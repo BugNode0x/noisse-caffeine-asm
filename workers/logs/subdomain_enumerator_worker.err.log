@@ -1,0 +1,8 @@
+2024-02-06 22:40:48,649	INFO worker.py:1540 -- Connecting to existing Ray cluster at address: 172.31.30.94:6379...
+2024-02-06 22:40:48,672	INFO worker.py:1724 -- Connected to Ray cluster.
+*** SIGTERM received at time=1707261618 on cpu 0 ***
+PC: @     0x7f859fb276be  (unknown)  __recv
+    @     0x7f859fa42520  (unknown)  (unknown)
+[2024-02-06 23:20:18,043 E 655820 655820] logging.cc:361: *** SIGTERM received at time=1707261618 on cpu 0 ***
+[2024-02-06 23:20:18,043 E 655820 655820] logging.cc:361: PC: @     0x7f859fb276be  (unknown)  __recv
+[2024-02-06 23:20:18,044 E 655820 655820] logging.cc:361:     @     0x7f859fa42520  (unknown)  (unknown)

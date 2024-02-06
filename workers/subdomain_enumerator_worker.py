@@ -36,7 +36,8 @@ class SubdomainEnumerationWorker(BaseWorker):
 
                 # Debug print
                 print(f"Received domain: {domain}, Hunter ID: {hunter_id}")
-                self.send_slack_notification(user_id, f"Processed domain {domain} successfully.")
+                if user_id:
+                    self.send_slack_notification(user_id, f"[!] Subdomain gathering started for {domain}, Hunter ID: {hunter_id}")
 
 
                 if not domain or not isinstance(domain, str):
@@ -59,7 +60,7 @@ class SubdomainEnumerationWorker(BaseWorker):
                 subdomains = self.process_task(domain)
                 if subdomains:
                     insert_subdomain_results(hunter_id, domain, subdomains)
-                    self.send_slack_notification(f"Processed domain {domain} successfully.")
+                    self.send_slack_notification(user_id, f"Subdomain gathering successful.")
 
 
 
