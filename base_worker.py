@@ -1,10 +1,29 @@
 import redis
 import json
+import requests
 from config import REDIS_HOST, REDIS_PORT, REDIS_PWD
+from db_processor import get_user_webhook
+
 
 class BaseWorker:
     def __init__(self):
         self.redis_client = redis.Redis(host=REDIS_HOST, port=REDIS_PORT, password=REDIS_PWD, decode_responses=True)
+
+    def send_slack_notification(self, user_id, message):
+        webhook_url = get_user_webhook(user_id)
+        if not webhook_url:
+            print("No webhook URL configured for this user.")
+            return
+        
+        slack_data = {'text': message}
+
+        response = requests.post(
+            webhook_url, json=slack_data,
+            headers={'Content-Type': 'application/json'}
+        )
+
+        if response.status_code != 200:
+            print(f"Slack notification failed: {response.status_code} - {response.text}")
 
     def fetch_task(self):
         task_data = self.redis_client.blpop('api_queue', 10)

@@ -6,7 +6,7 @@ import ray
 from pathlib import Path
 parent_dir = Path(__file__).resolve().parent.parent
 sys.path.append(str(parent_dir))
-from db_processor import insert_subdomain_results, ensure_hunter_exists, ensure_domain_exists
+from db_processor import insert_subdomain_results, ensure_hunter_exists, ensure_domain_exists, get_user_id_from_hunter_id
 from base_worker import BaseWorker
 
 class SubdomainEnumerationWorker(BaseWorker):
@@ -30,10 +30,14 @@ class SubdomainEnumerationWorker(BaseWorker):
             task_data = self.fetch_task()
             if task_data:
                 domain = task_data.get('domain')
-                hunter_id = task_data.get('user_id')
+                hunter_id = task_data.get('user_id'
+                )
+                user_id = get_user_id_from_hunter_id(hunter_id)
 
                 # Debug print
                 print(f"Received domain: {domain}, Hunter ID: {hunter_id}")
+                self.send_slack_notification(user_id, f"Processed domain {domain} successfully.")
+
 
                 if not domain or not isinstance(domain, str):
                     print(f"Invalid or missing domain in task data: {task_data}")
@@ -55,6 +59,8 @@ class SubdomainEnumerationWorker(BaseWorker):
                 subdomains = self.process_task(domain)
                 if subdomains:
                     insert_subdomain_results(hunter_id, domain, subdomains)
+                    self.send_slack_notification(f"Processed domain {domain} successfully.")
+
 
 
 

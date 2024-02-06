@@ -1,7 +1,8 @@
 import psycopg2
 import re
-from config import POSTGRES_HOST, POSTGRES_PORT, POSTGRES_DB, POSTGRES_USER, POSTGRES_PASSWORD
 import ray
+from config import POSTGRES_HOST, POSTGRES_PORT, POSTGRES_DB, POSTGRES_USER, POSTGRES_PASSWORD
+
 
 def is_valid_domain(domain_name):
     # Regular expression for validating a domain name
@@ -31,7 +32,8 @@ def execute_db_query(query, params, fetch_one=False, commit=False):
         if commit:
             conn.commit()
         if fetch_one:
-            return cur.fetchone()
+            result = cur.fetchone()
+            return result[0] if result else None
         return None
     except (Exception, psycopg2.DatabaseError) as error:
         print(f"Database query error: {error}")
@@ -64,6 +66,10 @@ def ensure_domain_exists(domain_name):
     execute_db_query(insert_query, (domain_name,), commit=True)
     return get_root_domain_id(domain_name)
 
+def get_user_webhook(user_id):
+    query = 'SELECT webhook_url FROM user_webhooks WHERE user_id = %s'
+    return execute_db_query(query, (user_id,), fetch_one=True)
+
 def get_user_id_from_hunter_id(hunter_id):
     query = 'SELECT user_id FROM users WHERE hunter_id = %s'
     return execute_db_query(query, (hunter_id,), fetch_one=True)
@@ -86,7 +92,6 @@ def process_and_insert_subdomain(user_id, subdomain):
         execute_db_query("INSERT INTO user_subdomain (user_id, subdomain_id) VALUES (%s, %s) ON CONFLICT DO NOTHING", (user_id, subdomain_id), commit=True)
     else:
         print(f"Failed to insert subdomain: {subdomain}")
-
 
 def insert_subdomain_results(hunter_id, domain, subdomains):
     user_id = get_user_id_from_hunter_id(hunter_id)
