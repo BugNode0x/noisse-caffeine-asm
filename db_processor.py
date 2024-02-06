@@ -1,6 +1,7 @@
 import psycopg2
 import re
 from config import POSTGRES_HOST, POSTGRES_PORT, POSTGRES_DB, POSTGRES_USER, POSTGRES_PASSWORD
+import ray
 
 def is_valid_domain(domain_name):
     # Regular expression for validating a domain name
@@ -39,7 +40,6 @@ def execute_db_query(query, params, fetch_one=False, commit=False):
         if conn is not None:
             conn.close()
 
-
 def ensure_hunter_exists(hunter_id):
     existing_hunter_id = get_hunter_id(hunter_id)
     if existing_hunter_id is None:
@@ -76,7 +76,33 @@ def get_root_domain_id(domain_name):
     query = 'SELECT domain_id FROM domains WHERE domain_name = %s'
     return execute_db_query(query, (str(domain_name),), fetch_one=True)
 
+@ray.remote
+def process_and_insert_subdomain(user_id, subdomain):
+    subdomain_id = execute_db_query("SELECT subdomain_id FROM subdomains WHERE subdomain = %s", (subdomain,), fetch_one=True)
+    if subdomain_id is None:
+        subdomain_id = execute_db_query("INSERT INTO subdomains (subdomain) VALUES (%s) RETURNING subdomain_id", (subdomain,), fetch_one=True, commit=True)
+
+    if subdomain_id:
+        execute_db_query("INSERT INTO user_subdomain (user_id, subdomain_id) VALUES (%s, %s) ON CONFLICT DO NOTHING", (user_id, subdomain_id), commit=True)
+    else:
+        print(f"Failed to insert subdomain: {subdomain}")
+
+
 def insert_subdomain_results(hunter_id, domain, subdomains):
+    user_id = get_user_id_from_hunter_id(hunter_id)
+    domain_id = ensure_domain_exists(domain)
+    ensure_user_domain_exists(user_id, domain_id)
+
+    # Create a list to hold Ray futures
+    futures = []
+
+    for subdomain in subdomains:
+        # Start a new Ray task for each subdomain
+        future = process_and_insert_subdomain.remote(user_id, subdomain)
+        futures.append(future)
+
+    # Wait for all tasks to complete
+    ray.get(futures)
     user_id = get_user_id_from_hunter_id(hunter_id)
     domain_id = ensure_domain_exists(domain)
     ensure_user_domain_exists(user_id, domain_id)

@@ -2,6 +2,7 @@ import sys
 import json
 import subprocess
 import shlex
+import ray
 from pathlib import Path
 parent_dir = Path(__file__).resolve().parent.parent
 sys.path.append(str(parent_dir))
@@ -58,5 +59,6 @@ class SubdomainEnumerationWorker(BaseWorker):
 
 
 if __name__ == "__main__":
+    ray.init()
     worker = SubdomainEnumerationWorker()
     worker.run()
