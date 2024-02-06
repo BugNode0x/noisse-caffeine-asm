@@ -44,13 +44,10 @@ class SubdomainEnumerationWorker(BaseWorker):
                 # Ensure the hunter exists and get domain ID
                 ensure_hunter_exists(hunter_id)
                 domain_id = ensure_domain_exists(domain)
-                if not domain_id:
-                    print(f"Error: Unable to process domain {domain}")
+                if not domain_id or not hunter_id:
+                    print(f"Error processing task for domain {domain} and hunter {hunter_id}")
                     continue
-                if not hunter_id:
-                    print(f"Error: Unable to process hunter {hunter_id}")
-                    continue
-
+                
                 print(f"Processing domain: {domain} with ID: {domain_id}")
 
                 # Proceed to enumerate subdomains

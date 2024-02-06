@@ -24,21 +24,21 @@ def execute_db_query(query, params, fetch_one=False, commit=False):
     conn = create_db_connection()
     if conn is None:
         return None
-
     try:
         cur = conn.cursor()
         cur.execute(query, params)
-        if fetch_one:
-            result = cur.fetchone()
-            return result[0] if result else None
         if commit:
             conn.commit()
+        if fetch_one:
+            return cur.fetchone()
+        return None
     except (Exception, psycopg2.DatabaseError) as error:
         print(f"Database query error: {error}")
         return None
     finally:
         if conn is not None:
             conn.close()
+
 
 def ensure_hunter_exists(hunter_id):
     existing_hunter_id = get_hunter_id(hunter_id)
@@ -80,13 +80,14 @@ def insert_subdomain_results(hunter_id, domain, subdomains):
     user_id = get_user_id_from_hunter_id(hunter_id)
     domain_id = ensure_domain_exists(domain)
     ensure_user_domain_exists(user_id, domain_id)
-    
-    root_domain_id = get_root_domain_id(domain)
-    if root_domain_id is None:
-        print(f"Error: root_domain_id not found for domain {domain}")
-        return
 
-    print(f"Inserting subdomain results for domain ID: {root_domain_id}")
     for subdomain in subdomains:
-        query = 'INSERT INTO subdomain_results (hunter_id, root_domain_id, subdomain) VALUES (%s, %s, %s)'
-        execute_db_query(query, (hunter_id, domain_id, subdomain), commit=True)
+        subdomain_id = execute_db_query("SELECT subdomain_id FROM subdomains WHERE subdomain = %s", (subdomain,), fetch_one=True)
+        if subdomain_id is None:
+            print(f"Inserting new subdomain: {subdomain}")
+            subdomain_id = execute_db_query("INSERT INTO subdomains (subdomain) VALUES (%s) RETURNING subdomain_id", (subdomain,), fetch_one=True, commit=True)
+
+        if subdomain_id:
+            execute_db_query("INSERT INTO user_subdomain (user_id, subdomain_id) VALUES (%s, %s) ON CONFLICT DO NOTHING", (user_id, subdomain_id), commit=True)
+        else:
+            print(f"Failed to insert subdomain: {subdomain}")
