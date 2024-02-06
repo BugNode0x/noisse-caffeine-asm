@@ -2,12 +2,10 @@ import psycopg2
 import re
 from config import POSTGRES_HOST, POSTGRES_PORT, POSTGRES_DB, POSTGRES_USER, POSTGRES_PASSWORD
 
-# validation
 def is_valid_domain(domain_name):
     # Regular expression for validating a domain name
     pattern = r"^(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?\.)+[a-zA-Z]{2,}$"
     return re.match(pattern, domain_name) is not None
-
 
 def create_db_connection():
     try:
@@ -48,35 +46,27 @@ def ensure_hunter_exists(hunter_id):
         query = 'INSERT INTO users (hunter_id) VALUES (%s)'
         execute_db_query(query, (hunter_id,), commit=True)
 
-def ensure_domain_exists(domain_name, hunter_id):
-    if not isinstance(domain_name, str) or not is_valid_domain(domain_name):
-        print(f"Invalid domain name type: {type(domain_name)} for domain: {domain_name}")
-        return None
+def ensure_user_domain_exists(user_id, domain_id):
+    # Check if the user-domain pair exists
+    query = 'SELECT id FROM user_domains WHERE user_id = %s AND domain_id = %s'
+    existing_id = execute_db_query(query, (user_id, domain_id), fetch_one=True)
+    if existing_id is None:
+        # Insert the new user-domain pair
+        insert_query = 'INSERT INTO user_domains (user_id, domain_id) VALUES (%s, %s)'
+        execute_db_query(insert_query, (user_id, domain_id), commit=True)
 
-    # Check if domain already exists
+def ensure_domain_exists(domain_name):
     existing_domain_id = get_root_domain_id(domain_name)
     if existing_domain_id:
-        print(f"Existing domain ID found: {existing_domain_id} for domain: {domain_name}")
         return existing_domain_id
-
     # Insert new domain
-    user_id = get_user_id_from_hunter_id(hunter_id)
-    if user_id is None:
-        print(f"Unable to find user_id for hunter_id {hunter_id}")
-        return None
-
-    try:
-        query = 'INSERT INTO domains (domain_name, user_id) VALUES (%s, %s)'
-        execute_db_query(query, (domain_name, user_id), commit=True)
-        return get_root_domain_id(domain_name)
-    except Exception as e:
-        print(f"Error inserting new domain: {e}")
-        return None
+    insert_query = 'INSERT INTO domains (domain_name) VALUES (%s)'
+    execute_db_query(insert_query, (domain_name,), commit=True)
+    return get_root_domain_id(domain_name)
 
 def get_user_id_from_hunter_id(hunter_id):
     query = 'SELECT user_id FROM users WHERE hunter_id = %s'
     return execute_db_query(query, (hunter_id,), fetch_one=True)
-
 
 def get_hunter_id(hunter_id):
     query = 'SELECT hunter_id FROM users WHERE hunter_id = %s'
@@ -86,11 +76,10 @@ def get_root_domain_id(domain_name):
     query = 'SELECT domain_id FROM domains WHERE domain_name = %s'
     return execute_db_query(query, (str(domain_name),), fetch_one=True)
 
-
 def insert_subdomain_results(hunter_id, domain, subdomains):
-    ensure_hunter_exists(hunter_id)
-    root_domain_id = ensure_domain_exists(domain, hunter_id)
-    ensure_domain_exists(domain, hunter_id)
+    user_id = get_user_id_from_hunter_id(hunter_id)
+    domain_id = ensure_domain_exists(domain)
+    ensure_user_domain_exists(user_id, domain_id)
     
     root_domain_id = get_root_domain_id(domain)
     if root_domain_id is None:
@@ -100,4 +89,4 @@ def insert_subdomain_results(hunter_id, domain, subdomains):
     print(f"Inserting subdomain results for domain ID: {root_domain_id}")
     for subdomain in subdomains:
         query = 'INSERT INTO subdomain_results (hunter_id, root_domain_id, subdomain) VALUES (%s, %s, %s)'
-        execute_db_query(query, (hunter_id, root_domain_id, subdomain), commit=True)
+        execute_db_query(query, (hunter_id, domain_id, subdomain), commit=True)

@@ -5,7 +5,7 @@ import shlex
 from pathlib import Path
 parent_dir = Path(__file__).resolve().parent.parent
 sys.path.append(str(parent_dir))
-from db_processor import insert_subdomain_results, get_root_domain_id, ensure_hunter_exists, ensure_domain_exists
+from db_processor import insert_subdomain_results, ensure_hunter_exists, ensure_domain_exists
 from base_worker import BaseWorker
 
 class SubdomainEnumerationWorker(BaseWorker):
@@ -43,7 +43,7 @@ class SubdomainEnumerationWorker(BaseWorker):
 
                 # Ensure the hunter exists and get domain ID
                 ensure_hunter_exists(hunter_id)
-                domain_id = ensure_domain_exists(domain, hunter_id)
+                domain_id = ensure_domain_exists(domain)
                 if not domain_id:
                     print(f"Error: Unable to process domain {domain}")
                     continue

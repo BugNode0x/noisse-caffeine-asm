@@ -7,7 +7,7 @@ class BaseWorker:
         self.redis_client = redis.Redis(host=REDIS_HOST, port=REDIS_PORT, password=REDIS_PWD, decode_responses=True)
 
     def fetch_task(self):
-        task_data = self.redis_client.blpop('api_queue', 30)
+        task_data = self.redis_client.blpop('api_queue', 10)
         if task_data:
             queue_name, task_data_str = task_data
             print(f"Fetched task from {queue_name}: {task_data_str}")
