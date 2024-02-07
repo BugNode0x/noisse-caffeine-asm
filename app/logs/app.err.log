@@ -98,3 +98,465 @@ Press CTRL+C to quit
 127.0.0.1 - - [06/Feb/2024 23:38:34] "POST /monitor-domain HTTP/1.0" 200 -
 127.0.0.1 - - [06/Feb/2024 23:41:28] "POST /monitor-domain HTTP/1.0" 200 -
 127.0.0.1 - - [06/Feb/2024 23:41:41] "POST /monitor-domain HTTP/1.0" 200 -
+127.0.0.1 - - [06/Feb/2024 23:55:08] "GET /.env HTTP/1.0" 404 -
+127.0.0.1 - - [06/Feb/2024 23:55:08] "POST / HTTP/1.0" 404 -
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/dns_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 256-977-552
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/dns_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 256-977-552
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/dns_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 256-977-552
+127.0.0.1 - - [07/Feb/2024 00:48:51] "GET /.env HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 00:48:51] "POST / HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 01:00:41] "GET / HTTP/1.0" 404 -
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/dns_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 256-977-552
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/dns_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 256-977-552
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/dns_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 256-977-552
+127.0.0.1 - - [07/Feb/2024 02:14:48] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 02:47:26] "GET /.env HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 02:47:26] "POST / HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 02:56:13] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 03:04:35] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 03:23:06] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 04:14:26] "GET /.env HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 04:14:27] "POST / HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 04:36:06] "GET /.aws/credentials HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 04:36:06] "POST /.aws/credentials HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 04:36:07] "GET /.env.prod HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 04:36:07] "POST /.env.prod HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 04:36:08] "GET /.env.save HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 04:36:08] "POST /.env.save HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 04:36:09] "GET /.env.production HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 04:36:09] "POST /.env.production HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 04:36:09] "GET /app/.env HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 04:36:10] "POST /app/.env HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 04:36:10] "GET /back/.env HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 04:36:10] "POST /back/.env HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 04:36:11] "GET /system/.env HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 04:36:11] "POST /system/.env HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 04:36:12] "GET /application/.env HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 04:36:12] "POST /application/.env HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 04:36:13] "GET /.env.project HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 04:36:13] "POST /.env.project HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 04:36:14] "GET /laravel/.env HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 04:36:14] "POST /laravel/.env HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 04:36:15] "GET /private/.env HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 04:36:15] "POST /private/.env HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 04:36:15] "GET /sources/.env HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 04:36:16] "POST /sources/.env HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 04:36:16] "GET /script/.env HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 04:36:17] "POST /script/.env HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 04:36:17] "GET /docker/.env HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 04:36:17] "POST /docker/.env HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 04:36:17] "GET /enviroments/.env.production HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 04:36:18] "POST /enviroments/.env.production HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 04:36:18] "GET /apps/.env HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 04:36:19] "POST /apps/.env HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 04:36:19] "GET /enviroments/.env HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 04:36:20] "POST /enviroments/.env HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 04:36:20] "GET /.env.dist HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 04:36:20] "POST /.env.dist HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 04:36:21] "GET /.env.development HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 04:36:22] "POST /.env.development HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 04:36:22] "GET /api/.env HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 04:36:22] "POST /api/.env HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 04:36:23] "GET /cms/.env HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 04:36:23] "POST /cms/.env HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 04:36:23] "GET /.env HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 04:36:24] "POST /.env HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 04:36:25] "GET /development/.env HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 04:36:25] "POST /development/.env HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 04:36:26] "GET /live_env HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 04:36:27] "POST /live_env HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 04:36:27] "GET /shared/.env HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 04:36:27] "POST /shared/.env HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 04:36:28] "GET /admin-app/.env HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 04:36:28] "POST /admin-app/.env HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 04:36:29] "GET /.env.old HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 04:36:29] "POST /.env.old HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 04:36:30] "GET /core/.env HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 04:36:30] "POST /core/.env HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 04:36:30] "GET /frontend_dev.php/$ HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 04:36:32] "GET /debug/default/view?panel=config HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 04:36:33] "GET /config.json HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 04:36:33] "GET /.json HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 04:36:34] "GET /testphpinfo.php HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 04:36:34] "GET /info/info.php HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 04:36:35] "GET /pinfo.php HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 04:36:35] "GET /info.php HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 04:36:36] "GET /viewinfo.php HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 04:36:36] "GET /information HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 04:36:36] "GET /admin/phpinfo.php HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 04:36:37] "GET /info/phpinfo.php HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 04:36:37] "GET /phptest.php HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 04:36:37] "GET /phpinfo.php HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 04:36:38] "GET /phpinformation HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 04:36:38] "GET /information.php HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 04:36:39] "GET /infophp.php HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 04:36:39] "GET /php.php HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 04:36:39] "GET /admin.php HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 04:36:40] "GET /testphpinfo HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 04:36:40] "GET /_phpinfo.php HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 04:36:41] "GET /phpinfo HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 04:36:41] "GET /php-info.php HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 04:36:41] "GET /php_info.php HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 04:36:42] "GET /PHPConf.php HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 04:36:42] "GET /phpinfo/phpinfo.php HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 04:36:42] "GET /scripts/phpinfo.php HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 04:36:42] "GET /phpversion.php HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 04:36:43] "GET /_profiler/phpinfo HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 04:46:46] "POST /boaform/admin/formLogin HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 05:02:13] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 05:03:58] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 05:18:58] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 05:43:22] "GET /.env HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 05:43:22] "POST / HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 07:14:32] "GET /.env HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 07:14:32] "POST / HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 07:47:37] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 07:53:48] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 08:11:05] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 08:33:34] "POST /index.htm HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 08:33:34] "POST /FD873AC4-CF86-4FED-84EC-4BD59C6F17A7 HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 09:02:10] "GET /.env HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 09:02:10] "POST / HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 09:13:35] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 09:14:16] "GET /webui/ HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 09:15:13] "GET /favicon.ico HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 09:15:46] "GET /geoserver/web/ HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 10:34:13] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 11:12:57] "GET /.env HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 11:12:57] "POST / HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 12:01:11] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 12:37:01] "GET /.env HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 12:37:02] "POST / HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 12:45:30] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 13:12:43] "POST /boaform/admin/formLogin HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 13:19:46] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 13:20:43] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 13:24:45] "GET /echo.php HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 14:01:23] "GET /.env HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 14:01:23] "POST / HTTP/1.0" 404 -
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/subdomain_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 256-977-552
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/subdomain_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 256-977-552
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/subdomain_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 256-977-552
+127.0.0.1 - - [07/Feb/2024 15:04:25] "POST /monitor-domain HTTP/1.0" 200 -
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/subdomain_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 256-977-552
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/subdomain_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 256-977-552
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/subdomain_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 256-977-552
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/subdomain_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 256-977-552
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/subdomain_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 256-977-552
+127.0.0.1 - - [07/Feb/2024 15:10:39] "POST /monitor-domain HTTP/1.0" 200 -
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/subdomain_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 256-977-552
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/subdomain_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 256-977-552
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/subdomain_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 256-977-552
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/subdomain_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 256-977-552
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/subdomain_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 256-977-552
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/subdomain_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 256-977-552
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/subdomain_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 256-977-552
+127.0.0.1 - - [07/Feb/2024 15:21:04] "POST /monitor-domain HTTP/1.0" 200 -
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/subdomain_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 256-977-552
+127.0.0.1 - - [07/Feb/2024 15:21:39] "POST /monitor-domain HTTP/1.0" 200 -
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/subdomain_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 256-977-552
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/subdomain_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 256-977-552
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/subdomain_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 256-977-552
+127.0.0.1 - - [07/Feb/2024 15:22:17] "POST /monitor-domain HTTP/1.0" 200 -
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/subdomain_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 256-977-552
+127.0.0.1 - - [07/Feb/2024 15:22:45] "POST /monitor-domain HTTP/1.0" 200 -
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/subdomain_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 256-977-552
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/subdomain_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 256-977-552
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/subdomain_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 256-977-552
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/subdomain_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 256-977-552
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/subdomain_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 256-977-552
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/subdomain_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 256-977-552
+127.0.0.1 - - [07/Feb/2024 15:26:36] "POST /monitor-domain HTTP/1.0" 200 -
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/subdomain_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 256-977-552
+127.0.0.1 - - [07/Feb/2024 15:28:56] "POST /monitor-domain HTTP/1.0" 200 -
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/subdomain_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 256-977-552
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/subdomain_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 256-977-552
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/subdomain_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 256-977-552
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/subdomain_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 256-977-552
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/subdomain_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 256-977-552
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/subdomain_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 256-977-552
+127.0.0.1 - - [07/Feb/2024 15:30:07] "POST /monitor-domain HTTP/1.0" 200 -
+127.0.0.1 - - [07/Feb/2024 15:34:30] "POST /monitor-domain HTTP/1.0" 200 -
+127.0.0.1 - - [07/Feb/2024 15:36:29] "POST /monitor-domain HTTP/1.0" 200 -
+127.0.0.1 - - [07/Feb/2024 15:39:29] "GET /.env HTTP/1.0" 404 -
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/dns_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 256-977-552
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/dns_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 256-977-552
+127.0.0.1 - - [07/Feb/2024 15:45:45] "POST /monitor-domain HTTP/1.0" 200 -
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/dns_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 256-977-552
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/dns_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 256-977-552
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/dns_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 256-977-552
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/dns_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 256-977-552
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/dns_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 256-977-552
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/dns_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 256-977-552
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/dns_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 256-977-552
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/base_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 256-977-552
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/base_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 256-977-552
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/subdomain_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 256-977-552
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/dns_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 256-977-552
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/base_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 256-977-552
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/base_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 256-977-552
+127.0.0.1 - - [07/Feb/2024 16:03:22] "POST /monitor-domain HTTP/1.0" 200 -
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/base_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 256-977-552
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/base_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 256-977-552
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/base_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 256-977-552
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/base_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 256-977-552
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/base_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 256-977-552
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/base_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 256-977-552
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/subdomain_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 256-977-552
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/subdomain_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 256-977-552
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/subdomain_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 256-977-552
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/subdomain_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 256-977-552
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/subdomain_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 256-977-552
+127.0.0.1 - - [07/Feb/2024 16:09:16] "GET /.env HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 16:09:17] "POST / HTTP/1.0" 404 -
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/base_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 256-977-552
+127.0.0.1 - - [07/Feb/2024 16:10:55] "POST /monitor-domain HTTP/1.0" 200 -
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/dns_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 256-977-552
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/dns_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 256-977-552
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/dns_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 256-977-552
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/dns_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 256-977-552
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/dns_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 256-977-552
+127.0.0.1 - - [07/Feb/2024 16:18:25] "POST /monitor-domain HTTP/1.0" 200 -
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/dns_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 256-977-552
+127.0.0.1 - - [07/Feb/2024 16:20:56] "POST /monitor-domain HTTP/1.0" 200 -
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/dns_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 256-977-552
+127.0.0.1 - - [07/Feb/2024 17:25:05] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 17:25:05] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 17:25:05] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 17:25:06] "POST /monitor-domain HTTP/1.0" 500 -
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.30.94:5000
+Press CTRL+C to quit
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 116-874-671
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.30.94:5000
+Press CTRL+C to quit
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 116-874-671
+127.0.0.1 - - [07/Feb/2024 17:34:26] "POST /monitor-domain HTTP/1.0" 200 -

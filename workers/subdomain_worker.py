@@ -23,21 +23,26 @@ class SubdomainEnumerationWorker(BaseWorker):
             return None
 
         subdomains = stdout.decode().splitlines()
+        user_id = get_user_id_from_hunter_id(self.hunter_id)
+
+        for subdomain in subdomains:
+            task = json.dumps({'subdomain': subdomain, 'root_domain': domain, 'user_id': user_id})
+            self.redis_client.rpush('dns_queue', task)
+
         return subdomains
 
     def run(self):
         while True:
-            task_data = self.fetch_task()
+            queue_name, task_data = self.fetch_task()
             if task_data:
                 domain = task_data.get('domain')
-                hunter_id = task_data.get('user_id'
-                )
-                user_id = get_user_id_from_hunter_id(hunter_id)
+                self.hunter_id = task_data.get('user_id')
+                user_id = get_user_id_from_hunter_id(self.hunter_id)
 
                 # Debug print
-                print(f"Received domain: {domain}, Hunter ID: {hunter_id}")
+                print(f"Received domain: {domain}, Hunter ID: {self.hunter_id}")
                 if user_id:
-                    self.send_slack_notification(user_id, f"[!] Subdomain gathering started for {domain}, Hunter ID: {hunter_id}")
+                    self.send_slack_notification(user_id, f"[!] Subdomain gathering started for {domain}, Hunter ID: {self.hunter_id}")
 
 
                 if not domain or not isinstance(domain, str):
@@ -45,13 +50,13 @@ class SubdomainEnumerationWorker(BaseWorker):
                     continue
 
                 # Debug print before calling ensure_domain_exists
-                print(f"Calling ensure_domain_exists with domain: {domain}, Hunter ID: {hunter_id}")
+                print(f"Calling ensure_domain_exists with domain: {domain}, Hunter ID: {self.hunter_id}")
 
                 # Ensure the hunter exists and get domain ID
-                ensure_hunter_exists(hunter_id)
+                ensure_hunter_exists(self.hunter_id)
                 domain_id = ensure_domain_exists(domain)
-                if not domain_id or not hunter_id:
-                    print(f"Error processing task for domain {domain} and hunter {hunter_id}")
+                if not domain_id or not self.hunter_id:
+                    print(f"Error processing task for domain {domain} and hunter {self.hunter_id}")
                     continue
                 
                 print(f"Processing domain: {domain} with ID: {domain_id}")
@@ -59,13 +64,11 @@ class SubdomainEnumerationWorker(BaseWorker):
                 # Proceed to enumerate subdomains
                 subdomains = self.process_task(domain)
                 if subdomains:
-                    insert_subdomain_results(hunter_id, domain, subdomains)
+                    insert_subdomain_results(self.hunter_id, domain, subdomains)
                     self.send_slack_notification(user_id, f"Subdomain gathering successful.")
-
-
 
 
 if __name__ == "__main__":
     ray.init()
-    worker = SubdomainEnumerationWorker()
+    worker = SubdomainEnumerationWorker(queue_names=['api_queue'])
     worker.run()
