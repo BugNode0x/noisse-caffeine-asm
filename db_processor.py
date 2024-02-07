@@ -187,4 +187,3 @@ def insert_http_data(user_id, host, root_domain, url, title, webserver, tech, st
     '''
     execute_db_query(insert_query, (subdomain_id, url, title, webserver, tech, status_code, content_length), commit=True)
     print(f"New HTTP data inserted for {url}.")
-

@@ -1,0 +1,107 @@
+2024-02-07 22:47:02,694	INFO worker.py:1724 -- Started a local Ray instance.
+*** SIGTERM received at time=1707346024 on cpu 0 ***
+PC: @     0x7f1ea9f276be  (unknown)  __recv
+    @     0x7f1ea9e42520  (unknown)  (unknown)
+[2024-02-07 22:47:04,422 E 158271 158271] logging.cc:361: *** SIGTERM received at time=1707346024 on cpu 0 ***
+[2024-02-07 22:47:04,422 E 158271 158271] logging.cc:361: PC: @     0x7f1ea9f276be  (unknown)  __recv
+[2024-02-07 22:47:04,423 E 158271 158271] logging.cc:361:     @     0x7f1ea9e42520  (unknown)  (unknown)
+2024-02-07 22:47:12,437	INFO worker.py:1724 -- Started a local Ray instance.
+[33m(raylet)[0m [2024-02-07 22:48:12,386 E 158684 158684] (raylet) node_manager.cc:3022: 1 Workers (tasks / actors) killed due to memory pressure (OOM), 0 Workers crashed due to other reasons at node (ID: 663d710015e13749a5c6451602cb4693184c03351bcb4ab943feb321, IP: 172.31.30.94) over the last time period. To see more information about the Workers killed on this node, use `ray logs raylet.out -ip 172.31.30.94`
+[33m(raylet)[0m 
+[33m(raylet)[0m Refer to the documentation on how to address the out of memory issue: https://docs.ray.io/en/latest/ray-core/scheduling/ray-oom-prevention.html. Consider provisioning more memory on this node or reducing task parallelism by requesting more CPUs per task. To adjust the kill threshold, set the environment variable `RAY_memory_usage_threshold` when starting Ray. To disable worker killing, set the environment variable `RAY_memory_monitor_refresh_ms` to zero.
+*** SIGTERM received at time=1707346399 on cpu 0 ***
+PC: @     0x7fe5d3d276be  (unknown)  __recv
+    @     0x7fe5d3c42520  (unknown)  (unknown)
+[2024-02-07 22:53:19,425 E 158556 158556] logging.cc:361: *** SIGTERM received at time=1707346399 on cpu 0 ***
+[2024-02-07 22:53:19,426 E 158556 158556] logging.cc:361: PC: @     0x7fe5d3d276be  (unknown)  __recv
+[2024-02-07 22:53:19,426 E 158556 158556] logging.cc:361:     @     0x7fe5d3c42520  (unknown)  (unknown)
+2024-02-07 22:53:27,861	INFO worker.py:1724 -- Started a local Ray instance.
+Traceback (most recent call last):
+  File "/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/subdomain_worker.py", line 75, in <module>
+    worker.run()
+  File "/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/subdomain_worker.py", line 69, in run
+    self.send_slack_notification(user_id, f"Processed HTTP for {root_domain} successfully.")
+UnboundLocalError: local variable 'user_id' referenced before assignment
+2024-02-07 22:53:37,454	INFO worker.py:1724 -- Started a local Ray instance.
+Traceback (most recent call last):
+  File "/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/subdomain_worker.py", line 75, in <module>
+    worker.run()
+  File "/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/subdomain_worker.py", line 69, in run
+    self.send_slack_notification(user_id, f"Processed HTTP for {root_domain} successfully.")
+UnboundLocalError: local variable 'user_id' referenced before assignment
+2024-02-07 22:53:46,865	INFO worker.py:1724 -- Started a local Ray instance.
+Traceback (most recent call last):
+  File "/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/subdomain_worker.py", line 75, in <module>
+    worker.run()
+  File "/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/subdomain_worker.py", line 69, in run
+    self.send_slack_notification(user_id, f"Processed HTTP for {root_domain} successfully.")
+UnboundLocalError: local variable 'user_id' referenced before assignment
+2024-02-07 22:53:56,609	INFO worker.py:1724 -- Started a local Ray instance.
+Traceback (most recent call last):
+  File "/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/subdomain_worker.py", line 75, in <module>
+    worker.run()
+  File "/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/subdomain_worker.py", line 69, in run
+    self.send_slack_notification(user_id, f"Processed HTTP for {root_domain} successfully.")
+UnboundLocalError: local variable 'user_id' referenced before assignment
+2024-02-07 22:54:07,197	INFO worker.py:1724 -- Started a local Ray instance.
+Traceback (most recent call last):
+  File "/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/subdomain_worker.py", line 75, in <module>
+    worker.run()
+  File "/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/subdomain_worker.py", line 69, in run
+    self.send_slack_notification(user_id, f"Processed HTTP for {root_domain} successfully.")
+UnboundLocalError: local variable 'user_id' referenced before assignment
+2024-02-07 22:54:18,498	INFO worker.py:1724 -- Started a local Ray instance.
+Traceback (most recent call last):
+  File "/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/subdomain_worker.py", line 75, in <module>
+    worker.run()
+  File "/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/subdomain_worker.py", line 69, in run
+    self.send_slack_notification(user_id, f"Processed HTTP for {root_domain} successfully.")
+UnboundLocalError: local variable 'user_id' referenced before assignment
+2024-02-07 22:54:29,326	INFO worker.py:1724 -- Started a local Ray instance.
+Traceback (most recent call last):
+  File "/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/subdomain_worker.py", line 75, in <module>
+    worker.run()
+  File "/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/subdomain_worker.py", line 69, in run
+    self.send_slack_notification(user_id, f"Processed HTTP for {root_domain} successfully.")
+UnboundLocalError: local variable 'user_id' referenced before assignment
+2024-02-07 22:54:40,031	INFO worker.py:1724 -- Started a local Ray instance.
+Traceback (most recent call last):
+  File "/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/subdomain_worker.py", line 75, in <module>
+    worker.run()
+  File "/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/subdomain_worker.py", line 69, in run
+    self.send_slack_notification(user_id, f"Processed HTTP for {root_domain} successfully.")
+UnboundLocalError: local variable 'user_id' referenced before assignment
+2024-02-07 22:54:50,772	INFO worker.py:1724 -- Started a local Ray instance.
+Traceback (most recent call last):
+  File "/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/subdomain_worker.py", line 75, in <module>
+    worker.run()
+  File "/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/subdomain_worker.py", line 69, in run
+    self.send_slack_notification(user_id, f"Processed HTTP for {root_domain} successfully.")
+UnboundLocalError: local variable 'user_id' referenced before assignment
+2024-02-07 22:55:01,617	INFO worker.py:1724 -- Started a local Ray instance.
+Traceback (most recent call last):
+  File "/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/subdomain_worker.py", line 75, in <module>
+    worker.run()
+  File "/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/subdomain_worker.py", line 69, in run
+    self.send_slack_notification(user_id, f"Processed HTTP for {root_domain} successfully.")
+UnboundLocalError: local variable 'user_id' referenced before assignment
+2024-02-07 22:55:11,733	INFO worker.py:1724 -- Started a local Ray instance.
+[33m(raylet)[0m [2024-02-07 22:56:11,686 E 166182 166182] (raylet) node_manager.cc:3022: 1 Workers (tasks / actors) killed due to memory pressure (OOM), 0 Workers crashed due to other reasons at node (ID: 0f33bf2b2737fecb8e5800dae6e497a69bf92d5ec4010bb712552115, IP: 172.31.30.94) over the last time period. To see more information about the Workers killed on this node, use `ray logs raylet.out -ip 172.31.30.94`
+[33m(raylet)[0m 
+[33m(raylet)[0m Refer to the documentation on how to address the out of memory issue: https://docs.ray.io/en/latest/ray-core/scheduling/ray-oom-prevention.html. Consider provisioning more memory on this node or reducing task parallelism by requesting more CPUs per task. To adjust the kill threshold, set the environment variable `RAY_memory_usage_threshold` when starting Ray. To disable worker killing, set the environment variable `RAY_memory_monitor_refresh_ms` to zero.
+*** SIGTERM received at time=1707346624 on cpu 0 ***
+PC: @     0x7f90531276be  (unknown)  __recv
+    @     0x7f9053042520  (unknown)  (unknown)
+[2024-02-07 22:57:04,691 E 166128 166128] logging.cc:361: *** SIGTERM received at time=1707346624 on cpu 0 ***
+[2024-02-07 22:57:04,692 E 166128 166128] logging.cc:361: PC: @     0x7f90531276be  (unknown)  __recv
+[2024-02-07 22:57:04,692 E 166128 166128] logging.cc:361:     @     0x7f9053042520  (unknown)  (unknown)
+2024-02-07 22:57:12,822	INFO worker.py:1724 -- Started a local Ray instance.
+[33m(raylet)[0m [2024-02-07 22:58:12,763 E 167361 167361] (raylet) node_manager.cc:3022: 1 Workers (tasks / actors) killed due to memory pressure (OOM), 0 Workers crashed due to other reasons at node (ID: 44152c8b18bdba50a6b050aa574c4ffb808a017baa84e7937ea4874a, IP: 172.31.30.94) over the last time period. To see more information about the Workers killed on this node, use `ray logs raylet.out -ip 172.31.30.94`
+[33m(raylet)[0m 
+[33m(raylet)[0m Refer to the documentation on how to address the out of memory issue: https://docs.ray.io/en/latest/ray-core/scheduling/ray-oom-prevention.html. Consider provisioning more memory on this node or reducing task parallelism by requesting more CPUs per task. To adjust the kill threshold, set the environment variable `RAY_memory_usage_threshold` when starting Ray. To disable worker killing, set the environment variable `RAY_memory_monitor_refresh_ms` to zero.
+*** SIGTERM received at time=1707346719 on cpu 0 ***
+PC: @     0x7f684bb276be  (unknown)  __recv
+    @     0x7f684ba42520  (unknown)  (unknown)
+[2024-02-07 22:58:39,237 E 167233 167233] logging.cc:361: *** SIGTERM received at time=1707346719 on cpu 0 ***
+[2024-02-07 22:58:39,239 E 167233 167233] logging.cc:361: PC: @     0x7f684bb276be  (unknown)  __recv
+[2024-02-07 22:58:39,239 E 167233 167233] logging.cc:361:     @     0x7f684ba42520  (unknown)  (unknown)

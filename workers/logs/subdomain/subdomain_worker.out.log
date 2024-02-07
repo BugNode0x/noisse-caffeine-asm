@@ -1,0 +1,14 @@
+Fetched task from api_queue: {"domain": "vulnweb.com", "user_id": "user_01HMTAXPTE8XSQKD8XZ9M66CQM"}
+Received domain: vulnweb.com, Hunter ID: user_01HMTAXPTE8XSQKD8XZ9M66CQM
+Calling ensure_domain_exists with domain: vulnweb.com, Hunter ID: user_01HMTAXPTE8XSQKD8XZ9M66CQM
+Processing domain: vulnweb.com with ID: 91
+Running subfinder
+Error in subdomain enumeration: /bin/sh: 1: ~/go/bin/subfinder: not found
+
+Fetched task from api_queue: {"domain": "vulnweb.com", "user_id": "user_01HMTAXPTE8XSQKD8XZ9M66CQM"}
+Received domain: vulnweb.com, Hunter ID: user_01HMTAXPTE8XSQKD8XZ9M66CQM
+Calling ensure_domain_exists with domain: vulnweb.com, Hunter ID: user_01HMTAXPTE8XSQKD8XZ9M66CQM
+Processing domain: vulnweb.com with ID: 91
+Running subfinder
+Error in subdomain enumeration: /bin/sh: 1: ~/go/bin/subfinder: not found
+

@@ -1,0 +1,72 @@
+Traceback (most recent call last):
+  File "/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/dns_worker.py", line 11, in <module>
+    class DNSWorker(BaseWorker):
+  File "/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/dns_worker.py", line 46, in DNSWorker
+    self.send_slack_notification(user_id, f"Processed DNS for {root_domain} successfully.")
+NameError: name 'self' is not defined
+Traceback (most recent call last):
+  File "/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/dns_worker.py", line 11, in <module>
+    class DNSWorker(BaseWorker):
+  File "/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/dns_worker.py", line 46, in DNSWorker
+    self.send_slack_notification(user_id, f"Processed DNS for {root_domain} successfully.")
+NameError: name 'self' is not defined
+Traceback (most recent call last):
+  File "/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/dns_worker.py", line 11, in <module>
+    class DNSWorker(BaseWorker):
+  File "/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/dns_worker.py", line 46, in DNSWorker
+    self.send_slack_notification(user_id, f"Processed DNS for {root_domain} successfully.")
+NameError: name 'self' is not defined
+Traceback (most recent call last):
+  File "/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/dns_worker.py", line 11, in <module>
+    class DNSWorker(BaseWorker):
+  File "/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/dns_worker.py", line 46, in DNSWorker
+    self.send_slack_notification(user_id, f"Processed DNS for {root_domain} successfully.")
+NameError: name 'self' is not defined
+Traceback (most recent call last):
+  File "/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/dns_worker.py", line 11, in <module>
+    class DNSWorker(BaseWorker):
+  File "/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/dns_worker.py", line 46, in DNSWorker
+    self.send_slack_notification(user_id, f"Processed DNS for {root_domain} successfully.")
+NameError: name 'self' is not defined
+Traceback (most recent call last):
+  File "/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/dns_worker.py", line 11, in <module>
+    class DNSWorker(BaseWorker):
+  File "/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/dns_worker.py", line 46, in DNSWorker
+    self.send_slack_notification(user_id, f"Processed DNS for {root_domain} successfully.")
+NameError: name 'self' is not defined
+Traceback (most recent call last):
+  File "/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/dns_worker.py", line 11, in <module>
+    class DNSWorker(BaseWorker):
+  File "/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/dns_worker.py", line 46, in DNSWorker
+    self.send_slack_notification(user_id, f"Processed DNS for {root_domain} successfully.")
+NameError: name 'self' is not defined
+Traceback (most recent call last):
+  File "/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/dns_worker.py", line 11, in <module>
+    class DNSWorker(BaseWorker):
+  File "/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/dns_worker.py", line 46, in DNSWorker
+    self.send_slack_notification(user_id, f"Processed DNS for {root_domain} successfully.")
+NameError: name 'self' is not defined
+Traceback (most recent call last):
+  File "/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/dns_worker.py", line 11, in <module>
+    class DNSWorker(BaseWorker):
+  File "/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/dns_worker.py", line 46, in DNSWorker
+    self.send_slack_notification(user_id, f"Processed DNS for {root_domain} successfully.")
+NameError: name 'self' is not defined
+Traceback (most recent call last):
+  File "/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/dns_worker.py", line 11, in <module>
+    class DNSWorker(BaseWorker):
+  File "/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/dns_worker.py", line 46, in DNSWorker
+    self.send_slack_notification(user_id, f"Processed DNS for {root_domain} successfully.")
+NameError: name 'self' is not defined
+Traceback (most recent call last):
+  File "/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/dns_worker.py", line 11, in <module>
+    class DNSWorker(BaseWorker):
+  File "/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/dns_worker.py", line 46, in DNSWorker
+    self.send_slack_notification(user_id, f"Processed DNS for {root_domain} successfully.")
+NameError: name 'self' is not defined
+Traceback (most recent call last):
+  File "/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/dns_worker.py", line 11, in <module>
+    class DNSWorker(BaseWorker):
+  File "/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/dns_worker.py", line 46, in DNSWorker
+    self.send_slack_notification(user_id, f"Processed DNS for {root_domain} successfully.")
+NameError: name 'self' is not defined

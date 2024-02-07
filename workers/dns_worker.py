@@ -36,14 +36,15 @@ class DNSWorker(BaseWorker):
             insert_dns_data(dns_data, user_id)
             self.send_slack_notification(user_id, f"Processed DNS for {subdomain} successfully.")
 
+            resolved_subdomain = dns_data['host']
+            http_task = json.dumps({'subdomain': resolved_subdomain, 'root_domain': root_domain, 'user_id': user_id})
+            self.redis_client.rpush('http_queue', http_task)
+            print(f"Pushed to http_queue: {http_task}")
+
         except Exception as e:
             print(f"Error processing DNS for {subdomain}: {e}")
             self.send_slack_notification(user_id, f"Error processing DNS for {subdomain}: {e}")
-
-        resolved_subdomain = dns_data['host']
-        http_task = json.dumps({'subdomain': resolved_subdomain, 'root_domain': root_domain, 'user_id': user_id})
-        self.redis_client.rpush('http_queue', http_task)
-        print(f"Pushed to http_queue: {http_task}")
+            return
 
     def run(self):
         while True:
