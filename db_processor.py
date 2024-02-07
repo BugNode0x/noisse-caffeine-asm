@@ -4,6 +4,7 @@ import ray
 from config import POSTGRES_HOST, POSTGRES_PORT, POSTGRES_DB, POSTGRES_USER, POSTGRES_PASSWORD
 
 
+# legwork
 def is_valid_domain(domain_name):
     # Regular expression for validating a domain name
     pattern = r"^(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?\.)+[a-zA-Z]{2,}$"
@@ -83,6 +84,8 @@ def get_root_domain_id(domain_name):
     return execute_db_query(query, (str(domain_name),), fetch_one=True)
 
 
+# insertion and logic
+
 @ray.remote
 def process_and_insert_subdomain(user_id, subdomain):
     subdomain_id = execute_db_query("SELECT subdomain_id FROM subdomains WHERE subdomain = %s", (subdomain,), fetch_one=True)
@@ -124,7 +127,6 @@ def insert_subdomain_results(hunter_id, domain, subdomains):
         else:
             print(f"Failed to insert subdomain: {subdomain}")
 
-# DNS WORKER
 def insert_dns_data(dns_data, user_id):
     subdomain = dns_data['host']
     ip = dns_data.get('a', [None])[0]  # Taking the first IP address, if available
@@ -157,3 +159,20 @@ def insert_dns_data(dns_data, user_id):
     '''
     execute_db_query(insert_query, (subdomain_id, subdomain, ip, status_code, timestamp), commit=True)
     print(f"New DNS data inserted for {subdomain}.")
+
+def insert_http_data(user_id, host, root_domain, url, title, webserver, tech, status_code, content_length):
+    # Fetch subdomain_id
+    subdomain_id_query = "SELECT subdomain_id FROM subdomains WHERE subdomain = %s"
+    subdomain_id = execute_db_query(subdomain_id_query, (host,), fetch_one=True)
+
+    if subdomain_id is None:
+        print(f"Subdomain ID not found for {host}")
+        return
+
+    # Insert new HTTP result
+    insert_query = '''
+        INSERT INTO http_results (subdomain_id, url, title, webserver, tech, status_code, content_length)
+        VALUES (%s, %s, %s, %s, %s, %s, %s)
+    '''
+    execute_db_query(insert_query, (subdomain_id, url, title, webserver, tech, status_code, content_length), commit=True)
+    print(f"New HTTP data inserted for {url}.")
