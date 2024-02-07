@@ -38,7 +38,7 @@ class DNSWorker(BaseWorker):
             self.send_slack_notification(user_id, f"Processed DNS for {subdomain} successfully.")
         except Exception as e:
             print(f"Error processing DNS for {subdomain}: {e}")
-            elf.send_slack_notification(user_id, f"Error processing DNS for {subdomain}: {e}")
+            self.send_slack_notification(user_id, f"Error processing DNS for {subdomain}: {e}")
 
     def run(self):
         while True:

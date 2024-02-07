@@ -82,42 +82,6 @@ def get_root_domain_id(domain_name):
     query = 'SELECT domain_id FROM domains WHERE domain_name = %s'
     return execute_db_query(query, (str(domain_name),), fetch_one=True)
 
-# DNS WORKER
-def insert_dns_data(dns_data, user_id):
-    subdomain = dns_data['host']
-    ip = dns_data.get('a', [None])[0]  # Taking the first IP address, if available
-    status_code = dns_data['status_code']
-    timestamp = dns_data['timestamp']
-
-    # Fetch subdomain_id
-    subdomain_id_query = "SELECT subdomain_id FROM subdomains WHERE subdomain = %s"
-    subdomain_id = execute_db_query(subdomain_id_query, (subdomain,), fetch_one=True)
-
-    if subdomain_id is None:
-        print(f"Subdomain ID not found for {subdomain}")
-        return
-
-    # Fetch the most recent DNS result for comparison
-    latest_dns_query = '''
-        SELECT ip, status_code FROM dns_results
-        WHERE subdomain_id = %s
-        ORDER BY timestamp DESC
-        LIMIT 1
-    '''
-    latest_dns = execute_db_query(latest_dns_query, (subdomain_id,), fetch_one=True)
-
-    # Compare new data with the most recent result
-    if latest_dns and latest_dns == (ip, status_code):
-        print(f"No new DNS data for {subdomain}. Skipping insertion.")
-        return
-
-    # Insert new DNS result
-    insert_query = '''
-        INSERT INTO dns_results (subdomain_id, subdomain, ip, status_code, timestamp)
-        VALUES (%s, %s, %s, %s, %s)
-    '''
-    execute_db_query(insert_query, (subdomain_id, subdomain, ip, status_code, timestamp), commit=True)
-    print(f"New DNS data inserted for {subdomain}.")
 
 @ray.remote
 def process_and_insert_subdomain(user_id, subdomain):
@@ -159,3 +123,42 @@ def insert_subdomain_results(hunter_id, domain, subdomains):
             execute_db_query("INSERT INTO user_subdomain (user_id, subdomain_id) VALUES (%s, %s) ON CONFLICT DO NOTHING", (user_id, subdomain_id), commit=True)
         else:
             print(f"Failed to insert subdomain: {subdomain}")
+
+# DNS WORKER
+def insert_dns_data(dns_data, user_id):
+    subdomain = dns_data['host']
+    ip = dns_data.get('a', [None])[0]  # Taking the first IP address, if available
+    status_code = dns_data['status_code']
+    timestamp = dns_data['timestamp']
+
+    # Fetch subdomain_id
+    subdomain_id_query = "SELECT subdomain_id FROM subdomains WHERE subdomain = %s"
+    subdomain_id = execute_db_query(subdomain_id_query, (subdomain,), fetch_one=True)
+
+    if subdomain_id is None:
+        print(f"Subdomain ID not found for {subdomain}")
+        return
+
+    # Fetch the most recent DNS result for comparison
+    latest_dns_query = '''
+        SELECT ip, status_code FROM dns_results
+        WHERE subdomain_id = %s
+        ORDER BY timestamp DESC
+        LIMIT 1
+    '''
+    latest_dns = execute_db_query(latest_dns_query, (subdomain_id,), fetch_one=True)
+
+    # Compare new data with the most recent result
+    if latest_dns and latest_dns == (ip, status_code):
+        print(f"No new DNS data for {subdomain}. Skipping insertion.")
+        return
+
+    # Insert new DNS result
+    insert_query = '''
+        INSERT INTO dns_results (subdomain_id, subdomain, ip, status_code, timestamp)
+        VALUES (%s, %s, %s, %s, %s)
+    '''
+    execute_db_query(insert_query, (subdomain_id, subdomain, ip, status_code, timestamp), commit=True)
+    print(f"New DNS data inserted for {subdomain}.")
+
+
