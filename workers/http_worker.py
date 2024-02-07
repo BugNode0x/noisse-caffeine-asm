@@ -9,15 +9,13 @@ from db_processor import insert_http_data
 from base_worker import BaseWorker
 
 class HTTPWorker(BaseWorker):
-    def process_task(self, task_data):
-        _, task = task_data
+    def process_task(self, task):
         subdomain = task['subdomain']
         root_domain = task['root_domain']
         user_id = task['user_id']
         
-        
-        dnsx_path = os.path.expanduser('~/go/bin/httpx')
-        httpx_cmd = [dnsx_path, '-silent', '-tech-detect', '-json']
+        httpx_path = os.path.expanduser('~/go/bin/httpx')
+        httpx_cmd = [httpx_path, '-silent', '-tech-detect', '-json']
         try:
             process = subprocess.Popen(httpx_cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, stdin=subprocess.PIPE)
             stdout, _ = process.communicate(input=subdomain.encode())
@@ -40,13 +38,14 @@ class HTTPWorker(BaseWorker):
 
         except Exception as e:
             print(f"Error processing HTTP for {subdomain}: {e}")
-            # Optionally send a Slack notification about the error
 
     def run(self):
         while True:
-            task_data = self.fetch_task()  # No need to pass queue_name
+            task_data = self.fetch_task()
             if task_data:
-                self.process_task(task_data)
+                queue_name, task_json = task_data
+                if task_json:  # Check if task_json is not None
+                    self.process_task(task_json)
 
 if __name__ == "__main__":
     worker = HTTPWorker(queue_names=['http_queue'])
