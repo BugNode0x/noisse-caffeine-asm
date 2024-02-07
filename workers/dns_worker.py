@@ -5,7 +5,7 @@ from pathlib import Path
 import os
 parent_dir = Path(__file__).resolve().parent.parent
 sys.path.append(str(parent_dir))
-# from db_processor import insert_dns_data, get_user_id_from_hunter_id
+from db_processor import insert_dns_data, get_user_id_from_hunter_id
 from base_worker import BaseWorker
 
 class DNSWorker(BaseWorker):
@@ -32,15 +32,13 @@ class DNSWorker(BaseWorker):
                 raise Exception(f"dnsx failed with exit code {process.returncode}")
 
             dns_data = json.loads(stdout.decode())
-            print(dns_data)  # Display the output of the command
+            print(dns_data)
 
-            # Comment out the database insertion and Slack notification
-            # insert_dns_data(dns_data, user_id)  # Implement this in db_processor.py
-            # self.send_slack_notification(user_id, f"Processed DNS for {subdomain} successfully.")
+            insert_dns_data(dns_data, user_id)  # Implement this in db_processor.py
+            self.send_slack_notification(user_id, f"Processed DNS for {subdomain} successfully.")
         except Exception as e:
             print(f"Error processing DNS for {subdomain}: {e}")
-            # Comment out the Slack notification for errors
-            # self.send_slack_notification(user_id, f"Error processing DNS for {subdomain}: {e}")
+            elf.send_slack_notification(user_id, f"Error processing DNS for {subdomain}: {e}")
 
     def run(self):
         while True:

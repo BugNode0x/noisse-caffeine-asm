@@ -578,3 +578,28 @@ Press CTRL+C to quit
  * Debugger is active!
  * Debugger PIN: 116-874-671
 127.0.0.1 - - [07/Feb/2024 17:42:19] "POST /monitor-domain HTTP/1.0" 200 -
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/dns_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 116-874-671
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/dns_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 116-874-671
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/dns_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 116-874-671
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/dns_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 116-874-671
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/dns_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 116-874-671
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/db_processor.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 116-874-671
+127.0.0.1 - - [07/Feb/2024 18:04:26] "POST /monitor-domain HTTP/1.0" 200 -
