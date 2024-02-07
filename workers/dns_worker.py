@@ -40,7 +40,8 @@ class DNSWorker(BaseWorker):
             print(f"Error processing DNS for {subdomain}: {e}")
             self.send_slack_notification(user_id, f"Error processing DNS for {subdomain}: {e}")
 
-        http_task = json.dumps({'subdomain': subdomain, 'root_domain': root_domain, 'user_id': user_id})
+        resolved_subdomain = dns_data['host']
+        http_task = json.dumps({'subdomain': resolved_subdomain, 'root_domain': root_domain, 'user_id': user_id})
         self.redis_client.rpush('http_queue', http_task)
         print(f"Pushed to http_queue: {http_task}")
 

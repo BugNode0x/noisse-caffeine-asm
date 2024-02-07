@@ -763,3 +763,64 @@ Press CTRL+C to quit
  * Restarting with stat
  * Debugger is active!
  * Debugger PIN: 116-874-671
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/dns_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 116-874-671
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/dns_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 116-874-671
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/http_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 116-874-671
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/http_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 116-874-671
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/http_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 116-874-671
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/http_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 116-874-671
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/http_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 116-874-671
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/http_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 116-874-671
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/http_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 116-874-671
+127.0.0.1 - - [07/Feb/2024 21:21:46] "HEAD /Core/Skin/Login.aspx HTTP/1.0" 404 -
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/http_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 116-874-671
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/http_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 116-874-671
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/http_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 116-874-671
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/http_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 116-874-671
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/http_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 116-874-671
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/http_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 116-874-671
