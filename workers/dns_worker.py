@@ -46,7 +46,10 @@ class DNSWorker(BaseWorker):
         while True:
             task_data = self.fetch_task()  # No argument is passed
             if task_data:
-                self.process_task(task_data)
+                _, task_json = task_data
+                if task_json is not None:  # Check if task_json is not None
+                    self.process_task(task_data)
+
 
 if __name__ == "__main__":
     worker = DNSWorker(queue_names=['dns_queue'])
