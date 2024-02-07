@@ -139,17 +139,14 @@ def insert_dns_data(dns_data, user_id):
         print(f"Subdomain ID not found for {subdomain}")
         return
 
-    # Fetch the most recent DNS result for comparison
-    latest_dns_query = '''
-        SELECT ip, status_code FROM dns_results
-        WHERE subdomain_id = %s
-        ORDER BY timestamp DESC
-        LIMIT 1
+    # Check for an exact match in dns_results
+    exact_match_query = '''
+        SELECT COUNT(*) FROM dns_results
+        WHERE subdomain_id = %s AND ip = %s AND status_code = %s
     '''
-    latest_dns = execute_db_query(latest_dns_query, (subdomain_id,), fetch_one=True)
+    exact_match_count = execute_db_query(exact_match_query, (subdomain_id, ip, status_code), fetch_one=True)
 
-    # Compare new data with the most recent result
-    if latest_dns and latest_dns == (ip, status_code):
+    if exact_match_count and exact_match_count[0] > 0:
         print(f"No new DNS data for {subdomain}. Skipping insertion.")
         return
 
@@ -160,5 +157,3 @@ def insert_dns_data(dns_data, user_id):
     '''
     execute_db_query(insert_query, (subdomain_id, subdomain, ip, status_code, timestamp), commit=True)
     print(f"New DNS data inserted for {subdomain}.")
-
-

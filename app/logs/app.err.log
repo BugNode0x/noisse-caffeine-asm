@@ -643,3 +643,37 @@ Press CTRL+C to quit
  * Restarting with stat
  * Debugger is active!
  * Debugger PIN: 116-874-671
+127.0.0.1 - - [07/Feb/2024 19:10:16] "GET / HTTP/1.0" 404 -
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/db_processor.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 116-874-671
+127.0.0.1 - - [07/Feb/2024 19:12:29] "POST /monitor-domain HTTP/1.0" 200 -
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/db_processor.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 116-874-671
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/db_processor.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 116-874-671
+127.0.0.1 - - [07/Feb/2024 19:18:58] "POST /monitor-domain HTTP/1.0" 200 -
+127.0.0.1 - - [07/Feb/2024 19:23:49] "POST /monitor-domain HTTP/1.0" 200 -
+127.0.0.1 - - [07/Feb/2024 19:26:08] "POST /monitor-domain HTTP/1.0" 200 -
+127.0.0.1 - - [07/Feb/2024 19:31:51] "POST /monitor-domain HTTP/1.0" 200 -
+127.0.0.1 - - [07/Feb/2024 19:33:06] "POST /monitor-domain HTTP/1.0" 200 -
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/db_processor.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 116-874-671
+127.0.0.1 - - [07/Feb/2024 19:38:17] "POST /monitor-domain HTTP/1.0" 200 -
+127.0.0.1 - - [07/Feb/2024 19:44:16] "GET /.env HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 19:44:16] "POST / HTTP/1.0" 404 -
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/db_processor.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 116-874-671
+127.0.0.1 - - [07/Feb/2024 19:46:32] "HEAD /Core/Skin/Login.aspx HTTP/1.0" 404 -
+127.0.0.1 - - [07/Feb/2024 19:46:33] "POST /monitor-domain HTTP/1.0" 200 -
+127.0.0.1 - - [07/Feb/2024 19:49:08] "POST /monitor-domain HTTP/1.0" 200 -
+127.0.0.1 - - [07/Feb/2024 19:51:34] "POST /monitor-domain HTTP/1.0" 200 -
