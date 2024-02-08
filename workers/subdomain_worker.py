@@ -3,11 +3,9 @@ import json
 import subprocess
 import shlex
 import ray
-from pathlib import Path
-parent_dir = Path(__file__).resolve().parent.parent
-sys.path.append(str(parent_dir))
-from db_processor import insert_subdomain_results, ensure_hunter_exists, ensure_domain_exists, get_user_id_from_hunter_id
-from base_worker import BaseWorker
+from brain.db_processor import insert_subdomain_results, ensure_hunter_exists, ensure_domain_exists, get_user_id_from_hunter_id
+from brain.base_worker import BaseWorker
+
 
 class SubdomainEnumerationWorker(BaseWorker):
     def process_task(self, domain):

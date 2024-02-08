@@ -5,8 +5,8 @@ from pathlib import Path
 import os
 parent_dir = Path(__file__).resolve().parent.parent
 sys.path.append(str(parent_dir))
-from db_processor import insert_dns_data, get_user_id_from_hunter_id
-from base_worker import BaseWorker
+from brain.db_processor import insert_dns_data, get_user_id_from_hunter_id
+from brain.base_worker import BaseWorker
 
 class DNSWorker(BaseWorker):
     def process_task(self, task_data):

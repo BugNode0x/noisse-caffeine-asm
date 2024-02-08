@@ -5,8 +5,8 @@ from pathlib import Path
 parent_dir = Path(__file__).resolve().parent.parent
 sys.path.append(str(parent_dir))
 import os
-from db_processor import insert_http_data
-from base_worker import BaseWorker
+from brain.db_processor import insert_http_data
+from brain.base_worker import BaseWorker
 
 class HTTPWorker(BaseWorker):
     def process_task(self, task):

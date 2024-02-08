@@ -844,3 +844,84 @@ Press CTRL+C to quit
  * Restarting with stat
  * Debugger is active!
  * Debugger PIN: 116-874-671
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.30.94:5000
+Press CTRL+C to quit
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 126-685-212
+127.0.0.1 - - [08/Feb/2024 17:57:38] "POST /monitor-domain HTTP/1.0" 200 -
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.30.94:5000
+Press CTRL+C to quit
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 126-685-212
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.30.94:5000
+Press CTRL+C to quit
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 126-685-212
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.30.94:5000
+Press CTRL+C to quit
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 126-685-212
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.30.94:5000
+Press CTRL+C to quit
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 126-685-212
+127.0.0.1 - - [08/Feb/2024 18:08:35] "GET /.env HTTP/1.0" 404 -
+127.0.0.1 - - [08/Feb/2024 18:08:35] "POST / HTTP/1.0" 404 -
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.30.94:5000
+Press CTRL+C to quit
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 126-685-212
+127.0.0.1 - - [08/Feb/2024 18:10:32] "POST /monitor-domain HTTP/1.0" 200 -
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.30.94:5000
+Press CTRL+C to quit
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 126-685-212
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/supervisor.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 126-685-212
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/supervisor.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 126-685-212
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/supervisor.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 126-685-212
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/supervisor.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 126-685-212
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/supervisor.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 126-685-212
+127.0.0.1 - - [08/Feb/2024 18:18:00] "POST /monitor-domain HTTP/1.0" 200 -

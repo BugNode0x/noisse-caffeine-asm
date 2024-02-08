@@ -2,7 +2,7 @@ import redis
 import json
 import requests
 from config import REDIS_HOST, REDIS_PORT, REDIS_PWD
-from db_processor import get_user_webhook
+from .db_processor import get_user_webhook
 
 class BaseWorker:
     def __init__(self, queue_names=None):
