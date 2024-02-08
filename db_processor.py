@@ -3,7 +3,6 @@ import re
 import ray
 from config import POSTGRES_HOST, POSTGRES_PORT, POSTGRES_DB, POSTGRES_USER, POSTGRES_PASSWORD
 
-
 # legwork
 def is_valid_domain(domain_name):
     # Regular expression for validating a domain name
