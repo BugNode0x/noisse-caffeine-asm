@@ -126,7 +126,8 @@ def insert_subdomain_results(hunter_id, domain, subdomains):
         else:
             print(f"Failed to insert subdomain: {subdomain}")
 
-def insert_dns_data(dns_data, user_id):
+@ray.remote
+def insert_dns_data_remote(dns_data):
     subdomain = dns_data['host']
     ip = dns_data.get('a', [None])[0]  # Taking the first IP address, if available
     status_code = dns_data['status_code']
@@ -140,24 +141,24 @@ def insert_dns_data(dns_data, user_id):
         print(f"Subdomain ID not found for {subdomain}")
         return
 
-    # Check for an exact match in dns_results
-    exact_match_query = '''
+    # Check if the same subdomain with the same IP already exists
+    check_query = '''
         SELECT COUNT(*) FROM dns_results
-        WHERE subdomain_id = %s AND ip = %s AND status_code = %s
+        WHERE subdomain = %s AND ip = %s
     '''
-    exact_match_count = execute_db_query(exact_match_query, (subdomain_id, ip, status_code), fetch_one=True)
+    count = execute_db_query(check_query, (subdomain, ip), fetch_one=True)
+    
+    # Insert new DNS result only if no matching subdomain and IP are found
+    if count == 0:
+        insert_query = '''
+            INSERT INTO dns_results (subdomain_id, subdomain, ip, status_code, timestamp)
+            VALUES (%s, %s, %s, %s, %s)
+        '''
+        execute_db_query(insert_query, (subdomain_id, subdomain, ip, status_code, timestamp), commit=True)
+        print(f"New DNS data inserted for {subdomain}.")
+    else:
+        print(f"Duplicate DNS data for {subdomain} with IP {ip} not inserted.")
 
-    if exact_match_count and exact_match_count[0] > 0:
-        print(f"No new DNS data for {subdomain}. Skipping insertion.")
-        return
-
-    # Insert new DNS result
-    insert_query = '''
-        INSERT INTO dns_results (subdomain_id, subdomain, ip, status_code, timestamp)
-        VALUES (%s, %s, %s, %s, %s)
-    '''
-    execute_db_query(insert_query, (subdomain_id, subdomain, ip, status_code, timestamp), commit=True)
-    print(f"New DNS data inserted for {subdomain}.")
 
 def insert_http_data(user_id, host, root_domain, url, title, webserver, tech, status_code, content_length):
     # Fetch subdomain_id
