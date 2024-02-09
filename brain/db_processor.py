@@ -159,7 +159,7 @@ def insert_dns_data_remote(dns_data):
     else:
         print(f"Duplicate DNS data for {subdomain} with IP {ip} not inserted.")
 
-
+@ray.remote
 def insert_http_data(user_id, host, root_domain, url, title, webserver, tech, status_code, content_length):
     # Fetch subdomain_id
     subdomain_id_query = "SELECT subdomain_id FROM subdomains WHERE subdomain = %s"
@@ -172,18 +172,17 @@ def insert_http_data(user_id, host, root_domain, url, title, webserver, tech, st
     # Check for an exact match in http_results
     exact_match_query = '''
         SELECT COUNT(*) FROM http_results
-        WHERE subdomain_id = %s AND url = %s AND title = %s AND webserver = %s AND tech = %s AND status_code = %s AND content_length = %s
+        WHERE subdomain_id = %s AND url = %s AND title = %s AND webserver = %s AND tech = %s
     '''
-    exact_match_count = execute_db_query(exact_match_query, (subdomain_id, url, title, webserver, tech, status_code, content_length), fetch_one=True)
+    exact_match_count = execute_db_query(exact_match_query, (subdomain_id, url, title, webserver, tech), fetch_one=True)
 
-    if exact_match_count and exact_match_count[0] > 0:
-        print(f"No new HTTP data for {url}. Skipping insertion.")
-        return
-
-    # Insert new HTTP result
-    insert_query = '''
-        INSERT INTO http_results (subdomain_id, url, title, webserver, tech, status_code, content_length)
-        VALUES (%s, %s, %s, %s, %s, %s, %s)
-    '''
-    execute_db_query(insert_query, (subdomain_id, url, title, webserver, tech, status_code, content_length), commit=True)
-    print(f"New HTTP data inserted for {url}.")
+    # Insert new HTTP result if no exact match found
+    if exact_match_count == 0:
+        insert_query = '''
+            INSERT INTO http_results (subdomain_id, url, title, webserver, tech, status_code, content_length)
+            VALUES (%s, %s, %s, %s, %s, %s, %s)
+        '''
+        execute_db_query(insert_query, (subdomain_id, url, title, webserver, tech, status_code, content_length), commit=True)
+        print(f"New HTTP data inserted for {url}.")
+    else:
+        print(f"Duplicate HTTP data for {url} not inserted.")

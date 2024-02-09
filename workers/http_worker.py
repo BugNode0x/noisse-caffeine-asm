@@ -1,12 +1,12 @@
 import sys
 import subprocess
 import json
-from pathlib import Path
-parent_dir = Path(__file__).resolve().parent.parent
-sys.path.append(str(parent_dir))
 import os
+import ray
 from brain.db_processor import insert_http_data
 from brain.base_worker import BaseWorker
+
+ray.init()
 
 class HTTPWorker(BaseWorker):
     def process_task(self, task):
@@ -34,7 +34,7 @@ class HTTPWorker(BaseWorker):
             content_length = http_data.get('content_length', 0)
 
             # Call function to insert data into the database
-            insert_http_data(user_id, subdomain, root_domain, url, title, webserver, tech, status_code, content_length)
+            insert_future = insert_http_data.remote(user_id, subdomain, root_domain, url, title, webserver, tech, status_code, content_length)
 
         except Exception as e:
             print(f"Error processing HTTP for {subdomain}: {e}")
