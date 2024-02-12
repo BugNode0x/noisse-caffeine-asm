@@ -23,6 +23,7 @@ class ScreenshotWorker(BaseWorker):
         user_id = task['user_id']
         
         subdomain = urlparse(url).netloc
+        print(subdomain)
 
         screenshot_filename = url.replace("://", "_") + ".png"
         screenshot_path = os.path.join('/home/ubuntu/asm/dev/noisse-caffeine-asm/temp-shots', screenshot_filename)
@@ -39,9 +40,10 @@ class ScreenshotWorker(BaseWorker):
 
             base64_screenshot = self.encode_image_to_base64(screenshot_path)
 
-            curl_cmd = ['curl', '-X', 'GET', '-H', 'Accept: */*', '-H', 'Accept-Language: en', '-H', 'User-Agent: Mozilla/5.0 ...', url]
+            curl_cmd = ['curl', '-X', 'GET', '-H', 'Accept: */*', '-H', 'Accept-Language: en', '-H', 'User-Agent: Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36 Edg/88.0.705.81', url]
             curl_process = subprocess.Popen(curl_cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-            dom_data, _ = curl_process.communicate()
+            dom_data_bytes, _ = curl_process.communicate()
+            dom_data = dom_data_bytes.decode('utf-8')  # Decode bytes to string
 
             if curl_process.returncode != 0:
                 raise Exception(f"Curl failed with exit code {curl_process.returncode}")

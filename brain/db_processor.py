@@ -33,14 +33,15 @@ def execute_db_query(query, params, fetch_one=False, commit=False):
             conn.commit()
         if fetch_one:
             result = cur.fetchone()
-            return result[0] if result else None
+            return result[0] if result else None  # Return None if no result
         return None
     except (Exception, psycopg2.DatabaseError) as error:
         print(f"Database query error: {error}")
-        return None
+        return None  # Return None in case of an error
     finally:
         if conn is not None:
             conn.close()
+
 
 def ensure_hunter_exists(hunter_id):
     existing_hunter_id = get_hunter_id(hunter_id)
@@ -208,7 +209,7 @@ def insert_screenshot_data(subdomain, url, base64_screenshot, dom_data):
         # Only insert if no existing record is found
         insert_query = '''
             INSERT INTO screenshot_results (subdomain_id, url, screenshot, dom)
-            VALUES (%s, %s, %s, %s, %s)
+            VALUES (%s, %s, %s, %s)
         '''
         execute_db_query(insert_query, (subdomain_id, url, base64_screenshot, dom_data), commit=True)
         print(f"Inserted new screenshot data for subdomain ID {subdomain_id} and URL {url}.")
