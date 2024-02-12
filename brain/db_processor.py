@@ -31,17 +31,20 @@ def execute_db_query(query, params, fetch_one=False, commit=False):
         cur.execute(query, params)
         if commit:
             conn.commit()
+
         if fetch_one:
             result = cur.fetchone()
             return result[0] if result else None  # Return None if no result
-        return None
+        else:
+            # Fetch and return all results for SELECT queries
+            return cur.fetchall()
+            
     except (Exception, psycopg2.DatabaseError) as error:
         print(f"Database query error: {error}")
         return None  # Return None in case of an error
     finally:
         if conn is not None:
             conn.close()
-
 
 def ensure_hunter_exists(hunter_id):
     existing_hunter_id = get_hunter_id(hunter_id)
@@ -83,8 +86,6 @@ def get_root_domain_id(domain_name):
     query = 'SELECT domain_id FROM domains WHERE domain_name = %s'
     return execute_db_query(query, (str(domain_name),), fetch_one=True)
 
-
-# insertion and logic
 
 @ray.remote
 def process_and_insert_subdomain(user_id, subdomain):
@@ -215,3 +216,24 @@ def insert_screenshot_data(subdomain, url, base64_screenshot, dom_data):
         print(f"Inserted new screenshot data for subdomain ID {subdomain_id} and URL {url}.")
     else:
         print(f"Duplicate screenshot data for subdomain ID {subdomain_id} and URL {url} not inserted.")
+
+@ray.remote
+def insert_js_result(subdomain_id, js_url):
+    # Check if a record with the same subdomain_id and JS URL already exists
+    check_query = '''
+        SELECT COUNT(*) FROM js_results
+        WHERE subdomain_id = %s AND url = %s
+    '''
+    count = execute_db_query(check_query, (subdomain_id, js_url), fetch_one=True)
+
+    if count == 0:
+        # Only insert if no existing record is found
+        insert_query = '''
+            INSERT INTO js_results (subdomain_id, url)
+            VALUES (%s, %s)
+        '''
+        execute_db_query(insert_query, (subdomain_id, js_url), commit=True)
+        print(f"Inserted new JS data for subdomain ID {subdomain_id} and URL {js_url}.")
+    else:
+        print(f"Duplicate JS data for subdomain ID {subdomain_id} and URL {js_url} not inserted.")
+

@@ -1543,3 +1543,165 @@ Press CTRL+C to quit
  * Debugger PIN: 714-881-132
 127.0.0.1 - - [12/Feb/2024 02:01:48] "POST /monitor-domain HTTP/1.0" 200 -
 127.0.0.1 - - [12/Feb/2024 02:04:20] "POST /monitor-domain HTTP/1.0" 200 -
+127.0.0.1 - - [12/Feb/2024 02:55:20] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [12/Feb/2024 03:09:46] "GET /gate.php HTTP/1.0" 404 -
+127.0.0.1 - - [12/Feb/2024 03:09:46] "GET /99vt HTTP/1.0" 404 -
+127.0.0.1 - - [12/Feb/2024 03:09:46] "GET /aaaaaaaaaaaaaaaaaaaaaaaaaqr HTTP/1.0" 404 -
+127.0.0.1 - - [12/Feb/2024 03:09:46] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [12/Feb/2024 03:09:46] "GET /robots.txt HTTP/1.0" 404 -
+127.0.0.1 - - [12/Feb/2024 03:09:46] "GET /robots.txt HTTP/1.0" 404 -
+127.0.0.1 - - [12/Feb/2024 03:09:47] "GET /99vu HTTP/1.0" 404 -
+127.0.0.1 - - [12/Feb/2024 03:53:33] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [12/Feb/2024 04:45:16] "GET /.env HTTP/1.0" 404 -
+127.0.0.1 - - [12/Feb/2024 04:45:16] "POST / HTTP/1.0" 404 -
+127.0.0.1 - - [12/Feb/2024 04:57:06] "GET /.env HTTP/1.0" 404 -
+127.0.0.1 - - [12/Feb/2024 04:57:06] "POST / HTTP/1.0" 404 -
+127.0.0.1 - - [12/Feb/2024 05:12:21] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [12/Feb/2024 05:12:30] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [12/Feb/2024 05:20:10] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [12/Feb/2024 05:31:51] "GET /.env HTTP/1.0" 404 -
+127.0.0.1 - - [12/Feb/2024 05:31:52] "POST / HTTP/1.0" 404 -
+127.0.0.1 - - [12/Feb/2024 06:46:04] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [12/Feb/2024 06:56:39] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [12/Feb/2024 08:15:46] "GET /.env HTTP/1.0" 404 -
+127.0.0.1 - - [12/Feb/2024 08:15:47] "POST / HTTP/1.0" 404 -
+127.0.0.1 - - [12/Feb/2024 08:49:17] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [12/Feb/2024 08:59:14] "GET /.env HTTP/1.0" 404 -
+127.0.0.1 - - [12/Feb/2024 08:59:14] "POST / HTTP/1.0" 404 -
+127.0.0.1 - - [12/Feb/2024 09:49:13] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [12/Feb/2024 09:53:18] "OPTIONS / HTTP/1.0" 404 -
+127.0.0.1 - - [12/Feb/2024 10:15:56] "GET /.env HTTP/1.0" 404 -
+127.0.0.1 - - [12/Feb/2024 10:15:56] "POST / HTTP/1.0" 404 -
+127.0.0.1 - - [12/Feb/2024 10:57:05] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [12/Feb/2024 11:07:05] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [12/Feb/2024 11:31:13] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [12/Feb/2024 12:08:24] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [12/Feb/2024 12:25:33] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [12/Feb/2024 12:25:34] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [12/Feb/2024 12:25:34] "GET /favicon.ico HTTP/1.0" 404 -
+127.0.0.1 - - [12/Feb/2024 12:25:35] "GET /robots.txt HTTP/1.0" 404 -
+127.0.0.1 - - [12/Feb/2024 12:47:57] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [12/Feb/2024 13:17:45] "GET /.env HTTP/1.0" 404 -
+127.0.0.1 - - [12/Feb/2024 13:17:45] "POST / HTTP/1.0" 404 -
+127.0.0.1 - - [12/Feb/2024 13:20:44] "GET /.env HTTP/1.0" 404 -
+127.0.0.1 - - [12/Feb/2024 13:20:45] "POST / HTTP/1.0" 404 -
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/crawl_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/crawl_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/brain/db_processor.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/brain/db_processor.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/brain/db_processor.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/brain/db_processor.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/crawl_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/crawl_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/crawl_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+127.0.0.1 - - [12/Feb/2024 14:18:46] "GET /.env HTTP/1.0" 404 -
+127.0.0.1 - - [12/Feb/2024 14:18:47] "POST / HTTP/1.0" 404 -
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/crawl_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+127.0.0.1 - - [12/Feb/2024 14:27:16] "GET /.env HTTP/1.0" 404 -
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/crawl_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/crawl_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/crawl_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+127.0.0.1 - - [12/Feb/2024 14:30:59] "GET / HTTP/1.0" 404 -
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/crawl_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/crawl_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/crawl_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/crawl_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/crawl_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/crawl_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/crawl_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/crawl_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/crawl_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/crawl_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/crawl_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/crawl_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/crawl_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/brain/db_processor.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/brain/db_processor.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/crawl_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
