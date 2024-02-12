@@ -56,6 +56,10 @@ class ScreenshotWorker(BaseWorker):
         if base64_screenshot or dom_data:
             insert_screenshot_data.remote(subdomain, url, base64_screenshot, dom_data)
 
+        crawl_task = json.dumps({'root_domain': root_domain, 'user_id': user_id})
+        self.redis_client.rpush('crawl_queue', crawl_task)
+        print(f"Pushed to crawl_queue: {crawl_task}")
+
     def run(self):
         while True:
             task_data = self.fetch_task()

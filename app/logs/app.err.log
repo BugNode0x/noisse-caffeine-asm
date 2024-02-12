@@ -1705,3 +1705,42 @@ Press CTRL+C to quit
  * Restarting with stat
  * Debugger is active!
  * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/screenshot_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/screenshot_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/screenshot_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/screenshot_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/screenshot_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+127.0.0.1 - - [12/Feb/2024 14:56:24] "GET /aaaaaaaaaaaaaaaaaaaaaaaaaqr HTTP/1.0" 404 -
+127.0.0.1 - - [12/Feb/2024 14:56:24] "GET /robots.txt HTTP/1.0" 404 -
+127.0.0.1 - - [12/Feb/2024 14:56:24] "GET /robots.txt HTTP/1.0" 404 -
+127.0.0.1 - - [12/Feb/2024 14:56:24] "GET /99vt HTTP/1.0" 404 -
+127.0.0.1 - - [12/Feb/2024 14:56:24] "GET /gate.php HTTP/1.0" 404 -
+127.0.0.1 - - [12/Feb/2024 14:56:24] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [12/Feb/2024 14:56:24] "GET /99vu HTTP/1.0" 404 -
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/screenshot_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/screenshot_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/screenshot_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
