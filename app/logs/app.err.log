@@ -1513,3 +1513,33 @@ Press CTRL+C to quit
  * Restarting with stat
  * Debugger is active!
  * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/http_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/http_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/http_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/http_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/http_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/http_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/http_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+127.0.0.1 - - [12/Feb/2024 02:01:48] "POST /monitor-domain HTTP/1.0" 200 -
+127.0.0.1 - - [12/Feb/2024 02:04:20] "POST /monitor-domain HTTP/1.0" 200 -

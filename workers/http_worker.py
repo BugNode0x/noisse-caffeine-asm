@@ -35,6 +35,10 @@ class HTTPWorker(BaseWorker):
             # Call function to insert data into the database
             insert_future = insert_http_data.remote(user_id, subdomain, root_domain, url, title, webserver, tech, status_code, content_length)
 
+            screenshot_task = json.dumps({'url': url, 'root_domain': root_domain, 'user_id': user_id})
+            self.redis_client.rpush('screenshot_queue', screenshot_task)
+            print(f"Pushed to screenshot_queue: {screenshot_task}")
+
         except Exception as e:
             print(f"Error processing HTTP for {subdomain}: {e}")
 
