@@ -2,12 +2,39 @@ import json
 import subprocess
 import ray
 import os
+from urllib.parse import urlparse, parse_qs
 from brain.base_worker import BaseWorker
 from brain.db_processor import insert_js_result, execute_db_query
 
 ray.init()
 
 class JavaScriptGatheringWorker(BaseWorker):
+    def clean_and_deduplicate_urls(self, urls):
+        unique_urls = set()
+        seen_param_combinations = set()
+
+        for url in urls:
+            url = url.strip()
+            parsed_url = urlparse(url)
+            netloc = parsed_url.netloc
+
+            if netloc.startswith("www."):
+                netloc = netloc[4:]
+
+            path = parsed_url.path.rstrip('/') if parsed_url.path.endswith('/') else parsed_url.path
+            base_url = f"{parsed_url.scheme}://{netloc}{path}"
+
+            query_params = parse_qs(parsed_url.query)
+            param_keys = tuple(sorted(query_params.keys()))
+
+            url_identifier = (base_url, param_keys)
+
+            if url_identifier not in seen_param_combinations:
+                seen_param_combinations.add(url_identifier)
+                unique_urls.add(url)
+
+        return unique_urls
+
     def fetch_eligible_urls(self, root_domain):
         query = '''
             SELECT subdomain_id, url FROM http_results 
@@ -19,7 +46,6 @@ class JavaScriptGatheringWorker(BaseWorker):
         print(f"With like_pattern: {like_pattern}")
         print(execute_db_query(query, (like_pattern,)))
         return execute_db_query(query, (like_pattern,))
-        
 
 
     def process_url(self, subdomain_id, url):
@@ -31,7 +57,8 @@ class JavaScriptGatheringWorker(BaseWorker):
 
         if process.returncode == 0:
             js_urls = stdout.decode().splitlines()
-            for js_url in js_urls:
+            cleaned_urls = self.clean_and_deduplicate_urls(js_urls)
+            for js_url in cleaned_urls:
                 insert_future = insert_js_result.remote(subdomain_id, js_url)
 
     def process_task(self, task):
