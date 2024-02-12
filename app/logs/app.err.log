@@ -925,3 +925,509 @@ Press CTRL+C to quit
  * Debugger is active!
  * Debugger PIN: 126-685-212
 127.0.0.1 - - [08/Feb/2024 18:18:00] "POST /monitor-domain HTTP/1.0" 200 -
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.27.251:5000
+Press CTRL+C to quit
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 438-877-481
+127.0.0.1 - - [09/Feb/2024 21:55:51] "POST /monitor-domain HTTP/1.0" 200 -
+127.0.0.1 - - [09/Feb/2024 22:02:34] "POST /monitor-domain HTTP/1.0" 200 -
+127.0.0.1 - - [09/Feb/2024 22:05:29] "POST /monitor-domain HTTP/1.0" 200 -
+127.0.0.1 - - [09/Feb/2024 22:09:05] "POST /monitor-domain HTTP/1.0" 200 -
+127.0.0.1 - - [09/Feb/2024 22:12:12] "GET /dev/.git/HEAD HTTP/1.0" 404 -
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.27.251:5000
+Press CTRL+C to quit
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+127.0.0.1 - - [09/Feb/2024 22:29:08] "GET /.env HTTP/1.0" 404 -
+127.0.0.1 - - [09/Feb/2024 22:29:08] "POST / HTTP/1.0" 404 -
+127.0.0.1 - - [09/Feb/2024 22:30:06] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [09/Feb/2024 22:35:20] "GET /assets/.git/HEAD HTTP/1.0" 404 -
+127.0.0.1 - - [09/Feb/2024 22:36:41] "GET /.env HTTP/1.0" 404 -
+127.0.0.1 - - [09/Feb/2024 22:36:41] "POST / HTTP/1.0" 404 -
+127.0.0.1 - - [09/Feb/2024 23:03:07] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [09/Feb/2024 23:04:23] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [09/Feb/2024 23:04:23] "GET /cf_scripts/scripts/ajax/ckeditor/ckeditor.js HTTP/1.0" 404 -
+127.0.0.1 - - [09/Feb/2024 23:08:00] "GET /admin/.git/HEAD HTTP/1.0" 404 -
+127.0.0.1 - - [09/Feb/2024 23:16:44] "GET /.env HTTP/1.0" 404 -
+127.0.0.1 - - [09/Feb/2024 23:22:50] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [10/Feb/2024 00:05:38] "GET /.env HTTP/1.0" 404 -
+127.0.0.1 - - [10/Feb/2024 00:05:39] "POST / HTTP/1.0" 404 -
+127.0.0.1 - - [10/Feb/2024 00:06:47] "GET /api/.git/HEAD HTTP/1.0" 404 -
+127.0.0.1 - - [10/Feb/2024 00:43:50] "GET /favicon.ico HTTP/1.0" 404 -
+127.0.0.1 - - [10/Feb/2024 01:08:28] "GET /templates/.git/HEAD HTTP/1.0" 404 -
+127.0.0.1 - - [10/Feb/2024 01:14:11] "GET /core/.git/HEAD HTTP/1.0" 404 -
+127.0.0.1 - - [10/Feb/2024 01:15:50] "GET /.env HTTP/1.0" 404 -
+127.0.0.1 - - [10/Feb/2024 01:15:51] "POST / HTTP/1.0" 404 -
+127.0.0.1 - - [10/Feb/2024 01:29:29] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [10/Feb/2024 01:33:12] "GET /.env HTTP/1.0" 404 -
+127.0.0.1 - - [10/Feb/2024 01:33:12] "POST / HTTP/1.0" 404 -
+127.0.0.1 - - [10/Feb/2024 01:57:14] "GET /client/.git/HEAD HTTP/1.0" 404 -
+127.0.0.1 - - [10/Feb/2024 02:09:10] "GET /.env HTTP/1.0" 404 -
+127.0.0.1 - - [10/Feb/2024 02:09:10] "POST / HTTP/1.0" 404 -
+127.0.0.1 - - [10/Feb/2024 02:30:24] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [10/Feb/2024 03:04:39] "GET /.env HTTP/1.0" 404 -
+127.0.0.1 - - [10/Feb/2024 03:04:39] "POST / HTTP/1.0" 404 -
+127.0.0.1 - - [10/Feb/2024 03:08:23] "GET /favicon.ico HTTP/1.0" 404 -
+127.0.0.1 - - [10/Feb/2024 04:21:17] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [10/Feb/2024 04:39:04] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [10/Feb/2024 04:41:33] "GET /frontend/.git/HEAD HTTP/1.0" 404 -
+127.0.0.1 - - [10/Feb/2024 05:07:53] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [10/Feb/2024 05:24:26] "GET /.env HTTP/1.0" 404 -
+127.0.0.1 - - [10/Feb/2024 05:24:26] "POST / HTTP/1.0" 404 -
+127.0.0.1 - - [10/Feb/2024 06:19:26] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [10/Feb/2024 07:06:37] "GET /.env HTTP/1.0" 404 -
+127.0.0.1 - - [10/Feb/2024 07:06:38] "POST / HTTP/1.0" 404 -
+127.0.0.1 - - [10/Feb/2024 07:12:55] "GET /.env HTTP/1.0" 404 -
+127.0.0.1 - - [10/Feb/2024 07:12:55] "POST / HTTP/1.0" 404 -
+127.0.0.1 - - [10/Feb/2024 07:37:55] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [10/Feb/2024 07:37:59] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [10/Feb/2024 07:45:09] "POST /boaform/admin/formLogin HTTP/1.0" 404 -
+127.0.0.1 - - [10/Feb/2024 08:02:06] "GET /.env HTTP/1.0" 404 -
+127.0.0.1 - - [10/Feb/2024 08:02:06] "POST / HTTP/1.0" 404 -
+127.0.0.1 - - [10/Feb/2024 08:31:15] "GET /.env HTTP/1.0" 404 -
+127.0.0.1 - - [10/Feb/2024 08:31:17] "POST / HTTP/1.0" 404 -
+127.0.0.1 - - [10/Feb/2024 08:51:53] "GET /.env HTTP/1.0" 404 -
+127.0.0.1 - - [10/Feb/2024 09:49:34] "GET /test/.git/HEAD HTTP/1.0" 404 -
+127.0.0.1 - - [10/Feb/2024 09:52:49] "GET /.env HTTP/1.0" 404 -
+127.0.0.1 - - [10/Feb/2024 09:52:49] "POST / HTTP/1.0" 404 -
+127.0.0.1 - - [10/Feb/2024 10:01:10] "GET /.env HTTP/1.0" 404 -
+127.0.0.1 - - [10/Feb/2024 10:01:10] "POST / HTTP/1.0" 404 -
+127.0.0.1 - - [10/Feb/2024 10:50:00] "GET /app/.git/HEAD HTTP/1.0" 404 -
+127.0.0.1 - - [10/Feb/2024 11:32:18] "GET /.env HTTP/1.0" 404 -
+127.0.0.1 - - [10/Feb/2024 11:32:19] "POST / HTTP/1.0" 404 -
+127.0.0.1 - - [10/Feb/2024 11:48:30] "GET /.env HTTP/1.0" 404 -
+127.0.0.1 - - [10/Feb/2024 11:48:30] "POST / HTTP/1.0" 404 -
+127.0.0.1 - - [10/Feb/2024 12:24:16] "GET /.env HTTP/1.0" 404 -
+127.0.0.1 - - [10/Feb/2024 12:24:16] "POST / HTTP/1.0" 404 -
+127.0.0.1 - - [10/Feb/2024 12:31:40] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [10/Feb/2024 12:55:02] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [10/Feb/2024 12:55:04] "POST /HNAP1/ HTTP/1.0" 404 -
+127.0.0.1 - - [10/Feb/2024 14:09:33] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [10/Feb/2024 15:08:41] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [10/Feb/2024 15:08:54] "GET /.env HTTP/1.0" 404 -
+127.0.0.1 - - [10/Feb/2024 15:08:54] "POST / HTTP/1.0" 404 -
+127.0.0.1 - - [10/Feb/2024 15:43:53] "GET /.env HTTP/1.0" 404 -
+127.0.0.1 - - [10/Feb/2024 15:43:54] "POST / HTTP/1.0" 404 -
+127.0.0.1 - - [10/Feb/2024 16:32:37] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [10/Feb/2024 16:55:12] "GET /ReportServer HTTP/1.0" 404 -
+127.0.0.1 - - [10/Feb/2024 17:01:43] "GET /.env HTTP/1.0" 404 -
+127.0.0.1 - - [10/Feb/2024 17:01:43] "POST / HTTP/1.0" 404 -
+127.0.0.1 - - [10/Feb/2024 17:22:49] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [10/Feb/2024 17:23:11] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [10/Feb/2024 17:23:12] "GET /Public/home/js/check.js HTTP/1.0" 404 -
+127.0.0.1 - - [10/Feb/2024 17:23:12] "GET /static/admin/javascript/hetong.js HTTP/1.0" 404 -
+127.0.0.1 - - [10/Feb/2024 17:40:19] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [10/Feb/2024 18:15:17] "GET /manager/text/list HTTP/1.0" 404 -
+127.0.0.1 - - [10/Feb/2024 19:10:20] "GET /.env HTTP/1.0" 404 -
+127.0.0.1 - - [10/Feb/2024 19:10:21] "POST / HTTP/1.0" 404 -
+127.0.0.1 - - [10/Feb/2024 19:14:21] "GET /.env HTTP/1.0" 404 -
+127.0.0.1 - - [10/Feb/2024 19:14:21] "POST / HTTP/1.0" 404 -
+127.0.0.1 - - [10/Feb/2024 19:47:57] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [10/Feb/2024 20:10:33] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [10/Feb/2024 20:16:45] "GET /actuator/health HTTP/1.0" 404 -
+127.0.0.1 - - [10/Feb/2024 21:03:38] "GET /.env HTTP/1.0" 404 -
+127.0.0.1 - - [10/Feb/2024 21:03:38] "POST / HTTP/1.0" 404 -
+127.0.0.1 - - [10/Feb/2024 21:19:17] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [10/Feb/2024 21:44:34] "GET /.git/HEAD HTTP/1.0" 404 -
+127.0.0.1 - - [10/Feb/2024 22:45:03] "GET /.env HTTP/1.0" 404 -
+127.0.0.1 - - [10/Feb/2024 22:45:03] "POST / HTTP/1.0" 404 -
+127.0.0.1 - - [10/Feb/2024 23:42:30] "GET /.env HTTP/1.0" 404 -
+127.0.0.1 - - [10/Feb/2024 23:42:30] "POST / HTTP/1.0" 404 -
+127.0.0.1 - - [10/Feb/2024 23:50:48] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [10/Feb/2024 23:56:03] "GET /.env HTTP/1.0" 404 -
+127.0.0.1 - - [10/Feb/2024 23:56:04] "POST / HTTP/1.0" 404 -
+127.0.0.1 - - [11/Feb/2024 00:31:58] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [11/Feb/2024 00:32:06] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [11/Feb/2024 00:42:24] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [11/Feb/2024 01:14:25] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [11/Feb/2024 01:43:16] "GET /.env HTTP/1.0" 404 -
+127.0.0.1 - - [11/Feb/2024 01:43:18] "POST / HTTP/1.0" 404 -
+127.0.0.1 - - [11/Feb/2024 02:28:51] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [11/Feb/2024 02:53:07] "GET /.env HTTP/1.0" 404 -
+127.0.0.1 - - [11/Feb/2024 02:53:07] "POST / HTTP/1.0" 404 -
+127.0.0.1 - - [11/Feb/2024 03:04:09] "GET /.env HTTP/1.0" 404 -
+127.0.0.1 - - [11/Feb/2024 03:04:12] "POST / HTTP/1.0" 404 -
+127.0.0.1 - - [11/Feb/2024 03:29:58] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [11/Feb/2024 03:33:22] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [11/Feb/2024 04:02:20] "GET /.env HTTP/1.0" 404 -
+127.0.0.1 - - [11/Feb/2024 04:02:20] "POST / HTTP/1.0" 404 -
+127.0.0.1 - - [11/Feb/2024 04:19:40] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [11/Feb/2024 04:34:17] "GET /.env HTTP/1.0" 404 -
+127.0.0.1 - - [11/Feb/2024 04:34:17] "POST / HTTP/1.0" 404 -
+127.0.0.1 - - [11/Feb/2024 04:40:10] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [11/Feb/2024 04:40:14] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [11/Feb/2024 04:54:48] "GET /.env HTTP/1.0" 404 -
+127.0.0.1 - - [11/Feb/2024 04:54:48] "POST / HTTP/1.0" 404 -
+127.0.0.1 - - [11/Feb/2024 05:33:09] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [11/Feb/2024 05:38:00] "GET /.env HTTP/1.0" 404 -
+127.0.0.1 - - [11/Feb/2024 05:38:01] "POST / HTTP/1.0" 404 -
+127.0.0.1 - - [11/Feb/2024 05:58:08] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [11/Feb/2024 06:08:14] "GET /.env HTTP/1.0" 404 -
+127.0.0.1 - - [11/Feb/2024 06:08:14] "POST / HTTP/1.0" 404 -
+127.0.0.1 - - [11/Feb/2024 06:21:29] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [11/Feb/2024 06:23:12] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [11/Feb/2024 07:15:01] "GET /.env HTTP/1.0" 404 -
+127.0.0.1 - - [11/Feb/2024 07:15:01] "POST / HTTP/1.0" 404 -
+127.0.0.1 - - [11/Feb/2024 07:29:38] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [11/Feb/2024 08:20:32] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [11/Feb/2024 08:23:18] "GET /api/settings HTTP/1.0" 404 -
+127.0.0.1 - - [11/Feb/2024 08:26:49] "GET /.env HTTP/1.0" 404 -
+127.0.0.1 - - [11/Feb/2024 08:26:49] "POST / HTTP/1.0" 404 -
+127.0.0.1 - - [11/Feb/2024 08:29:33] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [11/Feb/2024 08:29:33] "GET /form.html HTTP/1.0" 404 -
+127.0.0.1 - - [11/Feb/2024 08:29:34] "GET /upl.php HTTP/1.0" 404 -
+127.0.0.1 - - [11/Feb/2024 08:29:35] "GET /geoip/ HTTP/1.0" 404 -
+127.0.0.1 - - [11/Feb/2024 08:29:35] "GET /favicon.ico HTTP/1.0" 404 -
+127.0.0.1 - - [11/Feb/2024 08:29:36] "GET /1.php HTTP/1.0" 404 -
+127.0.0.1 - - [11/Feb/2024 08:29:36] "GET /bundle.js HTTP/1.0" 404 -
+127.0.0.1 - - [11/Feb/2024 08:29:37] "GET /files/ HTTP/1.0" 404 -
+127.0.0.1 - - [11/Feb/2024 08:29:37] "GET /systembc/password.php HTTP/1.0" 404 -
+127.0.0.1 - - [11/Feb/2024 08:29:38] "GET /password.php HTTP/1.0" 404 -
+127.0.0.1 - - [11/Feb/2024 08:29:38] "GET /info.php HTTP/1.0" 404 -
+127.0.0.1 - - [11/Feb/2024 09:19:45] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [11/Feb/2024 09:31:34] "GET /.env HTTP/1.0" 404 -
+127.0.0.1 - - [11/Feb/2024 09:31:34] "POST / HTTP/1.0" 404 -
+127.0.0.1 - - [11/Feb/2024 11:04:56] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [11/Feb/2024 11:05:56] "GET /webui/ HTTP/1.0" 404 -
+127.0.0.1 - - [11/Feb/2024 11:07:40] "GET /geoserver/web/ HTTP/1.0" 404 -
+127.0.0.1 - - [11/Feb/2024 11:11:07] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [11/Feb/2024 11:33:35] "GET /.env HTTP/1.0" 404 -
+127.0.0.1 - - [11/Feb/2024 11:33:35] "POST / HTTP/1.0" 404 -
+127.0.0.1 - - [11/Feb/2024 11:52:11] "GET /.env HTTP/1.0" 404 -
+127.0.0.1 - - [11/Feb/2024 11:52:12] "POST / HTTP/1.0" 404 -
+127.0.0.1 - - [11/Feb/2024 12:19:23] "GET /manager/html HTTP/1.0" 404 -
+127.0.0.1 - - [11/Feb/2024 12:35:37] "GET /.env HTTP/1.0" 404 -
+127.0.0.1 - - [11/Feb/2024 12:35:38] "POST / HTTP/1.0" 404 -
+127.0.0.1 - - [11/Feb/2024 12:48:36] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [11/Feb/2024 13:21:24] "GET /.env HTTP/1.0" 404 -
+127.0.0.1 - - [11/Feb/2024 13:21:25] "POST / HTTP/1.0" 404 -
+127.0.0.1 - - [11/Feb/2024 13:37:59] "GET /.env HTTP/1.0" 404 -
+127.0.0.1 - - [11/Feb/2024 13:37:59] "POST / HTTP/1.0" 404 -
+127.0.0.1 - - [11/Feb/2024 14:34:38] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [11/Feb/2024 14:36:54] "GET /.env HTTP/1.0" 404 -
+127.0.0.1 - - [11/Feb/2024 14:36:54] "POST / HTTP/1.0" 404 -
+127.0.0.1 - - [11/Feb/2024 16:02:13] "GET /.env HTTP/1.0" 404 -
+127.0.0.1 - - [11/Feb/2024 16:02:13] "POST / HTTP/1.0" 404 -
+127.0.0.1 - - [11/Feb/2024 16:06:46] "GET /.env HTTP/1.0" 404 -
+127.0.0.1 - - [11/Feb/2024 16:06:47] "POST / HTTP/1.0" 404 -
+127.0.0.1 - - [11/Feb/2024 16:31:00] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [11/Feb/2024 16:44:11] "GET /.env HTTP/1.0" 404 -
+127.0.0.1 - - [11/Feb/2024 16:44:11] "POST / HTTP/1.0" 404 -
+127.0.0.1 - - [11/Feb/2024 17:09:11] "GET /gate.php HTTP/1.0" 404 -
+127.0.0.1 - - [11/Feb/2024 17:09:11] "GET /aaaaaaaaaaaaaaaaaaaaaaaaaqr HTTP/1.0" 404 -
+127.0.0.1 - - [11/Feb/2024 17:09:11] "GET /robots.txt HTTP/1.0" 404 -
+127.0.0.1 - - [11/Feb/2024 17:09:11] "GET /99vt HTTP/1.0" 404 -
+127.0.0.1 - - [11/Feb/2024 17:09:11] "GET /robots.txt HTTP/1.0" 404 -
+127.0.0.1 - - [11/Feb/2024 17:09:11] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [11/Feb/2024 17:09:11] "GET /99vu HTTP/1.0" 404 -
+127.0.0.1 - - [11/Feb/2024 17:20:54] "GET /Temporary_Listen_Addresses HTTP/1.0" 404 -
+127.0.0.1 - - [11/Feb/2024 17:20:54] "GET /Pages/log/ HTTP/1.0" 404 -
+127.0.0.1 - - [11/Feb/2024 17:36:58] "POST /boaform/admin/formLogin HTTP/1.0" 404 -
+127.0.0.1 - - [11/Feb/2024 18:01:03] "GET /.git/config HTTP/1.0" 404 -
+127.0.0.1 - - [11/Feb/2024 18:01:03] "GET /.git/config HTTP/1.0" 404 -
+127.0.0.1 - - [11/Feb/2024 18:01:06] "GET /.git/config HTTP/1.0" 404 -
+127.0.0.1 - - [11/Feb/2024 18:01:06] "GET /.git/config HTTP/1.0" 404 -
+127.0.0.1 - - [11/Feb/2024 18:31:17] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [11/Feb/2024 19:11:21] "GET /.env HTTP/1.0" 404 -
+127.0.0.1 - - [11/Feb/2024 19:11:21] "POST / HTTP/1.0" 404 -
+127.0.0.1 - - [11/Feb/2024 20:18:38] "GET /.env HTTP/1.0" 404 -
+127.0.0.1 - - [11/Feb/2024 20:18:38] "POST / HTTP/1.0" 404 -
+127.0.0.1 - - [11/Feb/2024 20:34:12] "GET /.env HTTP/1.0" 404 -
+127.0.0.1 - - [11/Feb/2024 20:34:12] "POST / HTTP/1.0" 404 -
+127.0.0.1 - - [11/Feb/2024 20:44:43] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [11/Feb/2024 21:03:16] "GET /boaform/admin/formLogin?username=ec8&psd=ec8 HTTP/1.0" 404 -
+127.0.0.1 - - [11/Feb/2024 21:08:09] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [11/Feb/2024 21:49:32] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [11/Feb/2024 22:03:01] "GET /.env HTTP/1.0" 404 -
+127.0.0.1 - - [11/Feb/2024 22:03:01] "POST / HTTP/1.0" 404 -
+127.0.0.1 - - [11/Feb/2024 22:04:31] "GET /.env HTTP/1.0" 404 -
+127.0.0.1 - - [11/Feb/2024 22:04:31] "POST / HTTP/1.0" 404 -
+127.0.0.1 - - [11/Feb/2024 22:09:23] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [11/Feb/2024 22:09:23] "GET /99vt HTTP/1.0" 404 -
+127.0.0.1 - - [11/Feb/2024 22:09:23] "GET /gate.php HTTP/1.0" 404 -
+127.0.0.1 - - [11/Feb/2024 22:09:23] "GET /aaaaaaaaaaaaaaaaaaaaaaaaaqr HTTP/1.0" 404 -
+127.0.0.1 - - [11/Feb/2024 22:09:23] "GET /robots.txt HTTP/1.0" 404 -
+127.0.0.1 - - [11/Feb/2024 22:09:23] "GET /robots.txt HTTP/1.0" 404 -
+127.0.0.1 - - [11/Feb/2024 22:09:23] "GET /99vu HTTP/1.0" 404 -
+127.0.0.1 - - [11/Feb/2024 22:18:29] "GET /.env HTTP/1.0" 404 -
+127.0.0.1 - - [11/Feb/2024 22:18:29] "POST / HTTP/1.0" 404 -
+127.0.0.1 - - [11/Feb/2024 23:17:28] "GET / HTTP/1.0" 404 -
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/screenshot_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/screenshot_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+127.0.0.1 - - [11/Feb/2024 23:40:43] "GET /.env HTTP/1.0" 404 -
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/http_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/http_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/screenshot_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/screenshot_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/screenshot_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+127.0.0.1 - - [12/Feb/2024 00:09:57] "GET /.env HTTP/1.0" 404 -
+127.0.0.1 - - [12/Feb/2024 00:09:57] "POST / HTTP/1.0" 404 -
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/http_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/dns_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/subdomain_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/screenshot_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/screenshot_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/screenshot_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/screenshot_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/screenshot_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/screenshot_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/screenshot_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/screenshot_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/screenshot_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/screenshot_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/screenshot_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/screenshot_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/screenshot_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/screenshot_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/screenshot_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/screenshot_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/screenshot_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/screenshot_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/screenshot_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/screenshot_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/screenshot_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/screenshot_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/brain/db_processor.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/screenshot_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/screenshot_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/brain/db_processor.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/brain/db_processor.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/screenshot_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/screenshot_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/screenshot_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/screenshot_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+127.0.0.1 - - [12/Feb/2024 00:59:22] "GET / HTTP/1.0" 404 -
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/screenshot_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/screenshot_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/screenshot_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/screenshot_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/screenshot_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/screenshot_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+127.0.0.1 - - [12/Feb/2024 01:08:00] "GET /_profiler/phpinfo HTTP/1.0" 404 -
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/screenshot_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/screenshot_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/screenshot_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/screenshot_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/brain/db_processor.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+127.0.0.1 - - [12/Feb/2024 01:13:36] "GET /.env HTTP/1.0" 404 -
+127.0.0.1 - - [12/Feb/2024 01:13:37] "POST / HTTP/1.0" 404 -
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/brain/db_processor.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/brain/db_processor.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/brain/db_processor.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/screenshot_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/screenshot_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/screenshot_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/screenshot_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/screenshot_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/screenshot_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/screenshot_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/brain/db_processor.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/brain/db_processor.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/screenshot_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/brain/db_processor.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132

@@ -186,3 +186,31 @@ def insert_http_data(user_id, host, root_domain, url, title, webserver, tech, st
         print(f"New HTTP data inserted for {url}.")
     else:
         print(f"Duplicate HTTP data for {url} not inserted.")
+
+@ray.remote
+def insert_screenshot_data(subdomain, url, base64_screenshot, dom_data):
+    # Fetch the subdomain_id from the subdomains table
+    subdomain_id_query = "SELECT subdomain_id FROM subdomains WHERE subdomain = %s"
+    subdomain_id = execute_db_query(subdomain_id_query, (subdomain,), fetch_one=True)
+
+    if subdomain_id is None:
+        print(f"Subdomain ID not found for {subdomain}")
+        return
+
+    # Check if a record with the same subdomain_id and URL already exists
+    check_query = '''
+        SELECT COUNT(*) FROM screenshot_results
+        WHERE subdomain_id = %s AND url = %s
+    '''
+    count = execute_db_query(check_query, (subdomain_id, url), fetch_one=True)
+
+    if count == 0:
+        # Only insert if no existing record is found
+        insert_query = '''
+            INSERT INTO screenshot_results (subdomain_id, url, screenshot, dom)
+            VALUES (%s, %s, %s, %s, %s)
+        '''
+        execute_db_query(insert_query, (subdomain_id, url, base64_screenshot, dom_data), commit=True)
+        print(f"Inserted new screenshot data for subdomain ID {subdomain_id} and URL {url}.")
+    else:
+        print(f"Duplicate screenshot data for subdomain ID {subdomain_id} and URL {url} not inserted.")
