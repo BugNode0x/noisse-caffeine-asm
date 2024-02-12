@@ -23,10 +23,12 @@ class ScreenshotWorker(BaseWorker):
         user_id = task['user_id']
         
         subdomain = urlparse(url).netloc
-        print(subdomain)
 
         screenshot_filename = url.replace("://", "_") + ".png"
         screenshot_path = os.path.join('/home/ubuntu/asm/dev/noisse-caffeine-asm/temp-shots', screenshot_filename)
+
+        base64_screenshot = None  # Initialize to None
+        dom_data = None  # Initialize to None
 
         
         try:
@@ -35,25 +37,24 @@ class ScreenshotWorker(BaseWorker):
             nuclei_process = subprocess.Popen(nuclei_cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, stdin=subprocess.PIPE)
             _, _ = nuclei_process.communicate(input=url.encode())
 
-            if nuclei_process.returncode != 0:
-                raise Exception(f"Nuclei failed with exit code {nuclei_process.returncode}")
+            if nuclei_process.returncode == 0:
+                base64_screenshot = self.encode_image_to_base64(screenshot_path)
+        except Exception as e:
+            print(f"Error taking screenshot for {url}: {e}")
 
-            base64_screenshot = self.encode_image_to_base64(screenshot_path)
+        try:
 
             curl_cmd = ['curl', '-X', 'GET', '-H', 'Accept: */*', '-H', 'Accept-Language: en', '-H', 'User-Agent: Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36 Edg/88.0.705.81', url]
             curl_process = subprocess.Popen(curl_cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
             dom_data_bytes, _ = curl_process.communicate()
-            dom_data = dom_data_bytes.decode('utf-8')  # Decode bytes to string
 
-            if curl_process.returncode != 0:
-                raise Exception(f"Curl failed with exit code {curl_process.returncode}")
-
-            # Store screenshot and DOM data in the database
-            insert_screenshot_data.remote(subdomain, url, base64_screenshot, dom_data)
-
-
+            if curl_process.returncode == 0:
+                dom_data = dom_data_bytes.decode('utf-8')  # Decode bytes to string
         except Exception as e:
-            print(f"Error taking screenshot for {url}: {e}")
+            print(f"Error fetching DOM for {url}: {e}")
+
+        if base64_screenshot or dom_data:
+            insert_screenshot_data.remote(subdomain, url, base64_screenshot, dom_data)
 
     def run(self):
         while True:
