@@ -1999,3 +1999,228 @@ Press CTRL+C to quit
  * Debugger is active!
  * Debugger PIN: 714-881-132
 127.0.0.1 - - [12/Feb/2024 22:47:37] "GET /admin/config.php HTTP/1.0" 404 -
+127.0.0.1 - - [12/Feb/2024 22:54:46] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [12/Feb/2024 22:54:57] "GET /favicon-32x32.png HTTP/1.0" 404 -
+127.0.0.1 - - [12/Feb/2024 22:54:57] "GET /showLogin.cc HTTP/1.0" 404 -
+127.0.0.1 - - [12/Feb/2024 22:55:13] "GET /sugar_version.json HTTP/1.0" 404 -
+127.0.0.1 - - [12/Feb/2024 22:55:30] "GET /favicon.ico HTTP/1.0" 404 -
+127.0.0.1 - - [12/Feb/2024 22:55:47] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [12/Feb/2024 22:55:47] "GET /admin/ HTTP/1.0" 404 -
+127.0.0.1 - - [12/Feb/2024 22:55:47] "GET /sitecore/shell/sitecore.version.xml HTTP/1.0" 404 -
+127.0.0.1 - - [12/Feb/2024 22:55:58] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [12/Feb/2024 22:56:04] "GET /solr/ HTTP/1.0" 404 -
+127.0.0.1 - - [12/Feb/2024 22:56:18] "GET /api/session/properties HTTP/1.0" 404 -
+127.0.0.1 - - [12/Feb/2024 22:56:32] "GET /Telerik.Web.UI.WebResource.axd?type=rau HTTP/1.0" 404 -
+127.0.0.1 - - [12/Feb/2024 22:56:46] "GET /favicon.ico HTTP/1.0" 404 -
+127.0.0.1 - - [12/Feb/2024 22:56:46] "GET /index.jsp HTTP/1.0" 404 -
+127.0.0.1 - - [12/Feb/2024 22:57:01] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [12/Feb/2024 22:57:01] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [12/Feb/2024 22:57:01] "GET /cf_scripts/scripts/ajax/ckeditor/ckeditor.js HTTP/1.0" 404 -
+127.0.0.1 - - [12/Feb/2024 22:57:01] "GET /cgi-bin/authLogin.cgi HTTP/1.0" 404 -
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/screenshot_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/screenshot_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/screenshot_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/screenshot_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/screenshot_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/screenshot_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/screenshot_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/screenshot_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+127.0.0.1 - - [12/Feb/2024 23:24:07] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [12/Feb/2024 23:24:13] "POST /HNAP1/ HTTP/1.0" 404 -
+127.0.0.1 - - [12/Feb/2024 23:41:46] "GET /portal/redlion HTTP/1.0" 404 -
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/screenshot_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/screenshot_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+127.0.0.1 - - [12/Feb/2024 23:57:07] "GET /.env HTTP/1.0" 404 -
+127.0.0.1 - - [12/Feb/2024 23:57:07] "POST / HTTP/1.0" 404 -
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/screenshot_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/screenshot_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/screenshot_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/screenshot_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/screenshot_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+127.0.0.1 - - [12/Feb/2024 23:59:00] "GET / HTTP/1.0" 404 -
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/screenshot_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/screenshot_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/screenshot_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/screenshot_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/screenshot_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/screenshot_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/screenshot_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/screenshot_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/screenshot_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/screenshot_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/screenshot_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/screenshot_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/screenshot_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/screenshot_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/screenshot_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/screenshot_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/screenshot_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/screenshot_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/screenshot_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/screenshot_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/screenshot_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/screenshot_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/screenshot_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/screenshot_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/screenshot_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/screenshot_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/screenshot_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/screenshot_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/screenshot_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/screenshot_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/screenshot_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/screenshot_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/screenshot_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/screenshot_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/screenshot_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+127.0.0.1 - - [13/Feb/2024 00:44:29] "GET / HTTP/1.0" 404 -

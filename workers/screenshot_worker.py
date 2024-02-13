@@ -4,6 +4,7 @@ import os
 import ray
 import base64
 import boto3
+from datetime import datetime
 from urllib.parse import urlparse
 from brain.base_worker import BaseWorker
 from brain.db_processor import insert_screenshot_data
@@ -12,14 +13,24 @@ ray.init()
 
 
 class ScreenshotWorker(BaseWorker):
-    def upload_to_s3(self, filepath, bucket_name, object_name):
+    bucket_name = 'noisse-shots'
+
+    def upload_to_s3(self, filepath, object_name):
         s3_client = boto3.client('s3')
         try:
-            s3_client.upload_file(filepath, bucket_name, object_name)
+            s3_client.upload_file(filepath, self.bucket_name, object_name)
         except Exception as e:
             print(f"Error uploading file to S3: {e}")
             return False
-        return True
+        else:
+            os.remove(filepath)  # Remove file only after successful upload
+            return True
+
+
+    def generate_timestamped_filename(self, url):
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        return url.replace("://", "_") + f"_{timestamp}.png"
+
 
     def process_task(self, task):
         url = task['url']
@@ -27,10 +38,13 @@ class ScreenshotWorker(BaseWorker):
         user_id = task['user_id']
         subdomain = urlparse(url).netloc
 
+        timestamped_filename = self.generate_timestamped_filename(url)
+
         dom_data = None
+        s3_url = None
 
         # Construct the screenshot filename and path
-        screenshot_filename = url.replace("://", "_") + ".png"
+        screenshot_filename = self.generate_timestamped_filename(url)
         screenshot_path = os.path.join('/home/ubuntu/asm/dev/noisse-caffeine-asm/temp-shots', screenshot_filename)
 
         
@@ -41,15 +55,26 @@ class ScreenshotWorker(BaseWorker):
             _, _ = nuclei_process.communicate(input=url.encode())
 
             if nuclei_process.returncode == 0:
-                bucket_name = 'noisse-shots'
-                object_name = os.path.basename(screenshot_path)
-                upload_success = self.upload_to_s3(screenshot_path, bucket_name, object_name)
-                s3_url = f"s3://{bucket_name}/{object_name}" if upload_success else None
+                # Assuming original screenshot is saved as 'http_www.vulnweb.com.png'
+                original_screenshot_path = os.path.join('/home/ubuntu/asm/dev/noisse-caffeine-asm/temp-shots', url.replace("://", "_") + ".png")
 
-                upload_success = self.upload_to_s3(screenshot_path, bucket_name, object_name)
+                if os.path.exists(original_screenshot_path):
+                    # Rename file to timestamped filename
+                    timestamped_screenshot_path = os.path.join('/home/ubuntu/asm/dev/noisse-caffeine-asm/temp-shots', timestamped_filename)
+                    os.rename(original_screenshot_path, timestamped_screenshot_path)
 
-                if not upload_success:
-                    print(f"Failed to upload screenshot: {screenshot_path}")
+                    # Upload to S3
+                    folder_name = root_domain.replace("://", "_")
+                    object_name = f"{folder_name}/{os.path.basename(timestamped_screenshot_path)}"
+                    upload_success = self.upload_to_s3(timestamped_screenshot_path, object_name)
+                    if upload_success:
+                        s3_https_base_url = "https://noisse-shots.s3.us-east-2.amazonaws.com/"
+                        s3_url = f"{s3_https_base_url}{object_name}"
+                    else:
+                        print(f"Failed to upload screenshot: {timestamped_screenshot_path}")
+                else:
+                    print(f"Original screenshot file not found: {original_screenshot_path}")
+
 
         except Exception as e:
             print(f"Error taking screenshot for {url}: {e}")
