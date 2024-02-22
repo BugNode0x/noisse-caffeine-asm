@@ -2,11 +2,11 @@ import subprocess
 import json
 import os
 import ray
+import time
 from brain.db_processor import insert_http_data
 from brain.base_worker import BaseWorker
 
-ray.init()
-
+@ray.remote
 class HTTPWorker(BaseWorker):
     def process_task(self, task):
         subdomain = task['subdomain']
@@ -55,5 +55,17 @@ class HTTPWorker(BaseWorker):
             print("Shutting down HTTPWorker gracefully...")
 
 if __name__ == "__main__":
-    worker = HTTPWorker(queue_names=['http_queue'])
-    worker.run()
+    ray.init()
+
+    num_workers = 4
+    http_workers = [HTTPWorker.remote(queue_names=['http_queue']) for _ in range(num_workers)]
+    
+    for worker in http_workers:
+        worker.run.remote()
+
+    try:
+        print("HTTP Workers have been started. Main script will now wait indefinitely.")
+        while True:
+            time.sleep(60)
+    except KeyboardInterrupt:
+        print("Shutting down HTTP Workers gracefully...")

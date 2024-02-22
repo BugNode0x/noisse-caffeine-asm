@@ -2,6 +2,7 @@ import subprocess
 import json
 import ray
 import os
+import time
 from brain.db_processor import get_user_id_from_hunter_id, insert_dns_data_remote
 from brain.base_worker import BaseWorker
 
@@ -63,3 +64,10 @@ if __name__ == "__main__":
     
     for worker in dns_workers:
         worker.run.remote()
+
+    try:
+        print("DNS Workers have been started. Main script will now wait indefinitely.")
+        while True:
+            time.sleep(60)
+    except KeyboardInterrupt:
+        print("Shutting down DNS Workers gracefully...")

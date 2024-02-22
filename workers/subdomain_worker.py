@@ -2,6 +2,7 @@ import json
 import subprocess
 import shlex
 import ray
+import time
 from brain.db_processor import insert_subdomain_results, ensure_hunter_exists, ensure_domain_exists, get_user_id_from_hunter_id
 from brain.base_worker import BaseWorker
 
@@ -72,7 +73,14 @@ if __name__ == "__main__":
     ray.init()
 
     num_workers = 4
-    workers = [SubdomainEnumerationWorker.remote(queue_names=['api_queue']) for _ in range(num_workers)]
+    subdomain_workers = [SubdomainEnumerationWorker.remote(queue_names=['api_queue']) for _ in range(num_workers)]
     
-    for worker in workers:
+    for worker in subdomain_workers:
         worker.run.remote()
+
+    try:
+        print("Subdomain Workers have been started. Main script will now wait indefinitely.")
+        while True:
+            time.sleep(60)
+    except KeyboardInterrupt:
+        print("Shutting down Subdomain Workers gracefully...")

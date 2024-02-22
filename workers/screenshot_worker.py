@@ -4,14 +4,13 @@ import os
 import ray
 import base64
 import boto3
+import time
 from datetime import datetime
 from urllib.parse import urlparse
 from brain.base_worker import BaseWorker
 from brain.db_processor import insert_screenshot_data
 
-ray.init()
-
-
+@ray.remote
 class ScreenshotWorker(BaseWorker):
     bucket_name = 'noisse-shots'
 
@@ -109,5 +108,17 @@ class ScreenshotWorker(BaseWorker):
             print("Shutting down ShotWorker gracefully...")
 
 if __name__ == "__main__":
-    worker = ScreenshotWorker(queue_names=['screenshot_queue'])
-    worker.run()
+    ray.init()
+
+    num_workers = 4
+    screenshot_workers = [ScreenshotWorker.remote(queue_names=['screenshot_queue']) for _ in range(num_workers)]
+    
+    for worker in screenshot_workers:
+        worker.run.remote()
+
+    try:
+        print("Screenshot Workers have been started. Main script will now wait indefinitely.")
+        while True:
+            time.sleep(60)
+    except KeyboardInterrupt:
+        print("Shutting down Screenshot Workers gracefully...")

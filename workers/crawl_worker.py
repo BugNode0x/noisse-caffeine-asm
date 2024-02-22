@@ -2,12 +2,12 @@ import json
 import subprocess
 import ray
 import os
+import time
 from urllib.parse import urlparse, parse_qs
 from brain.base_worker import BaseWorker
 from brain.db_processor import insert_js_result, execute_db_query
 
-ray.init()
-
+@ray.remote
 class JavaScriptGatheringWorker(BaseWorker):
     def clean_and_deduplicate_urls(self, urls):
         unique_urls = set()
@@ -82,5 +82,17 @@ class JavaScriptGatheringWorker(BaseWorker):
             print("Shutting down CrawlWorker gracefully...")
 
 if __name__ == "__main__":
-    worker = JavaScriptGatheringWorker(queue_names=['crawl_queue'])
-    worker.run()
+    ray.init()
+
+    num_workers = 4
+    crawl_workers = [JavaScriptGatheringWorker.remote(queue_names=['crawl_queue']) for _ in range(num_workers)]
+    
+    for worker in crawl_workers:
+        worker.run.remote()
+
+    try:
+        print("Crawl Workers have been started. Main script will now wait indefinitely.")
+        while True:
+            time.sleep(60)
+    except KeyboardInterrupt:
+        print("Shutting down Crawl Workers gracefully...")
