@@ -29,39 +29,42 @@ class SubdomainEnumerationWorker(BaseWorker):
         return subdomains
 
     def run(self):
-        while True:
-            queue_name, task_data = self.fetch_task()
-            if task_data:
-                domain = task_data.get('domain')
-                self.hunter_id = task_data.get('user_id')
-                user_id = get_user_id_from_hunter_id(self.hunter_id)
+        try:
+            while True:
+                queue_name, task_data = self.fetch_task()
+                if task_data:
+                    domain = task_data.get('domain')
+                    self.hunter_id = task_data.get('user_id')
+                    user_id = get_user_id_from_hunter_id(self.hunter_id)
 
-                # Debug print
-                print(f"Received domain: {domain}, Hunter ID: {self.hunter_id}")
-                if user_id:
-                    self.send_slack_notification(user_id, f"[!] Subdomain gathering started for {domain}.")
+                    # Debug print
+                    print(f"Received domain: {domain}, Hunter ID: {self.hunter_id}")
+                    if user_id:
+                        self.send_slack_notification(user_id, f"[!] Subdomain gathering started for {domain}.")
 
 
-                if not domain or not isinstance(domain, str):
-                    print(f"Invalid or missing domain in task data: {task_data}")
-                    continue
+                    if not domain or not isinstance(domain, str):
+                        print(f"Invalid or missing domain in task data: {task_data}")
+                        continue
 
-                # Debug print before calling ensure_domain_exists
-                print(f"Calling ensure_domain_exists with domain: {domain}, Hunter ID: {self.hunter_id}")
+                    # Debug print before calling ensure_domain_exists
+                    print(f"Calling ensure_domain_exists with domain: {domain}, Hunter ID: {self.hunter_id}")
 
-                # Ensure the hunter exists and get domain ID
-                ensure_hunter_exists(self.hunter_id)
-                domain_id = ensure_domain_exists(domain)
-                if not domain_id or not self.hunter_id:
-                    print(f"Error processing task for domain {domain} and hunter {self.hunter_id}")
-                    continue
-                
-                print(f"Processing domain: {domain} with ID: {domain_id}")
+                    # Ensure the hunter exists and get domain ID
+                    ensure_hunter_exists(self.hunter_id)
+                    domain_id = ensure_domain_exists(domain)
+                    if not domain_id or not self.hunter_id:
+                        print(f"Error processing task for domain {domain} and hunter {self.hunter_id}")
+                        continue
 
-                # Proceed to enumerate subdomains
-                subdomains = self.process_task(domain)
-                if subdomains:
-                    insert_subdomain_results(self.hunter_id, domain, subdomains)
+                    print(f"Processing domain: {domain} with ID: {domain_id}")
+
+                    # Proceed to enumerate subdomains
+                    subdomains = self.process_task(domain)
+                    if subdomains:
+                        insert_subdomain_results(self.hunter_id, domain, subdomains)
+        except KeyboardInterrupt:
+            print("Shutting down SubdomainWorker gracefully...")
                     
 
 

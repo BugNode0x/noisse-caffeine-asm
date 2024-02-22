@@ -98,12 +98,15 @@ class ScreenshotWorker(BaseWorker):
         self.send_slack_notification(user_id, f"Processed screenshot for {subdomain} successfully.")
 
     def run(self):
-        while True:
-            task_data = self.fetch_task()
-            if task_data:
-                _, task_json = task_data
-                if task_json:
-                    self.process_task(task_json)
+        try:
+            while True:
+                task_data = self.fetch_task()
+                if task_data:
+                    _, task_json = task_data
+                    if task_json:
+                        self.process_task(task_json)
+        except KeyboardInterrupt:
+            print("Shutting down ShotWorker gracefully...")
 
 if __name__ == "__main__":
     worker = ScreenshotWorker(queue_names=['screenshot_queue'])

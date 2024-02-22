@@ -46,12 +46,15 @@ class DNSWorker(BaseWorker):
             print(f"Error processing DNS for {subdomain}: {e}")
 
     def run(self):
-        while True:
-            task_data = self.fetch_task()
-            if task_data:
-                _, task_json = task_data
-                if task_json is not None:
-                    self.process_task(task_data)
+        try:
+            while True:
+                task_data = self.fetch_task()
+                if task_data:
+                    _, task_json = task_data
+                    if task_json:
+                        self.process_task(task_data)
+        except KeyboardInterrupt:
+            print("Shutting down DNSWorker gracefully...")
 
 if __name__ == "__main__":
     worker = DNSWorker(queue_names=['dns_queue'])

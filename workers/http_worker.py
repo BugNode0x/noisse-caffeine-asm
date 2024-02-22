@@ -44,12 +44,15 @@ class HTTPWorker(BaseWorker):
             print(f"Error processing HTTP for {subdomain}: {e}")
 
     def run(self):
-        while True:
-            task_data = self.fetch_task()
-            if task_data:
-                queue_name, task_json = task_data
-                if task_json:  # Check if task_json is not None
-                    self.process_task(task_json)
+        try:
+            while True:
+                task_data = self.fetch_task()
+                if task_data:
+                    queue_name, task_json = task_data
+                    if task_json:  # Check if task_json is not None
+                        self.process_task(task_json)
+        except KeyboardInterrupt:
+            print("Shutting down HTTPWorker gracefully...")
 
 if __name__ == "__main__":
     worker = HTTPWorker(queue_names=['http_queue'])

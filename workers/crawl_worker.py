@@ -71,12 +71,15 @@ class JavaScriptGatheringWorker(BaseWorker):
                 print(f"No eligible URLs found for root domain: {root_domain}")
         
     def run(self):
-        while True:
-            task_data_str = self.redis_client.blpop('crawl_queue', timeout=5)  # Timeout to cycle through queues
-            if task_data_str:
-                _, task_json_str = task_data_str
-                task = json.loads(task_json_str)
-                self.process_task(task)
+        try:
+            while True:
+                task_data_str = self.redis_client.blpop('crawl_queue', timeout=5)  # Timeout to cycle through queues
+                if task_data_str:
+                    _, task_json_str = task_data_str
+                    task = json.loads(task_json_str)
+                    self.process_task(task)
+        except KeyboardInterrupt:
+            print("Shutting down CrawlWorker gracefully...")
 
 if __name__ == "__main__":
     worker = JavaScriptGatheringWorker(queue_names=['crawl_queue'])
