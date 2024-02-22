@@ -5,7 +5,7 @@ import ray
 from brain.db_processor import insert_subdomain_results, ensure_hunter_exists, ensure_domain_exists, get_user_id_from_hunter_id
 from brain.base_worker import BaseWorker
 
-
+@ray.remote
 class SubdomainEnumerationWorker(BaseWorker):
     def process_task(self, domain):
         print(f"Running subfinder")
@@ -70,5 +70,9 @@ class SubdomainEnumerationWorker(BaseWorker):
 
 if __name__ == "__main__":
     ray.init()
-    worker = SubdomainEnumerationWorker(queue_names=['api_queue'])
-    worker.run()
+
+    num_workers = 4
+    workers = [SubdomainEnumerationWorker.remote(queue_names=['api_queue']) for _ in range(num_workers)]
+    
+    for worker in workers:
+        worker.run.remote()
