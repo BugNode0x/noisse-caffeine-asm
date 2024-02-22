@@ -21,7 +21,7 @@ def is_process_running(process):
 def main():
     # List of script names
     scripts = [
-        "workers/subdomain_worker.py", "workers/http_worker.py", "workers/dns_worker.py",
+        "workers/subdomain_worker.py", "workers/http_worker.py", "workers/dns_worker.py", "workers/screenshot_worker.py", "workers/crawl_worker.py",
     ]
 
     # Dictionary to hold script processes

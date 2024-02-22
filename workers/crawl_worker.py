@@ -42,7 +42,6 @@ class JavaScriptGatheringWorker(BaseWorker):
             AND url LIKE %s
         '''
         like_pattern = f'%.{root_domain}'
-        print(f"Executing query: {query}")
         print(f"With like_pattern: {like_pattern}")
         print(execute_db_query(query, (like_pattern,)))
         return execute_db_query(query, (like_pattern,))
@@ -70,7 +69,7 @@ class JavaScriptGatheringWorker(BaseWorker):
                     self.process_url(subdomain_id, url)
             else:
                 print(f"No eligible URLs found for root domain: {root_domain}")
-
+        
     def run(self):
         while True:
             task_data_str = self.redis_client.blpop('crawl_queue', timeout=5)  # Timeout to cycle through queues

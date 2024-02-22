@@ -4,7 +4,7 @@
 tmux new-session -d -s debuggers
 
 # Define the Python scripts to execute
-scripts=("workers/subdomain_worker.py" "workers/dns_worker.py" "workers/http_worker.py" )
+scripts=("workers/subdomain_worker.py" "workers/dns_worker.py" "workers/http_worker.py" "workers/crawl_worker.py" "workers/screenshot_worker.py" )
 # Loop through the scripts and open them in separate tmux windows
 for script in "${scripts[@]}"; do
     tmux new-window -t debuggers: -n "$script" "python3 $script"

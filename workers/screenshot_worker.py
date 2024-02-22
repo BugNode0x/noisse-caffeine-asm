@@ -95,6 +95,7 @@ class ScreenshotWorker(BaseWorker):
         crawl_task = json.dumps({'root_domain': root_domain, 'user_id': user_id})
         self.redis_client.rpush('crawl_queue', crawl_task)
         print(f"Pushed to crawl_queue: {crawl_task}")
+        self.send_slack_notification(user_id, f"Processed screenshot for {subdomain} successfully.")
 
     def run(self):
         while True:
