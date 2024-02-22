@@ -5,8 +5,7 @@ import os
 from brain.db_processor import get_user_id_from_hunter_id, insert_dns_data_remote
 from brain.base_worker import BaseWorker
 
-ray.init()
-
+@ray.remote
 class DNSWorker(BaseWorker):
     def process_task(self, task_data):
         _, task = task_data
@@ -57,5 +56,10 @@ class DNSWorker(BaseWorker):
             print("Shutting down DNSWorker gracefully...")
 
 if __name__ == "__main__":
-    worker = DNSWorker(queue_names=['dns_queue'])
-    worker.run()
+    ray.init()
+
+    num_workers = 4
+    dns_workers = [DNSWorker.remote(queue_names=['dns_queue']) for _ in range(num_workers)]
+    
+    for worker in dns_workers:
+        worker.run.remote()
