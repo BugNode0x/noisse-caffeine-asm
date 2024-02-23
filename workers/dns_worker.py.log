@@ -1,0 +1,392 @@
+2024-02-23 04:07:47,418	INFO worker.py:1724 -- Started a local Ray instance.
+Traceback (most recent call last):
+  File "/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/dns_worker.py", line 78, in <module>
+    ray.init()
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/ray/_private/client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/ray/_private/worker.py", line 1726, in init
+    connect(
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/ray/_private/worker.py", line 2342, in connect
+    worker.core_worker = ray._raylet.CoreWorker(
+KeyboardInterrupt
+Exception ignored in atexit callback: <function shutdown at 0x7f64530036d0>
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/ray/_private/client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/ray/_private/worker.py", line 1788, in shutdown
+    time.sleep(0.5)
+KeyboardInterrupt: 
+2024-02-23 04:14:13,911	INFO worker.py:1724 -- Started a local Ray instance.
+DNS Workers have been started. Main script will now wait indefinitely.
+Shutting down DNS Workers gracefully...
+Exception ignored in atexit callback: <function shutdown at 0x7f2ac20c76d0>
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/ray/_private/client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/ray/_private/worker.py", line 1788, in shutdown
+    time.sleep(0.5)
+KeyboardInterrupt: 
+2024-02-23 04:15:30,736	INFO worker.py:1724 -- Started a local Ray instance.
+DNS Workers have been started. Main script will now wait indefinitely.
+[36m(DNSWorker pid=1974952)[0m Fetched task from dns_queue: {"subdomain": "restasp.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(DNSWorker pid=1974949)[0m Fetched task from dns_queue: {"subdomain": "testap.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(DNSWorker pid=1974951)[0m Fetched task from dns_queue: {"subdomain": "antivirus1.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(DNSWorker pid=1974952)[0m {'host': 'restasp.vulnweb.com', 'ttl': 3600, 'resolver': ['8.8.4.4:53'], 'a': ['44.228.249.3'], 'all': ['restasp.vulnweb.com.\t3600\tIN\tA\t44.228.249.3', '\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 512'], 'status_code': 'NOERROR', 'timestamp': '2024-02-23T04:16:53.75854849Z'}
+[36m(DNSWorker pid=1974951)[0m {'host': 'antivirus1.vulnweb.com', 'ttl': 3600, 'resolver': ['8.8.4.4:53'], 'a': ['44.228.249.3'], 'all': ['antivirus1.vulnweb.com.\t3600\tIN\tA\t44.228.249.3', '\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 512'], 'status_code': 'NOERROR', 'timestamp': '2024-02-23T04:16:53.854913888Z'}
+[36m(DNSWorker pid=1974949)[0m {'host': 'testap.vulnweb.com', 'ttl': 3600, 'resolver': ['8.8.4.4:53'], 'a': ['44.228.249.3'], 'all': ['testap.vulnweb.com.\t3600\tIN\tA\t44.228.249.3', '\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 512'], 'status_code': 'NOERROR', 'timestamp': '2024-02-23T04:16:53.76358517Z'}
+[36m(insert_dns_data_remote pid=1974210)[0m Starting insert_dns_data_remote function.
+[36m(insert_dns_data_remote pid=1974210)[0m Processing DNS data for subdomain: antivirus1.vulnweb.com, IP: 44.228.249.3
+[36m(insert_dns_data_remote pid=1974209)[0m Processing DNS data for subdomain: restasp.vulnweb.com, IP: 44.228.249.3
+[36m(insert_dns_data_remote pid=1974219)[0m Processing DNS data for subdomain: testap.vulnweb.com, IP: 44.228.249.3
+[36m(DNSWorker pid=1974952)[0m Error processing DNS for restasp.vulnweb.com: BaseWorker.send_slack_notification() missing 1 required positional argument: 'message'
+[36m(DNSWorker pid=1974949)[0m Error processing DNS for testap.vulnweb.com: BaseWorker.send_slack_notification() missing 1 required positional argument: 'message'
+[36m(insert_dns_data_remote pid=1974209)[0m Count of existing DNS records for restasp.vulnweb.com with IP 44.228.249.3: 1
+[36m(insert_dns_data_remote pid=1974209)[0m Duplicate DNS data for restasp.vulnweb.com with IP 44.228.249.3 not inserted.
+[36m(insert_dns_data_remote pid=1974209)[0m Completed insert_dns_data_remote function.
+[36m(insert_dns_data_remote pid=1974219)[0m Count of existing DNS records for testap.vulnweb.com with IP 44.228.249.3: 1
+[36m(insert_dns_data_remote pid=1974219)[0m Duplicate DNS data for testap.vulnweb.com with IP 44.228.249.3 not inserted.
+[36m(DNSWorker pid=1974952)[0m Fetched task from dns_queue: {"subdomain": "tetphp.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(DNSWorker pid=1974953)[0m Error processing DNS for testhtml5.vulnweb.com: BaseWorker.send_slack_notification() missing 1 required positional argument: 'message'
+[36m(DNSWorker pid=1974951)[0m Fetched task from dns_queue: {"subdomain": "testaps.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(DNSWorker pid=1974949)[0m Fetched task from dns_queue: {"subdomain": "rest.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(insert_dns_data_remote pid=1974210)[0m Count of existing DNS records for antivirus1.vulnweb.com with IP 44.228.249.3: 1
+[36m(insert_dns_data_remote pid=1974210)[0m Duplicate DNS data for antivirus1.vulnweb.com with IP 44.228.249.3 not inserted.
+[36m(DNSWorker pid=1974953)[0m Fetched task from dns_queue: {"subdomain": "testaspx.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(DNSWorker pid=1974952)[0m {'host': 'tetphp.vulnweb.com', 'ttl': 3600, 'resolver': ['8.8.4.4:53'], 'a': ['44.228.249.3'], 'all': ['tetphp.vulnweb.com.\t3600\tIN\tA\t44.228.249.3', '\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 512'], 'status_code': 'NOERROR', 'timestamp': '2024-02-23T04:16:56.463876939Z'}
+[36m(insert_dns_data_remote pid=1974208)[0m Processing DNS data for subdomain: tetphp.vulnweb.com, IP: 44.228.249.3
+[36m(DNSWorker pid=1974953)[0m {'host': 'testaspx.vulnweb.com', 'ttl': 3600, 'resolver': ['8.8.4.4:53'], 'a': ['44.228.249.3'], 'all': ['testaspx.vulnweb.com.\t3600\tIN\tA\t44.228.249.3', '\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 512'], 'status_code': 'NOERROR', 'timestamp': '2024-02-23T04:16:56.603230248Z'}
+[36m(DNSWorker pid=1974951)[0m {'host': 'testaps.vulnweb.com', 'ttl': 3600, 'resolver': ['8.8.4.4:53'], 'a': ['44.228.249.3'], 'all': ['testaps.vulnweb.com.\t3600\tIN\tA\t44.228.249.3', '\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 512'], 'status_code': 'NOERROR', 'timestamp': '2024-02-23T04:16:56.577729867Z'}
+[36m(insert_dns_data_remote pid=1974210)[0m Processing DNS data for subdomain: testaps.vulnweb.com, IP: 44.228.249.3
+[36m(insert_dns_data_remote pid=1974219)[0m Processing DNS data for subdomain: testaspx.vulnweb.com, IP: 44.228.249.3
+[36m(DNSWorker pid=1974949)[0m {'host': 'rest.vulnweb.com', 'ttl': 3600, 'resolver': ['8.8.4.4:53'], 'a': ['35.81.188.86'], 'all': ['rest.vulnweb.com.\t3600\tIN\tA\t35.81.188.86', '\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 512'], 'status_code': 'NOERROR', 'timestamp': '2024-02-23T04:16:56.550648429Z'}
+[36m(insert_dns_data_remote pid=1974209)[0m Processing DNS data for subdomain: rest.vulnweb.com, IP: 35.81.188.86
+[36m(DNSWorker pid=1974952)[0m Error processing DNS for tetphp.vulnweb.com: BaseWorker.send_slack_notification() missing 1 required positional argument: 'message'
+[36m(insert_dns_data_remote pid=1974208)[0m Count of existing DNS records for tetphp.vulnweb.com with IP 44.228.249.3: 1
+[36m(insert_dns_data_remote pid=1974208)[0m Duplicate DNS data for tetphp.vulnweb.com with IP 44.228.249.3 not inserted.
+[36m(DNSWorker pid=1974953)[0m Error processing DNS for testaspx.vulnweb.com: BaseWorker.send_slack_notification() missing 1 required positional argument: 'message'
+[36m(DNSWorker pid=1974953)[0m Fetched task from dns_queue: {"subdomain": "testhtml5.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(DNSWorker pid=1974952)[0m Fetched task from dns_queue: {"subdomain": "testapsnet.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(DNSWorker pid=1974951)[0m Error processing DNS for testaps.vulnweb.com: BaseWorker.send_slack_notification() missing 1 required positional argument: 'message'
+[36m(insert_dns_data_remote pid=1974210)[0m Count of existing DNS records for testaps.vulnweb.com with IP 44.228.249.3: 1
+[36m(insert_dns_data_remote pid=1974210)[0m Duplicate DNS data for testaps.vulnweb.com with IP 44.228.249.3 not inserted.
+[36m(insert_dns_data_remote pid=1974219)[0m Count of existing DNS records for testaspx.vulnweb.com with IP 44.228.249.3: 1
+[36m(insert_dns_data_remote pid=1974219)[0m Duplicate DNS data for testaspx.vulnweb.com with IP 44.228.249.3 not inserted.
+[36m(DNSWorker pid=1974953)[0m Fetched task from dns_queue: {"subdomain": "odincovo.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(DNSWorker pid=1974951)[0m Fetched task from dns_queue: {"subdomain": "blogger.com.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(DNSWorker pid=1974949)[0m Error processing DNS for rest.vulnweb.com: BaseWorker.send_slack_notification() missing 1 required positional argument: 'message'
+[36m(insert_dns_data_remote pid=1974209)[0m Count of existing DNS records for rest.vulnweb.com with IP 35.81.188.86: 1
+[36m(insert_dns_data_remote pid=1974209)[0m Duplicate DNS data for rest.vulnweb.com with IP 35.81.188.86 not inserted.
+[36m(DNSWorker pid=1974949)[0m Fetched task from dns_queue: {"subdomain": "testphp.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(DNSWorker pid=1974952)[0m {'host': 'testapsnet.vulnweb.com', 'ttl': 3600, 'resolver': ['8.8.4.4:53'], 'a': ['44.228.249.3'], 'all': ['testapsnet.vulnweb.com.\t3600\tIN\tA\t44.228.249.3', '\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 512'], 'status_code': 'NOERROR', 'timestamp': '2024-02-23T04:16:58.894036464Z'}
+[36m(DNSWorker pid=1974953)[0m {'host': 'testhtml5.vulnweb.com', 'ttl': 3600, 'resolver': ['8.8.4.4:53'], 'a': ['44.228.249.3'], 'all': ['testhtml5.vulnweb.com.\t3600\tIN\tA\t44.228.249.3', '\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 512'], 'status_code': 'NOERROR', 'timestamp': '2024-02-23T04:16:53.944355313Z'}
+[36m(insert_dns_data_remote pid=1974209)[0m Processing DNS data for subdomain: testapsnet.vulnweb.com, IP: 44.228.249.3
+[36m(DNSWorker pid=1974953)[0m {'host': 'odincovo.vulnweb.com', 'ttl': 3600, 'resolver': ['8.8.4.4:53'], 'a': ['44.228.249.3'], 'all': ['odincovo.vulnweb.com.\t3600\tIN\tA\t44.228.249.3', '\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 512'], 'status_code': 'NOERROR', 'timestamp': '2024-02-23T04:16:59.082291193Z'}
+[36m(DNSWorker pid=1974951)[0m {'host': 'blogger.com.vulnweb.com', 'ttl': 3600, 'resolver': ['8.8.4.4:53'], 'a': ['44.228.249.3'], 'all': ['blogger.com.vulnweb.com.\t3600\tIN\tA\t44.228.249.3', '\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 512'], 'status_code': 'NOERROR', 'timestamp': '2024-02-23T04:16:59.05047418Z'}
+[36m(DNSWorker pid=1974949)[0m {'host': 'testphp.vulnweb.com', 'ttl': 2827, 'resolver': ['8.8.4.4:53'], 'a': ['44.228.249.3'], 'all': ['testphp.vulnweb.com.\t2827\tIN\tA\t44.228.249.3', '\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 512'], 'status_code': 'NOERROR', 'timestamp': '2024-02-23T04:16:59.093157667Z'}
+[36m(insert_dns_data_remote pid=1974210)[0m Processing DNS data for subdomain: odincovo.vulnweb.com, IP: 44.228.249.3
+[36m(insert_dns_data_remote pid=1974219)[0m Processing DNS data for subdomain: blogger.com.vulnweb.com, IP: 44.228.249.3
+[36m(insert_dns_data_remote pid=1974208)[0m Processing DNS data for subdomain: testphp.vulnweb.com, IP: 44.228.249.3
+[36m(DNSWorker pid=1974952)[0m Error processing DNS for testapsnet.vulnweb.com: BaseWorker.send_slack_notification() missing 1 required positional argument: 'message'
+[36m(DNSWorker pid=1974952)[0m Fetched task from dns_queue: {"subdomain": "www.testphp.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(insert_dns_data_remote pid=1974208)[0m Starting insert_dns_data_remote function.[32m [repeated 11x across cluster] (Ray deduplicates logs by default. Set RAY_DEDUP_LOGS=0 to disable log deduplication, or see https://docs.ray.io/en/master/ray-observability/ray-logging.html#log-deduplication for more options.)[0m
+[36m(insert_dns_data_remote pid=1974208)[0m Processing DNS data for subdomain: testhtml5.vulnweb.com, IP: 44.228.249.3
+[36m(insert_dns_data_remote pid=1974209)[0m Count of existing DNS records for testapsnet.vulnweb.com with IP 44.228.249.3: 1
+[36m(insert_dns_data_remote pid=1974209)[0m Duplicate DNS data for testapsnet.vulnweb.com with IP 44.228.249.3 not inserted.
+[36m(DNSWorker pid=1974951)[0m Error processing DNS for blogger.com.vulnweb.com: BaseWorker.send_slack_notification() missing 1 required positional argument: 'message'
+[36m(insert_dns_data_remote pid=1974210)[0m Count of existing DNS records for odincovo.vulnweb.com with IP 44.228.249.3: 1
+[36m(insert_dns_data_remote pid=1974210)[0m Duplicate DNS data for odincovo.vulnweb.com with IP 44.228.249.3 not inserted.
+[36m(insert_dns_data_remote pid=1974219)[0m Count of existing DNS records for blogger.com.vulnweb.com with IP 44.228.249.3: 1
+[36m(insert_dns_data_remote pid=1974219)[0m Duplicate DNS data for blogger.com.vulnweb.com with IP 44.228.249.3 not inserted.
+[36m(DNSWorker pid=1974953)[0m Error processing DNS for odincovo.vulnweb.com: BaseWorker.send_slack_notification() missing 1 required positional argument: 'message'
+[36m(insert_dns_data_remote pid=1974208)[0m Count of existing DNS records for testphp.vulnweb.com with IP 44.228.249.3: 1
+[36m(insert_dns_data_remote pid=1974208)[0m Duplicate DNS data for testphp.vulnweb.com with IP 44.228.249.3 not inserted.
+[36m(DNSWorker pid=1974949)[0m Error processing DNS for testphp.vulnweb.com: BaseWorker.send_slack_notification() missing 1 required positional argument: 'message'
+[36m(DNSWorker pid=1974953)[0m Fetched task from dns_queue: {"subdomain": "test.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(insert_dns_data_remote pid=1974208)[0m Completed insert_dns_data_remote function.[32m [repeated 11x across cluster][0m
+[36m(DNSWorker pid=1974951)[0m Fetched task from dns_queue: {"subdomain": "www.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(DNSWorker pid=1974949)[0m Fetched task from dns_queue: {"subdomain": "httptestaspnet.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(DNSWorker pid=1974953)[0m {'host': 'test.vulnweb.com', 'ttl': 3600, 'resolver': ['8.8.4.4:53'], 'a': ['44.228.249.3'], 'all': ['test.vulnweb.com.\t3600\tIN\tA\t44.228.249.3', '\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 512'], 'status_code': 'NOERROR', 'timestamp': '2024-02-23T04:17:01.486984507Z'}
+[36m(DNSWorker pid=1974951)[0m Error processing DNS for antivirus1.vulnweb.com: BaseWorker.send_slack_notification() missing 1 required positional argument: 'message'
+[36m(insert_dns_data_remote pid=1974208)[0m Count of existing DNS records for testhtml5.vulnweb.com with IP 44.228.249.3: 1
+[36m(insert_dns_data_remote pid=1974208)[0m Duplicate DNS data for testhtml5.vulnweb.com with IP 44.228.249.3 not inserted.
+[36m(DNSWorker pid=1974951)[0m {'host': 'www.vulnweb.com', 'ttl': 3600, 'resolver': ['8.8.4.4:53'], 'a': ['44.228.249.3'], 'all': ['www.vulnweb.com.\t3600\tIN\tA\t44.228.249.3', '\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 512'], 'status_code': 'NOERROR', 'timestamp': '2024-02-23T04:17:01.471367097Z'}
+[36m(DNSWorker pid=1974949)[0m {'host': 'httptestaspnet.vulnweb.com', 'ttl': 3600, 'resolver': ['8.8.4.4:53'], 'a': ['44.228.249.3'], 'all': ['httptestaspnet.vulnweb.com.\t3600\tIN\tA\t44.228.249.3', '\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 512'], 'status_code': 'NOERROR', 'timestamp': '2024-02-23T04:17:01.49884523Z'}
+[36m(insert_dns_data_remote pid=1974210)[0m Processing DNS data for subdomain: test.vulnweb.com, IP: 44.228.249.3
+[36m(insert_dns_data_remote pid=1974219)[0m Processing DNS data for subdomain: httptestaspnet.vulnweb.com, IP: 44.228.249.3
+[36m(insert_dns_data_remote pid=1974208)[0m Processing DNS data for subdomain: www.vulnweb.com, IP: 44.228.249.3
+[36m(DNSWorker pid=1974953)[0m Error processing DNS for test.vulnweb.com: BaseWorker.send_slack_notification() missing 1 required positional argument: 'message'
+[36m(DNSWorker pid=1974951)[0m Error processing DNS for www.vulnweb.com: BaseWorker.send_slack_notification() missing 1 required positional argument: 'message'
+[36m(DNSWorker pid=1974949)[0m Error processing DNS for httptestaspnet.vulnweb.com: BaseWorker.send_slack_notification() missing 1 required positional argument: 'message'
+[36m(insert_dns_data_remote pid=1974210)[0m Count of existing DNS records for test.vulnweb.com with IP 44.228.249.3: 1
+[36m(insert_dns_data_remote pid=1974210)[0m Duplicate DNS data for test.vulnweb.com with IP 44.228.249.3 not inserted.
+[36m(insert_dns_data_remote pid=1974219)[0m Count of existing DNS records for httptestaspnet.vulnweb.com with IP 44.228.249.3: 1
+[36m(insert_dns_data_remote pid=1974219)[0m Duplicate DNS data for httptestaspnet.vulnweb.com with IP 44.228.249.3 not inserted.
+[36m(insert_dns_data_remote pid=1974208)[0m Count of existing DNS records for www.vulnweb.com with IP 44.228.249.3: 1
+[36m(insert_dns_data_remote pid=1974208)[0m Duplicate DNS data for www.vulnweb.com with IP 44.228.249.3 not inserted.
+[36m(DNSWorker pid=1974951)[0m Fetched task from dns_queue: {"subdomain": "www.testasp.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(DNSWorker pid=1974953)[0m Fetched task from dns_queue: {"subdomain": "testasp.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(DNSWorker pid=1974949)[0m Fetched task from dns_queue: {"subdomain": "test.php.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(DNSWorker pid=1974952)[0m Error processing DNS for www.testphp.vulnweb.com: Expecting value: line 1 column 1 (char 0)
+[36m(DNSWorker pid=1974952)[0m Fetched task from dns_queue: {"subdomain": "testaspnet.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(DNSWorker pid=1974949)[0m {'host': 'test.php.vulnweb.com', 'ttl': 3600, 'resolver': ['8.8.4.4:53'], 'a': ['44.228.249.3'], 'all': ['test.php.vulnweb.com.\t3600\tIN\tA\t44.228.249.3', '\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 512'], 'status_code': 'NOERROR', 'timestamp': '2024-02-23T04:17:03.902445023Z'}
+[36m(insert_dns_data_remote pid=1974210)[0m Processing DNS data for subdomain: test.php.vulnweb.com, IP: 44.228.249.3
+[36m(DNSWorker pid=1974953)[0m {'host': 'testasp.vulnweb.com', 'ttl': 3600, 'resolver': ['8.8.4.4:53'], 'a': ['44.238.29.244'], 'all': ['testasp.vulnweb.com.\t3600\tIN\tA\t44.238.29.244', '\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 512'], 'status_code': 'NOERROR', 'timestamp': '2024-02-23T04:17:03.907327008Z'}
+[36m(insert_dns_data_remote pid=1974219)[0m Processing DNS data for subdomain: testasp.vulnweb.com, IP: 44.238.29.244
+[36m(DNSWorker pid=1974952)[0m {'host': 'testaspnet.vulnweb.com', 'ttl': 3600, 'resolver': ['8.8.4.4:53'], 'a': ['44.238.29.244'], 'all': ['testaspnet.vulnweb.com.\t3600\tIN\tA\t44.238.29.244', '\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 512'], 'status_code': 'NOERROR', 'timestamp': '2024-02-23T04:17:04.501850291Z'}
+[36m(insert_dns_data_remote pid=1974208)[0m Processing DNS data for subdomain: testaspnet.vulnweb.com, IP: 44.238.29.244
+[36m(insert_dns_data_remote pid=1974210)[0m Count of existing DNS records for test.php.vulnweb.com with IP 44.228.249.3: 1
+[36m(insert_dns_data_remote pid=1974210)[0m Duplicate DNS data for test.php.vulnweb.com with IP 44.228.249.3 not inserted.
+[36m(DNSWorker pid=1974949)[0m Error processing DNS for test.php.vulnweb.com: BaseWorker.send_slack_notification() missing 1 required positional argument: 'message'
+[36m(DNSWorker pid=1974953)[0m Error processing DNS for testasp.vulnweb.com: BaseWorker.send_slack_notification() missing 1 required positional argument: 'message'
+[36m(insert_dns_data_remote pid=1974208)[0m Starting insert_dns_data_remote function.[32m [repeated 6x across cluster][0m
+[36m(insert_dns_data_remote pid=1974219)[0m Count of existing DNS records for testasp.vulnweb.com with IP 44.238.29.244: 1
+[36m(insert_dns_data_remote pid=1974219)[0m Duplicate DNS data for testasp.vulnweb.com with IP 44.238.29.244 not inserted.
+[36m(DNSWorker pid=1974952)[0m Error processing DNS for testaspnet.vulnweb.com: BaseWorker.send_slack_notification() missing 1 required positional argument: 'message'
+[36m(insert_dns_data_remote pid=1974219)[0m Completed insert_dns_data_remote function.[32m [repeated 5x across cluster][0m
+[36m(insert_dns_data_remote pid=1974208)[0m Count of existing DNS records for testaspnet.vulnweb.com with IP 44.238.29.244: 1
+[36m(insert_dns_data_remote pid=1974208)[0m Duplicate DNS data for testaspnet.vulnweb.com with IP 44.238.29.244 not inserted.
+[36m(DNSWorker pid=1974951)[0m Error processing DNS for www.testasp.vulnweb.com: Expecting value: line 1 column 1 (char 0)
+[36m(DNSWorker pid=1974952)[0m Fetched task from dns_queue: {"subdomain": "test.php.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 42}
+[36m(insert_dns_data_remote pid=1974208)[0m Completed insert_dns_data_remote function.
+[36m(DNSWorker pid=1974953)[0m Fetched task from dns_queue: {"subdomain": "testphp.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 42}
+[36m(DNSWorker pid=1974951)[0m Fetched task from dns_queue: {"subdomain": "testaspnet.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 42}
+[36m(DNSWorker pid=1974949)[0m Fetched task from dns_queue: {"subdomain": "test.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 42}
+[36m(DNSWorker pid=1974952)[0m {'host': 'test.php.vulnweb.com', 'ttl': 3600, 'resolver': ['8.8.4.4:53'], 'a': ['44.228.249.3'], 'all': ['test.php.vulnweb.com.\t3600\tIN\tA\t44.228.249.3', '\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 512'], 'status_code': 'NOERROR', 'timestamp': '2024-02-23T04:18:45.932346945Z'}
+[36m(DNSWorker pid=1974951)[0m {'host': 'testaspnet.vulnweb.com', 'ttl': 3600, 'resolver': ['8.8.4.4:53'], 'a': ['44.238.29.244'], 'all': ['testaspnet.vulnweb.com.\t3600\tIN\tA\t44.238.29.244', '\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 512'], 'status_code': 'NOERROR', 'timestamp': '2024-02-23T04:18:45.957355953Z'}
+[36m(insert_dns_data_remote pid=1974219)[0m Starting insert_dns_data_remote function.
+[36m(insert_dns_data_remote pid=1974219)[0m Processing DNS data for subdomain: testaspnet.vulnweb.com, IP: 44.238.29.244
+[36m(insert_dns_data_remote pid=1974208)[0m Processing DNS data for subdomain: test.php.vulnweb.com, IP: 44.228.249.3
+[36m(DNSWorker pid=1974953)[0m {'host': 'testphp.vulnweb.com', 'ttl': 3600, 'resolver': ['8.8.4.4:53'], 'a': ['44.228.249.3'], 'all': ['testphp.vulnweb.com.\t3600\tIN\tA\t44.228.249.3', '\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 512'], 'status_code': 'NOERROR', 'timestamp': '2024-02-23T04:18:46.01648778Z'}
+[36m(DNSWorker pid=1974949)[0m {'host': 'test.vulnweb.com', 'ttl': 3495, 'resolver': ['8.8.4.4:53'], 'a': ['44.228.249.3'], 'all': ['test.vulnweb.com.\t3495\tIN\tA\t44.228.249.3', '\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 512'], 'status_code': 'NOERROR', 'timestamp': '2024-02-23T04:18:46.071500838Z'}
+[36m(insert_dns_data_remote pid=1974210)[0m Processing DNS data for subdomain: testphp.vulnweb.com, IP: 44.228.249.3
+[36m(insert_dns_data_remote pid=1974209)[0m Processing DNS data for subdomain: test.vulnweb.com, IP: 44.228.249.3
+[36m(DNSWorker pid=1974952)[0m Error processing DNS for test.php.vulnweb.com: BaseWorker.send_slack_notification() missing 1 required positional argument: 'message'
+[36m(DNSWorker pid=1974951)[0m Error processing DNS for testaspnet.vulnweb.com: BaseWorker.send_slack_notification() missing 1 required positional argument: 'message'
+[36m(insert_dns_data_remote pid=1974219)[0m Count of existing DNS records for testaspnet.vulnweb.com with IP 44.238.29.244: 1
+[36m(insert_dns_data_remote pid=1974219)[0m Duplicate DNS data for testaspnet.vulnweb.com with IP 44.238.29.244 not inserted.
+[36m(insert_dns_data_remote pid=1974219)[0m Completed insert_dns_data_remote function.
+[36m(insert_dns_data_remote pid=1974208)[0m Count of existing DNS records for test.php.vulnweb.com with IP 44.228.249.3: 1
+[36m(insert_dns_data_remote pid=1974208)[0m Duplicate DNS data for test.php.vulnweb.com with IP 44.228.249.3 not inserted.
+[36m(DNSWorker pid=1974953)[0m Error processing DNS for testphp.vulnweb.com: BaseWorker.send_slack_notification() missing 1 required positional argument: 'message'
+[36m(DNSWorker pid=1974952)[0m Fetched task from dns_queue: {"subdomain": "testaps.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 42}
+[36m(DNSWorker pid=1974951)[0m Fetched task from dns_queue: {"subdomain": "testapsnet.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 42}
+[36m(DNSWorker pid=1974949)[0m Error processing DNS for test.vulnweb.com: BaseWorker.send_slack_notification() missing 1 required positional argument: 'message'
+[36m(insert_dns_data_remote pid=1974210)[0m Count of existing DNS records for testphp.vulnweb.com with IP 44.228.249.3: 1
+[36m(insert_dns_data_remote pid=1974210)[0m Duplicate DNS data for testphp.vulnweb.com with IP 44.228.249.3 not inserted.
+[36m(insert_dns_data_remote pid=1974209)[0m Count of existing DNS records for test.vulnweb.com with IP 44.228.249.3: 1
+[36m(insert_dns_data_remote pid=1974209)[0m Duplicate DNS data for test.vulnweb.com with IP 44.228.249.3 not inserted.
+[36m(DNSWorker pid=1974953)[0m Fetched task from dns_queue: {"subdomain": "www.testasp.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 42}
+[36m(DNSWorker pid=1974949)[0m Fetched task from dns_queue: {"subdomain": "antivirus1.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 42}
+[36m(DNSWorker pid=1974952)[0m {'host': 'testaps.vulnweb.com', 'ttl': 3600, 'resolver': ['8.8.4.4:53'], 'a': ['44.228.249.3'], 'all': ['testaps.vulnweb.com.\t3600\tIN\tA\t44.228.249.3', '\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 512'], 'status_code': 'NOERROR', 'timestamp': '2024-02-23T04:18:48.305640131Z'}
+[36m(insert_dns_data_remote pid=1974209)[0m Processing DNS data for subdomain: testaps.vulnweb.com, IP: 44.228.249.3
+[36m(DNSWorker pid=1974951)[0m {'host': 'testapsnet.vulnweb.com', 'ttl': 3600, 'resolver': ['8.8.4.4:53'], 'a': ['44.228.249.3'], 'all': ['testapsnet.vulnweb.com.\t3600\tIN\tA\t44.228.249.3', '\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 512'], 'status_code': 'NOERROR', 'timestamp': '2024-02-23T04:18:48.360218205Z'}
+[36m(DNSWorker pid=1974949)[0m {'host': 'antivirus1.vulnweb.com', 'ttl': 3485, 'resolver': ['8.8.4.4:53'], 'a': ['44.228.249.3'], 'all': ['antivirus1.vulnweb.com.\t3485\tIN\tA\t44.228.249.3', '\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 512'], 'status_code': 'NOERROR', 'timestamp': '2024-02-23T04:18:48.419532705Z'}
+[36m(insert_dns_data_remote pid=1974210)[0m Processing DNS data for subdomain: testapsnet.vulnweb.com, IP: 44.228.249.3
+[36m(insert_dns_data_remote pid=1974219)[0m Processing DNS data for subdomain: antivirus1.vulnweb.com, IP: 44.228.249.3
+[36m(DNSWorker pid=1974952)[0m Error processing DNS for testaps.vulnweb.com: BaseWorker.send_slack_notification() missing 1 required positional argument: 'message'
+[36m(DNSWorker pid=1974951)[0m Error processing DNS for testapsnet.vulnweb.com: BaseWorker.send_slack_notification() missing 1 required positional argument: 'message'
+[36m(insert_dns_data_remote pid=1974210)[0m Count of existing DNS records for testapsnet.vulnweb.com with IP 44.228.249.3: 1
+[36m(insert_dns_data_remote pid=1974210)[0m Duplicate DNS data for testapsnet.vulnweb.com with IP 44.228.249.3 not inserted.
+[36m(insert_dns_data_remote pid=1974209)[0m Count of existing DNS records for testaps.vulnweb.com with IP 44.228.249.3: 1
+[36m(insert_dns_data_remote pid=1974209)[0m Duplicate DNS data for testaps.vulnweb.com with IP 44.228.249.3 not inserted.
+[36m(DNSWorker pid=1974952)[0m Fetched task from dns_queue: {"subdomain": "testasp.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 42}
+[36m(DNSWorker pid=1974951)[0m Fetched task from dns_queue: {"subdomain": "blogger.com.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 42}
+[36m(DNSWorker pid=1974949)[0m Error processing DNS for antivirus1.vulnweb.com: BaseWorker.send_slack_notification() missing 1 required positional argument: 'message'
+[36m(DNSWorker pid=1974949)[0m Fetched task from dns_queue: {"subdomain": "testhtml5.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 42}
+[36m(insert_dns_data_remote pid=1974219)[0m Count of existing DNS records for antivirus1.vulnweb.com with IP 44.228.249.3: 1
+[36m(insert_dns_data_remote pid=1974219)[0m Duplicate DNS data for antivirus1.vulnweb.com with IP 44.228.249.3 not inserted.
+[36m(DNSWorker pid=1974953)[0m Error processing DNS for www.testasp.vulnweb.com: Expecting value: line 1 column 1 (char 0)
+[36m(DNSWorker pid=1974953)[0m Fetched task from dns_queue: {"subdomain": "www.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 42}
+[36m(DNSWorker pid=1974952)[0m {'host': 'testasp.vulnweb.com', 'ttl': 3600, 'resolver': ['8.8.4.4:53'], 'a': ['44.238.29.244'], 'all': ['testasp.vulnweb.com.\t3600\tIN\tA\t44.238.29.244', '\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 512'], 'status_code': 'NOERROR', 'timestamp': '2024-02-23T04:18:50.761563196Z'}
+[36m(insert_dns_data_remote pid=1974219)[0m Processing DNS data for subdomain: testasp.vulnweb.com, IP: 44.238.29.244
+[36m(DNSWorker pid=1974951)[0m {'host': 'blogger.com.vulnweb.com', 'ttl': 3600, 'resolver': ['8.8.4.4:53'], 'a': ['44.228.249.3'], 'all': ['blogger.com.vulnweb.com.\t3600\tIN\tA\t44.228.249.3', '\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 512'], 'status_code': 'NOERROR', 'timestamp': '2024-02-23T04:18:50.826409061Z'}
+[36m(DNSWorker pid=1974949)[0m {'host': 'testhtml5.vulnweb.com', 'ttl': 3600, 'resolver': ['8.8.4.4:53'], 'a': ['44.228.249.3'], 'all': ['testhtml5.vulnweb.com.\t3600\tIN\tA\t44.228.249.3', '\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 512'], 'status_code': 'NOERROR', 'timestamp': '2024-02-23T04:18:50.848013599Z'}
+[36m(insert_dns_data_remote pid=1974210)[0m Processing DNS data for subdomain: blogger.com.vulnweb.com, IP: 44.228.249.3
+[36m(DNSWorker pid=1974953)[0m {'host': 'www.vulnweb.com', 'ttl': 3600, 'resolver': ['8.8.4.4:53'], 'a': ['44.228.249.3'], 'all': ['www.vulnweb.com.\t3600\tIN\tA\t44.228.249.3', '\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 512'], 'status_code': 'NOERROR', 'timestamp': '2024-02-23T04:18:51.54595977Z'}
+[36m(insert_dns_data_remote pid=1974209)[0m Starting insert_dns_data_remote function.[32m [repeated 9x across cluster][0m
+[36m(insert_dns_data_remote pid=1974208)[0m Processing DNS data for subdomain: www.vulnweb.com, IP: 44.228.249.3
+[36m(DNSWorker pid=1974952)[0m Error processing DNS for testasp.vulnweb.com: BaseWorker.send_slack_notification() missing 1 required positional argument: 'message'
+[36m(insert_dns_data_remote pid=1974219)[0m Count of existing DNS records for testasp.vulnweb.com with IP 44.238.29.244: 1
+[36m(insert_dns_data_remote pid=1974219)[0m Duplicate DNS data for testasp.vulnweb.com with IP 44.238.29.244 not inserted.
+[36m(DNSWorker pid=1974952)[0m Fetched task from dns_queue: {"subdomain": "testap.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 42}
+[36m(DNSWorker pid=1974951)[0m Error processing DNS for blogger.com.vulnweb.com: BaseWorker.send_slack_notification() missing 1 required positional argument: 'message'
+[36m(DNSWorker pid=1974949)[0m Error processing DNS for testhtml5.vulnweb.com: BaseWorker.send_slack_notification() missing 1 required positional argument: 'message'
+[36m(insert_dns_data_remote pid=1974210)[0m Count of existing DNS records for blogger.com.vulnweb.com with IP 44.228.249.3: 1
+[36m(insert_dns_data_remote pid=1974210)[0m Duplicate DNS data for blogger.com.vulnweb.com with IP 44.228.249.3 not inserted.
+[36m(DNSWorker pid=1974951)[0m Fetched task from dns_queue: {"subdomain": "odincovo.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 42}
+[36m(insert_dns_data_remote pid=1974209)[0m Completed insert_dns_data_remote function.[32m [repeated 9x across cluster][0m
+[36m(DNSWorker pid=1974949)[0m Fetched task from dns_queue: {"subdomain": "rest.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 42}
+[36m(DNSWorker pid=1974953)[0m Error processing DNS for www.vulnweb.com: BaseWorker.send_slack_notification() missing 1 required positional argument: 'message'
+[36m(insert_dns_data_remote pid=1974208)[0m Count of existing DNS records for www.vulnweb.com with IP 44.228.249.3: 1
+[36m(insert_dns_data_remote pid=1974208)[0m Duplicate DNS data for www.vulnweb.com with IP 44.228.249.3 not inserted.
+[36m(DNSWorker pid=1974953)[0m Fetched task from dns_queue: {"subdomain": "restasp.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 42}
+[36m(DNSWorker pid=1974952)[0m {'host': 'testap.vulnweb.com', 'ttl': 3600, 'resolver': ['8.8.4.4:53'], 'a': ['44.228.249.3'], 'all': ['testap.vulnweb.com.\t3600\tIN\tA\t44.228.249.3', '\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 512'], 'status_code': 'NOERROR', 'timestamp': '2024-02-23T04:18:53.145720418Z'}
+[36m(insert_dns_data_remote pid=1974208)[0m Processing DNS data for subdomain: testap.vulnweb.com, IP: 44.228.249.3
+[36m(DNSWorker pid=1974951)[0m {'host': 'odincovo.vulnweb.com', 'ttl': 3600, 'resolver': ['8.8.4.4:53'], 'a': ['44.228.249.3'], 'all': ['odincovo.vulnweb.com.\t3600\tIN\tA\t44.228.249.3', '\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 512'], 'status_code': 'NOERROR', 'timestamp': '2024-02-23T04:18:53.239916254Z'}
+[36m(insert_dns_data_remote pid=1974209)[0m Processing DNS data for subdomain: odincovo.vulnweb.com, IP: 44.228.249.3
+[36m(DNSWorker pid=1974949)[0m {'host': 'rest.vulnweb.com', 'ttl': 3600, 'resolver': ['8.8.4.4:53'], 'a': ['35.81.188.86'], 'all': ['rest.vulnweb.com.\t3600\tIN\tA\t35.81.188.86', '\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 512'], 'status_code': 'NOERROR', 'timestamp': '2024-02-23T04:18:53.297389304Z'}
+[36m(insert_dns_data_remote pid=1974209)[0m Processing DNS data for subdomain: testhtml5.vulnweb.com, IP: 44.228.249.3
+[36m(insert_dns_data_remote pid=1974210)[0m Processing DNS data for subdomain: rest.vulnweb.com, IP: 35.81.188.86
+[36m(DNSWorker pid=1974953)[0m {'host': 'restasp.vulnweb.com', 'ttl': 3600, 'resolver': ['8.8.4.4:53'], 'a': ['44.228.249.3'], 'all': ['restasp.vulnweb.com.\t3600\tIN\tA\t44.228.249.3', '\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 512'], 'status_code': 'NOERROR', 'timestamp': '2024-02-23T04:18:53.933493493Z'}
+[36m(insert_dns_data_remote pid=1974219)[0m Processing DNS data for subdomain: restasp.vulnweb.com, IP: 44.228.249.3
+[36m(DNSWorker pid=1974952)[0m Error processing DNS for testap.vulnweb.com: BaseWorker.send_slack_notification() missing 1 required positional argument: 'message'
+[36m(DNSWorker pid=1974952)[0m Fetched task from dns_queue: {"subdomain": "testaspx.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 42}
+[36m(insert_dns_data_remote pid=1974208)[0m Count of existing DNS records for testap.vulnweb.com with IP 44.228.249.3: 1
+[36m(insert_dns_data_remote pid=1974208)[0m Duplicate DNS data for testap.vulnweb.com with IP 44.228.249.3 not inserted.
+[36m(DNSWorker pid=1974951)[0m Error processing DNS for odincovo.vulnweb.com: BaseWorker.send_slack_notification() missing 1 required positional argument: 'message'
+[36m(DNSWorker pid=1974951)[0m Fetched task from dns_queue: {"subdomain": "httptestaspnet.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 42}
+[36m(insert_dns_data_remote pid=1974209)[0m Count of existing DNS records for odincovo.vulnweb.com with IP 44.228.249.3: 1
+[36m(insert_dns_data_remote pid=1974209)[0m Duplicate DNS data for odincovo.vulnweb.com with IP 44.228.249.3 not inserted.
+[36m(DNSWorker pid=1974949)[0m Error processing DNS for rest.vulnweb.com: BaseWorker.send_slack_notification() missing 1 required positional argument: 'message'
+[36m(insert_dns_data_remote pid=1974210)[0m Count of existing DNS records for rest.vulnweb.com with IP 35.81.188.86: 1
+[36m(insert_dns_data_remote pid=1974210)[0m Duplicate DNS data for rest.vulnweb.com with IP 35.81.188.86 not inserted.
+[36m(DNSWorker pid=1974949)[0m Fetched task from dns_queue: {"subdomain": "tetphp.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 42}
+[36m(insert_dns_data_remote pid=1974209)[0m Count of existing DNS records for testhtml5.vulnweb.com with IP 44.228.249.3: 1
+[36m(insert_dns_data_remote pid=1974209)[0m Duplicate DNS data for testhtml5.vulnweb.com with IP 44.228.249.3 not inserted.
+[36m(DNSWorker pid=1974953)[0m Error processing DNS for restasp.vulnweb.com: BaseWorker.send_slack_notification() missing 1 required positional argument: 'message'
+[36m(insert_dns_data_remote pid=1974219)[0m Count of existing DNS records for restasp.vulnweb.com with IP 44.228.249.3: 1
+[36m(insert_dns_data_remote pid=1974219)[0m Duplicate DNS data for restasp.vulnweb.com with IP 44.228.249.3 not inserted.
+[36m(DNSWorker pid=1974953)[0m Fetched task from dns_queue: {"subdomain": "www.testphp.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 42}
+[36m(DNSWorker pid=1974952)[0m {'host': 'testaspx.vulnweb.com', 'ttl': 3600, 'resolver': ['8.8.4.4:53'], 'a': ['44.228.249.3'], 'all': ['testaspx.vulnweb.com.\t3600\tIN\tA\t44.228.249.3', '\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 512'], 'status_code': 'NOERROR', 'timestamp': '2024-02-23T04:18:55.521708447Z'}
+[36m(DNSWorker pid=1974951)[0m {'host': 'httptestaspnet.vulnweb.com', 'ttl': 3600, 'resolver': ['8.8.4.4:53'], 'a': ['44.228.249.3'], 'all': ['httptestaspnet.vulnweb.com.\t3600\tIN\tA\t44.228.249.3', '\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 512'], 'status_code': 'NOERROR', 'timestamp': '2024-02-23T04:18:55.612713977Z'}
+[36m(insert_dns_data_remote pid=1974210)[0m Processing DNS data for subdomain: httptestaspnet.vulnweb.com, IP: 44.228.249.3
+[36m(insert_dns_data_remote pid=1974219)[0m Processing DNS data for subdomain: testaspx.vulnweb.com, IP: 44.228.249.3
+[36m(DNSWorker pid=1974949)[0m {'host': 'tetphp.vulnweb.com', 'ttl': 3600, 'resolver': ['8.8.4.4:53'], 'a': ['44.228.249.3'], 'all': ['tetphp.vulnweb.com.\t3600\tIN\tA\t44.228.249.3', '\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 512'], 'status_code': 'NOERROR', 'timestamp': '2024-02-23T04:18:55.816455591Z'}
+[36m(insert_dns_data_remote pid=1974209)[0m Processing DNS data for subdomain: tetphp.vulnweb.com, IP: 44.228.249.3
+[36m(DNSWorker pid=1974953)[0m Error processing DNS for www.testphp.vulnweb.com: Expecting value: line 1 column 1 (char 0)
+[36m(insert_dns_data_remote pid=1974209)[0m Starting insert_dns_data_remote function.[32m [repeated 8x across cluster][0m
+[36m(DNSWorker pid=1974952)[0m Error processing DNS for testaspx.vulnweb.com: BaseWorker.send_slack_notification() missing 1 required positional argument: 'message'
+[36m(insert_dns_data_remote pid=1974219)[0m Count of existing DNS records for testaspx.vulnweb.com with IP 44.228.249.3: 1
+[36m(insert_dns_data_remote pid=1974219)[0m Duplicate DNS data for testaspx.vulnweb.com with IP 44.228.249.3 not inserted.
+[36m(DNSWorker pid=1974951)[0m Error processing DNS for httptestaspnet.vulnweb.com: BaseWorker.send_slack_notification() missing 1 required positional argument: 'message'
+[36m(insert_dns_data_remote pid=1974210)[0m Count of existing DNS records for httptestaspnet.vulnweb.com with IP 44.228.249.3: 1
+[36m(insert_dns_data_remote pid=1974210)[0m Duplicate DNS data for httptestaspnet.vulnweb.com with IP 44.228.249.3 not inserted.
+[36m(insert_dns_data_remote pid=1974209)[0m Count of existing DNS records for tetphp.vulnweb.com with IP 44.228.249.3: 1
+[36m(insert_dns_data_remote pid=1974209)[0m Duplicate DNS data for tetphp.vulnweb.com with IP 44.228.249.3 not inserted.
+[36m(DNSWorker pid=1974949)[0m Error processing DNS for tetphp.vulnweb.com: BaseWorker.send_slack_notification() missing 1 required positional argument: 'message'
+[36m(DNSWorker pid=1974949)[0m Fetched task from dns_queue: {"subdomain": "rest.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 42}
+[36m(insert_dns_data_remote pid=1974209)[0m Completed insert_dns_data_remote function.[32m [repeated 8x across cluster][0m
+[36m(DNSWorker pid=1974953)[0m Fetched task from dns_queue: {"subdomain": "tetphp.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 42}
+[36m(DNSWorker pid=1974952)[0m Fetched task from dns_queue: {"subdomain": "www.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 42}
+[36m(DNSWorker pid=1974951)[0m Fetched task from dns_queue: {"subdomain": "httptestaspnet.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 42}
+[36m(DNSWorker pid=1974949)[0m {'host': 'rest.vulnweb.com', 'ttl': 3600, 'resolver': ['8.8.4.4:53'], 'a': ['35.81.188.86'], 'all': ['rest.vulnweb.com.\t3600\tIN\tA\t35.81.188.86', '\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 512'], 'status_code': 'NOERROR', 'timestamp': '2024-02-23T04:19:41.185089431Z'}
+[36m(insert_dns_data_remote pid=1974209)[0m Starting insert_dns_data_remote function.
+[36m(insert_dns_data_remote pid=1974209)[0m Processing DNS data for subdomain: rest.vulnweb.com, IP: 35.81.188.86
+[36m(DNSWorker pid=1974953)[0m {'host': 'tetphp.vulnweb.com', 'ttl': 3600, 'resolver': ['8.8.4.4:53'], 'a': ['44.228.249.3'], 'all': ['tetphp.vulnweb.com.\t3600\tIN\tA\t44.228.249.3', '\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 512'], 'status_code': 'NOERROR', 'timestamp': '2024-02-23T04:19:41.30590826Z'}
+[36m(insert_dns_data_remote pid=1974210)[0m Processing DNS data for subdomain: tetphp.vulnweb.com, IP: 44.228.249.3
+[36m(DNSWorker pid=1974952)[0m {'host': 'www.vulnweb.com', 'ttl': 3440, 'resolver': ['8.8.4.4:53'], 'a': ['44.228.249.3'], 'all': ['www.vulnweb.com.\t3440\tIN\tA\t44.228.249.3', '\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 512'], 'status_code': 'NOERROR', 'timestamp': '2024-02-23T04:19:41.358730411Z'}
+[36m(insert_dns_data_remote pid=1974219)[0m Processing DNS data for subdomain: www.vulnweb.com, IP: 44.228.249.3
+[36m(DNSWorker pid=1974951)[0m {'host': 'httptestaspnet.vulnweb.com', 'ttl': 3600, 'resolver': ['8.8.4.4:53'], 'a': ['44.228.249.3'], 'all': ['httptestaspnet.vulnweb.com.\t3600\tIN\tA\t44.228.249.3', '\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 512'], 'status_code': 'NOERROR', 'timestamp': '2024-02-23T04:19:41.471131482Z'}
+[36m(insert_dns_data_remote pid=1974208)[0m Processing DNS data for subdomain: httptestaspnet.vulnweb.com, IP: 44.228.249.3
+[36m(DNSWorker pid=1974949)[0m Error processing DNS for rest.vulnweb.com: BaseWorker.send_slack_notification() missing 1 required positional argument: 'message'
+[36m(insert_dns_data_remote pid=1974209)[0m Count of existing DNS records for rest.vulnweb.com with IP 35.81.188.86: 1
+[36m(insert_dns_data_remote pid=1974209)[0m Duplicate DNS data for rest.vulnweb.com with IP 35.81.188.86 not inserted.
+[36m(DNSWorker pid=1974953)[0m Error processing DNS for tetphp.vulnweb.com: BaseWorker.send_slack_notification() missing 1 required positional argument: 'message'
+[36m(DNSWorker pid=1974949)[0m Fetched task from dns_queue: {"subdomain": "test.php.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 42}
+[36m(insert_dns_data_remote pid=1974210)[0m Count of existing DNS records for tetphp.vulnweb.com with IP 44.228.249.3: 1
+[36m(insert_dns_data_remote pid=1974210)[0m Duplicate DNS data for tetphp.vulnweb.com with IP 44.228.249.3 not inserted.
+[36m(DNSWorker pid=1974953)[0m Fetched task from dns_queue: {"subdomain": "testasp.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 42}
+[36m(DNSWorker pid=1974952)[0m Error processing DNS for www.vulnweb.com: BaseWorker.send_slack_notification() missing 1 required positional argument: 'message'
+[36m(insert_dns_data_remote pid=1974219)[0m Count of existing DNS records for www.vulnweb.com with IP 44.228.249.3: 1
+[36m(insert_dns_data_remote pid=1974219)[0m Duplicate DNS data for www.vulnweb.com with IP 44.228.249.3 not inserted.
+[36m(DNSWorker pid=1974952)[0m Fetched task from dns_queue: {"subdomain": "test.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 42}
+[36m(DNSWorker pid=1974951)[0m Error processing DNS for httptestaspnet.vulnweb.com: BaseWorker.send_slack_notification() missing 1 required positional argument: 'message'
+[36m(insert_dns_data_remote pid=1974208)[0m Count of existing DNS records for httptestaspnet.vulnweb.com with IP 44.228.249.3: 1
+[36m(insert_dns_data_remote pid=1974208)[0m Duplicate DNS data for httptestaspnet.vulnweb.com with IP 44.228.249.3 not inserted.
+[36m(DNSWorker pid=1974951)[0m Fetched task from dns_queue: {"subdomain": "restasp.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 42}
+[36m(DNSWorker pid=1974949)[0m {'host': 'test.php.vulnweb.com', 'ttl': 3600, 'resolver': ['8.8.4.4:53'], 'a': ['44.228.249.3'], 'all': ['test.php.vulnweb.com.\t3600\tIN\tA\t44.228.249.3', '\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 512'], 'status_code': 'NOERROR', 'timestamp': '2024-02-23T04:19:43.578029279Z'}
+[36m(insert_dns_data_remote pid=1974208)[0m Processing DNS data for subdomain: test.php.vulnweb.com, IP: 44.228.249.3
+[36m(DNSWorker pid=1974953)[0m {'host': 'testasp.vulnweb.com', 'ttl': 3440, 'resolver': ['8.8.4.4:53'], 'a': ['44.238.29.244'], 'all': ['testasp.vulnweb.com.\t3440\tIN\tA\t44.238.29.244', '\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 512'], 'status_code': 'NOERROR', 'timestamp': '2024-02-23T04:19:43.755617737Z'}
+[36m(DNSWorker pid=1974952)[0m {'host': 'test.vulnweb.com', 'ttl': 3600, 'resolver': ['8.8.4.4:53'], 'a': ['44.228.249.3'], 'all': ['test.vulnweb.com.\t3600\tIN\tA\t44.228.249.3', '\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 512'], 'status_code': 'NOERROR', 'timestamp': '2024-02-23T04:19:43.8524843Z'}
+[36m(DNSWorker pid=1974951)[0m {'host': 'restasp.vulnweb.com', 'ttl': 3550, 'resolver': ['8.8.4.4:53'], 'a': ['44.228.249.3'], 'all': ['restasp.vulnweb.com.\t3550\tIN\tA\t44.228.249.3', '\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 512'], 'status_code': 'NOERROR', 'timestamp': '2024-02-23T04:19:43.865577306Z'}
+[36m(insert_dns_data_remote pid=1974210)[0m Processing DNS data for subdomain: restasp.vulnweb.com, IP: 44.228.249.3
+[36m(insert_dns_data_remote pid=1974209)[0m Processing DNS data for subdomain: testasp.vulnweb.com, IP: 44.238.29.244
+[36m(insert_dns_data_remote pid=1974219)[0m Processing DNS data for subdomain: test.vulnweb.com, IP: 44.228.249.3
+[36m(DNSWorker pid=1974949)[0m Error processing DNS for test.php.vulnweb.com: BaseWorker.send_slack_notification() missing 1 required positional argument: 'message'
+[36m(insert_dns_data_remote pid=1974208)[0m Count of existing DNS records for test.php.vulnweb.com with IP 44.228.249.3: 1
+[36m(insert_dns_data_remote pid=1974208)[0m Duplicate DNS data for test.php.vulnweb.com with IP 44.228.249.3 not inserted.
+[36m(DNSWorker pid=1974949)[0m Fetched task from dns_queue: {"subdomain": "testap.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 42}
+[36m(DNSWorker pid=1974953)[0m Error processing DNS for testasp.vulnweb.com: BaseWorker.send_slack_notification() missing 1 required positional argument: 'message'
+[36m(DNSWorker pid=1974952)[0m Error processing DNS for test.vulnweb.com: BaseWorker.send_slack_notification() missing 1 required positional argument: 'message'
+[36m(DNSWorker pid=1974951)[0m Error processing DNS for restasp.vulnweb.com: BaseWorker.send_slack_notification() missing 1 required positional argument: 'message'
+[36m(insert_dns_data_remote pid=1974210)[0m Count of existing DNS records for restasp.vulnweb.com with IP 44.228.249.3: 1
+[36m(insert_dns_data_remote pid=1974210)[0m Duplicate DNS data for restasp.vulnweb.com with IP 44.228.249.3 not inserted.
+[36m(insert_dns_data_remote pid=1974209)[0m Count of existing DNS records for testasp.vulnweb.com with IP 44.238.29.244: 1
+[36m(insert_dns_data_remote pid=1974209)[0m Duplicate DNS data for testasp.vulnweb.com with IP 44.238.29.244 not inserted.
+[36m(insert_dns_data_remote pid=1974219)[0m Count of existing DNS records for test.vulnweb.com with IP 44.228.249.3: 1
+[36m(insert_dns_data_remote pid=1974219)[0m Duplicate DNS data for test.vulnweb.com with IP 44.228.249.3 not inserted.
+[36m(DNSWorker pid=1974953)[0m Fetched task from dns_queue: {"subdomain": "testhtml5.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 42}
+[36m(insert_dns_data_remote pid=1974219)[0m Completed insert_dns_data_remote function.[32m [repeated 8x across cluster][0m
+[36m(DNSWorker pid=1974952)[0m Fetched task from dns_queue: {"subdomain": "testapsnet.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 42}
+[36m(DNSWorker pid=1974951)[0m Fetched task from dns_queue: {"subdomain": "testaps.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 42}
+[36m(DNSWorker pid=1974949)[0m {'host': 'testap.vulnweb.com', 'ttl': 3600, 'resolver': ['8.8.4.4:53'], 'a': ['44.228.249.3'], 'all': ['testap.vulnweb.com.\t3600\tIN\tA\t44.228.249.3', '\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 512'], 'status_code': 'NOERROR', 'timestamp': '2024-02-23T04:19:46.017519666Z'}
+[36m(insert_dns_data_remote pid=1974209)[0m Processing DNS data for subdomain: testap.vulnweb.com, IP: 44.228.249.3
+[36m(DNSWorker pid=1974952)[0m {'host': 'testapsnet.vulnweb.com', 'ttl': 3432, 'resolver': ['8.8.4.4:53'], 'a': ['44.228.249.3'], 'all': ['testapsnet.vulnweb.com.\t3432\tIN\tA\t44.228.249.3', '\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 512'], 'status_code': 'NOERROR', 'timestamp': '2024-02-23T04:19:46.228306685Z'}
+[36m(insert_dns_data_remote pid=1974209)[0m Starting insert_dns_data_remote function.[32m [repeated 8x across cluster][0m
+[36m(insert_dns_data_remote pid=1974219)[0m Processing DNS data for subdomain: testapsnet.vulnweb.com, IP: 44.228.249.3
+[36m(DNSWorker pid=1974953)[0m {'host': 'testhtml5.vulnweb.com', 'ttl': 3427, 'resolver': ['8.8.4.4:53'], 'a': ['44.228.249.3'], 'all': ['testhtml5.vulnweb.com.\t3427\tIN\tA\t44.228.249.3', '\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 512'], 'status_code': 'NOERROR', 'timestamp': '2024-02-23T04:19:46.292075538Z'}
+[36m(DNSWorker pid=1974951)[0m {'host': 'testaps.vulnweb.com', 'ttl': 3542, 'resolver': ['8.8.4.4:53'], 'a': ['44.228.249.3'], 'all': ['testaps.vulnweb.com.\t3542\tIN\tA\t44.228.249.3', '\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 512'], 'status_code': 'NOERROR', 'timestamp': '2024-02-23T04:19:46.312367438Z'}
+[36m(insert_dns_data_remote pid=1974210)[0m Processing DNS data for subdomain: testhtml5.vulnweb.com, IP: 44.228.249.3
+[36m(insert_dns_data_remote pid=1974208)[0m Processing DNS data for subdomain: testaps.vulnweb.com, IP: 44.228.249.3
+[36m(DNSWorker pid=1974949)[0m Error processing DNS for testap.vulnweb.com: BaseWorker.send_slack_notification() missing 1 required positional argument: 'message'
+[36m(insert_dns_data_remote pid=1974209)[0m Count of existing DNS records for testap.vulnweb.com with IP 44.228.249.3: 1
+[36m(insert_dns_data_remote pid=1974209)[0m Duplicate DNS data for testap.vulnweb.com with IP 44.228.249.3 not inserted.
+[36m(DNSWorker pid=1974949)[0m Fetched task from dns_queue: {"subdomain": "www.testphp.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 42}
+[36m(DNSWorker pid=1974952)[0m Error processing DNS for testapsnet.vulnweb.com: BaseWorker.send_slack_notification() missing 1 required positional argument: 'message'
+[36m(insert_dns_data_remote pid=1974219)[0m Count of existing DNS records for testapsnet.vulnweb.com with IP 44.228.249.3: 1
+[36m(insert_dns_data_remote pid=1974219)[0m Duplicate DNS data for testapsnet.vulnweb.com with IP 44.228.249.3 not inserted.
+[36m(DNSWorker pid=1974953)[0m Error processing DNS for testhtml5.vulnweb.com: BaseWorker.send_slack_notification() missing 1 required positional argument: 'message'
+[36m(DNSWorker pid=1974953)[0m Fetched task from dns_queue: {"subdomain": "antivirus1.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 42}
+[36m(DNSWorker pid=1974952)[0m Fetched task from dns_queue: {"subdomain": "blogger.com.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 42}
+[36m(DNSWorker pid=1974951)[0m Error processing DNS for testaps.vulnweb.com: BaseWorker.send_slack_notification() missing 1 required positional argument: 'message'
+[36m(insert_dns_data_remote pid=1974210)[0m Count of existing DNS records for testhtml5.vulnweb.com with IP 44.228.249.3: 1
+[36m(insert_dns_data_remote pid=1974210)[0m Duplicate DNS data for testhtml5.vulnweb.com with IP 44.228.249.3 not inserted.
+[36m(insert_dns_data_remote pid=1974208)[0m Count of existing DNS records for testaps.vulnweb.com with IP 44.228.249.3: 1
+[36m(insert_dns_data_remote pid=1974208)[0m Duplicate DNS data for testaps.vulnweb.com with IP 44.228.249.3 not inserted.
+[36m(DNSWorker pid=1974951)[0m Fetched task from dns_queue: {"subdomain": "odincovo.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 42}
+[36m(DNSWorker pid=1974952)[0m {'host': 'blogger.com.vulnweb.com', 'ttl': 3600, 'resolver': ['8.8.4.4:53'], 'a': ['44.228.249.3'], 'all': ['blogger.com.vulnweb.com.\t3600\tIN\tA\t44.228.249.3', '\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 512'], 'status_code': 'NOERROR', 'timestamp': '2024-02-23T04:19:48.635349928Z'}
+[36m(insert_dns_data_remote pid=1974208)[0m Processing DNS data for subdomain: blogger.com.vulnweb.com, IP: 44.228.249.3
+[36m(DNSWorker pid=1974953)[0m {'host': 'antivirus1.vulnweb.com', 'ttl': 3425, 'resolver': ['8.8.4.4:53'], 'a': ['44.228.249.3'], 'all': ['antivirus1.vulnweb.com.\t3425\tIN\tA\t44.228.249.3', '\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 512'], 'status_code': 'NOERROR', 'timestamp': '2024-02-23T04:19:48.660010317Z'}
+[36m(DNSWorker pid=1974951)[0m {'host': 'odincovo.vulnweb.com', 'ttl': 3431, 'resolver': ['8.8.4.4:53'], 'a': ['44.228.249.3'], 'all': ['odincovo.vulnweb.com.\t3431\tIN\tA\t44.228.249.3', '\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 512'], 'status_code': 'NOERROR', 'timestamp': '2024-02-23T04:19:48.709588312Z'}
+[36m(insert_dns_data_remote pid=1974210)[0m Processing DNS data for subdomain: antivirus1.vulnweb.com, IP: 44.228.249.3
+[36m(insert_dns_data_remote pid=1974219)[0m Processing DNS data for subdomain: odincovo.vulnweb.com, IP: 44.228.249.3
+[36m(DNSWorker pid=1974953)[0m Error processing DNS for antivirus1.vulnweb.com: BaseWorker.send_slack_notification() missing 1 required positional argument: 'message'
+[36m(DNSWorker pid=1974952)[0m Error processing DNS for blogger.com.vulnweb.com: BaseWorker.send_slack_notification() missing 1 required positional argument: 'message'
+[36m(DNSWorker pid=1974952)[0m Fetched task from dns_queue: {"subdomain": "testaspnet.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 42}
+[36m(insert_dns_data_remote pid=1974210)[0m Count of existing DNS records for antivirus1.vulnweb.com with IP 44.228.249.3: 1
+[36m(insert_dns_data_remote pid=1974210)[0m Duplicate DNS data for antivirus1.vulnweb.com with IP 44.228.249.3 not inserted.
+[36m(insert_dns_data_remote pid=1974208)[0m Count of existing DNS records for blogger.com.vulnweb.com with IP 44.228.249.3: 1
+[36m(insert_dns_data_remote pid=1974208)[0m Duplicate DNS data for blogger.com.vulnweb.com with IP 44.228.249.3 not inserted.
+[36m(DNSWorker pid=1974953)[0m Fetched task from dns_queue: {"subdomain": "testphp.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 42}
+[36m(DNSWorker pid=1974951)[0m Error processing DNS for odincovo.vulnweb.com: BaseWorker.send_slack_notification() missing 1 required positional argument: 'message'
+[36m(DNSWorker pid=1974951)[0m Fetched task from dns_queue: {"subdomain": "testaspx.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 42}
+[36m(insert_dns_data_remote pid=1974219)[0m Count of existing DNS records for odincovo.vulnweb.com with IP 44.228.249.3: 1
+[36m(insert_dns_data_remote pid=1974219)[0m Duplicate DNS data for odincovo.vulnweb.com with IP 44.228.249.3 not inserted.
+[36m(DNSWorker pid=1974949)[0m Error processing DNS for www.testphp.vulnweb.com: Expecting value: line 1 column 1 (char 0)
+[36m(DNSWorker pid=1974949)[0m Fetched task from dns_queue: {"subdomain": "www.testasp.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 42}
+[36m(insert_dns_data_remote pid=1974219)[0m Completed insert_dns_data_remote function.[32m [repeated 7x across cluster][0m
+[36m(DNSWorker pid=1974953)[0m {'host': 'testphp.vulnweb.com', 'ttl': 3535, 'resolver': ['8.8.4.4:53'], 'a': ['44.228.249.3'], 'all': ['testphp.vulnweb.com.\t3535\tIN\tA\t44.228.249.3', '\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 512'], 'status_code': 'NOERROR', 'timestamp': '2024-02-23T04:19:51.041781078Z'}
+[36m(insert_dns_data_remote pid=1974219)[0m Processing DNS data for subdomain: testphp.vulnweb.com, IP: 44.228.249.3
+[36m(DNSWorker pid=1974952)[0m {'host': 'testaspnet.vulnweb.com', 'ttl': 3600, 'resolver': ['8.8.4.4:53'], 'a': ['44.238.29.244'], 'all': ['testaspnet.vulnweb.com.\t3600\tIN\tA\t44.238.29.244', '\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 512'], 'status_code': 'NOERROR', 'timestamp': '2024-02-23T04:19:51.079859858Z'}
+[36m(DNSWorker pid=1974951)[0m {'host': 'testaspx.vulnweb.com', 'ttl': 3600, 'resolver': ['8.8.4.4:53'], 'a': ['44.228.249.3'], 'all': ['testaspx.vulnweb.com.\t3600\tIN\tA\t44.228.249.3', '\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 512'], 'status_code': 'NOERROR', 'timestamp': '2024-02-23T04:19:51.089553536Z'}
+[36m(insert_dns_data_remote pid=1974210)[0m Processing DNS data for subdomain: testaspnet.vulnweb.com, IP: 44.238.29.244
+[36m(insert_dns_data_remote pid=1974208)[0m Processing DNS data for subdomain: testaspx.vulnweb.com, IP: 44.228.249.3
+[36m(DNSWorker pid=1974949)[0m Error processing DNS for www.testasp.vulnweb.com: Expecting value: line 1 column 1 (char 0)
+[36m(insert_dns_data_remote pid=1974208)[0m Starting insert_dns_data_remote function.[32m [repeated 9x across cluster][0m
+[36m(DNSWorker pid=1974953)[0m Error processing DNS for testphp.vulnweb.com: BaseWorker.send_slack_notification() missing 1 required positional argument: 'message'
+[36m(insert_dns_data_remote pid=1974219)[0m Count of existing DNS records for testphp.vulnweb.com with IP 44.228.249.3: 1
+[36m(insert_dns_data_remote pid=1974219)[0m Duplicate DNS data for testphp.vulnweb.com with IP 44.228.249.3 not inserted.
+[36m(DNSWorker pid=1974952)[0m Error processing DNS for testaspnet.vulnweb.com: BaseWorker.send_slack_notification() missing 1 required positional argument: 'message'
+[36m(DNSWorker pid=1974951)[0m Error processing DNS for testaspx.vulnweb.com: BaseWorker.send_slack_notification() missing 1 required positional argument: 'message'
+[36m(insert_dns_data_remote pid=1974210)[0m Count of existing DNS records for testaspnet.vulnweb.com with IP 44.238.29.244: 1
+[36m(insert_dns_data_remote pid=1974210)[0m Duplicate DNS data for testaspnet.vulnweb.com with IP 44.238.29.244 not inserted.
+[36m(insert_dns_data_remote pid=1974208)[0m Count of existing DNS records for testaspx.vulnweb.com with IP 44.228.249.3: 1
+[36m(insert_dns_data_remote pid=1974208)[0m Duplicate DNS data for testaspx.vulnweb.com with IP 44.228.249.3 not inserted.
+Shutting down DNS Workers gracefully...
+Exception ignored in atexit callback: <function shutdown at 0x7efe863336d0>
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/ray/_private/client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/ray/_private/worker.py", line 1788, in shutdown
+    time.sleep(0.5)
+KeyboardInterrupt: 

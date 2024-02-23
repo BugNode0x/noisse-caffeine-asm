@@ -1,0 +1,105 @@
+2024-02-23 04:07:47,453	INFO worker.py:1724 -- Started a local Ray instance.
+*** SIGTERM received at time=1708661268 on cpu 3 ***
+PC: @     0x7f40565276be  (unknown)  __recv
+    @     0x7f4056442520  1098867872  (unknown)
+    @     0x7f40554d3702         80  boost::asio::detail::socket_ops::sync_recv1()
+    @     0x7f4054dfc5b8        112  ray::ServerConnection::ReadBuffer()
+    @     0x7f4054dfdbd2        496  ray::ServerConnection::ReadMessage()
+    @     0x7f4054c36514        112  ray::raylet::RayletConnection::AtomicRequestReply()
+    @     0x7f4054c36dcc        432  ray::raylet::RayletClient::RayletClient()
+    @     0x7f4054b966de       1248  ray::core::CoreWorker::CoreWorker()
+    @     0x7f4054b9cb7f        624  ray::core::CoreWorkerProcessImpl::CoreWorkerProcessImpl()
+    @     0x7f4054b9dcbf         80  ray::core::CoreWorkerProcess::Initialize()
+    @     0x7f4054a608ef       2016  __pyx_pw_3ray_7_raylet_10CoreWorker_1__cinit__()
+    @     0x7f4054a61b99         48  __pyx_tp_new_3ray_7_raylet_CoreWorker()
+    @     0x557ed12199c7  (unknown)  _PyObject_MakeTpCall
+    @     0x557ed163aba0  (unknown)  (unknown)
+[2024-02-23 04:07:48,598 E 1966661 1966661] logging.cc:361: *** SIGTERM received at time=1708661268 on cpu 3 ***
+[2024-02-23 04:07:48,599 E 1966661 1966661] logging.cc:361: PC: @     0x7f40565276be  (unknown)  __recv
+[2024-02-23 04:07:48,599 E 1966661 1966661] logging.cc:361:     @     0x7f4056442520  1098867872  (unknown)
+[2024-02-23 04:07:48,600 E 1966661 1966661] logging.cc:361:     @     0x7f40554d3702         80  boost::asio::detail::socket_ops::sync_recv1()
+[2024-02-23 04:07:48,600 E 1966661 1966661] logging.cc:361:     @     0x7f4054dfc5b8        112  ray::ServerConnection::ReadBuffer()
+[2024-02-23 04:07:48,600 E 1966661 1966661] logging.cc:361:     @     0x7f4054dfdbd2        496  ray::ServerConnection::ReadMessage()
+[2024-02-23 04:07:48,600 E 1966661 1966661] logging.cc:361:     @     0x7f4054c36514        112  ray::raylet::RayletConnection::AtomicRequestReply()
+[2024-02-23 04:07:48,600 E 1966661 1966661] logging.cc:361:     @     0x7f4054c36dcc        432  ray::raylet::RayletClient::RayletClient()
+[2024-02-23 04:07:48,600 E 1966661 1966661] logging.cc:361:     @     0x7f4054b966de       1248  ray::core::CoreWorker::CoreWorker()
+[2024-02-23 04:07:48,600 E 1966661 1966661] logging.cc:361:     @     0x7f4054b9cb7f        624  ray::core::CoreWorkerProcessImpl::CoreWorkerProcessImpl()
+[2024-02-23 04:07:48,600 E 1966661 1966661] logging.cc:361:     @     0x7f4054b9dcbf         80  ray::core::CoreWorkerProcess::Initialize()
+[2024-02-23 04:07:48,600 E 1966661 1966661] logging.cc:361:     @     0x7f4054a608ef       2016  __pyx_pw_3ray_7_raylet_10CoreWorker_1__cinit__()
+[2024-02-23 04:07:48,600 E 1966661 1966661] logging.cc:361:     @     0x7f4054a61b99         48  __pyx_tp_new_3ray_7_raylet_CoreWorker()
+[2024-02-23 04:07:48,601 E 1966661 1966661] logging.cc:361:     @     0x557ed12199c7  (unknown)  _PyObject_MakeTpCall
+[2024-02-23 04:07:48,602 E 1966661 1966661] logging.cc:361:     @     0x557ed163aba0  (unknown)  (unknown)
+2024-02-23 04:14:13,731	INFO worker.py:1724 -- Started a local Ray instance.
+Subdomain Workers have been started. Main script will now wait indefinitely.
+Shutting down Subdomain Workers gracefully...
+*** SIGTERM received at time=1708661668 on cpu 0 ***
+PC: @     0x7f060f11b63d  (unknown)  select
+    @     0x7f060f042520  (unknown)  (unknown)
+[2024-02-23 04:14:28,174 E 1970951 1970951] logging.cc:361: *** SIGTERM received at time=1708661668 on cpu 0 ***
+[2024-02-23 04:14:28,174 E 1970951 1970951] logging.cc:361: PC: @     0x7f060f11b63d  (unknown)  select
+[2024-02-23 04:14:28,174 E 1970951 1970951] logging.cc:361:     @     0x7f060f042520  (unknown)  (unknown)
+Exception ignored in atexit callback: <function shutdown at 0x7f060b9481f0>
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/ray/_private/client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/ray/_private/worker.py", line 1788, in shutdown
+    time.sleep(0.5)
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/ray/_private/worker.py", line 1390, in sigterm_handler
+    sys.exit(signum)
+SystemExit: 15
+2024-02-23 04:15:30,959	INFO worker.py:1724 -- Started a local Ray instance.
+2024-02-23 04:16:54,192	ERROR worker.py:405 -- Unhandled error (suppress with 'RAY_IGNORE_UNHANDLED_ERRORS=1'): [36mray::SubdomainEnumerationWorker.run()[39m (pid=1974947, ip=172.31.27.251, actor_id=98b86d1457f7f1702da42e7001000000, repr=<subdomain_worker.SubdomainEnumerationWorker object at 0x7ff29793dc30>)
+  File "/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/subdomain_worker.py", line 68, in run
+    subdomains = self.process_task(domain)
+  File "/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/subdomain_worker.py", line 34, in process_task
+    self.send_slack_notification(f"[!] Subdomain enumeration finished for {domain}.")
+TypeError: BaseWorker.send_slack_notification() missing 1 required positional argument: 'message'
+2024-02-23 04:18:46,348	ERROR worker.py:405 -- Unhandled error (suppress with 'RAY_IGNORE_UNHANDLED_ERRORS=1'): [36mray::SubdomainEnumerationWorker.run()[39m (pid=1974945, ip=172.31.27.251, actor_id=37aa87014435c1279a2c3ae001000000, repr=<subdomain_worker.SubdomainEnumerationWorker object at 0x7fad12c15c00>)
+  File "/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/subdomain_worker.py", line 68, in run
+    subdomains = self.process_task(domain)
+  File "/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/subdomain_worker.py", line 34, in process_task
+    self.send_slack_notification(f"[!] Subdomain enumeration finished for {domain}.")
+TypeError: BaseWorker.send_slack_notification() missing 1 required positional argument: 'message'
+2024-02-23 04:19:41,694	ERROR worker.py:405 -- Unhandled error (suppress with 'RAY_IGNORE_UNHANDLED_ERRORS=1'): [36mray::SubdomainEnumerationWorker.run()[39m (pid=1974946, ip=172.31.27.251, actor_id=5890f10ea5e272611662228f01000000, repr=<subdomain_worker.SubdomainEnumerationWorker object at 0x7f7696b3dc00>)
+  File "/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/subdomain_worker.py", line 68, in run
+    subdomains = self.process_task(domain)
+  File "/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/subdomain_worker.py", line 34, in process_task
+    self.send_slack_notification(f"[!] Subdomain enumeration finished for {domain}.")
+TypeError: BaseWorker.send_slack_notification() missing 1 required positional argument: 'message'
+Subdomain Workers have been started. Main script will now wait indefinitely.
+[36m(SubdomainEnumerationWorker pid=1974947)[0m Fetched task from api_queue: {"domain": "vulnweb.com", "user_id": "user_01HMTAXPTE8XSQKD8XZ9M66CQM"}
+[36m(SubdomainEnumerationWorker pid=1974947)[0m Received domain: vulnweb.com, Hunter ID: user_01HMTAXPTE8XSQKD8XZ9M66CQM
+[36m(SubdomainEnumerationWorker pid=1974947)[0m Calling ensure_domain_exists with domain: vulnweb.com, Hunter ID: user_01HMTAXPTE8XSQKD8XZ9M66CQM
+[36m(SubdomainEnumerationWorker pid=1974947)[0m Processing domain: vulnweb.com with ID: 144
+[36m(SubdomainEnumerationWorker pid=1974947)[0m Running subfinder for domain: vulnweb.com
+[36m(SubdomainEnumerationWorker pid=1974947)[0m Running subfinder
+[36m(SubdomainEnumerationWorker pid=1974945)[0m Fetched task from api_queue: {"domain": "vulnweb.com", "user_id": "user_01HNZEKKM36W84MCQSSBFK7NDH"}
+[36m(SubdomainEnumerationWorker pid=1974945)[0m Received domain: vulnweb.com, Hunter ID: user_01HNZEKKM36W84MCQSSBFK7NDH
+[36m(SubdomainEnumerationWorker pid=1974945)[0m Slack notification failed: 403 - invalid_token
+[36m(SubdomainEnumerationWorker pid=1974945)[0m Calling ensure_domain_exists with domain: vulnweb.com, Hunter ID: user_01HNZEKKM36W84MCQSSBFK7NDH
+[36m(SubdomainEnumerationWorker pid=1974945)[0m Processing domain: vulnweb.com with ID: 144
+[36m(SubdomainEnumerationWorker pid=1974945)[0m Running subfinder for domain: vulnweb.com
+[36m(SubdomainEnumerationWorker pid=1974945)[0m Running subfinder
+[36m(SubdomainEnumerationWorker pid=1974946)[0m Fetched task from api_queue: {"domain": "vulnweb.com", "user_id": "user_01HNZEKKM36W84MCQSSBFK7NDH"}
+[36m(SubdomainEnumerationWorker pid=1974946)[0m Received domain: vulnweb.com, Hunter ID: user_01HNZEKKM36W84MCQSSBFK7NDH
+[36m(SubdomainEnumerationWorker pid=1974946)[0m Slack notification failed: 403 - invalid_token
+[36m(SubdomainEnumerationWorker pid=1974946)[0m Calling ensure_domain_exists with domain: vulnweb.com, Hunter ID: user_01HNZEKKM36W84MCQSSBFK7NDH
+[36m(SubdomainEnumerationWorker pid=1974946)[0m Processing domain: vulnweb.com with ID: 144
+[36m(SubdomainEnumerationWorker pid=1974946)[0m Running subfinder for domain: vulnweb.com
+[36m(SubdomainEnumerationWorker pid=1974946)[0m Running subfinder
+Shutting down Subdomain Workers gracefully...
+*** SIGTERM received at time=1708662006 on cpu 2 ***
+PC: @     0x7fdd01d1b63d  (unknown)  select
+    @     0x7fdd01c42520  (unknown)  (unknown)
+[2024-02-23 04:20:06,497 E 1973572 1973572] logging.cc:361: *** SIGTERM received at time=1708662006 on cpu 2 ***
+[2024-02-23 04:20:06,497 E 1973572 1973572] logging.cc:361: PC: @     0x7fdd01d1b63d  (unknown)  select
+[2024-02-23 04:20:06,497 E 1973572 1973572] logging.cc:361:     @     0x7fdd01c42520  (unknown)  (unknown)
+Exception ignored in atexit callback: <function shutdown at 0x7fdcfe5441f0>
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/ray/_private/client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/ray/_private/worker.py", line 1788, in shutdown
+    time.sleep(0.5)
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/ray/_private/worker.py", line 1390, in sigterm_handler
+    sys.exit(signum)
+SystemExit: 15

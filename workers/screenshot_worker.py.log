@@ -1,0 +1,38 @@
+2024-02-23 04:07:47,583	INFO worker.py:1724 -- Started a local Ray instance.
+Traceback (most recent call last):
+  File "/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/screenshot_worker.py", line 111, in <module>
+    ray.init()
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/ray/_private/client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/ray/_private/worker.py", line 1726, in init
+    connect(
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/ray/_private/worker.py", line 2368, in connect
+    worker.core_worker.notify_raylet()
+KeyboardInterrupt
+Exception ignored in atexit callback: <function shutdown at 0x7fb781e037f0>
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/ray/_private/client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/ray/_private/worker.py", line 1788, in shutdown
+    time.sleep(0.5)
+KeyboardInterrupt: 
+2024-02-23 04:14:14,032	INFO worker.py:1724 -- Started a local Ray instance.
+Screenshot Workers have been started. Main script will now wait indefinitely.
+Shutting down Screenshot Workers gracefully...
+Exception ignored in atexit callback: <function shutdown at 0x7f03021377f0>
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/ray/_private/client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/ray/_private/worker.py", line 1788, in shutdown
+    time.sleep(0.5)
+KeyboardInterrupt: 
+2024-02-23 04:15:30,790	INFO worker.py:1724 -- Started a local Ray instance.
+Screenshot Workers have been started. Main script will now wait indefinitely.
+Shutting down Screenshot Workers gracefully...
+Exception ignored in atexit callback: <function shutdown at 0x7f41581337f0>
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/ray/_private/client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/ray/_private/worker.py", line 1788, in shutdown
+    time.sleep(0.5)
+KeyboardInterrupt: 
