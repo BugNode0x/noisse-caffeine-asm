@@ -6284,3 +6284,83 @@ Press CTRL+C to quit
 127.0.0.1 - - [22/Feb/2024 23:45:23] "POST /monitor-domain HTTP/1.0" 200 -
 127.0.0.1 - - [22/Feb/2024 23:47:40] "GET / HTTP/1.0" 404 -
 127.0.0.1 - - [22/Feb/2024 23:49:10] "POST /monitor-domain HTTP/1.0" 200 -
+127.0.0.1 - - [22/Feb/2024 23:54:58] "GET / HTTP/1.0" 404 -
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/dns_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+127.0.0.1 - - [22/Feb/2024 23:59:54] "POST /monitor-domain HTTP/1.0" 200 -
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/brain/db_processor.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+127.0.0.1 - - [23/Feb/2024 00:05:49] "GET /.env HTTP/1.0" 404 -
+127.0.0.1 - - [23/Feb/2024 00:05:50] "POST / HTTP/1.0" 404 -
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/brain/db_processor.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+127.0.0.1 - - [23/Feb/2024 00:07:33] "POST /monitor-domain HTTP/1.0" 200 -
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/brain/db_processor.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/brain/db_processor.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/subdomain_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+127.0.0.1 - - [23/Feb/2024 00:13:46] "POST /monitor-domain HTTP/1.0" 200 -
+127.0.0.1 - - [23/Feb/2024 00:15:30] "POST /monitor-domain HTTP/1.0" 200 -
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/subdomain_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/brain/db_processor.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+127.0.0.1 - - [23/Feb/2024 00:23:25] "POST /monitor-domain HTTP/1.0" 200 -
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/brain/db_processor.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/brain/db_processor.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+127.0.0.1 - - [23/Feb/2024 00:26:59] "POST /monitor-domain HTTP/1.0" 200 -
+127.0.0.1 - - [23/Feb/2024 00:27:25] "POST /monitor-domain HTTP/1.0" 200 -
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/brain/db_processor.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/subdomain_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+127.0.0.1 - - [23/Feb/2024 00:29:11] "POST /monitor-domain HTTP/1.0" 200 -
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/brain/db_processor.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+127.0.0.1 - - [23/Feb/2024 00:31:23] "POST /monitor-domain HTTP/1.0" 200 -
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/brain/db_processor.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+127.0.0.1 - - [23/Feb/2024 00:53:02] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [23/Feb/2024 00:53:06] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [23/Feb/2024 00:55:06] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [23/Feb/2024 01:03:13] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [23/Feb/2024 01:08:29] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [23/Feb/2024 01:20:32] "GET /.env HTTP/1.0" 404 -
+127.0.0.1 - - [23/Feb/2024 01:20:32] "POST / HTTP/1.0" 404 -
+127.0.0.1 - - [23/Feb/2024 01:48:29] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [23/Feb/2024 02:00:44] "GET / HTTP/1.0" 404 -
+127.0.0.1 - - [23/Feb/2024 02:06:04] "GET /.env HTTP/1.0" 404 -
+127.0.0.1 - - [23/Feb/2024 02:06:04] "POST / HTTP/1.0" 404 -
+127.0.0.1 - - [23/Feb/2024 03:04:33] "POST /monitor-domain HTTP/1.0" 200 -

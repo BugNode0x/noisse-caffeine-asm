@@ -33,7 +33,7 @@ class DNSWorker(BaseWorker):
             insert_future = insert_dns_data_remote.remote(dns_data)
 
             # Optional: wait for the operation to complete
-            # result = ray.get(insert_future)
+            result = ray.get(insert_future)
 
             self.send_slack_notification(user_id, f"Processed DNS for {subdomain} successfully.")
 

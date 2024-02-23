@@ -130,17 +130,23 @@ def insert_subdomain_results(hunter_id, domain, subdomains):
 
 @ray.remote
 def insert_dns_data_remote(dns_data):
+    print("Starting insert_dns_data_remote function.")
+
     subdomain = dns_data['host']
     ip = dns_data.get('a', [None])[0]  # Taking the first IP address, if available
     status_code = dns_data['status_code']
     timestamp = dns_data['timestamp']
 
+    print(f"Processing DNS data for subdomain: {subdomain}, IP: {ip}")
+
     # Fetch subdomain_id
     subdomain_id_query = "SELECT subdomain_id FROM subdomains WHERE subdomain = %s"
     subdomain_id = execute_db_query(subdomain_id_query, (subdomain,), fetch_one=True)
+    
 
     if subdomain_id is None:
-        print(f"Subdomain ID not found for {subdomain}")
+        print(f"Subdomain ID not found for {subdomain}. Attempting to insert.")
+        # You might need an additional step here to insert the subdomain if it's not found
         return
 
     # Check if the same subdomain with the same IP already exists
@@ -149,7 +155,9 @@ def insert_dns_data_remote(dns_data):
         WHERE subdomain = %s AND ip = %s
     '''
     count = execute_db_query(check_query, (subdomain, ip), fetch_one=True)
-    
+
+    print(f"Count of existing DNS records for {subdomain} with IP {ip}: {count}")
+
     # Insert new DNS result only if no matching subdomain and IP are found
     if count == 0:
         insert_query = '''
@@ -160,6 +168,8 @@ def insert_dns_data_remote(dns_data):
         print(f"New DNS data inserted for {subdomain}.")
     else:
         print(f"Duplicate DNS data for {subdomain} with IP {ip} not inserted.")
+
+    print("Completed insert_dns_data_remote function.")
 
 @ray.remote
 def insert_http_data(user_id, host, root_domain, url, title, webserver, tech, status_code, content_length):
