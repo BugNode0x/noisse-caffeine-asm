@@ -36,3 +36,22 @@ Traceback (most recent call last):
   File "/home/ubuntu/.local/lib/python3.10/site-packages/ray/_private/worker.py", line 1788, in shutdown
     time.sleep(0.5)
 KeyboardInterrupt: 
+2024-02-23 04:24:23,728	INFO worker.py:1724 -- Started a local Ray instance.
+Screenshot Workers have been started. Main script will now wait indefinitely.
+[36m(ScreenshotWorker pid=1983412)[0m Fetched task from screenshot_queue: {"url": "https://www.noisse.io", "root_domain": "noisse.io", "user_id": 42}
+[36m(ScreenshotWorker pid=1983412)[0m Pushed to crawl_queue: {"root_domain": "noisse.io", "user_id": 42}
+[36m(insert_screenshot_data pid=1982757)[0m Database query error: no results to fetch
+[36m(insert_screenshot_data pid=1982757)[0m Inserted new screenshot data for subdomain ID 8812 and URL https://www.noisse.io.
+[36m(ScreenshotWorker pid=1983412)[0m Fetched task from screenshot_queue: {"url": "https://www.noisse.io", "root_domain": "noisse.io", "user_id": 41}
+[36m(ScreenshotWorker pid=1983412)[0m Original screenshot file not found: /home/ubuntu/asm/dev/noisse-caffeine-asm/temp-shots/https_www.noisse.io.png
+[36m(ScreenshotWorker pid=1983412)[0m Pushed to crawl_queue: {"root_domain": "noisse.io", "user_id": 41}
+[36m(insert_screenshot_data pid=1982757)[0m Duplicate screenshot data for subdomain ID 8812 and URL https://www.noisse.io not inserted.
+Shutting down Screenshot Workers gracefully...
+Exception ignored in atexit callback: <function shutdown at 0x7f967521f7f0>
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/ray/_private/client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/ray/_private/worker.py", line 1801, in shutdown
+    global_worker.core_worker.shutdown_driver()
+KeyboardInterrupt: 
+2024-02-23 04:27:57,667	INFO worker.py:1724 -- Started a local Ray instance.

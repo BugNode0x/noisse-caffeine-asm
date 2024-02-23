@@ -103,3 +103,45 @@ Traceback (most recent call last):
   File "/home/ubuntu/.local/lib/python3.10/site-packages/ray/_private/worker.py", line 1390, in sigterm_handler
     sys.exit(signum)
 SystemExit: 15
+2024-02-23 04:24:23,560	INFO worker.py:1724 -- Started a local Ray instance.
+Subdomain Workers have been started. Main script will now wait indefinitely.
+[36m(SubdomainEnumerationWorker pid=1983466)[0m Fetched task from api_queue: {"domain": "noisse.io", "user_id": "user_01HNZEKKM36W84MCQSSBFK7NDH"}
+[36m(SubdomainEnumerationWorker pid=1983466)[0m Received domain: noisse.io, Hunter ID: user_01HNZEKKM36W84MCQSSBFK7NDH
+[36m(SubdomainEnumerationWorker pid=1983466)[0m Calling ensure_domain_exists with domain: noisse.io, Hunter ID: user_01HNZEKKM36W84MCQSSBFK7NDH
+[36m(SubdomainEnumerationWorker pid=1983466)[0m Processing domain: noisse.io with ID: 145
+[36m(SubdomainEnumerationWorker pid=1983466)[0m Running subfinder
+[36m(SubdomainEnumerationWorker pid=1983466)[0m Database query error: no results to fetch
+[36m(SubdomainEnumerationWorker pid=1983466)[0m Database query error: no results to fetch[32m [repeated 6x across cluster] (Ray deduplicates logs by default. Set RAY_DEDUP_LOGS=0 to disable log deduplication, or see https://docs.ray.io/en/master/ray-observability/ray-logging.html#log-deduplication for more options.)[0m
+[36m(SubdomainEnumerationWorker pid=1983466)[0m Database query error: no results to fetch[32m [repeated 4x across cluster][0m
+[36m(SubdomainEnumerationWorker pid=1983465)[0m Fetched task from api_queue: {"domain": "noisse.io", "user_id": "user_01HMTAXPTE8XSQKD8XZ9M66CQM"}
+[36m(SubdomainEnumerationWorker pid=1983465)[0m Received domain: noisse.io, Hunter ID: user_01HMTAXPTE8XSQKD8XZ9M66CQM
+[36m(SubdomainEnumerationWorker pid=1983465)[0m Calling ensure_domain_exists with domain: noisse.io, Hunter ID: user_01HMTAXPTE8XSQKD8XZ9M66CQM
+[36m(SubdomainEnumerationWorker pid=1983465)[0m Processing domain: noisse.io with ID: 145
+[36m(SubdomainEnumerationWorker pid=1983465)[0m Running subfinder
+[36m(SubdomainEnumerationWorker pid=1983465)[0m Database query error: no results to fetch
+[36m(SubdomainEnumerationWorker pid=1983465)[0m Database query error: no results to fetch[32m [repeated 6x across cluster][0m
+[36m(SubdomainEnumerationWorker pid=1983465)[0m Database query error: no results to fetch[32m [repeated 4x across cluster][0m
+Shutting down Subdomain Workers gracefully...
+*** SIGTERM received at time=1708662467 on cpu 1 ***
+PC: @     0x55afd72cf69c  (unknown)  (unknown)
+    @     0x7f2a31842520    1054960  (unknown)
+    @     0x55afd76fe340  (unknown)  (unknown)
+[2024-02-23 04:27:47,703 E 1982092 1982092] logging.cc:361: *** SIGTERM received at time=1708662467 on cpu 1 ***
+[2024-02-23 04:27:47,704 E 1982092 1982092] logging.cc:361: PC: @     0x55afd72cf69c  (unknown)  (unknown)
+[2024-02-23 04:27:47,704 E 1982092 1982092] logging.cc:361:     @     0x7f2a31842520    1054960  (unknown)
+[2024-02-23 04:27:47,705 E 1982092 1982092] logging.cc:361:     @     0x55afd76fe340  (unknown)  (unknown)
+Exception ignored in: <module 'threading' from '/usr/lib/python3.10/threading.py'>
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/threading.py", line 1537, in _shutdown
+    atexit_call()
+  File "/usr/lib/python3.10/concurrent/futures/thread.py", line 23, in _python_exit
+    def _python_exit():
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/ray/_private/worker.py", line 1390, in sigterm_handler
+    sys.exit(signum)
+SystemExit: 15
+Exception ignored in sys.unraisablehook: <built-in function unraisablehook>
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/ray/_private/worker.py", line 1390, in sigterm_handler
+    sys.exit(signum)
+SystemExit: 15
+2024-02-23 04:27:57,483	INFO worker.py:1724 -- Started a local Ray instance.

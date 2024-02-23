@@ -36,3 +36,617 @@ Traceback (most recent call last):
   File "/home/ubuntu/.local/lib/python3.10/site-packages/ray/_private/worker.py", line 1788, in shutdown
     time.sleep(0.5)
 KeyboardInterrupt: 
+2024-02-23 04:24:23,944	INFO worker.py:1724 -- Started a local Ray instance.
+Crawl Workers have been started. Main script will now wait indefinitely.
+[36m(JavaScriptGatheringWorker pid=1983467)[0m With like_pattern: %.noisse.io
+[36m(JavaScriptGatheringWorker pid=1983467)[0m [(8812, 'https://www.noisse.io'), (8814, 'https://app.noisse.io')]
+[36m(insert_js_result pid=1982784)[0m Duplicate JS data for subdomain ID 8812 and URL https://www.noisse.io/_next/static/css/854d85d39f5a0427.css not inserted.
+[36m(JavaScriptGatheringWorker pid=1983461)[0m With like_pattern: %.noisse.io
+[36m(JavaScriptGatheringWorker pid=1983461)[0m [(8812, 'https://www.noisse.io'), (8814, 'https://app.noisse.io')]
+[36m(insert_js_result pid=1982787)[0m Duplicate JS data for subdomain ID 8812 and URL https://www.noisse.io/_next/static/media/=L-y not inserted.
+[36m(insert_js_result pid=1982785)[0m Duplicate JS data for subdomain ID 8812 and URL https://api.noisse.io/portal/auth not inserted.
+[36m(insert_js_result pid=1982786)[0m Duplicate JS data for subdomain ID 8812 and URL https://www.noisse.io not inserted.
+[36m(insert_js_result pid=1982784)[0m Duplicate JS data for subdomain ID 8812 and URL https://www.noisse.io/_next/ not inserted.
+[36m(insert_js_result pid=1982784)[0m Duplicate JS data for subdomain ID 8812 and URL https://www.noisse.io/_next/ not inserted.
+[36m(insert_js_result pid=1982785)[0m Database query error: no results to fetch
+[36m(insert_js_result pid=1982785)[0m Inserted new JS data for subdomain ID 8812 and URL https://www.noisse.io/_next/image?url=%2Fnoisse.png&w=2048&q=75.
+[36m(insert_js_result pid=1982786)[0m Duplicate JS data for subdomain ID 8812 and URL https://www.noisse.io/_next/image not inserted.
+[36m(insert_js_result pid=1982787)[0m Duplicate JS data for subdomain ID 8812 and URL https://www.noisse.io/_next/static/media/=L-y not inserted.
+[36m(insert_js_result pid=1982786)[0m Duplicate JS data for subdomain ID 8812 and URL https://www.noisse.io/_next/static/chunks/app/(landing)/page-1cb77c2f0604d82f.js not inserted.[32m [repeated 21x across cluster] (Ray deduplicates logs by default. Set RAY_DEDUP_LOGS=0 to disable log deduplication, or see https://docs.ray.io/en/master/ray-observability/ray-logging.html#log-deduplication for more options.)[0m
+[36m(insert_js_result pid=1982786)[0m Duplicate JS data for subdomain ID 8812 and URL https://api.noisse.io/portal/auth not inserted.
+[36m(insert_js_result pid=1982785)[0m Duplicate JS data for subdomain ID 8812 and URL https://www.noisse.io not inserted.
+[36m(insert_js_result pid=1982784)[0m Database query error: no results to fetch
+[36m(insert_js_result pid=1982784)[0m Inserted new JS data for subdomain ID 8814 and URL https://app.noisse.io/static/js/main.10e54f55.js.
+[36m(insert_js_result pid=1982786)[0m Duplicate JS data for subdomain ID 8812 and URL https://www.noisse.io/_next/static/chunks/955-ff6aeb2b8f8c60f6.js not inserted.[32m [repeated 5x across cluster][0m
+[36m(insert_js_result pid=1982787)[0m Database query error: no results to fetch
+[36m(insert_js_result pid=1982787)[0m Inserted new JS data for subdomain ID 8814 and URL https://app.noisse.io/static/css/main.dba06ccd.css.
+[36m(insert_js_result pid=1982785)[0m Inserted new JS data for subdomain ID 8814 and URL https://app.noisse.io.
+[36m(insert_js_result pid=1982786)[0m Inserted new JS data for subdomain ID 8814 and URL https://app.noisse.io/site.webmanifest.
+[36m(insert_js_result pid=1982787)[0m Duplicate JS data for subdomain ID 8814 and URL https://app.noisse.io not inserted.
+[36m(insert_js_result pid=1982785)[0m Duplicate JS data for subdomain ID 8814 and URL https://app.noisse.io/site.webmanifest not inserted.
+Shutting down Crawl Workers gracefully...
+Exception ignored in atexit callback: <function shutdown at 0x7fbfcf41f910>
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/ray/_private/client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/ray/_private/worker.py", line 1801, in shutdown
+    global_worker.core_worker.shutdown_driver()
+KeyboardInterrupt: 
+[36m(insert_js_result pid=1982786)[0m Duplicate JS data for subdomain ID 8814 and URL https://app.noisse.io/static/js/main.10e54f55.js not inserted.[32m [repeated 2x across cluster][0m
+[36m(insert_js_result pid=1982786)[0m Database query error: no results to fetch[32m [repeated 2x across cluster][0m
+2024-02-23 04:27:57,171	INFO worker.py:1724 -- Started a local Ray instance.
+Crawl Workers have been started. Main script will now wait indefinitely.
+[36m(JavaScriptGatheringWorker pid=1990653)[0m With like_pattern: %.vulnweb.com
+[36m(JavaScriptGatheringWorker pid=1990653)[0m [(8821, 'http://rest.vulnweb.com')]
+[36m(JavaScriptGatheringWorker pid=1990663)[0m With like_pattern: %.vulnweb.com
+[36m(JavaScriptGatheringWorker pid=1990664)[0m With like_pattern: %.vulnweb.com
+[36m(JavaScriptGatheringWorker pid=1990663)[0m [(8821, 'http://rest.vulnweb.com'), (8824, 'http://testphp.vulnweb.com'), (8823, 'http://testasp.vulnweb.com'), (8822, 'http://testaspnet.vulnweb.com')]
+[36m(insert_js_result pid=1990020)[0m Database query error: no results to fetch
+[36m(insert_js_result pid=1990020)[0m Inserted new JS data for subdomain ID 8821 and URL http://vulnweb.com/.
+[36m(JavaScriptGatheringWorker pid=1990669)[0m With like_pattern: %.vulnweb.com
+[36m(JavaScriptGatheringWorker pid=1990669)[0m [(8821, 'http://rest.vulnweb.com'), (8824, 'http://testphp.vulnweb.com'), (8823, 'http://testasp.vulnweb.com'), (8822, 'http://testaspnet.vulnweb.com')][32m [repeated 2x across cluster] (Ray deduplicates logs by default. Set RAY_DEDUP_LOGS=0 to disable log deduplication, or see https://docs.ray.io/en/master/ray-observability/ray-logging.html#log-deduplication for more options.)[0m
+[36m(insert_js_result pid=1990022)[0m Inserted new JS data for subdomain ID 8821 and URL http://rest.vulnweb.com.
+[36m(insert_js_result pid=1990021)[0m Inserted new JS data for subdomain ID 8821 and URL http://rest.vulnweb.com/docs/.
+[36m(insert_js_result pid=1990020)[0m Duplicate JS data for subdomain ID 8821 and URL http://vulnweb.com/ not inserted.
+[36m(insert_js_result pid=1990021)[0m Database query error: no results to fetch[32m [repeated 2x across cluster][0m
+[36m(insert_js_result pid=1990022)[0m Duplicate JS data for subdomain ID 8821 and URL http://rest.vulnweb.com/docs/ not inserted.
+[36m(insert_js_result pid=1990021)[0m Duplicate JS data for subdomain ID 8821 and URL http://rest.vulnweb.com not inserted.
+[36m(insert_js_result pid=1990021)[0m Duplicate JS data for subdomain ID 8821 and URL http://rest.vulnweb.com not inserted.
+[36m(insert_js_result pid=1990021)[0m Duplicate JS data for subdomain ID 8821 and URL http://rest.vulnweb.com not inserted.
+[36m(JavaScriptGatheringWorker pid=1990653)[0m With like_pattern: %.vulnweb.com
+[36m(insert_js_result pid=1990022)[0m Duplicate JS data for subdomain ID 8821 and URL http://vulnweb.com/ not inserted.[32m [repeated 2x across cluster][0m
+[36m(insert_js_result pid=1990020)[0m Duplicate JS data for subdomain ID 8821 and URL http://rest.vulnweb.com/docs/ not inserted.[32m [repeated 2x across cluster][0m
+[36m(JavaScriptGatheringWorker pid=1990653)[0m [(8821, 'http://rest.vulnweb.com'), (8824, 'http://testphp.vulnweb.com'), (8823, 'http://testasp.vulnweb.com'), (8822, 'http://testaspnet.vulnweb.com'), (8836, 'http://testhtml5.vulnweb.com'), (8839, 'http://www.vulnweb.com')]
+[36m(insert_js_result pid=1990020)[0m Database query error: no results to fetch
+[36m(insert_js_result pid=1990020)[0m Inserted new JS data for subdomain ID 8824 and URL http://testphp.vulnweb.com/hj/var/www/database_connect.php.
+[36m(insert_js_result pid=1990021)[0m Inserted new JS data for subdomain ID 8824 and URL http://testphp.vulnweb.com.
+[36m(insert_js_result pid=1990020)[0m Duplicate JS data for subdomain ID 8824 and URL http://testphp.vulnweb.com/hj/var/www/database_connect.php not inserted.
+[36m(insert_js_result pid=1990021)[0m Duplicate JS data for subdomain ID 8824 and URL http://testphp.vulnweb.com not inserted.
+[36m(insert_js_result pid=1990020)[0m Inserted new JS data for subdomain ID 8823 and URL http://testasp.vulnweb.com.
+[36m(insert_js_result pid=1990020)[0m Database query error: no results to fetch[32m [repeated 4x across cluster][0m
+[36m(insert_js_result pid=1990022)[0m Inserted new JS data for subdomain ID 8824 and URL http://testphp.vulnweb.com/hj/var/www/database_connect.php.
+[36m(insert_js_result pid=1990019)[0m Inserted new JS data for subdomain ID 8824 and URL http://testphp.vulnweb.com.
+[36m(insert_js_result pid=1990022)[0m Inserted new JS data for subdomain ID 8823 and URL http://testasp.vulnweb.com/Register.asp?RetURL=%2FDefault%2Easp%3F.
+[36m(insert_js_result pid=1990021)[0m Inserted new JS data for subdomain ID 8823 and URL http://testasp.vulnweb.com/styles.css.
+[36m(insert_js_result pid=1990020)[0m Inserted new JS data for subdomain ID 8823 and URL http://testasp.vulnweb.com/Default.asp.
+[36m(insert_js_result pid=1990022)[0m Inserted new JS data for subdomain ID 8823 and URL http://testasp.vulnweb.com/Templatize.asp?item=html/about.html.
+[36m(insert_js_result pid=1990021)[0m Inserted new JS data for subdomain ID 8823 and URL http://testasp.vulnweb.com/html/about.html.
+[36m(insert_js_result pid=1990019)[0m Inserted new JS data for subdomain ID 8823 and URL http://testasp.vulnweb.com/Templates/MainTemplate.dwt.asp.
+[36m(insert_js_result pid=1990021)[0m Duplicate JS data for subdomain ID 8821 and URL http://rest.vulnweb.com not inserted.
+[36m(insert_js_result pid=1990019)[0m Duplicate JS data for subdomain ID 8821 and URL http://rest.vulnweb.com/docs/ not inserted.
+[36m(insert_js_result pid=1990021)[0m Duplicate JS data for subdomain ID 8821 and URL http://vulnweb.com/ not inserted.
+[36m(insert_js_result pid=1990022)[0m Inserted new JS data for subdomain ID 8823 and URL http://testasp.vulnweb.com/Search.asp.
+[36m(insert_js_result pid=1990021)[0m Duplicate JS data for subdomain ID 8823 and URL http://testasp.vulnweb.com/Register.asp?RetURL=%2FDefault%2Easp%3F not inserted.
+[36m(insert_js_result pid=1990022)[0m Duplicate JS data for subdomain ID 8823 and URL http://testasp.vulnweb.com/Templates/MainTemplate.dwt.asp not inserted.
+[36m(insert_js_result pid=1990020)[0m Duplicate JS data for subdomain ID 8823 and URL http://testasp.vulnweb.com/Default.asp not inserted.
+[36m(insert_js_result pid=1990021)[0m Duplicate JS data for subdomain ID 8823 and URL http://testasp.vulnweb.com/styles.css not inserted.
+[36m(insert_js_result pid=1990020)[0m Duplicate JS data for subdomain ID 8823 and URL http://testasp.vulnweb.com/Templatize.asp?item=html/about.html not inserted.
+[36m(insert_js_result pid=1990022)[0m Duplicate JS data for subdomain ID 8823 and URL http://testasp.vulnweb.com/html/about.html not inserted.
+[36m(insert_js_result pid=1990019)[0m Duplicate JS data for subdomain ID 8823 and URL http://testasp.vulnweb.com not inserted.
+[36m(insert_js_result pid=1990019)[0m Database query error: no results to fetch[32m [repeated 10x across cluster][0m
+[36m(insert_js_result pid=1990019)[0m Inserted new JS data for subdomain ID 8823 and URL http://testasp.vulnweb.com/showforum.asp?id=1.[32m [repeated 3x across cluster][0m
+[36m(insert_js_result pid=1990022)[0m Duplicate JS data for subdomain ID 8823 and URL http://testasp.vulnweb.com/Search.asp not inserted.
+[36m(insert_js_result pid=1990022)[0m Duplicate JS data for subdomain ID 8823 and URL http://testasp.vulnweb.com/html/about.html not inserted.
+[36m(insert_js_result pid=1990020)[0m Duplicate JS data for subdomain ID 8823 and URL http://testasp.vulnweb.com/Templatize.asp?item=html/about.html not inserted.
+[36m(insert_js_result pid=1990022)[0m Duplicate JS data for subdomain ID 8823 and URL http://testasp.vulnweb.com/Templates/MainTemplate.dwt.asp not inserted.
+[36m(JavaScriptGatheringWorker pid=1990669)[0m With like_pattern: %.noisse.io
+[36m(insert_js_result pid=1990019)[0m Duplicate JS data for subdomain ID 8823 and URL http://testasp.vulnweb.com/showforum.asp?id=1 not inserted.[32m [repeated 4x across cluster][0m
+[36m(insert_js_result pid=1990021)[0m Duplicate JS data for subdomain ID 8823 and URL http://testasp.vulnweb.com/Default.asp not inserted.
+[36m(insert_js_result pid=1990019)[0m Duplicate JS data for subdomain ID 8823 and URL http://testasp.vulnweb.com/styles.css not inserted.
+[36m(insert_js_result pid=1990021)[0m Duplicate JS data for subdomain ID 8823 and URL http://testasp.vulnweb.com not inserted.
+[36m(insert_js_result pid=1990019)[0m Duplicate JS data for subdomain ID 8823 and URL http://testasp.vulnweb.com/Search.asp not inserted.
+[36m(JavaScriptGatheringWorker pid=1990669)[0m [(8826, 'https://www.noisse.io'), (8825, 'https://app.noisse.io')]
+[36m(JavaScriptGatheringWorker pid=1990663)[0m With like_pattern: %.vulnweb.com
+[36m(insert_js_result pid=1990020)[0m Database query error: no results to fetch
+[36m(insert_js_result pid=1990020)[0m Inserted new JS data for subdomain ID 8822 and URL http://testaspnet.vulnweb.com/Signup.aspx.
+[36m(insert_js_result pid=1990022)[0m Inserted new JS data for subdomain ID 8822 and URL http://testaspnet.vulnweb.com/styles.css.
+[36m(insert_js_result pid=1990021)[0m Inserted new JS data for subdomain ID 8822 and URL http://testaspnet.vulnweb.com/default.aspx.
+[36m(insert_js_result pid=1990019)[0m Inserted new JS data for subdomain ID 8822 and URL http://testaspnet.vulnweb.com/ReadNews.aspx?id=3&NewsAd=ads/def.html.
+[36m(JavaScriptGatheringWorker pid=1990663)[0m [(8821, 'http://rest.vulnweb.com'), (8824, 'http://testphp.vulnweb.com'), (8823, 'http://testasp.vulnweb.com'), (8822, 'http://testaspnet.vulnweb.com'), (8836, 'http://testhtml5.vulnweb.com'), (8839, 'http://www.vulnweb.com')]
+[36m(insert_js_result pid=1990020)[0m Inserted new JS data for subdomain ID 8822 and URL http://testaspnet.vulnweb.com/login.aspx.
+[36m(insert_js_result pid=1990021)[0m Inserted new JS data for subdomain ID 8822 and URL http://testaspnet.vulnweb.com/ads/def.html.
+[36m(insert_js_result pid=1990019)[0m Inserted new JS data for subdomain ID 8822 and URL http://testaspnet.vulnweb.com/about.aspx.
+[36m(insert_js_result pid=1990020)[0m Inserted new JS data for subdomain ID 8824 and URL http://testphp.vulnweb.com/index.php.
+[36m(insert_js_result pid=1990022)[0m Inserted new JS data for subdomain ID 8822 and URL http://testaspnet.vulnweb.com/rssFeed.aspx.
+[36m(insert_js_result pid=1990021)[0m Inserted new JS data for subdomain ID 8822 and URL http://testaspnet.vulnweb.com.
+[36m(insert_js_result pid=1990019)[0m Inserted new JS data for subdomain ID 8824 and URL http://testphp.vulnweb.com/categories.php.
+[36m(insert_js_result pid=1990020)[0m Duplicate JS data for subdomain ID 8824 and URL http://testphp.vulnweb.com not inserted.
+[36m(JavaScriptGatheringWorker pid=1990664)[0m With like_pattern: %.noisse.io
+[36m(insert_js_result pid=1990022)[0m Inserted new JS data for subdomain ID 8824 and URL http://testphp.vulnweb.com/login.php.
+[36m(JavaScriptGatheringWorker pid=1990664)[0m [(8826, 'https://www.noisse.io'), (8825, 'https://app.noisse.io')]
+[36m(insert_js_result pid=1990021)[0m Inserted new JS data for subdomain ID 8824 and URL http://testphp.vulnweb.com/AJAX/index.php.
+[36m(insert_js_result pid=1990019)[0m Inserted new JS data for subdomain ID 8824 and URL http://testphp.vulnweb.com/userinfo.php.
+[36m(insert_js_result pid=1990020)[0m Inserted new JS data for subdomain ID 8824 and URL http://testphp.vulnweb.com/guestbook.php.
+[36m(insert_js_result pid=1990020)[0m Database query error: no results to fetch[32m [repeated 15x across cluster][0m
+[36m(insert_js_result pid=1990022)[0m Inserted new JS data for subdomain ID 8822 and URL http://testaspnet.vulnweb.com/Comments.aspx?id=2.
+[36m(insert_js_result pid=1990020)[0m Duplicate JS data for subdomain ID 8822 and URL http://testaspnet.vulnweb.com not inserted.
+[36m(insert_js_result pid=1990022)[0m Inserted new JS data for subdomain ID 8824 and URL http://testphp.vulnweb.com/Templates/main_dynamic_template.dwt.php.
+[36m(insert_js_result pid=1990021)[0m Inserted new JS data for subdomain ID 8824 and URL http://testphp.vulnweb.com/style.css.
+[36m(insert_js_result pid=1990019)[0m Inserted new JS data for subdomain ID 8824 and URL http://testphp.vulnweb.com/high.
+[36m(insert_js_result pid=1990022)[0m Duplicate JS data for subdomain ID 8822 and URL http://testaspnet.vulnweb.com/Signup.aspx not inserted.
+[36m(insert_js_result pid=1990021)[0m Duplicate JS data for subdomain ID 8822 and URL http://testaspnet.vulnweb.com/ads/def.html not inserted.
+[36m(insert_js_result pid=1990019)[0m Duplicate JS data for subdomain ID 8822 and URL http://testaspnet.vulnweb.com/rssFeed.aspx not inserted.
+[36m(insert_js_result pid=1990022)[0m Duplicate JS data for subdomain ID 8822 and URL http://testaspnet.vulnweb.com/login.aspx not inserted.
+[36m(insert_js_result pid=1990020)[0m Inserted new JS data for subdomain ID 8822 and URL http://testaspnet.vulnweb.com/ReadNews.aspx?id=2&NewsAd=ads/def.html.
+[36m(insert_js_result pid=1990021)[0m Duplicate JS data for subdomain ID 8822 and URL http://testaspnet.vulnweb.com/styles.css not inserted.
+[36m(insert_js_result pid=1990022)[0m Duplicate JS data for subdomain ID 8822 and URL http://testaspnet.vulnweb.com/about.aspx not inserted.
+[36m(insert_js_result pid=1990020)[0m Duplicate JS data for subdomain ID 8822 and URL http://testaspnet.vulnweb.com/default.aspx not inserted.
+[36m(insert_js_result pid=1990021)[0m Inserted new JS data for subdomain ID 8824 and URL http://testphp.vulnweb.com/artists.php.
+[36m(insert_js_result pid=1990020)[0m Inserted new JS data for subdomain ID 8824 and URL http://testphp.vulnweb.com/Mod_Rewrite_Shop/.
+[36m(insert_js_result pid=1990022)[0m Inserted new JS data for subdomain ID 8824 and URL http://testphp.vulnweb.com/disclaimer.php.
+[36m(insert_js_result pid=1990019)[0m Inserted new JS data for subdomain ID 8824 and URL http://testphp.vulnweb.com/cart.php.
+[36m(insert_js_result pid=1990020)[0m Duplicate JS data for subdomain ID 8822 and URL http://testaspnet.vulnweb.com not inserted.
+[36m(insert_js_result pid=1990019)[0m Database query error: no results to fetch[32m [repeated 9x across cluster][0m
+[36m(insert_js_result pid=1990022)[0m Duplicate JS data for subdomain ID 8822 and URL http://testaspnet.vulnweb.com/Comments.aspx?id=2 not inserted.
+[36m(insert_js_result pid=1990021)[0m Inserted new JS data for subdomain ID 8824 and URL http://testphp.vulnweb.com/privacy.php.
+[36m(insert_js_result pid=1990022)[0m Duplicate JS data for subdomain ID 8822 and URL http://testaspnet.vulnweb.com/login.aspx not inserted.
+[36m(insert_js_result pid=1990021)[0m Duplicate JS data for subdomain ID 8822 and URL http://testaspnet.vulnweb.com/styles.css not inserted.
+[36m(insert_js_result pid=1990019)[0m Duplicate JS data for subdomain ID 8822 and URL http://testaspnet.vulnweb.com/Signup.aspx not inserted.
+[36m(insert_js_result pid=1990019)[0m Duplicate JS data for subdomain ID 8822 and URL http://testaspnet.vulnweb.com/ads/def.html not inserted.
+[36m(insert_js_result pid=1990020)[0m Duplicate JS data for subdomain ID 8822 and URL http://testaspnet.vulnweb.com/rssFeed.aspx not inserted.
+[36m(insert_js_result pid=1990022)[0m Duplicate JS data for subdomain ID 8823 and URL http://testasp.vulnweb.com/Templates/MainTemplate.dwt.asp not inserted.
+[36m(insert_js_result pid=1990019)[0m Inserted new JS data for subdomain ID 8822 and URL http://testaspnet.vulnweb.com/Comments.aspx?id=0.
+[36m(insert_js_result pid=1990020)[0m Duplicate JS data for subdomain ID 8823 and URL http://testasp.vulnweb.com/Search.asp not inserted.
+[36m(insert_js_result pid=1990019)[0m Duplicate JS data for subdomain ID 8823 and URL http://testasp.vulnweb.com not inserted.
+[36m(insert_js_result pid=1990021)[0m Inserted new JS data for subdomain ID 8824 and URL http://testphp.vulnweb.com/hpp/.
+[36m(insert_js_result pid=1990020)[0m Duplicate JS data for subdomain ID 8822 and URL http://testaspnet.vulnweb.com/about.aspx not inserted.
+[36m(insert_js_result pid=1990022)[0m Duplicate JS data for subdomain ID 8822 and URL http://testaspnet.vulnweb.com/default.aspx not inserted.
+[36m(insert_js_result pid=1990020)[0m Duplicate JS data for subdomain ID 8823 and URL http://testasp.vulnweb.com/html/about.html not inserted.
+[36m(insert_js_result pid=1990019)[0m Duplicate JS data for subdomain ID 8823 and URL http://testasp.vulnweb.com/styles.css not inserted.
+[36m(insert_js_result pid=1990022)[0m Duplicate JS data for subdomain ID 8823 and URL http://testasp.vulnweb.com/Templatize.asp?item=html/about.html not inserted.
+[36m(insert_js_result pid=1990019)[0m Duplicate JS data for subdomain ID 8823 and URL http://testasp.vulnweb.com/Default.asp not inserted.
+[36m(insert_js_result pid=1990022)[0m Inserted new JS data for subdomain ID 8826 and URL https://www.noisse.io/_next/static/chunks/d622d42c-900c42fece6f2d89.js.
+[36m(insert_js_result pid=1990022)[0m Database query error: no results to fetch[32m [repeated 3x across cluster][0m
+[36m(insert_js_result pid=1990020)[0m Duplicate JS data for subdomain ID 8823 and URL http://testasp.vulnweb.com/Register.asp?RetURL=%2FDefault%2Easp%3F not inserted.[32m [repeated 4x across cluster][0m
+[36m(insert_js_result pid=1990021)[0m Inserted new JS data for subdomain ID 8826 and URL https://www.noisse.io/_next/static/media/=L-y.
+[36m(insert_js_result pid=1990020)[0m Inserted new JS data for subdomain ID 8826 and URL https://api.noisse.io/portal/auth.
+[36m(insert_js_result pid=1990020)[0m Duplicate JS data for subdomain ID 8821 and URL http://rest.vulnweb.com/docs/ not inserted.
+[36m(insert_js_result pid=1990019)[0m Duplicate JS data for subdomain ID 8821 and URL http://rest.vulnweb.com not inserted.
+[36m(insert_js_result pid=1990020)[0m Duplicate JS data for subdomain ID 8821 and URL http://vulnweb.com/ not inserted.
+[36m(insert_js_result pid=1990019)[0m Inserted new JS data for subdomain ID 8826 and URL https://www.noisse.io/static/chunks/955-ff6aeb2b8f8c60f6.js.[32m [repeated 12x across cluster][0m
+[36m(insert_js_result pid=1990019)[0m Database query error: no results to fetch[32m [repeated 14x across cluster][0m
+[36m(insert_js_result pid=1990021)[0m Inserted new JS data for subdomain ID 8826 and URL https://www.noisse.io.
+[36m(insert_js_result pid=1990022)[0m Duplicate JS data for subdomain ID 8826 and URL https://www.noisse.io/_next/static/chunks/app/(landing)/page-1cb77c2f0604d82f.js not inserted.
+[36m(insert_js_result pid=1990019)[0m Duplicate JS data for subdomain ID 8826 and URL https://api.noisse.io/portal/auth not inserted.
+[36m(insert_js_result pid=1990020)[0m Inserted new JS data for subdomain ID 8826 and URL https://www.noisse.io/.
+[36m(insert_js_result pid=1990022)[0m Duplicate JS data for subdomain ID 8826 and URL https://www.noisse.io/_next/static/media/=L-y not inserted.
+[36m(insert_js_result pid=1990022)[0m Duplicate JS data for subdomain ID 8822 and URL http://testaspnet.vulnweb.com/login.aspx not inserted.
+[36m(insert_js_result pid=1990019)[0m Inserted new JS data for subdomain ID 8826 and URL https://www.noisse.io/_next/.
+[36m(insert_js_result pid=1990021)[0m Duplicate JS data for subdomain ID 8822 and URL http://testaspnet.vulnweb.com not inserted.
+[36m(insert_js_result pid=1990022)[0m Duplicate JS data for subdomain ID 8822 and URL http://testaspnet.vulnweb.com/about.aspx not inserted.
+[36m(insert_js_result pid=1990020)[0m Inserted new JS data for subdomain ID 8826 and URL https://www.noisse.io/_next/image?url=%2Flogo-footer.png&w=256&q=75.[32m [repeated 2x across cluster][0m
+[36m(insert_js_result pid=1990020)[0m Database query error: no results to fetch[32m [repeated 5x across cluster][0m
+[36m(insert_js_result pid=1990019)[0m Duplicate JS data for subdomain ID 8822 and URL http://testaspnet.vulnweb.com/default.aspx not inserted.
+[36m(insert_js_result pid=1990021)[0m Duplicate JS data for subdomain ID 8822 and URL http://testaspnet.vulnweb.com/styles.css not inserted.
+[36m(insert_js_result pid=1990022)[0m Duplicate JS data for subdomain ID 8822 and URL http://testaspnet.vulnweb.com/Signup.aspx not inserted.
+[36m(insert_js_result pid=1990020)[0m Duplicate JS data for subdomain ID 8822 and URL http://testaspnet.vulnweb.com/ads/def.html not inserted.
+[36m(insert_js_result pid=1990020)[0m Duplicate JS data for subdomain ID 8822 and URL http://testaspnet.vulnweb.com/ReadNews.aspx?id=3&NewsAd=ads/def.html not inserted.[32m [repeated 12x across cluster][0m
+[36m(insert_js_result pid=1990019)[0m Duplicate JS data for subdomain ID 8822 and URL http://testaspnet.vulnweb.com/rssFeed.aspx not inserted.
+[36m(JavaScriptGatheringWorker pid=1990669)[0m With like_pattern: %.vulnweb.com
+[36m(JavaScriptGatheringWorker pid=1990669)[0m [(8821, 'http://rest.vulnweb.com'), (8824, 'http://testphp.vulnweb.com'), (8823, 'http://testasp.vulnweb.com'), (8822, 'http://testaspnet.vulnweb.com'), (8836, 'http://testhtml5.vulnweb.com'), (8839, 'http://www.vulnweb.com')]
+[36m(insert_js_result pid=1990020)[0m Inserted new JS data for subdomain ID 8825 and URL https://app.noisse.io.
+[36m(insert_js_result pid=1990019)[0m Inserted new JS data for subdomain ID 8825 and URL https://app.noisse.io/site.webmanifest.
+[36m(insert_js_result pid=1990020)[0m Duplicate JS data for subdomain ID 8824 and URL http://testphp.vulnweb.com/hj/var/www/database_connect.php not inserted.
+[36m(insert_js_result pid=1990019)[0m Duplicate JS data for subdomain ID 8824 and URL http://testphp.vulnweb.com not inserted.
+[36m(insert_js_result pid=1990020)[0m Inserted new JS data for subdomain ID 8836 and URL http://testhtml5.vulnweb.com/static/app/partials/.[32m [repeated 4x across cluster][0m
+[36m(insert_js_result pid=1990020)[0m Database query error: no results to fetch[32m [repeated 6x across cluster][0m
+[36m(insert_js_result pid=1990022)[0m Duplicate JS data for subdomain ID 8823 and URL http://testasp.vulnweb.com/Register.asp?RetURL=%2FDefault%2Easp%3F not inserted.
+[36m(insert_js_result pid=1990022)[0m Duplicate JS data for subdomain ID 8823 and URL http://testasp.vulnweb.com/Templates/MainTemplate.dwt.asp not inserted.
+[36m(JavaScriptGatheringWorker pid=1990664)[0m With like_pattern: %.vulnweb.com
+[36m(insert_js_result pid=1990022)[0m Duplicate JS data for subdomain ID 8823 and URL http://testasp.vulnweb.com/Default.asp not inserted.
+[36m(insert_js_result pid=1990020)[0m Duplicate JS data for subdomain ID 8823 and URL http://testasp.vulnweb.com not inserted.
+[36m(insert_js_result pid=1990021)[0m Duplicate JS data for subdomain ID 8823 and URL http://testasp.vulnweb.com/styles.css not inserted.
+[36m(insert_js_result pid=1990019)[0m Duplicate JS data for subdomain ID 8823 and URL http://testasp.vulnweb.com/html/about.html not inserted.
+[36m(JavaScriptGatheringWorker pid=1990664)[0m [(8821, 'http://rest.vulnweb.com'), (8824, 'http://testphp.vulnweb.com'), (8823, 'http://testasp.vulnweb.com'), (8822, 'http://testaspnet.vulnweb.com'), (8836, 'http://testhtml5.vulnweb.com'), (8839, 'http://www.vulnweb.com')]
+[36m(insert_js_result pid=1990022)[0m Duplicate JS data for subdomain ID 8823 and URL http://testasp.vulnweb.com/Templatize.asp?item=html/about.html not inserted.
+[36m(insert_js_result pid=1990019)[0m Duplicate JS data for subdomain ID 8821 and URL http://vulnweb.com/ not inserted.
+[36m(insert_js_result pid=1990020)[0m Duplicate JS data for subdomain ID 8823 and URL http://testasp.vulnweb.com/Search.asp not inserted.
+[36m(insert_js_result pid=1990022)[0m Duplicate JS data for subdomain ID 8821 and URL http://rest.vulnweb.com not inserted.
+[36m(insert_js_result pid=1990019)[0m Inserted new JS data for subdomain ID 8836 and URL http://testhtml5.vulnweb.com/static/app/controllers/controllers.js.[32m [repeated 10x across cluster][0m
+[36m(insert_js_result pid=1990019)[0m Database query error: no results to fetch[32m [repeated 10x across cluster][0m
+[36m(insert_js_result pid=1990021)[0m Duplicate JS data for subdomain ID 8821 and URL http://rest.vulnweb.com/docs/ not inserted.
+[36m(insert_js_result pid=1990019)[0m Inserted new JS data for subdomain ID 8825 and URL https://api.noisse.io/portal/auth.
+[36m(insert_js_result pid=1990020)[0m Inserted new JS data for subdomain ID 8825 and URL https://app.noisse.io/products/released.
+[36m(insert_js_result pid=1990022)[0m Inserted new JS data for subdomain ID 8825 and URL https://app.noisse.io/domains/enumerate.
+[36m(insert_js_result pid=1990021)[0m Inserted new JS data for subdomain ID 8825 and URL https://app.noisse.io/customers/customer-list.
+[36m(insert_js_result pid=1990019)[0m Inserted new JS data for subdomain ID 8825 and URL https://app.noisse.io/products/dashboard.
+[36m(insert_js_result pid=1990022)[0m Duplicate JS data for subdomain ID 8825 and URL https://app.noisse.io/static/js/main.10e54f55.js not inserted.[32m [repeated 2x across cluster][0m
+[36m(insert_js_result pid=1990020)[0m Inserted new JS data for subdomain ID 8825 and URL https://app.noisse.io/web-domains/count.
+[36m(insert_js_result pid=1990021)[0m Inserted new JS data for subdomain ID 8825 and URL https://app.noisse.io/customers/overview.
+[36m(insert_js_result pid=1990019)[0m Duplicate JS data for subdomain ID 8825 and URL https://app.noisse.io not inserted.
+[36m(insert_js_result pid=1990022)[0m Inserted new JS data for subdomain ID 8825 and URL https://app.noisse.io/income/payouts.
+[36m(insert_js_result pid=1990020)[0m Inserted new JS data for subdomain ID 8825 and URL https://api.noisse.io/portal/user.
+[36m(insert_js_result pid=1990021)[0m Inserted new JS data for subdomain ID 8825 and URL https://app.noisse.io/threats/overview.
+[36m(insert_js_result pid=1990019)[0m Inserted new JS data for subdomain ID 8825 and URL https://app.noisse.io/portal/user.
+[36m(insert_js_result pid=1990022)[0m Inserted new JS data for subdomain ID 8825 and URL https://app.noisse.io/products/drafts.
+[36m(insert_js_result pid=1990022)[0m Database query error: no results to fetch[32m [repeated 12x across cluster][0m
+[36m(insert_js_result pid=1990020)[0m Inserted new JS data for subdomain ID 8825 and URL https://app.noisse.io/domains/view?tab=.
+[36m(JavaScriptGatheringWorker pid=1990653)[0m With like_pattern: %.noisse.io
+[36m(insert_js_result pid=1990021)[0m Inserted new JS data for subdomain ID 8825 and URL https://app.noisse.io/products/add.
+[36m(insert_js_result pid=1990019)[0m Inserted new JS data for subdomain ID 8825 and URL https://app.noisse.io/products/comments.
+[36m(JavaScriptGatheringWorker pid=1990653)[0m [(8826, 'https://www.noisse.io'), (8825, 'https://app.noisse.io')]
+[36m(insert_js_result pid=1990022)[0m Inserted new JS data for subdomain ID 8825 and URL https://app.noisse.io/static/js/g.
+[36m(insert_js_result pid=1990020)[0m Inserted new JS data for subdomain ID 8825 and URL https://app.noisse.io/assets-ips/count.
+[36m(insert_js_result pid=1990021)[0m Inserted new JS data for subdomain ID 8825 and URL https://api.noisse.io/portal/logout.
+[36m(insert_js_result pid=1990019)[0m Inserted new JS data for subdomain ID 8825 and URL https://app.noisse.io/domains/count.
+[36m(insert_js_result pid=1990022)[0m Inserted new JS data for subdomain ID 8825 and URL https://app.noisse.io/products/scheduled.
+[36m(insert_js_result pid=1990019)[0m Duplicate JS data for subdomain ID 8825 and URL https://app.noisse.io/site.webmanifest not inserted.
+[36m(insert_js_result pid=1990020)[0m Inserted new JS data for subdomain ID 8825 and URL https://app.noisse.io/income/refunds.
+[36m(insert_js_result pid=1990019)[0m Duplicate JS data for subdomain ID 8825 and URL https://app.noisse.io/static/css/main.dba06ccd.css not inserted.
+[36m(insert_js_result pid=1990021)[0m Inserted new JS data for subdomain ID 8825 and URL https://app.noisse.io/assets/view.
+[36m(insert_js_result pid=1990022)[0m Inserted new JS data for subdomain ID 8825 and URL https://app.noisse.io/income/statements.
+[36m(insert_js_result pid=1990020)[0m Inserted new JS data for subdomain ID 8825 and URL https://app.noisse.io/income/earning.
+[36m(insert_js_result pid=1990019)[0m Inserted new JS data for subdomain ID 8825 and URL https://app.noisse.io/assets/overview.
+[36m(insert_js_result pid=1990019)[0m Database query error: no results to fetch[32m [repeated 13x across cluster][0m
+[36m(insert_js_result pid=1990021)[0m Inserted new JS data for subdomain ID 8839 and URL http://www.vulnweb.com.
+[36m(insert_js_result pid=1990022)[0m Inserted new JS data for subdomain ID 8839 and URL http://testphp.vulnweb.com/.
+[36m(insert_js_result pid=1990020)[0m Inserted new JS data for subdomain ID 8839 and URL http://testhtml5.vulnweb.com/.
+[36m(insert_js_result pid=1990019)[0m Inserted new JS data for subdomain ID 8839 and URL http://testaspnet.vulnweb.com/.
+[36m(insert_js_result pid=1990021)[0m Inserted new JS data for subdomain ID 8839 and URL http://testasp.vulnweb.com/.
+[36m(insert_js_result pid=1990022)[0m Inserted new JS data for subdomain ID 8839 and URL http://rest.vulnweb.com/.
+[36m(insert_js_result pid=1990021)[0m Duplicate JS data for subdomain ID 8822 and URL http://testaspnet.vulnweb.com not inserted.
+[36m(insert_js_result pid=1990020)[0m Inserted new JS data for subdomain ID 8825 and URL https://app.noisse.io/assets-ips/chart-data.
+[36m(insert_js_result pid=1990022)[0m Duplicate JS data for subdomain ID 8822 and URL http://testaspnet.vulnweb.com/Signup.aspx not inserted.
+[36m(insert_js_result pid=1990019)[0m Inserted new JS data for subdomain ID 8825 and URL https://app.noisse.io/domains/add.
+[36m(insert_js_result pid=1990022)[0m Duplicate JS data for subdomain ID 8822 and URL http://testaspnet.vulnweb.com/rssFeed.aspx not inserted.
+[36m(insert_js_result pid=1990020)[0m Duplicate JS data for subdomain ID 8822 and URL http://testaspnet.vulnweb.com/Comments.aspx?id=3 not inserted.[32m [repeated 2x across cluster][0m
+[36m(insert_js_result pid=1990019)[0m Duplicate JS data for subdomain ID 8822 and URL http://testaspnet.vulnweb.com/login.aspx not inserted.
+[36m(insert_js_result pid=1990020)[0m Duplicate JS data for subdomain ID 8822 and URL http://testaspnet.vulnweb.com/styles.css not inserted.
+[36m(insert_js_result pid=1990021)[0m Duplicate JS data for subdomain ID 8822 and URL http://testaspnet.vulnweb.com/about.aspx not inserted.
+[36m(insert_js_result pid=1990022)[0m Duplicate JS data for subdomain ID 8822 and URL http://testaspnet.vulnweb.com/ads/def.html not inserted.
+[36m(insert_js_result pid=1990019)[0m Duplicate JS data for subdomain ID 8822 and URL http://testaspnet.vulnweb.com/default.aspx not inserted.
+[36m(insert_js_result pid=1990020)[0m Duplicate JS data for subdomain ID 8824 and URL http://testphp.vulnweb.com/userinfo.php not inserted.
+[36m(insert_js_result pid=1990022)[0m Duplicate JS data for subdomain ID 8824 and URL http://testphp.vulnweb.com/cart.php not inserted.
+[36m(insert_js_result pid=1990019)[0m Database query error: no results to fetch[32m [repeated 8x across cluster][0m
+[36m(insert_js_result pid=1990019)[0m Duplicate JS data for subdomain ID 8824 and URL http://testphp.vulnweb.com/login.php not inserted.
+[36m(insert_js_result pid=1990021)[0m Inserted new JS data for subdomain ID 8825 and URL https://app.noisse.io/active-domains/count.
+[36m(insert_js_result pid=1990020)[0m Duplicate JS data for subdomain ID 8824 and URL http://testphp.vulnweb.com/artists.php not inserted.
+[36m(insert_js_result pid=1990022)[0m Duplicate JS data for subdomain ID 8824 and URL http://testphp.vulnweb.com/disclaimer.php not inserted.
+[36m(insert_js_result pid=1990019)[0m Duplicate JS data for subdomain ID 8824 and URL http://testphp.vulnweb.com/style.css not inserted.
+[36m(insert_js_result pid=1990020)[0m Duplicate JS data for subdomain ID 8824 and URL http://testphp.vulnweb.com/Mod_Rewrite_Shop/ not inserted.
+[36m(insert_js_result pid=1990021)[0m Duplicate JS data for subdomain ID 8824 and URL http://testphp.vulnweb.com not inserted.
+[36m(insert_js_result pid=1990022)[0m Duplicate JS data for subdomain ID 8824 and URL http://testphp.vulnweb.com/AJAX/index.php not inserted.
+[36m(insert_js_result pid=1990019)[0m Duplicate JS data for subdomain ID 8824 and URL http://testphp.vulnweb.com/hpp/ not inserted.
+[36m(insert_js_result pid=1990021)[0m Duplicate JS data for subdomain ID 8821 and URL http://vulnweb.com/ not inserted.
+[36m(insert_js_result pid=1990020)[0m Duplicate JS data for subdomain ID 8821 and URL http://rest.vulnweb.com/docs/ not inserted.
+[36m(insert_js_result pid=1990022)[0m Duplicate JS data for subdomain ID 8821 and URL http://rest.vulnweb.com not inserted.
+[36m(insert_js_result pid=1990019)[0m Duplicate JS data for subdomain ID 8824 and URL http://testphp.vulnweb.com/guestbook.php not inserted.
+[36m(insert_js_result pid=1990021)[0m Duplicate JS data for subdomain ID 8824 and URL http://testphp.vulnweb.com/high not inserted.
+[36m(insert_js_result pid=1990020)[0m Duplicate JS data for subdomain ID 8824 and URL http://testphp.vulnweb.com/categories.php not inserted.
+[36m(insert_js_result pid=1990022)[0m Duplicate JS data for subdomain ID 8824 and URL http://testphp.vulnweb.com/Templates/main_dynamic_template.dwt.php not inserted.
+[36m(insert_js_result pid=1990019)[0m Duplicate JS data for subdomain ID 8824 and URL http://testphp.vulnweb.com/privacy.php not inserted.
+[36m(insert_js_result pid=1990021)[0m Duplicate JS data for subdomain ID 8824 and URL http://testphp.vulnweb.com/index.php not inserted.
+[36m(insert_js_result pid=1990020)[0m Duplicate JS data for subdomain ID 8823 and URL http://testasp.vulnweb.com/Default.asp not inserted.
+[36m(insert_js_result pid=1990022)[0m Duplicate JS data for subdomain ID 8823 and URL http://testasp.vulnweb.com/Register.asp?RetURL=%2FDefault%2Easp%3F not inserted.
+[36m(insert_js_result pid=1990021)[0m Duplicate JS data for subdomain ID 8823 and URL http://testasp.vulnweb.com/styles.css not inserted.
+[36m(insert_js_result pid=1990019)[0m Duplicate JS data for subdomain ID 8823 and URL http://testasp.vulnweb.com not inserted.
+[36m(insert_js_result pid=1990021)[0m Database query error: no results to fetch
+[36m(insert_js_result pid=1990020)[0m Duplicate JS data for subdomain ID 8823 and URL http://testasp.vulnweb.com/Templatize.asp?item=html/about.html not inserted.
+[36m(insert_js_result pid=1990022)[0m Duplicate JS data for subdomain ID 8823 and URL http://testasp.vulnweb.com/html/about.html not inserted.
+[36m(insert_js_result pid=1990019)[0m Duplicate JS data for subdomain ID 8823 and URL http://testasp.vulnweb.com/Templates/MainTemplate.dwt.asp not inserted.
+[36m(insert_js_result pid=1990019)[0m Duplicate JS data for subdomain ID 8823 and URL http://testasp.vulnweb.com/Search.asp not inserted.
+[36m(insert_js_result pid=1990020)[0m Duplicate JS data for subdomain ID 8826 and URL https://api.noisse.io/portal/auth not inserted.
+[36m(insert_js_result pid=1990022)[0m Duplicate JS data for subdomain ID 8826 and URL https://www.noisse.io/_next/static/media/=L-y not inserted.
+[36m(insert_js_result pid=1990019)[0m Duplicate JS data for subdomain ID 8826 and URL https://www.noisse.io not inserted.
+[36m(insert_js_result pid=1990020)[0m Duplicate JS data for subdomain ID 8826 and URL https://www.noisse.io/_next/static/chunks/main-app-01dcb8892b176af1.js not inserted.[32m [repeated 22x across cluster][0m
+[36m(insert_js_result pid=1990022)[0m Duplicate JS data for subdomain ID 8824 and URL http://testphp.vulnweb.com/privacy.php not inserted.
+[36m(insert_js_result pid=1990020)[0m Duplicate JS data for subdomain ID 8824 and URL http://testphp.vulnweb.com/Mod_Rewrite_Shop/ not inserted.
+[36m(insert_js_result pid=1990022)[0m Duplicate JS data for subdomain ID 8824 and URL http://testphp.vulnweb.com/disclaimer.php not inserted.
+[36m(insert_js_result pid=1990021)[0m Duplicate JS data for subdomain ID 8824 and URL http://testphp.vulnweb.com/guestbook.php not inserted.
+[36m(insert_js_result pid=1990019)[0m Database query error: no results to fetch
+[36m(insert_js_result pid=1990019)[0m Inserted new JS data for subdomain ID 8826 and URL https://www.noisse.io/_next/image?url=%2Fnoisse.png&w=640&q=75.
+[36m(insert_js_result pid=1990020)[0m Duplicate JS data for subdomain ID 8824 and URL http://testphp.vulnweb.com/index.php not inserted.
+[36m(insert_js_result pid=1990022)[0m Duplicate JS data for subdomain ID 8824 and URL http://testphp.vulnweb.com/login.php not inserted.
+[36m(insert_js_result pid=1990021)[0m Duplicate JS data for subdomain ID 8824 and URL http://testphp.vulnweb.com not inserted.
+[36m(insert_js_result pid=1990019)[0m Duplicate JS data for subdomain ID 8824 and URL http://testphp.vulnweb.com/userinfo.php not inserted.
+[36m(insert_js_result pid=1990021)[0m Duplicate JS data for subdomain ID 8824 and URL http://testphp.vulnweb.com/categories.php not inserted.
+[36m(insert_js_result pid=1990020)[0m Duplicate JS data for subdomain ID 8824 and URL http://testphp.vulnweb.com/high not inserted.
+[36m(insert_js_result pid=1990022)[0m Duplicate JS data for subdomain ID 8824 and URL http://testphp.vulnweb.com/cart.php not inserted.
+[36m(insert_js_result pid=1990019)[0m Duplicate JS data for subdomain ID 8824 and URL http://testphp.vulnweb.com/AJAX/index.php not inserted.
+[36m(insert_js_result pid=1990020)[0m Duplicate JS data for subdomain ID 8824 and URL http://testphp.vulnweb.com/hpp/ not inserted.
+[36m(insert_js_result pid=1990022)[0m Duplicate JS data for subdomain ID 8824 and URL http://testphp.vulnweb.com/Templates/main_dynamic_template.dwt.php not inserted.
+[36m(insert_js_result pid=1990021)[0m Duplicate JS data for subdomain ID 8824 and URL http://testphp.vulnweb.com/style.css not inserted.
+[36m(insert_js_result pid=1990019)[0m Duplicate JS data for subdomain ID 8824 and URL http://testphp.vulnweb.com/artists.php not inserted.
+[36m(insert_js_result pid=1990020)[0m Duplicate JS data for subdomain ID 8822 and URL http://testaspnet.vulnweb.com/ReadNews.aspx?id=2&NewsAd=ads/def.html not inserted.[32m [repeated 2x across cluster][0m
+[36m(insert_js_result pid=1990022)[0m Duplicate JS data for subdomain ID 8822 and URL http://testaspnet.vulnweb.com/default.aspx not inserted.
+[36m(insert_js_result pid=1990021)[0m Duplicate JS data for subdomain ID 8822 and URL http://testaspnet.vulnweb.com/Signup.aspx not inserted.
+[36m(insert_js_result pid=1990019)[0m Duplicate JS data for subdomain ID 8822 and URL http://testaspnet.vulnweb.com/styles.css not inserted.
+[36m(insert_js_result pid=1990020)[0m Duplicate JS data for subdomain ID 8822 and URL http://testaspnet.vulnweb.com/ads/def.html not inserted.
+[36m(insert_js_result pid=1990021)[0m Duplicate JS data for subdomain ID 8822 and URL http://testaspnet.vulnweb.com/about.aspx not inserted.
+[36m(insert_js_result pid=1990019)[0m Duplicate JS data for subdomain ID 8822 and URL http://testaspnet.vulnweb.com/login.aspx not inserted.
+[36m(insert_js_result pid=1990020)[0m Duplicate JS data for subdomain ID 8822 and URL http://testaspnet.vulnweb.com/rssFeed.aspx not inserted.
+[36m(insert_js_result pid=1990021)[0m Duplicate JS data for subdomain ID 8822 and URL http://testaspnet.vulnweb.com not inserted.
+[36m(JavaScriptGatheringWorker pid=1990663)[0m With like_pattern: %.vulnweb.com
+[36m(JavaScriptGatheringWorker pid=1990663)[0m [(8821, 'http://rest.vulnweb.com'), (8824, 'http://testphp.vulnweb.com'), (8823, 'http://testasp.vulnweb.com'), (8822, 'http://testaspnet.vulnweb.com'), (8836, 'http://testhtml5.vulnweb.com'), (8839, 'http://www.vulnweb.com')]
+[36m(insert_js_result pid=1990020)[0m Duplicate JS data for subdomain ID 8839 and URL http://testphp.vulnweb.com/ not inserted.
+[36m(insert_js_result pid=1990022)[0m Duplicate JS data for subdomain ID 8839 and URL http://rest.vulnweb.com/ not inserted.
+[36m(insert_js_result pid=1990021)[0m Duplicate JS data for subdomain ID 8839 and URL http://www.vulnweb.com not inserted.
+[36m(insert_js_result pid=1990019)[0m Duplicate JS data for subdomain ID 8839 and URL http://testaspnet.vulnweb.com/ not inserted.
+[36m(insert_js_result pid=1990020)[0m Duplicate JS data for subdomain ID 8839 and URL http://testasp.vulnweb.com/ not inserted.
+[36m(insert_js_result pid=1990020)[0m Duplicate JS data for subdomain ID 8823 and URL http://testasp.vulnweb.com/Register.asp?RetURL=%2FDefault%2Easp%3F not inserted.[32m [repeated 3x across cluster][0m
+[36m(insert_js_result pid=1990022)[0m Duplicate JS data for subdomain ID 8823 and URL http://testasp.vulnweb.com not inserted.
+[36m(insert_js_result pid=1990021)[0m Duplicate JS data for subdomain ID 8823 and URL http://testasp.vulnweb.com/html/about.html not inserted.
+[36m(insert_js_result pid=1990019)[0m Duplicate JS data for subdomain ID 8823 and URL http://testasp.vulnweb.com/styles.css not inserted.
+[36m(insert_js_result pid=1990020)[0m Duplicate JS data for subdomain ID 8823 and URL http://testasp.vulnweb.com/Templatize.asp?item=html/about.html not inserted.
+[36m(insert_js_result pid=1990019)[0m Duplicate JS data for subdomain ID 8823 and URL http://testasp.vulnweb.com/Default.asp not inserted.
+[36m(insert_js_result pid=1990020)[0m Duplicate JS data for subdomain ID 8823 and URL http://testasp.vulnweb.com/Search.asp not inserted.
+[36m(insert_js_result pid=1990022)[0m Duplicate JS data for subdomain ID 8823 and URL http://testasp.vulnweb.com/Templates/MainTemplate.dwt.asp not inserted.
+[36m(JavaScriptGatheringWorker pid=1990653)[0m With like_pattern: %.vulnweb.com
+[36m(insert_js_result pid=1990020)[0m Duplicate JS data for subdomain ID 8825 and URL https://app.noisse.io/web-domains/count not inserted.
+[36m(insert_js_result pid=1990022)[0m Duplicate JS data for subdomain ID 8825 and URL https://app.noisse.io/products/scheduled not inserted.
+[36m(insert_js_result pid=1990019)[0m Duplicate JS data for subdomain ID 8825 and URL https://app.noisse.io/income/refunds not inserted.
+[36m(JavaScriptGatheringWorker pid=1990653)[0m [(8821, 'http://rest.vulnweb.com'), (8824, 'http://testphp.vulnweb.com'), (8823, 'http://testasp.vulnweb.com'), (8822, 'http://testaspnet.vulnweb.com'), (8836, 'http://testhtml5.vulnweb.com'), (8839, 'http://www.vulnweb.com')]
+[36m(insert_js_result pid=1990020)[0m Duplicate JS data for subdomain ID 8825 and URL https://api.noisse.io/portal/logout not inserted.
+[36m(insert_js_result pid=1990022)[0m Duplicate JS data for subdomain ID 8825 and URL https://app.noisse.io/customers/overview not inserted.
+[36m(insert_js_result pid=1990021)[0m Duplicate JS data for subdomain ID 8825 and URL https://app.noisse.io/domains/count not inserted.
+[36m(insert_js_result pid=1990019)[0m Duplicate JS data for subdomain ID 8825 and URL https://app.noisse.io/assets-ips/chart-data not inserted.
+[36m(insert_js_result pid=1990020)[0m Duplicate JS data for subdomain ID 8825 and URL https://app.noisse.io/assets/view not inserted.
+[36m(insert_js_result pid=1990022)[0m Duplicate JS data for subdomain ID 8825 and URL https://app.noisse.io/site.webmanifest not inserted.
+[36m(insert_js_result pid=1990021)[0m Duplicate JS data for subdomain ID 8825 and URL https://app.noisse.io/static/js/g not inserted.
+[36m(insert_js_result pid=1990019)[0m Duplicate JS data for subdomain ID 8825 and URL https://app.noisse.io/domains/view?tab= not inserted.
+[36m(insert_js_result pid=1990020)[0m Duplicate JS data for subdomain ID 8825 and URL https://app.noisse.io/domains/add not inserted.
+[36m(insert_js_result pid=1990022)[0m Duplicate JS data for subdomain ID 8825 and URL https://app.noisse.io/products/comments not inserted.
+[36m(insert_js_result pid=1990021)[0m Duplicate JS data for subdomain ID 8825 and URL https://app.noisse.io/products/dashboard not inserted.
+[36m(insert_js_result pid=1990019)[0m Duplicate JS data for subdomain ID 8825 and URL https://app.noisse.io/domains/enumerate not inserted.
+[36m(insert_js_result pid=1990020)[0m Duplicate JS data for subdomain ID 8825 and URL https://app.noisse.io/portal/user not inserted.
+[36m(insert_js_result pid=1990022)[0m Duplicate JS data for subdomain ID 8825 and URL https://app.noisse.io/customers/customer-list not inserted.
+[36m(insert_js_result pid=1990021)[0m Duplicate JS data for subdomain ID 8825 and URL https://app.noisse.io/products/released not inserted.
+[36m(insert_js_result pid=1990019)[0m Duplicate JS data for subdomain ID 8825 and URL https://app.noisse.io/products/add not inserted.
+[36m(insert_js_result pid=1990020)[0m Duplicate JS data for subdomain ID 8825 and URL https://app.noisse.io/active-domains/count not inserted.
+[36m(insert_js_result pid=1990021)[0m Duplicate JS data for subdomain ID 8825 and URL https://app.noisse.io/static/js/main.10e54f55.js not inserted.[32m [repeated 3x across cluster][0m
+[36m(insert_js_result pid=1990022)[0m Duplicate JS data for subdomain ID 8825 and URL https://app.noisse.io/income/earning not inserted.
+[36m(insert_js_result pid=1990021)[0m Duplicate JS data for subdomain ID 8825 and URL https://app.noisse.io/assets-ips/count not inserted.
+[36m(insert_js_result pid=1990019)[0m Duplicate JS data for subdomain ID 8825 and URL https://app.noisse.io/income/statements not inserted.
+[36m(insert_js_result pid=1990020)[0m Duplicate JS data for subdomain ID 8825 and URL https://app.noisse.io/products/drafts not inserted.
+[36m(insert_js_result pid=1990022)[0m Duplicate JS data for subdomain ID 8825 and URL https://app.noisse.io/assets/overview not inserted.
+[36m(insert_js_result pid=1990021)[0m Duplicate JS data for subdomain ID 8825 and URL https://api.noisse.io/portal/user not inserted.
+[36m(insert_js_result pid=1990019)[0m Duplicate JS data for subdomain ID 8825 and URL https://app.noisse.io/income/payouts not inserted.
+[36m(insert_js_result pid=1990022)[0m Duplicate JS data for subdomain ID 8825 and URL https://app.noisse.io/threats/overview not inserted.
+[36m(insert_js_result pid=1990021)[0m Duplicate JS data for subdomain ID 8825 and URL https://app.noisse.io not inserted.
+[36m(insert_js_result pid=1990019)[0m Duplicate JS data for subdomain ID 8825 and URL https://api.noisse.io/portal/auth not inserted.
+[36m(insert_js_result pid=1990020)[0m Database query error: no results to fetch
+[36m(insert_js_result pid=1990020)[0m Inserted new JS data for subdomain ID 8836 and URL http://testhtml5.vulnweb.com/admin/.
+[36m(insert_js_result pid=1990022)[0m Duplicate JS data for subdomain ID 8821 and URL http://rest.vulnweb.com/docs/ not inserted.
+[36m(insert_js_result pid=1990021)[0m Duplicate JS data for subdomain ID 8821 and URL http://rest.vulnweb.com not inserted.
+[36m(insert_js_result pid=1990019)[0m Duplicate JS data for subdomain ID 8821 and URL http://vulnweb.com/ not inserted.
+[36m(insert_js_result pid=1990020)[0m Duplicate JS data for subdomain ID 8822 and URL http://testaspnet.vulnweb.com/Signup.aspx not inserted.
+[36m(insert_js_result pid=1990022)[0m Duplicate JS data for subdomain ID 8836 and URL http://testhtml5.vulnweb.com/static/app/partials/itemsList.html not inserted.[32m [repeated 10x across cluster][0m
+[36m(insert_js_result pid=1990019)[0m Duplicate JS data for subdomain ID 8822 and URL http://testaspnet.vulnweb.com not inserted.
+[36m(insert_js_result pid=1990020)[0m Duplicate JS data for subdomain ID 8822 and URL http://testaspnet.vulnweb.com/login.aspx not inserted.
+[36m(insert_js_result pid=1990022)[0m Duplicate JS data for subdomain ID 8822 and URL http://testaspnet.vulnweb.com/styles.css not inserted.
+[36m(insert_js_result pid=1990021)[0m Duplicate JS data for subdomain ID 8822 and URL http://testaspnet.vulnweb.com/rssFeed.aspx not inserted.
+[36m(insert_js_result pid=1990019)[0m Duplicate JS data for subdomain ID 8822 and URL http://testaspnet.vulnweb.com/ads/def.html not inserted.
+[36m(insert_js_result pid=1990019)[0m Duplicate JS data for subdomain ID 8822 and URL http://testaspnet.vulnweb.com/default.aspx not inserted.
+[36m(insert_js_result pid=1990021)[0m Duplicate JS data for subdomain ID 8822 and URL http://testaspnet.vulnweb.com/about.aspx not inserted.
+[36m(insert_js_result pid=1990022)[0m Duplicate JS data for subdomain ID 8821 and URL http://vulnweb.com/ not inserted.
+[36m(insert_js_result pid=1990021)[0m Duplicate JS data for subdomain ID 8821 and URL http://rest.vulnweb.com/docs/ not inserted.
+[36m(insert_js_result pid=1990019)[0m Duplicate JS data for subdomain ID 8821 and URL http://rest.vulnweb.com not inserted.
+[36m(JavaScriptGatheringWorker pid=1990669)[0m With like_pattern: %.vulnweb.com
+[36m(insert_js_result pid=1990021)[0m Duplicate JS data for subdomain ID 8822 and URL http://testaspnet.vulnweb.com/Comments.aspx?id=2 not inserted.[32m [repeated 2x across cluster][0m
+[36m(insert_js_result pid=1990020)[0m Duplicate JS data for subdomain ID 8839 and URL http://testphp.vulnweb.com/ not inserted.
+[36m(insert_js_result pid=1990022)[0m Duplicate JS data for subdomain ID 8839 and URL http://testasp.vulnweb.com/ not inserted.
+[36m(insert_js_result pid=1990021)[0m Duplicate JS data for subdomain ID 8839 and URL http://www.vulnweb.com not inserted.
+[36m(JavaScriptGatheringWorker pid=1990669)[0m [(8821, 'http://rest.vulnweb.com'), (8824, 'http://testphp.vulnweb.com'), (8823, 'http://testasp.vulnweb.com'), (8822, 'http://testaspnet.vulnweb.com'), (8836, 'http://testhtml5.vulnweb.com'), (8839, 'http://www.vulnweb.com')]
+[36m(insert_js_result pid=1990022)[0m Duplicate JS data for subdomain ID 8839 and URL http://testaspnet.vulnweb.com/ not inserted.
+[36m(insert_js_result pid=1990019)[0m Duplicate JS data for subdomain ID 8839 and URL http://rest.vulnweb.com/ not inserted.
+[36m(insert_js_result pid=1990020)[0m Duplicate JS data for subdomain ID 8824 and URL http://testphp.vulnweb.com/artists.php not inserted.
+[36m(insert_js_result pid=1990022)[0m Duplicate JS data for subdomain ID 8824 and URL http://testphp.vulnweb.com/Templates/main_dynamic_template.dwt.php not inserted.
+[36m(insert_js_result pid=1990021)[0m Duplicate JS data for subdomain ID 8824 and URL http://testphp.vulnweb.com/hpp/ not inserted.
+[36m(insert_js_result pid=1990019)[0m Duplicate JS data for subdomain ID 8824 and URL http://testphp.vulnweb.com/userinfo.php not inserted.
+[36m(insert_js_result pid=1990020)[0m Duplicate JS data for subdomain ID 8824 and URL http://testphp.vulnweb.com/cart.php not inserted.
+[36m(insert_js_result pid=1990022)[0m Duplicate JS data for subdomain ID 8824 and URL http://testphp.vulnweb.com/AJAX/index.php not inserted.
+[36m(insert_js_result pid=1990021)[0m Duplicate JS data for subdomain ID 8824 and URL http://testphp.vulnweb.com/privacy.php not inserted.
+[36m(insert_js_result pid=1990019)[0m Duplicate JS data for subdomain ID 8824 and URL http://testphp.vulnweb.com not inserted.
+[36m(insert_js_result pid=1990020)[0m Duplicate JS data for subdomain ID 8824 and URL http://testphp.vulnweb.com/login.php not inserted.
+[36m(insert_js_result pid=1990021)[0m Duplicate JS data for subdomain ID 8824 and URL http://testphp.vulnweb.com/index.php not inserted.
+[36m(insert_js_result pid=1990022)[0m Duplicate JS data for subdomain ID 8824 and URL http://testphp.vulnweb.com/Mod_Rewrite_Shop/ not inserted.
+[36m(insert_js_result pid=1990019)[0m Duplicate JS data for subdomain ID 8824 and URL http://testphp.vulnweb.com/disclaimer.php not inserted.
+[36m(insert_js_result pid=1990020)[0m Duplicate JS data for subdomain ID 8824 and URL http://testphp.vulnweb.com/guestbook.php not inserted.
+[36m(insert_js_result pid=1990019)[0m Duplicate JS data for subdomain ID 8839 and URL http://testhtml5.vulnweb.com/ not inserted.
+[36m(insert_js_result pid=1990022)[0m Duplicate JS data for subdomain ID 8824 and URL http://testphp.vulnweb.com/high not inserted.
+[36m(insert_js_result pid=1990021)[0m Duplicate JS data for subdomain ID 8824 and URL http://testphp.vulnweb.com/style.css not inserted.
+[36m(insert_js_result pid=1990019)[0m Duplicate JS data for subdomain ID 8824 and URL http://testphp.vulnweb.com/categories.php not inserted.
+[36m(insert_js_result pid=1990022)[0m Duplicate JS data for subdomain ID 8836 and URL http://testhtml5.vulnweb.com/static/app/post.js not inserted.
+[36m(insert_js_result pid=1990022)[0m Duplicate JS data for subdomain ID 8824 and URL http://testphp.vulnweb.com/login.php not inserted.
+[36m(insert_js_result pid=1990019)[0m Duplicate JS data for subdomain ID 8824 and URL http://testphp.vulnweb.com/index.php not inserted.
+[36m(insert_js_result pid=1990020)[0m Duplicate JS data for subdomain ID 8824 and URL http://testphp.vulnweb.com/AJAX/index.php not inserted.
+[36m(insert_js_result pid=1990021)[0m Duplicate JS data for subdomain ID 8824 and URL http://testphp.vulnweb.com not inserted.
+[36m(insert_js_result pid=1990019)[0m Duplicate JS data for subdomain ID 8824 and URL http://testphp.vulnweb.com/cart.php not inserted.
+[36m(insert_js_result pid=1990022)[0m Duplicate JS data for subdomain ID 8824 and URL http://testphp.vulnweb.com/userinfo.php not inserted.
+[36m(insert_js_result pid=1990020)[0m Duplicate JS data for subdomain ID 8824 and URL http://testphp.vulnweb.com/categories.php not inserted.
+[36m(insert_js_result pid=1990020)[0m Duplicate JS data for subdomain ID 8824 and URL http://testphp.vulnweb.com/guestbook.php not inserted.
+[36m(insert_js_result pid=1990021)[0m Duplicate JS data for subdomain ID 8824 and URL http://testphp.vulnweb.com/style.css not inserted.
+[36m(insert_js_result pid=1990019)[0m Duplicate JS data for subdomain ID 8824 and URL http://testphp.vulnweb.com/Templates/main_dynamic_template.dwt.php not inserted.
+[36m(insert_js_result pid=1990020)[0m Duplicate JS data for subdomain ID 8824 and URL http://testphp.vulnweb.com/artists.php not inserted.
+[36m(insert_js_result pid=1990022)[0m Duplicate JS data for subdomain ID 8824 and URL http://testphp.vulnweb.com/high not inserted.
+[36m(insert_js_result pid=1990021)[0m Duplicate JS data for subdomain ID 8824 and URL http://testphp.vulnweb.com/Mod_Rewrite_Shop/ not inserted.
+[36m(insert_js_result pid=1990019)[0m Duplicate JS data for subdomain ID 8824 and URL http://testphp.vulnweb.com/disclaimer.php not inserted.
+[36m(insert_js_result pid=1990020)[0m Duplicate JS data for subdomain ID 8824 and URL http://testphp.vulnweb.com/privacy.php not inserted.
+[36m(insert_js_result pid=1990022)[0m Duplicate JS data for subdomain ID 8824 and URL http://testphp.vulnweb.com/hpp/ not inserted.
+[36m(insert_js_result pid=1990020)[0m Duplicate JS data for subdomain ID 8821 and URL http://rest.vulnweb.com not inserted.
+[36m(insert_js_result pid=1990021)[0m Duplicate JS data for subdomain ID 8836 and URL http://testhtml5.vulnweb.com/static/css/style.css not inserted.[32m [repeated 9x across cluster][0m
+[36m(insert_js_result pid=1990022)[0m Duplicate JS data for subdomain ID 8821 and URL http://vulnweb.com/ not inserted.
+[36m(insert_js_result pid=1990021)[0m Duplicate JS data for subdomain ID 8821 and URL http://rest.vulnweb.com/docs/ not inserted.
+[36m(insert_js_result pid=1990022)[0m Duplicate JS data for subdomain ID 8823 and URL http://testasp.vulnweb.com/Templates/MainTemplate.dwt.asp not inserted.
+[36m(insert_js_result pid=1990019)[0m Duplicate JS data for subdomain ID 8823 and URL http://testasp.vulnweb.com/Default.asp not inserted.
+[36m(insert_js_result pid=1990020)[0m Duplicate JS data for subdomain ID 8823 and URL http://testasp.vulnweb.com/Templatize.asp?item=html/about.html not inserted.
+[36m(insert_js_result pid=1990022)[0m Duplicate JS data for subdomain ID 8823 and URL http://testasp.vulnweb.com/styles.css not inserted.
+[36m(insert_js_result pid=1990021)[0m Duplicate JS data for subdomain ID 8823 and URL http://testasp.vulnweb.com/html/about.html not inserted.
+[36m(insert_js_result pid=1990019)[0m Duplicate JS data for subdomain ID 8823 and URL http://testasp.vulnweb.com not inserted.
+[36m(insert_js_result pid=1990019)[0m Duplicate JS data for subdomain ID 8823 and URL http://testasp.vulnweb.com/Search.asp not inserted.
+[36m(JavaScriptGatheringWorker pid=1990664)[0m With like_pattern: %.vulnweb.com
+[36m(insert_js_result pid=1990022)[0m Duplicate JS data for subdomain ID 8823 and URL http://testasp.vulnweb.com/Login.asp?RetURL=%2FDefault%2Easp%3F not inserted.[32m [repeated 3x across cluster][0m
+[36m(JavaScriptGatheringWorker pid=1990664)[0m [(8821, 'http://rest.vulnweb.com'), (8824, 'http://testphp.vulnweb.com'), (8823, 'http://testasp.vulnweb.com'), (8822, 'http://testaspnet.vulnweb.com'), (8836, 'http://testhtml5.vulnweb.com'), (8839, 'http://www.vulnweb.com')]
+[36m(insert_js_result pid=1990020)[0m Duplicate JS data for subdomain ID 8839 and URL http://testasp.vulnweb.com/ not inserted.
+[36m(insert_js_result pid=1990022)[0m Duplicate JS data for subdomain ID 8839 and URL http://testaspnet.vulnweb.com/ not inserted.
+[36m(insert_js_result pid=1990021)[0m Duplicate JS data for subdomain ID 8839 and URL http://testphp.vulnweb.com/ not inserted.
+[36m(insert_js_result pid=1990019)[0m Duplicate JS data for subdomain ID 8839 and URL http://rest.vulnweb.com/ not inserted.
+[36m(insert_js_result pid=1990021)[0m Duplicate JS data for subdomain ID 8839 and URL http://www.vulnweb.com not inserted.
+[36m(insert_js_result pid=1990022)[0m Duplicate JS data for subdomain ID 8823 and URL http://testasp.vulnweb.com/Templates/MainTemplate.dwt.asp not inserted.
+[36m(insert_js_result pid=1990019)[0m Duplicate JS data for subdomain ID 8823 and URL http://testasp.vulnweb.com/Search.asp not inserted.
+[36m(insert_js_result pid=1990020)[0m Duplicate JS data for subdomain ID 8823 and URL http://testasp.vulnweb.com not inserted.
+[36m(insert_js_result pid=1990022)[0m Duplicate JS data for subdomain ID 8823 and URL http://testasp.vulnweb.com/styles.css not inserted.
+[36m(insert_js_result pid=1990019)[0m Duplicate JS data for subdomain ID 8823 and URL http://testasp.vulnweb.com/html/about.html not inserted.
+[36m(insert_js_result pid=1990021)[0m Duplicate JS data for subdomain ID 8823 and URL http://testasp.vulnweb.com/Templatize.asp?item=html/about.html not inserted.
+[36m(insert_js_result pid=1990022)[0m Duplicate JS data for subdomain ID 8823 and URL http://testasp.vulnweb.com/Default.asp not inserted.
+[36m(insert_js_result pid=1990020)[0m Duplicate JS data for subdomain ID 8824 and URL http://testphp.vulnweb.com/disclaimer.php not inserted.
+[36m(insert_js_result pid=1990019)[0m Duplicate JS data for subdomain ID 8823 and URL http://testasp.vulnweb.com/Register.asp?RetURL=%2FDefault%2Easp%3F not inserted.[32m [repeated 4x across cluster][0m
+[36m(insert_js_result pid=1990022)[0m Duplicate JS data for subdomain ID 8824 and URL http://testphp.vulnweb.com/userinfo.php not inserted.
+[36m(insert_js_result pid=1990021)[0m Duplicate JS data for subdomain ID 8824 and URL http://testphp.vulnweb.com/login.php not inserted.
+[36m(insert_js_result pid=1990019)[0m Duplicate JS data for subdomain ID 8824 and URL http://testphp.vulnweb.com/cart.php not inserted.
+[36m(insert_js_result pid=1990020)[0m Duplicate JS data for subdomain ID 8824 and URL http://testphp.vulnweb.com/Mod_Rewrite_Shop/ not inserted.
+[36m(insert_js_result pid=1990022)[0m Duplicate JS data for subdomain ID 8824 and URL http://testphp.vulnweb.com/artists.php not inserted.
+[36m(insert_js_result pid=1990021)[0m Duplicate JS data for subdomain ID 8824 and URL http://testphp.vulnweb.com/style.css not inserted.
+[36m(insert_js_result pid=1990019)[0m Duplicate JS data for subdomain ID 8824 and URL http://testphp.vulnweb.com not inserted.
+[36m(insert_js_result pid=1990022)[0m Duplicate JS data for subdomain ID 8824 and URL http://testphp.vulnweb.com/AJAX/index.php not inserted.
+[36m(insert_js_result pid=1990020)[0m Duplicate JS data for subdomain ID 8824 and URL http://testphp.vulnweb.com/guestbook.php not inserted.
+[36m(insert_js_result pid=1990021)[0m Duplicate JS data for subdomain ID 8824 and URL http://testphp.vulnweb.com/high not inserted.
+[36m(insert_js_result pid=1990019)[0m Duplicate JS data for subdomain ID 8824 and URL http://testphp.vulnweb.com/hpp/ not inserted.
+[36m(insert_js_result pid=1990020)[0m Duplicate JS data for subdomain ID 8824 and URL http://testphp.vulnweb.com/Templates/main_dynamic_template.dwt.php not inserted.
+[36m(insert_js_result pid=1990022)[0m Duplicate JS data for subdomain ID 8824 and URL http://testphp.vulnweb.com/categories.php not inserted.
+[36m(insert_js_result pid=1990021)[0m Duplicate JS data for subdomain ID 8824 and URL http://testphp.vulnweb.com/privacy.php not inserted.
+[36m(insert_js_result pid=1990019)[0m Duplicate JS data for subdomain ID 8824 and URL http://testphp.vulnweb.com/index.php not inserted.
+[36m(insert_js_result pid=1990020)[0m Duplicate JS data for subdomain ID 8822 and URL http://testaspnet.vulnweb.com/Signup.aspx not inserted.
+[36m(insert_js_result pid=1990022)[0m Duplicate JS data for subdomain ID 8822 and URL http://testaspnet.vulnweb.com not inserted.
+[36m(insert_js_result pid=1990022)[0m Duplicate JS data for subdomain ID 8822 and URL http://testaspnet.vulnweb.com/rssFeed.aspx not inserted.
+[36m(insert_js_result pid=1990020)[0m Duplicate JS data for subdomain ID 8822 and URL http://testaspnet.vulnweb.com/about.aspx not inserted.
+[36m(insert_js_result pid=1990021)[0m Duplicate JS data for subdomain ID 8822 and URL http://testaspnet.vulnweb.com/login.aspx not inserted.
+[36m(insert_js_result pid=1990019)[0m Duplicate JS data for subdomain ID 8822 and URL http://testaspnet.vulnweb.com/styles.css not inserted.
+[36m(insert_js_result pid=1990020)[0m Duplicate JS data for subdomain ID 8822 and URL http://testaspnet.vulnweb.com/default.aspx not inserted.
+[36m(insert_js_result pid=1990022)[0m Duplicate JS data for subdomain ID 8822 and URL http://testaspnet.vulnweb.com/ads/def.html not inserted.
+[36m(insert_js_result pid=1990019)[0m Duplicate JS data for subdomain ID 8822 and URL http://testaspnet.vulnweb.com/Comments.aspx?id=3 not inserted.[32m [repeated 2x across cluster][0m
+[36m(insert_js_result pid=1990022)[0m Duplicate JS data for subdomain ID 8822 and URL http://testaspnet.vulnweb.com not inserted.
+[36m(insert_js_result pid=1990019)[0m Duplicate JS data for subdomain ID 8822 and URL http://testaspnet.vulnweb.com/styles.css not inserted.
+[36m(insert_js_result pid=1990020)[0m Duplicate JS data for subdomain ID 8822 and URL http://testaspnet.vulnweb.com/Signup.aspx not inserted.
+[36m(insert_js_result pid=1990022)[0m Duplicate JS data for subdomain ID 8822 and URL http://testaspnet.vulnweb.com/rssFeed.aspx not inserted.
+[36m(insert_js_result pid=1990020)[0m Duplicate JS data for subdomain ID 8821 and URL http://vulnweb.com/ not inserted.
+[36m(insert_js_result pid=1990022)[0m Duplicate JS data for subdomain ID 8821 and URL http://rest.vulnweb.com/docs/ not inserted.
+[36m(insert_js_result pid=1990021)[0m Duplicate JS data for subdomain ID 8821 and URL http://rest.vulnweb.com not inserted.
+[36m(insert_js_result pid=1990019)[0m Duplicate JS data for subdomain ID 8822 and URL http://testaspnet.vulnweb.com/about.aspx not inserted.
+[36m(insert_js_result pid=1990020)[0m Duplicate JS data for subdomain ID 8822 and URL http://testaspnet.vulnweb.com/login.aspx not inserted.
+[36m(insert_js_result pid=1990021)[0m Duplicate JS data for subdomain ID 8822 and URL http://testaspnet.vulnweb.com/default.aspx not inserted.
+[36m(insert_js_result pid=1990019)[0m Duplicate JS data for subdomain ID 8822 and URL http://testaspnet.vulnweb.com/ads/def.html not inserted.
+[36m(insert_js_result pid=1990020)[0m Duplicate JS data for subdomain ID 8823 and URL http://testasp.vulnweb.com/Register.asp?RetURL=%2FDefault%2Easp%3F not inserted.[32m [repeated 3x across cluster][0m
+[36m(insert_js_result pid=1990022)[0m Duplicate JS data for subdomain ID 8823 and URL http://testasp.vulnweb.com not inserted.
+[36m(insert_js_result pid=1990021)[0m Duplicate JS data for subdomain ID 8823 and URL http://testasp.vulnweb.com/styles.css not inserted.
+[36m(insert_js_result pid=1990020)[0m Duplicate JS data for subdomain ID 8823 and URL http://testasp.vulnweb.com/Default.asp not inserted.
+[36m(insert_js_result pid=1990022)[0m Duplicate JS data for subdomain ID 8823 and URL http://testasp.vulnweb.com/Templates/MainTemplate.dwt.asp not inserted.
+[36m(insert_js_result pid=1990021)[0m Duplicate JS data for subdomain ID 8823 and URL http://testasp.vulnweb.com/Templatize.asp?item=html/about.html not inserted.
+[36m(insert_js_result pid=1990020)[0m Duplicate JS data for subdomain ID 8823 and URL http://testasp.vulnweb.com/html/about.html not inserted.
+[36m(insert_js_result pid=1990021)[0m Duplicate JS data for subdomain ID 8823 and URL http://testasp.vulnweb.com/Search.asp not inserted.
+[36m(insert_js_result pid=1990019)[0m Database query error: no results to fetch
+[36m(insert_js_result pid=1990019)[0m Inserted new JS data for subdomain ID 8823 and URL http://testasp.vulnweb.com/showforum.asp?id=2.
+[36m(insert_js_result pid=1990022)[0m Duplicate JS data for subdomain ID 8836 and URL http://testhtml5.vulnweb.com not inserted.[32m [repeated 6x across cluster][0m
+[36m(insert_js_result pid=1990020)[0m Duplicate JS data for subdomain ID 8824 and URL http://testphp.vulnweb.com/Mod_Rewrite_Shop/ not inserted.
+[36m(insert_js_result pid=1990021)[0m Database query error: no results to fetch[32m [repeated 4x across cluster][0m
+[36m(insert_js_result pid=1990021)[0m Inserted new JS data for subdomain ID 8836 and URL http://testhtml5.vulnweb.com/ajax/latest?offset=.[32m [repeated 4x across cluster][0m
+[36m(insert_js_result pid=1990022)[0m Duplicate JS data for subdomain ID 8824 and URL http://testphp.vulnweb.com/disclaimer.php not inserted.
+[36m(insert_js_result pid=1990021)[0m Duplicate JS data for subdomain ID 8824 and URL http://testphp.vulnweb.com/privacy.php not inserted.
+[36m(insert_js_result pid=1990019)[0m Duplicate JS data for subdomain ID 8824 and URL http://testphp.vulnweb.com/guestbook.php not inserted.
+[36m(insert_js_result pid=1990020)[0m Duplicate JS data for subdomain ID 8824 and URL http://testphp.vulnweb.com/index.php not inserted.
+[36m(insert_js_result pid=1990022)[0m Duplicate JS data for subdomain ID 8824 and URL http://testphp.vulnweb.com/userinfo.php not inserted.
+[36m(insert_js_result pid=1990021)[0m Duplicate JS data for subdomain ID 8824 and URL http://testphp.vulnweb.com not inserted.
+[36m(insert_js_result pid=1990019)[0m Duplicate JS data for subdomain ID 8824 and URL http://testphp.vulnweb.com/login.php not inserted.
+[36m(insert_js_result pid=1990020)[0m Duplicate JS data for subdomain ID 8824 and URL http://testphp.vulnweb.com/categories.php not inserted.
+[36m(insert_js_result pid=1990022)[0m Duplicate JS data for subdomain ID 8824 and URL http://testphp.vulnweb.com/high not inserted.
+[36m(insert_js_result pid=1990021)[0m Duplicate JS data for subdomain ID 8824 and URL http://testphp.vulnweb.com/cart.php not inserted.
+[36m(insert_js_result pid=1990019)[0m Duplicate JS data for subdomain ID 8824 and URL http://testphp.vulnweb.com/AJAX/index.php not inserted.
+[36m(insert_js_result pid=1990020)[0m Duplicate JS data for subdomain ID 8824 and URL http://testphp.vulnweb.com/Templates/main_dynamic_template.dwt.php not inserted.
+[36m(insert_js_result pid=1990022)[0m Duplicate JS data for subdomain ID 8824 and URL http://testphp.vulnweb.com/artists.php not inserted.
+[36m(insert_js_result pid=1990021)[0m Duplicate JS data for subdomain ID 8824 and URL http://testphp.vulnweb.com/hpp/ not inserted.
+[36m(insert_js_result pid=1990019)[0m Duplicate JS data for subdomain ID 8824 and URL http://testphp.vulnweb.com/style.css not inserted.
+[36m(insert_js_result pid=1990019)[0m Duplicate JS data for subdomain ID 8836 and URL http://testhtml5.vulnweb.com not inserted.[32m [repeated 7x across cluster][0m
+[36m(insert_js_result pid=1990021)[0m Duplicate JS data for subdomain ID 8822 and URL http://testaspnet.vulnweb.com/styles.css not inserted.
+[36m(insert_js_result pid=1990019)[0m Duplicate JS data for subdomain ID 8822 and URL http://testaspnet.vulnweb.com/default.aspx not inserted.
+[36m(insert_js_result pid=1990020)[0m Duplicate JS data for subdomain ID 8822 and URL http://testaspnet.vulnweb.com/about.aspx not inserted.
+[36m(insert_js_result pid=1990022)[0m Database query error: no results to fetch
+[36m(insert_js_result pid=1990022)[0m Inserted new JS data for subdomain ID 8822 and URL http://testaspnet.vulnweb.com/ReadNews.aspx?id=0&NewsAd=ads/def.html.
+[36m(insert_js_result pid=1990021)[0m Duplicate JS data for subdomain ID 8822 and URL http://testaspnet.vulnweb.com/Signup.aspx not inserted.
+[36m(insert_js_result pid=1990020)[0m Duplicate JS data for subdomain ID 8822 and URL http://testaspnet.vulnweb.com/login.aspx not inserted.
+[36m(insert_js_result pid=1990021)[0m Duplicate JS data for subdomain ID 8822 and URL http://testaspnet.vulnweb.com/ads/def.html not inserted.
+[36m(insert_js_result pid=1990022)[0m Duplicate JS data for subdomain ID 8822 and URL http://testaspnet.vulnweb.com/rssFeed.aspx not inserted.
+[36m(insert_js_result pid=1990019)[0m Duplicate JS data for subdomain ID 8822 and URL http://testaspnet.vulnweb.com not inserted.
+[36m(JavaScriptGatheringWorker pid=1990663)[0m With like_pattern: %.bugnode.io
+[36m(JavaScriptGatheringWorker pid=1990663)[0m [(8842, 'https://alpha.app.bugnode.io'), (8844, 'https://www.bugnode.io')]
+[36m(insert_js_result pid=1990019)[0m Duplicate JS data for subdomain ID 8839 and URL http://www.vulnweb.com not inserted.
+[36m(insert_js_result pid=1990020)[0m Duplicate JS data for subdomain ID 8823 and URL http://testasp.vulnweb.com/html/about.html not inserted.
+[36m(insert_js_result pid=1990019)[0m Duplicate JS data for subdomain ID 8822 and URL http://testaspnet.vulnweb.com/Comments.aspx?id=3 not inserted.[32m [repeated 10x across cluster][0m
+[36m(insert_js_result pid=1990022)[0m Duplicate JS data for subdomain ID 8823 and URL http://testasp.vulnweb.com/styles.css not inserted.
+[36m(insert_js_result pid=1990021)[0m Duplicate JS data for subdomain ID 8823 and URL http://testasp.vulnweb.com not inserted.
+[36m(insert_js_result pid=1990021)[0m Duplicate JS data for subdomain ID 8823 and URL http://testasp.vulnweb.com/Default.asp not inserted.
+[36m(insert_js_result pid=1990019)[0m Duplicate JS data for subdomain ID 8823 and URL http://testasp.vulnweb.com/Templatize.asp?item=html/about.html not inserted.
+[36m(JavaScriptGatheringWorker pid=1990653)[0m With like_pattern: %.bugnode.io
+[36m(insert_js_result pid=1990020)[0m Duplicate JS data for subdomain ID 8823 and URL http://testasp.vulnweb.com/Templates/MainTemplate.dwt.asp not inserted.
+[36m(insert_js_result pid=1990022)[0m Duplicate JS data for subdomain ID 8839 and URL http://www.vulnweb.com not inserted.
+[36m(insert_js_result pid=1990021)[0m Duplicate JS data for subdomain ID 8839 and URL http://testphp.vulnweb.com/ not inserted.
+[36m(insert_js_result pid=1990019)[0m Duplicate JS data for subdomain ID 8823 and URL http://testasp.vulnweb.com/Search.asp not inserted.
+[36m(JavaScriptGatheringWorker pid=1990653)[0m [(8842, 'https://alpha.app.bugnode.io'), (8844, 'https://www.bugnode.io')]
+[36m(insert_js_result pid=1990022)[0m Duplicate JS data for subdomain ID 8839 and URL http://rest.vulnweb.com/ not inserted.
+[36m(insert_js_result pid=1990021)[0m Duplicate JS data for subdomain ID 8839 and URL http://testasp.vulnweb.com/ not inserted.
+[36m(insert_js_result pid=1990019)[0m Duplicate JS data for subdomain ID 8839 and URL http://testaspnet.vulnweb.com/ not inserted.
+[36m(insert_js_result pid=1990020)[0m Duplicate JS data for subdomain ID 8836 and URL http://testhtml5.vulnweb.com/static/app/libs/sessvars.js not inserted.[32m [repeated 5x across cluster][0m
+[36m(insert_js_result pid=1990020)[0m Database query error: no results to fetch
+[36m(insert_js_result pid=1990020)[0m Inserted new JS data for subdomain ID 8842 and URL https://alpha.app.bugnode.io/css/app.min.css.
+[36m(insert_js_result pid=1990022)[0m Inserted new JS data for subdomain ID 8842 and URL https://alpha.app.bugnode.io.
+[36m(insert_js_result pid=1990021)[0m Inserted new JS data for subdomain ID 8842 and URL https://alpha.app.bugnode.io/css/home.css.
+[36m(insert_js_result pid=1990020)[0m Duplicate JS data for subdomain ID 8822 and URL http://testaspnet.vulnweb.com/Comments.aspx?id=2 not inserted.[32m [repeated 14x across cluster][0m
+[36m(insert_js_result pid=1990022)[0m Duplicate JS data for subdomain ID 8822 and URL http://testaspnet.vulnweb.com not inserted.
+[36m(insert_js_result pid=1990019)[0m Duplicate JS data for subdomain ID 8822 and URL http://testaspnet.vulnweb.com/Signup.aspx not inserted.
+[36m(insert_js_result pid=1990020)[0m Duplicate JS data for subdomain ID 8822 and URL http://testaspnet.vulnweb.com/styles.css not inserted.
+[36m(insert_js_result pid=1990022)[0m Duplicate JS data for subdomain ID 8822 and URL http://testaspnet.vulnweb.com/rssFeed.aspx not inserted.
+[36m(insert_js_result pid=1990021)[0m Duplicate JS data for subdomain ID 8822 and URL http://testaspnet.vulnweb.com/ads/def.html not inserted.
+[36m(insert_js_result pid=1990019)[0m Duplicate JS data for subdomain ID 8822 and URL http://testaspnet.vulnweb.com/login.aspx not inserted.
+[36m(insert_js_result pid=1990020)[0m Duplicate JS data for subdomain ID 8822 and URL http://testaspnet.vulnweb.com/default.aspx not inserted.
+[36m(insert_js_result pid=1990022)[0m Duplicate JS data for subdomain ID 8822 and URL http://testaspnet.vulnweb.com/about.aspx not inserted.
+[36m(insert_js_result pid=1990020)[0m Duplicate JS data for subdomain ID 8842 and URL https://alpha.app.bugnode.io not inserted.
+[36m(insert_js_result pid=1990021)[0m Database query error: no results to fetch[32m [repeated 2x across cluster][0m
+[36m(insert_js_result pid=1990022)[0m Duplicate JS data for subdomain ID 8842 and URL https://alpha.app.bugnode.io/css/home.css not inserted.
+[36m(insert_js_result pid=1990021)[0m Duplicate JS data for subdomain ID 8842 and URL https://alpha.app.bugnode.io/css/app.min.css not inserted.
+[36m(insert_js_result pid=1990020)[0m Duplicate JS data for subdomain ID 8839 and URL http://www.vulnweb.com not inserted.
+[36m(insert_js_result pid=1990021)[0m Duplicate JS data for subdomain ID 8822 and URL http://testaspnet.vulnweb.com/ReadNews.aspx?id=3&NewsAd=ads/def.html not inserted.
+[36m(insert_js_result pid=1990022)[0m Duplicate JS data for subdomain ID 8839 and URL http://testhtml5.vulnweb.com/ not inserted.
+[36m(insert_js_result pid=1990021)[0m Duplicate JS data for subdomain ID 8839 and URL http://testasp.vulnweb.com/ not inserted.
+[36m(insert_js_result pid=1990019)[0m Duplicate JS data for subdomain ID 8839 and URL http://testphp.vulnweb.com/ not inserted.
+[36m(insert_js_result pid=1990020)[0m Duplicate JS data for subdomain ID 8839 and URL http://testaspnet.vulnweb.com/ not inserted.
+[36m(insert_js_result pid=1990019)[0m Duplicate JS data for subdomain ID 8839 and URL http://rest.vulnweb.com/ not inserted.
+[36m(insert_js_result pid=1990020)[0m Duplicate JS data for subdomain ID 8836 and URL http://testhtml5.vulnweb.com/static/app/post.js not inserted.
+[36m(insert_js_result pid=1990022)[0m Duplicate JS data for subdomain ID 8836 and URL http://testhtml5.vulnweb.com/static/app/app.js not inserted.
+[36m(insert_js_result pid=1990022)[0m Database query error: no results to fetch
+[36m(insert_js_result pid=1990022)[0m Inserted new JS data for subdomain ID 8844 and URL https://www.bugnode.io/static/chunks/39209d7c-02c1ea1fe49760ff.js.
+[36m(insert_js_result pid=1990021)[0m Inserted new JS data for subdomain ID 8844 and URL https://www.bugnode.io/noisse-attack-surface-monitoring.
+[36m(insert_js_result pid=1990019)[0m Inserted new JS data for subdomain ID 8844 and URL https://www.bugnode.io/construction.
+[36m(insert_js_result pid=1990019)[0m Inserted new JS data for subdomain ID 8844 and URL https://www.bugnode.io/vulnerability-assessment.
+[36m(insert_js_result pid=1990022)[0m Inserted new JS data for subdomain ID 8844 and URL https://www.bugnode.io/_next/static/media/=L-y.
+[36m(insert_js_result pid=1990020)[0m Duplicate JS data for subdomain ID 8836 and URL http://testhtml5.vulnweb.com/static/css/style.css not inserted.[32m [repeated 7x across cluster][0m
+[36m(insert_js_result pid=1990021)[0m Inserted new JS data for subdomain ID 8844 and URL https://www.bugnode.io/contact-us.
+[36m(insert_js_result pid=1990019)[0m Inserted new JS data for subdomain ID 8844 and URL https://www.bugnode.io/secure-your-web.
+[36m(insert_js_result pid=1990020)[0m Inserted new JS data for subdomain ID 8844 and URL https://www.bugnode.io/about.
+[36m(insert_js_result pid=1990021)[0m Inserted new JS data for subdomain ID 8844 and URL https://www.bugnode.io/vulnerability-assessment/broken-access.
+[36m(insert_js_result pid=1990020)[0m Inserted new JS data for subdomain ID 8844 and URL https://www.bugnode.io/.
+[36m(insert_js_result pid=1990022)[0m Database query error: no results to fetch[32m [repeated 16x across cluster][0m
+[36m(insert_js_result pid=1990022)[0m Inserted new JS data for subdomain ID 8844 and URL https://www.bugnode.io/_next/static/chunks/661-202a224f2f6592d8.js.[32m [repeated 7x across cluster][0m
+[36m(insert_js_result pid=1990019)[0m Inserted new JS data for subdomain ID 8844 and URL https://www.bugnode.io/researcher.
+[36m(insert_js_result pid=1990020)[0m Inserted new JS data for subdomain ID 8844 and URL https://www.bugnode.io/client.
+[36m(insert_js_result pid=1990021)[0m Inserted new JS data for subdomain ID 8844 and URL https://www.bugnode.io/research-the-web.
+[36m(insert_js_result pid=1990020)[0m Duplicate JS data for subdomain ID 8844 and URL https://www.bugnode.io/vulnerability-assessment not inserted.
+[36m(insert_js_result pid=1990019)[0m Duplicate JS data for subdomain ID 8844 and URL https://www.bugnode.io/noisse-attack-surface-monitoring not inserted.
+[36m(insert_js_result pid=1990020)[0m Duplicate JS data for subdomain ID 8844 and URL https://www.bugnode.io/_next/static/chunks/938-b9b29a3cc1edea16.js not inserted.
+[36m(insert_js_result pid=1990020)[0m Duplicate JS data for subdomain ID 8844 and URL https://www.bugnode.io/_next/static/css/d404782e79183484.css not inserted.
+[36m(insert_js_result pid=1990021)[0m Duplicate JS data for subdomain ID 8844 and URL https://www.bugnode.io/research-the-web not inserted.
+[36m(insert_js_result pid=1990019)[0m Inserted new JS data for subdomain ID 8844 and URL https://www.bugnode.io/_next/image.
+[36m(insert_js_result pid=1990020)[0m Duplicate JS data for subdomain ID 8844 and URL https://www.bugnode.io/vulnerability-assessment/broken-access not inserted.
+[36m(insert_js_result pid=1990019)[0m Database query error: no results to fetch[32m [repeated 14x across cluster][0m
+[36m(insert_js_result pid=1990021)[0m Inserted new JS data for subdomain ID 8844 and URL https://www.bugnode.io/_next/image?url=%2Flogo-footer.png&w=384&q=75.[32m [repeated 10x across cluster][0m
+[36m(insert_js_result pid=1990020)[0m Duplicate JS data for subdomain ID 8844 and URL https://www.bugnode.io/client not inserted.
+[36m(insert_js_result pid=1990022)[0m Inserted new JS data for subdomain ID 8844 and URL https://www.bugnode.io.
+[36m(insert_js_result pid=1990021)[0m Duplicate JS data for subdomain ID 8844 and URL https://www.bugnode.io/construction not inserted.
+[36m(insert_js_result pid=1990019)[0m Duplicate JS data for subdomain ID 8844 and URL https://www.bugnode.io/researcher not inserted.
+[36m(insert_js_result pid=1990020)[0m Duplicate JS data for subdomain ID 8839 and URL http://rest.vulnweb.com/ not inserted.
+[36m(insert_js_result pid=1990022)[0m Duplicate JS data for subdomain ID 8839 and URL http://testphp.vulnweb.com/ not inserted.
+[36m(insert_js_result pid=1990021)[0m Duplicate JS data for subdomain ID 8839 and URL http://testaspnet.vulnweb.com/ not inserted.
+[36m(insert_js_result pid=1990019)[0m Duplicate JS data for subdomain ID 8839 and URL http://testasp.vulnweb.com/ not inserted.
+[36m(insert_js_result pid=1990021)[0m Duplicate JS data for subdomain ID 8839 and URL http://www.vulnweb.com not inserted.
+[36m(insert_js_result pid=1990020)[0m Duplicate JS data for subdomain ID 8844 and URL https://www.bugnode.io/about not inserted.
+[36m(insert_js_result pid=1990019)[0m Duplicate JS data for subdomain ID 8844 and URL https://www.bugnode.io/secure-your-web not inserted.
+[36m(insert_js_result pid=1990019)[0m Duplicate JS data for subdomain ID 8844 and URL https://www.bugnode.io/contact-us not inserted.
+[36m(insert_js_result pid=1990020)[0m Duplicate JS data for subdomain ID 8844 and URL https://www.bugnode.io/static/chunks/661-202a224f2f6592d8.js not inserted.[32m [repeated 11x across cluster][0m
