@@ -6364,3 +6364,24 @@ Press CTRL+C to quit
 127.0.0.1 - - [23/Feb/2024 02:06:04] "GET /.env HTTP/1.0" 404 -
 127.0.0.1 - - [23/Feb/2024 02:06:04] "POST / HTTP/1.0" 404 -
 127.0.0.1 - - [23/Feb/2024 03:04:33] "POST /monitor-domain HTTP/1.0" 200 -
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/dns_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/dns_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/dns_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/dns_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+ * Detected change in '/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/dns_worker.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 714-881-132
+127.0.0.1 - - [23/Feb/2024 03:23:23] "POST /monitor-domain HTTP/1.0" 200 -
