@@ -145,3 +145,215 @@ Traceback (most recent call last):
     sys.exit(signum)
 SystemExit: 15
 2024-02-23 04:27:57,483	INFO worker.py:1724 -- Started a local Ray instance.
+Subdomain Workers have been started. Main script will now wait indefinitely.
+[36m(SubdomainEnumerationWorker pid=1990849)[0m Fetched task from api_queue: {"domain": "vulnweb.com", "user_id": "user_01HNZEKKM36W84MCQSSBFK7NDH"}
+[36m(SubdomainEnumerationWorker pid=1990849)[0m Received domain: vulnweb.com, Hunter ID: user_01HNZEKKM36W84MCQSSBFK7NDH
+[36m(SubdomainEnumerationWorker pid=1990849)[0m Calling ensure_domain_exists with domain: vulnweb.com, Hunter ID: user_01HNZEKKM36W84MCQSSBFK7NDH
+[36m(SubdomainEnumerationWorker pid=1990849)[0m Database query error: no results to fetch
+[36m(SubdomainEnumerationWorker pid=1990849)[0m Processing domain: vulnweb.com with ID: 146
+[36m(SubdomainEnumerationWorker pid=1990849)[0m Running subfinder
+[36m(SubdomainEnumerationWorker pid=1990846)[0m Fetched task from api_queue: {"domain": "noisse.io", "user_id": "user_01HNZEKKM36W84MCQSSBFK7NDH"}
+[36m(SubdomainEnumerationWorker pid=1990848)[0m Fetched task from api_queue: {"domain": "vulnweb.com", "user_id": "user_01HMTAXPTE8XSQKD8XZ9M66CQM"}
+[36m(SubdomainEnumerationWorker pid=1990846)[0m Received domain: noisse.io, Hunter ID: user_01HNZEKKM36W84MCQSSBFK7NDH
+[36m(SubdomainEnumerationWorker pid=1990846)[0m Calling ensure_domain_exists with domain: noisse.io, Hunter ID: user_01HNZEKKM36W84MCQSSBFK7NDH
+[36m(SubdomainEnumerationWorker pid=1990848)[0m Received domain: vulnweb.com, Hunter ID: user_01HMTAXPTE8XSQKD8XZ9M66CQM
+[36m(SubdomainEnumerationWorker pid=1990848)[0m Calling ensure_domain_exists with domain: vulnweb.com, Hunter ID: user_01HMTAXPTE8XSQKD8XZ9M66CQM
+[36m(SubdomainEnumerationWorker pid=1990846)[0m Database query error: no results to fetch[32m [repeated 2x across cluster] (Ray deduplicates logs by default. Set RAY_DEDUP_LOGS=0 to disable log deduplication, or see https://docs.ray.io/en/master/ray-observability/ray-logging.html#log-deduplication for more options.)[0m
+[36m(SubdomainEnumerationWorker pid=1990846)[0m Processing domain: noisse.io with ID: 148
+[36m(SubdomainEnumerationWorker pid=1990848)[0m Processing domain: vulnweb.com with ID: 146
+[36m(SubdomainEnumerationWorker pid=1990846)[0m Running subfinder[32m [repeated 2x across cluster][0m
+[36m(SubdomainEnumerationWorker pid=1990850)[0m Fetched task from api_queue: {"domain": "bugnode.io", "user_id": "user_01HMTAXPTE8XSQKD8XZ9M66CQM"}
+[36m(SubdomainEnumerationWorker pid=1990850)[0m Received domain: bugnode.io, Hunter ID: user_01HMTAXPTE8XSQKD8XZ9M66CQM
+[36m(SubdomainEnumerationWorker pid=1990850)[0m Calling ensure_domain_exists with domain: bugnode.io, Hunter ID: user_01HMTAXPTE8XSQKD8XZ9M66CQM
+[36m(SubdomainEnumerationWorker pid=1990846)[0m Database query error: no results to fetch[32m [repeated 6x across cluster][0m
+[36m(SubdomainEnumerationWorker pid=1990850)[0m Processing domain: bugnode.io with ID: 149
+[36m(SubdomainEnumerationWorker pid=1990850)[0m Running subfinder
+[36m(process_and_insert_subdomain pid=1990078)[0m Database query error: no results to fetch[32m [repeated 10x across cluster][0m
+[36m(SubdomainEnumerationWorker pid=1990848)[0m Database query error: no results to fetch[32m [repeated 14x across cluster][0m
+[36m(SubdomainEnumerationWorker pid=1990849)[0m Database query error: no results to fetch[32m [repeated 18x across cluster][0m
+[36m(SubdomainEnumerationWorker pid=1990849)[0m Database query error: no results to fetch[32m [repeated 12x across cluster][0m
+[36m(SubdomainEnumerationWorker pid=1990849)[0m Database query error: no results to fetch[32m [repeated 9x across cluster][0m
+[36m(SubdomainEnumerationWorker pid=1990849)[0m Database query error: no results to fetch[32m [repeated 13x across cluster][0m
+[36m(SubdomainEnumerationWorker pid=1990849)[0m Database query error: no results to fetch[32m [repeated 11x across cluster][0m
+[36m(SubdomainEnumerationWorker pid=1990848)[0m Database query error: no results to fetch[32m [repeated 7x across cluster][0m
+Shutting down Subdomain Workers gracefully...
+*** SIGTERM received at time=1708668581 on cpu 3 ***
+PC: @     0x7f1917b148bf  (unknown)  __write
+    @     0x7f1917a42520  (unknown)  (unknown)
+    @ ... and at least 3 more frames
+[2024-02-23 06:09:41,209 E 1989407 1989407] logging.cc:361: *** SIGTERM received at time=1708668581 on cpu 3 ***
+[2024-02-23 06:09:41,209 E 1989407 1989407] logging.cc:361: PC: @     0x7f1917b148bf  (unknown)  __write
+[2024-02-23 06:09:41,209 E 1989407 1989407] logging.cc:361:     @     0x7f1917a42520  (unknown)  (unknown)
+[2024-02-23 06:09:41,209 E 1989407 1989407] logging.cc:361:     @ ... and at least 3 more frames
+Exception ignored in sys.unraisablehook: <built-in function unraisablehook>
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/ray/_private/worker.py", line 1390, in sigterm_handler
+    sys.exit(signum)
+SystemExit: 15
+[36m(SubdomainEnumerationWorker pid=1990848)[0m Database query error: no results to fetch[32m [repeated 3x across cluster][0m
+2024-02-24 02:18:08,812	INFO worker.py:1724 -- Started a local Ray instance.
+*** SIGTERM received at time=1708741261 on cpu 3 ***
+PC: @     0x56076c21d980  (unknown)  (unknown)
+    @     0x7fda8ea42520       6704  (unknown)
+    @     0x7fda8daf0293         48  AbslInternalPerThreadSemWait_lts_20230125
+    @     0x7fda8cf58195        144  absl::lts_20230125::CondVar::WaitCommon()
+    @     0x7fda8d9c07fe         80  gpr_cv_wait
+    @     0x7fda8d9a1f06        176  grpc_core::Executor::ThreadMain()
+    @     0x7fda8d9bf006        112  grpc_core::(anonymous namespace)::ThreadInternalsPosix::ThreadInternalsPosix()::{lambda()#1}::_FUN()
+    @     0x7fda8ea94ac3  (unknown)  (unknown)
+[2024-02-24 02:21:01,045 E 2256735 2256820] logging.cc:361: *** SIGTERM received at time=1708741261 on cpu 3 ***
+[2024-02-24 02:21:01,045 E 2256735 2256820] logging.cc:361: PC: @     0x56076c21d980  (unknown)  (unknown)
+[2024-02-24 02:21:01,045 E 2256735 2256820] logging.cc:361:     @     0x7fda8ea42520       6704  (unknown)
+[2024-02-24 02:21:01,045 E 2256735 2256820] logging.cc:361:     @     0x7fda8daf0293         48  AbslInternalPerThreadSemWait_lts_20230125
+[2024-02-24 02:21:01,045 E 2256735 2256820] logging.cc:361:     @     0x7fda8cf58195        144  absl::lts_20230125::CondVar::WaitCommon()
+[2024-02-24 02:21:01,046 E 2256735 2256820] logging.cc:361:     @     0x7fda8d9c07fe         80  gpr_cv_wait
+[2024-02-24 02:21:01,046 E 2256735 2256820] logging.cc:361:     @     0x7fda8d9a1f06        176  grpc_core::Executor::ThreadMain()
+[2024-02-24 02:21:01,046 E 2256735 2256820] logging.cc:361:     @     0x7fda8d9bf006        112  grpc_core::(anonymous namespace)::ThreadInternalsPosix::ThreadInternalsPosix()::{lambda()#1}::_FUN()
+[2024-02-24 02:21:01,046 E 2256735 2256820] logging.cc:361:     @     0x7fda8ea94ac3  (unknown)  (unknown)
+Subdomain Workers have been started. Main script will now wait indefinitely.
+Exception ignored in atexit callback: <function shutdown at 0x7fda8b3548b0>
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/ray/_private/client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/ray/_private/worker.py", line 1788, in shutdown
+    time.sleep(0.5)
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/ray/_private/worker.py", line 1390, in sigterm_handler
+    sys.exit(signum)
+SystemExit: 15
+2024-02-24 02:21:19,439	INFO worker.py:1724 -- Started a local Ray instance.
+2024-02-26 03:03:46,835	ERROR worker.py:405 -- Unhandled error (suppress with 'RAY_IGNORE_UNHANDLED_ERRORS=1'): [36mray::SubdomainEnumerationWorker.run()[39m (pid=2262143, ip=172.31.27.251, actor_id=1596ede841c1727d127505cd01000000, repr=<subdomain_worker.SubdomainEnumerationWorker object at 0x7fce201f6230>)
+  File "/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/subdomain_worker.py", line 35, in run
+    queue_name, task_data = self.fetch_task()
+  File "/home/ubuntu/asm/dev/noisse-caffeine-asm/brain/base_worker.py", line 30, in fetch_task
+    task_data = self.redis_client.blpop(queue_name, timeout=1)  # Set a timeout to cycle through queues
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/redis/commands/core.py", line 2594, in blpop
+    return self.execute_command("BLPOP", *keys)
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/redis/client.py", line 536, in execute_command
+    return conn.retry.call_with_retry(
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/redis/retry.py", line 49, in call_with_retry
+    fail(error)
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/redis/client.py", line 540, in <lambda>
+    lambda error: self._disconnect_raise(conn, error),
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/redis/client.py", line 526, in _disconnect_raise
+    raise error
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/redis/retry.py", line 46, in call_with_retry
+    return do()
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/redis/client.py", line 537, in <lambda>
+    lambda: self._send_command_parse_response(
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/redis/client.py", line 513, in _send_command_parse_response
+    return self.parse_response(conn, command_name, **options)
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/redis/client.py", line 553, in parse_response
+    response = connection.read_response()
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/redis/connection.py", line 500, in read_response
+    response = self._parser.read_response(disable_decoding=disable_decoding)
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/redis/_parsers/resp2.py", line 15, in read_response
+    result = self._read_response(disable_decoding=disable_decoding)
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/redis/_parsers/resp2.py", line 25, in _read_response
+    raw = self._buffer.readline()
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/redis/_parsers/socket.py", line 115, in readline
+    self._read_from_socket()
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/redis/_parsers/socket.py", line 68, in _read_from_socket
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+redis.exceptions.ConnectionError: Connection closed by server.
+2024-02-26 03:06:12,829	ERROR worker.py:405 -- Unhandled error (suppress with 'RAY_IGNORE_UNHANDLED_ERRORS=1'): [36mray::SubdomainEnumerationWorker.run()[39m (pid=2262142, ip=172.31.27.251, actor_id=a103bef27ae292e0e560a9e801000000, repr=<subdomain_worker.SubdomainEnumerationWorker object at 0x7f22f00a2230>)
+  File "/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/subdomain_worker.py", line 35, in run
+    queue_name, task_data = self.fetch_task()
+  File "/home/ubuntu/asm/dev/noisse-caffeine-asm/brain/base_worker.py", line 30, in fetch_task
+    task_data = self.redis_client.blpop(queue_name, timeout=1)  # Set a timeout to cycle through queues
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/redis/commands/core.py", line 2594, in blpop
+    return self.execute_command("BLPOP", *keys)
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/redis/client.py", line 536, in execute_command
+    return conn.retry.call_with_retry(
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/redis/retry.py", line 49, in call_with_retry
+    fail(error)
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/redis/client.py", line 540, in <lambda>
+    lambda error: self._disconnect_raise(conn, error),
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/redis/client.py", line 526, in _disconnect_raise
+    raise error
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/redis/retry.py", line 46, in call_with_retry
+    return do()
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/redis/client.py", line 537, in <lambda>
+    lambda: self._send_command_parse_response(
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/redis/client.py", line 513, in _send_command_parse_response
+    return self.parse_response(conn, command_name, **options)
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/redis/client.py", line 553, in parse_response
+    response = connection.read_response()
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/redis/connection.py", line 500, in read_response
+    response = self._parser.read_response(disable_decoding=disable_decoding)
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/redis/_parsers/resp2.py", line 15, in read_response
+    result = self._read_response(disable_decoding=disable_decoding)
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/redis/_parsers/resp2.py", line 25, in _read_response
+    raw = self._buffer.readline()
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/redis/_parsers/socket.py", line 115, in readline
+    self._read_from_socket()
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/redis/_parsers/socket.py", line 68, in _read_from_socket
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+redis.exceptions.ConnectionError: Connection closed by server.
+2024-02-26 03:06:12,873	ERROR worker.py:405 -- Unhandled error (suppress with 'RAY_IGNORE_UNHANDLED_ERRORS=1'): [36mray::SubdomainEnumerationWorker.run()[39m (pid=2262140, ip=172.31.27.251, actor_id=eea77b9c2b634238b876e2a501000000, repr=<subdomain_worker.SubdomainEnumerationWorker object at 0x7fea3c352290>)
+  File "/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/subdomain_worker.py", line 35, in run
+    queue_name, task_data = self.fetch_task()
+  File "/home/ubuntu/asm/dev/noisse-caffeine-asm/brain/base_worker.py", line 30, in fetch_task
+    task_data = self.redis_client.blpop(queue_name, timeout=1)  # Set a timeout to cycle through queues
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/redis/commands/core.py", line 2594, in blpop
+    return self.execute_command("BLPOP", *keys)
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/redis/client.py", line 536, in execute_command
+    return conn.retry.call_with_retry(
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/redis/retry.py", line 49, in call_with_retry
+    fail(error)
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/redis/client.py", line 540, in <lambda>
+    lambda error: self._disconnect_raise(conn, error),
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/redis/client.py", line 526, in _disconnect_raise
+    raise error
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/redis/retry.py", line 46, in call_with_retry
+    return do()
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/redis/client.py", line 537, in <lambda>
+    lambda: self._send_command_parse_response(
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/redis/client.py", line 513, in _send_command_parse_response
+    return self.parse_response(conn, command_name, **options)
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/redis/client.py", line 553, in parse_response
+    response = connection.read_response()
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/redis/connection.py", line 500, in read_response
+    response = self._parser.read_response(disable_decoding=disable_decoding)
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/redis/_parsers/resp2.py", line 15, in read_response
+    result = self._read_response(disable_decoding=disable_decoding)
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/redis/_parsers/resp2.py", line 25, in _read_response
+    raw = self._buffer.readline()
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/redis/_parsers/socket.py", line 115, in readline
+    self._read_from_socket()
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/redis/_parsers/socket.py", line 68, in _read_from_socket
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+redis.exceptions.ConnectionError: Connection closed by server.
+2024-02-26 03:06:12,878	ERROR worker.py:405 -- Unhandled error (suppress with 'RAY_IGNORE_UNHANDLED_ERRORS=1'): [36mray::SubdomainEnumerationWorker.run()[39m (pid=2262145, ip=172.31.27.251, actor_id=f3df01bff426e7e734cbaf1401000000, repr=<subdomain_worker.SubdomainEnumerationWorker object at 0x7f4a9c3421d0>)
+  File "/home/ubuntu/asm/dev/noisse-caffeine-asm/workers/subdomain_worker.py", line 35, in run
+    queue_name, task_data = self.fetch_task()
+  File "/home/ubuntu/asm/dev/noisse-caffeine-asm/brain/base_worker.py", line 30, in fetch_task
+    task_data = self.redis_client.blpop(queue_name, timeout=1)  # Set a timeout to cycle through queues
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/redis/commands/core.py", line 2594, in blpop
+    return self.execute_command("BLPOP", *keys)
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/redis/client.py", line 536, in execute_command
+    return conn.retry.call_with_retry(
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/redis/retry.py", line 49, in call_with_retry
+    fail(error)
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/redis/client.py", line 540, in <lambda>
+    lambda error: self._disconnect_raise(conn, error),
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/redis/client.py", line 526, in _disconnect_raise
+    raise error
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/redis/retry.py", line 46, in call_with_retry
+    return do()
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/redis/client.py", line 537, in <lambda>
+    lambda: self._send_command_parse_response(
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/redis/client.py", line 513, in _send_command_parse_response
+    return self.parse_response(conn, command_name, **options)
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/redis/client.py", line 553, in parse_response
+    response = connection.read_response()
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/redis/connection.py", line 500, in read_response
+    response = self._parser.read_response(disable_decoding=disable_decoding)
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/redis/_parsers/resp2.py", line 15, in read_response
+    result = self._read_response(disable_decoding=disable_decoding)
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/redis/_parsers/resp2.py", line 25, in _read_response
+    raw = self._buffer.readline()
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/redis/_parsers/socket.py", line 115, in readline
+    self._read_from_socket()
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/redis/_parsers/socket.py", line 68, in _read_from_socket
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+redis.exceptions.ConnectionError: Connection closed by server.
