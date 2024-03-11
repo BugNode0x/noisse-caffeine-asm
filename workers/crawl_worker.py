@@ -49,19 +49,32 @@ class JavaScriptGatheringWorker(BaseWorker):
 
     def process_url(self, subdomain_id, url):
         katana_path = os.path.expanduser('~/go/bin/katana')
-        katana_cmd = [katana_path, '-silent', '-d', '2', '-hl', '-jc', '-c', '50', '-p', '50']
+        # Updated Katana command with '-u' flag
+        katana_cmd = [katana_path, '-u', url, '-silent', '-d', '2', '-hl', '-jc', '-c', '50', '-p', '50', '-scp', '/snap/bin/chromium', '--no-sandbox']
 
-        process = subprocess.Popen(katana_cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, stdin=subprocess.PIPE)
-        stdout, _ = process.communicate(input=url.encode())
+        print(f"Executing Katana command: {' '.join(katana_cmd)}")
+        process = subprocess.Popen(katana_cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        stdout, _ = process.communicate()
 
         if process.returncode == 0:
+            print(f"Katana command executed successfully for URL: {url}")
             js_urls = stdout.decode().splitlines()
             cleaned_urls = self.clean_and_deduplicate_urls(js_urls)
+            print(f"Cleaned URLs for {url}: {cleaned_urls}")
             for js_url in cleaned_urls:
+                print(f"Inserting JS URL into DB: {js_url}")
                 insert_future = insert_js_result.remote(subdomain_id, js_url)
+                ray.get(insert_future)
+                print(f"Inserted JS URL into DB: {js_url}")
+        else:
+            print(f"Error executing Katana command for URL: {url}")
+        
 
     def process_task(self, task):
         root_domain = task.get('root_domain')
+        user_id = task.get('user_id')
+
+
         if root_domain:
             urls = self.fetch_eligible_urls(root_domain)
             if urls:  # Check if urls is not None
@@ -70,6 +83,8 @@ class JavaScriptGatheringWorker(BaseWorker):
             else:
                 print(f"No eligible URLs found for root domain: {root_domain}")
         
+        self.send_slack_notification(user_id, f"Finishing up ...")
+
     def run(self):
         try:
             while True:
@@ -78,6 +93,7 @@ class JavaScriptGatheringWorker(BaseWorker):
                     _, task_json_str = task_data_str
                     task = json.loads(task_json_str)
                     self.process_task(task)
+                    
         except KeyboardInterrupt:
             print("Shutting down CrawlWorker gracefully...")
 

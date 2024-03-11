@@ -40,8 +40,8 @@ class SubdomainEnumerationWorker(BaseWorker):
 
                     # Debug print
                     print(f"Received domain: {domain}, Hunter ID: {self.hunter_id}")
-                    if user_id:
-                        self.send_slack_notification(user_id, f"[!] Subdomain gathering started for {domain}.")
+                    if user_id and domain:
+                        self.send_slack_notification(user_id, f"Thanks for using Noisse! We've started doing recon in {domain}")
 
 
                     if not domain or not isinstance(domain, str):

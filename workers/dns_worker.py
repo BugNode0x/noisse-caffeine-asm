@@ -51,8 +51,6 @@ class DNSWorker(BaseWorker):
             # Optional: wait for the operation to complete
             result = ray.get(insert_future)
 
-            self.send_slack_notification(user_id, f"Processed DNS for {subdomain} successfully.")
-
             resolved_subdomain = dns_data['host']
             http_task = json.dumps({'subdomain': resolved_subdomain, 'root_domain': root_domain, 'user_id': user_id})
             self.redis_client.rpush('http_queue', http_task)
@@ -60,8 +58,6 @@ class DNSWorker(BaseWorker):
 
         except Exception as e:
             print(f"Error processing DNS for {subdomain}: {e}")
-
-        
 
     def run(self):
         try:

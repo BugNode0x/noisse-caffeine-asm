@@ -34,7 +34,6 @@ class HTTPWorker(BaseWorker):
 
             # Call function to insert data into the database
             insert_future = insert_http_data.remote(user_id, subdomain, root_domain, url, title, webserver, tech, status_code, content_length)
-            self.send_slack_notification(user_id, f"Processed HTTP for {subdomain} successfully.")
 
             screenshot_task = json.dumps({'url': url, 'root_domain': root_domain, 'user_id': user_id})
             self.redis_client.rpush('screenshot_queue', screenshot_task)
