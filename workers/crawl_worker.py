@@ -79,11 +79,14 @@ class JavaScriptGatheringWorker(BaseWorker):
             urls = self.fetch_eligible_urls(root_domain)
             if urls:  # Check if urls is not None
                 for subdomain_id, url in urls:
+                    start_message = f"[Crawl]Starting crawling for url: {url}"
+                    admin_start_message = f"{start_message} - User ID: {user_id}"
+                    self.send_slack_notification(user_id, start_message)
+                    self.send_admin_slack_notification(admin_start_message)
                     self.process_url(subdomain_id, url)
             else:
                 print(f"No eligible URLs found for root domain: {root_domain}")
         
-        self.send_slack_notification(user_id, f"Finishing up ...")
 
     def run(self):
         try:

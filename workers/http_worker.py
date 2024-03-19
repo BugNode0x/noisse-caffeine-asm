@@ -12,6 +12,11 @@ class HTTPWorker(BaseWorker):
         subdomain = task['subdomain']
         root_domain = task['root_domain']
         user_id = task['user_id']
+
+        user_message = f"[HTTP] Starting HTTP probing for subdomain: {subdomain}"
+        admin_message = f"{user_message} - User ID: {user_id}"
+        self.send_slack_notification(user_id, user_message)
+        self.send_admin_slack_notification(admin_message)
         
         httpx_path = os.path.expanduser('~/go/bin/httpx')
         httpx_cmd = [httpx_path, '-silent', '-tech-detect', '-json']
