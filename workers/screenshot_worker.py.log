@@ -1,0 +1,18 @@
+2024-03-21 15:16:44,952	INFO worker.py:1715 -- Started a local Ray instance. View the dashboard at [1m[32mhttp://127.0.0.1:8274 [39m[22m
+Screenshot Workers have been started. Main script will now wait indefinitely.
+[36m(ScreenshotWorker pid=1542217)[0m Fetched task from screenshot_queue_2: {"url": "http://testasp.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(ScreenshotWorker pid=1541786)[0m Fetched task from screenshot_queue_0: {"url": "http://www.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(insert_screenshot_data pid=1540735)[0m Database query error: no results to fetch
+[36m(insert_screenshot_data pid=1540735)[0m Inserted new screenshot data for subdomain ID 12358 and URL http://testasp.vulnweb.com.
+[36m(insert_screenshot_data pid=1540735)[0m Database query error: no results to fetch
+[36m(insert_screenshot_data pid=1540735)[0m Inserted new screenshot data for subdomain ID 12359 and URL http://www.vulnweb.com.
+[36m(ScreenshotWorker pid=1542164)[0m Fetched task from screenshot_queue_1: {"url": "http://testaspnet.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(ScreenshotWorker pid=1541786)[0m Fetched task from screenshot_queue_0: {"url": "http://testphp.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(insert_screenshot_data pid=1540735)[0m Database query error: no results to fetch
+[36m(insert_screenshot_data pid=1540735)[0m Inserted new screenshot data for subdomain ID 12367 and URL http://testaspnet.vulnweb.com.
+[36m(ScreenshotWorker pid=1541786)[0m Screenshot file not found for URL: http://testphp.vulnweb.com
+[36m(ScreenshotWorker pid=1541786)[0m Fetched task from screenshot_queue_0: {"url": "http://rest.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(insert_screenshot_data pid=1540735)[0m Database query error: no results to fetch
+[36m(insert_screenshot_data pid=1540735)[0m Inserted new screenshot data for subdomain ID 12370 and URL http://rest.vulnweb.com.
+Shutting down Screenshot Workers gracefully...
+2024-03-21 18:24:33,894	INFO worker.py:1715 -- Started a local Ray instance. View the dashboard at [1m[32mhttp://127.0.0.1:8273 [39m[22m

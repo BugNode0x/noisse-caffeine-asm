@@ -8,6 +8,10 @@ from brain.base_worker import BaseWorker
 
 @ray.remote
 class SubdomainEnumerationWorker(BaseWorker):
+    def push_notification_to_queue(self, user_id, message):
+        notification_task = json.dumps({'user_id': user_id, 'message': message})
+        self.redis_client.rpush('notification_queue', notification_task)
+
     def process_task(self, domain):
         print(f"Running subfinder")
         # Logic to enumerate subdomains using subfinder
@@ -43,6 +47,7 @@ class SubdomainEnumerationWorker(BaseWorker):
                     if user_id and domain:
                         user_message = f"Thanks for using Noisse! We've started doing recon in {domain}"
                         admin_message = f"{user_message} - User ID: {self.hunter_id}"
+                        self.push_notification_to_queue(user_id, user_message)
                         self.send_slack_notification(user_id, user_message)
                         self.send_admin_slack_notification(admin_message)
 
@@ -67,6 +72,8 @@ class SubdomainEnumerationWorker(BaseWorker):
                     subdomains = self.process_task(domain)
                     if subdomains:
                         insert_subdomain_results(self.hunter_id, domain, subdomains)
+                        end_message = f"Subdomain enumeration completed for {domain}"
+                        self.push_notification_to_queue(user_id, end_message)
         except KeyboardInterrupt:
             print("Shutting down SubdomainWorker gracefully...")
                     

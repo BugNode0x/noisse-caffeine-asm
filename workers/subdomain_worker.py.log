@@ -1,0 +1,28 @@
+2024-03-21 15:16:37,594	INFO worker.py:1715 -- Started a local Ray instance. View the dashboard at [1m[32mhttp://127.0.0.1:8272 [39m[22m
+Subdomain Workers have been started. Main script will now wait indefinitely.
+[36m(SubdomainEnumerationWorker pid=1541787)[0m Fetched task from api_queue: {"domain": "vulnweb.com", "user_id": "user_01HMTAXPTE8XSQKD8XZ9M66CQM"}
+[36m(SubdomainEnumerationWorker pid=1541787)[0m Received domain: vulnweb.com, Hunter ID: user_01HMTAXPTE8XSQKD8XZ9M66CQM
+[36m(SubdomainEnumerationWorker pid=1541787)[0m Calling ensure_domain_exists with domain: vulnweb.com, Hunter ID: user_01HMTAXPTE8XSQKD8XZ9M66CQM
+[36m(SubdomainEnumerationWorker pid=1541787)[0m Database query error: no results to fetch
+[36m(SubdomainEnumerationWorker pid=1541787)[0m Processing domain: vulnweb.com with ID: 192
+[36m(SubdomainEnumerationWorker pid=1541787)[0m Running subfinder
+[36m(SubdomainEnumerationWorker pid=1541787)[0m Database query error: no results to fetch
+[36m(process_and_insert_subdomain pid=1540486)[0m Database query error: no results to fetch
+[36m(process_and_insert_subdomain pid=1540486)[0m Database query error: no results to fetch[32m [repeated 8x across cluster] (Ray deduplicates logs by default. Set RAY_DEDUP_LOGS=0 to disable log deduplication, or see https://docs.ray.io/en/master/ray-observability/ray-logging.html#log-deduplication for more options.)[0m
+[36m(process_and_insert_subdomain pid=1540487)[0m Database query error: no results to fetch[32m [repeated 5x across cluster][0m
+[36m(process_and_insert_subdomain pid=1540484)[0m Database query error: no results to fetch[32m [repeated 5x across cluster][0m
+[36m(SubdomainEnumerationWorker pid=1541787)[0m Database query error: no results to fetch[32m [repeated 2x across cluster][0m
+[36m(SubdomainEnumerationWorker pid=1541787)[0m Database query error: no results to fetch[32m [repeated 3x across cluster][0m
+[36m(SubdomainEnumerationWorker pid=1541787)[0m Database query error: no results to fetch[32m [repeated 3x across cluster][0m
+[36m(SubdomainEnumerationWorker pid=1541787)[0m Database query error: no results to fetch[32m [repeated 3x across cluster][0m
+[36m(SubdomainEnumerationWorker pid=1541787)[0m Database query error: no results to fetch[32m [repeated 3x across cluster][0m
+[36m(SubdomainEnumerationWorker pid=1541787)[0m Database query error: no results to fetch[32m [repeated 3x across cluster][0m
+[36m(SubdomainEnumerationWorker pid=1541787)[0m Database query error: no results to fetch[32m [repeated 3x across cluster][0m
+Shutting down Subdomain Workers gracefully...
+*** SIGTERM received at time=1711045439 on cpu 0 ***
+PC: @     0x73823a51b2cf  (unknown)  __write
+    @     0x73823a442990  (unknown)  (unknown)
+[2024-03-21 18:23:59,687 E 1539275 1539275] logging.cc:361: *** SIGTERM received at time=1711045439 on cpu 0 ***
+[2024-03-21 18:23:59,687 E 1539275 1539275] logging.cc:361: PC: @     0x73823a51b2cf  (unknown)  __write
+[2024-03-21 18:23:59,687 E 1539275 1539275] logging.cc:361:     @     0x73823a442990  (unknown)  (unknown)
+2024-03-21 18:24:32,276	INFO worker.py:1715 -- Started a local Ray instance. View the dashboard at [1m[32mhttp://127.0.0.1:8271 [39m[22m

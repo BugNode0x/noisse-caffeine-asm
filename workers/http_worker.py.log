@@ -1,0 +1,56 @@
+2024-03-21 15:16:37,386	INFO worker.py:1715 -- Started a local Ray instance. View the dashboard at [1m[32mhttp://127.0.0.1:8271 [39m[22m
+HTTP Workers have been started. Main script will now wait indefinitely.
+[36m(HTTPWorker pid=1541583)[0m Fetched task from http_queue_2: {"subdomain": "tetphp.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(HTTPWorker pid=1541463)[0m Fetched task from http_queue_0: {"subdomain": "testaspx.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(HTTPWorker pid=1541535)[0m Fetched task from http_queue_1: {"subdomain": "httptestaspnet.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(HTTPWorker pid=1541585)[0m Fetched task from http_queue_3: {"subdomain": "test.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(HTTPWorker pid=1541535)[0m Error processing HTTP for httptestaspnet.vulnweb.com: Expecting value: line 1 column 1 (char 0)
+[36m(HTTPWorker pid=1541535)[0m Fetched task from http_queue_1: {"subdomain": "testasp.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(HTTPWorker pid=1541583)[0m Error processing HTTP for tetphp.vulnweb.com: Expecting value: line 1 column 1 (char 0)
+[36m(HTTPWorker pid=1541583)[0m Fetched task from http_queue_2: {"subdomain": "www.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(HTTPWorker pid=1541463)[0m Error processing HTTP for testaspx.vulnweb.com: Expecting value: line 1 column 1 (char 0)
+[36m(HTTPWorker pid=1541463)[0m Fetched task from http_queue_0: {"subdomain": "odincovo.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(HTTPWorker pid=1541585)[0m Error processing HTTP for test.vulnweb.com: Expecting value: line 1 column 1 (char 0)
+[36m(HTTPWorker pid=1541585)[0m Fetched task from http_queue_3: {"subdomain": "restasp.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(HTTPWorker pid=1541463)[0m Error processing HTTP for odincovo.vulnweb.com: Expecting value: line 1 column 1 (char 0)
+[36m(HTTPWorker pid=1541463)[0m Fetched task from http_queue_0: {"subdomain": "testapsnet.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(HTTPWorker pid=1541535)[0m {'timestamp': '2024-03-21T15:23:14.533724041Z', 'port': '80', 'url': 'http://testasp.vulnweb.com', 'input': 'testasp.vulnweb.com', 'title': 'acuforum forums', 'scheme': 'http', 'webserver': 'Microsoft-IIS/8.5', 'content_type': 'text/html', 'method': 'GET', 'host': '44.238.29.244', 'path': '/', 'time': '200.324111ms', 'a': ['44.238.29.244'], 'tech': ['DreamWeaver', 'IIS:8.5', 'Microsoft ASP.NET', 'Windows Server'], 'words': 328, 'lines': 46, 'status_code': 200, 'content_length': 3541, 'failed': False, 'knowledgebase': {'PageType': 'nonerror', 'pHash': 0}}
+[36m(HTTPWorker pid=1541535)[0m Pushed to screenshot_queue_2: {"url": "http://testasp.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(HTTPWorker pid=1541535)[0m Pushed to crawl_queue_2: {"url": "http://testasp.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(HTTPWorker pid=1541535)[0m Fetched task from http_queue_1: {"subdomain": "testaspnet.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(insert_http_data pid=1540463)[0m Database query error: no results to fetch
+[36m(insert_http_data pid=1540463)[0m New HTTP data inserted for http://testasp.vulnweb.com.
+[36m(HTTPWorker pid=1541583)[0m {'timestamp': '2024-03-21T15:23:19.329317055Z', 'port': '80', 'url': 'http://www.vulnweb.com', 'input': 'www.vulnweb.com', 'title': 'Acunetix Web Vulnerability Scanner - Test websites', 'scheme': 'http', 'webserver': 'nginx/1.19.0', 'content_type': 'text/html', 'method': 'GET', 'host': '44.228.249.3', 'path': '/', 'time': '416.76961ms', 'a': ['44.228.249.3'], 'tech': ['Nginx:1.19.0'], 'words': 482, 'lines': 74, 'status_code': 200, 'content_length': 4018, 'failed': False, 'knowledgebase': {'PageType': 'nonerror', 'pHash': 0}}
+[36m(HTTPWorker pid=1541583)[0m Pushed to screenshot_queue_0: {"url": "http://www.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(HTTPWorker pid=1541583)[0m Pushed to crawl_queue_0: {"url": "http://www.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(HTTPWorker pid=1541583)[0m Fetched task from http_queue_2: {"subdomain": "testaps.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(HTTPWorker pid=1541585)[0m Error processing HTTP for restasp.vulnweb.com: Expecting value: line 1 column 1 (char 0)
+[36m(HTTPWorker pid=1541585)[0m Fetched task from http_queue_3: {"subdomain": "testap.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(insert_http_data pid=1540463)[0m Database query error: no results to fetch
+[36m(insert_http_data pid=1540463)[0m New HTTP data inserted for http://www.vulnweb.com.
+[36m(HTTPWorker pid=1541463)[0m Error processing HTTP for testapsnet.vulnweb.com: Expecting value: line 1 column 1 (char 0)
+[36m(HTTPWorker pid=1541463)[0m Fetched task from http_queue_0: {"subdomain": "testphp.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(HTTPWorker pid=1541535)[0m {'timestamp': '2024-03-21T15:24:07.400892679Z', 'port': '80', 'url': 'http://testaspnet.vulnweb.com', 'input': 'testaspnet.vulnweb.com', 'title': 'acublog news', 'scheme': 'http', 'webserver': 'Microsoft-IIS/8.5', 'content_type': 'text/html', 'method': 'GET', 'host': '44.238.29.244', 'path': '/', 'time': '289.681137ms', 'a': ['44.238.29.244'], 'tech': ['IIS:8.5', 'Microsoft ASP.NET:2.0.50727', 'Microsoft Visual Studio', 'Windows Server'], 'words': 580, 'lines': 89, 'status_code': 200, 'content_length': 12417, 'failed': False, 'knowledgebase': {'PageType': 'nonerror', 'pHash': 0}}
+[36m(HTTPWorker pid=1541535)[0m Pushed to screenshot_queue_1: {"url": "http://testaspnet.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(HTTPWorker pid=1541535)[0m Pushed to crawl_queue_1: {"url": "http://testaspnet.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(insert_http_data pid=1540463)[0m Database query error: no results to fetch
+[36m(insert_http_data pid=1540463)[0m New HTTP data inserted for http://testaspnet.vulnweb.com.
+[36m(HTTPWorker pid=1541583)[0m Error processing HTTP for testaps.vulnweb.com: Expecting value: line 1 column 1 (char 0)
+[36m(HTTPWorker pid=1541583)[0m Fetched task from http_queue_2: {"subdomain": "antivirus1.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(HTTPWorker pid=1541585)[0m Error processing HTTP for testap.vulnweb.com: Expecting value: line 1 column 1 (char 0)
+[36m(HTTPWorker pid=1541585)[0m Fetched task from http_queue_3: {"subdomain": "blogger.com.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(HTTPWorker pid=1541463)[0m {'timestamp': '2024-03-21T15:24:14.707035075Z', 'port': '80', 'url': 'http://testphp.vulnweb.com', 'input': 'testphp.vulnweb.com', 'title': 'Home of Acunetix Art', 'scheme': 'http', 'webserver': 'nginx/1.19.0', 'content_type': 'text/html', 'method': 'GET', 'host': '44.228.249.3', 'path': '/', 'time': '697.21558ms', 'a': ['44.228.249.3'], 'tech': ['DreamWeaver', 'Nginx:1.19.0', 'PHP:5.6.40', 'Ubuntu'], 'words': 514, 'lines': 110, 'status_code': 200, 'content_length': 4958, 'failed': False, 'knowledgebase': {'PageType': 'nonerror', 'pHash': 0}}
+[36m(HTTPWorker pid=1541463)[0m Pushed to screenshot_queue_0: {"url": "http://testphp.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(HTTPWorker pid=1541463)[0m Pushed to crawl_queue_0: {"url": "http://testphp.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(insert_http_data pid=1540463)[0m Database query error: no results to fetch
+[36m(insert_http_data pid=1540463)[0m New HTTP data inserted for http://testphp.vulnweb.com.
+[36m(HTTPWorker pid=1541583)[0m Error processing HTTP for antivirus1.vulnweb.com: Expecting value: line 1 column 1 (char 0)
+[36m(HTTPWorker pid=1541585)[0m Error processing HTTP for blogger.com.vulnweb.com: Expecting value: line 1 column 1 (char 0)
+[36m(HTTPWorker pid=1541585)[0m Fetched task from http_queue_3: {"subdomain": "rest.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(HTTPWorker pid=1541585)[0m {'timestamp': '2024-03-21T15:25:16.891419839Z', 'port': '80', 'url': 'http://rest.vulnweb.com', 'input': 'rest.vulnweb.com', 'title': 'Acunetix Vulnerable REST API', 'scheme': 'http', 'webserver': 'Apache/2.4.25 (Debian)', 'content_type': 'text/html', 'method': 'GET', 'host': '35.81.188.86', 'path': '/', 'time': '162.686425ms', 'a': ['35.81.188.86'], 'tech': ['Apache HTTP Server:2.4.25', 'Debian', 'PHP:7.1.26'], 'words': 1397, 'lines': 138, 'status_code': 200, 'content_length': 3555, 'failed': False, 'knowledgebase': {'PageType': 'nonerror', 'pHash': 0}}
+[36m(HTTPWorker pid=1541585)[0m Pushed to screenshot_queue_0: {"url": "http://rest.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(HTTPWorker pid=1541585)[0m Pushed to crawl_queue_0: {"url": "http://rest.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(insert_http_data pid=1540463)[0m Database query error: no results to fetch
+[36m(insert_http_data pid=1540463)[0m New HTTP data inserted for http://rest.vulnweb.com.
+Shutting down HTTP Workers gracefully...
+2024-03-21 18:24:31,803	INFO worker.py:1715 -- Started a local Ray instance. View the dashboard at [1m[32mhttp://127.0.0.1:8270 [39m[22m
