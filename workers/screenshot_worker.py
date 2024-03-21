@@ -2,7 +2,6 @@ import json
 import subprocess
 import os
 import ray
-import base64
 import boto3
 import time
 from datetime import datetime
@@ -89,11 +88,6 @@ class ScreenshotWorker(BaseWorker):
         # Insert into the database
         insert_screenshot_data.remote(subdomain, url, s3_url, dom_data)
 
-        # Push to the next queue
-        crawl_task = json.dumps({'root_domain': root_domain, 'user_id': user_id})
-        self.redis_client.rpush('crawl_queue', crawl_task)
-        print(f"Pushed to crawl_queue: {crawl_task}")
-
     def run(self):
         try:
             while True:
@@ -111,7 +105,8 @@ if __name__ == "__main__":
     num_workers = 4
     screenshot_workers = [ScreenshotWorker.remote(queue_names=['screenshot_queue']) for _ in range(num_workers)]
     
-    for worker in screenshot_workers:
+    for i in range(num_workers):
+        worker = ScreenshotWorker.remote(queue_names=[f'screenshot_queue_{i}'])
         worker.run.remote()
 
     try:

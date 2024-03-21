@@ -3,6 +3,7 @@ import json
 import os
 import ray
 import time
+import hashlib
 from brain.db_processor import insert_http_data
 from brain.base_worker import BaseWorker
 
@@ -40,13 +41,27 @@ class HTTPWorker(BaseWorker):
             # Call function to insert data into the database
             insert_future = insert_http_data.remote(user_id, subdomain, root_domain, url, title, webserver, tech, status_code, content_length)
 
+            screenshot_queue_index = self.select_queue_index(url)
+            screenshot_task_queue = f'screenshot_queue_{screenshot_queue_index}'
             screenshot_task = json.dumps({'url': url, 'root_domain': root_domain, 'user_id': user_id})
-            self.redis_client.rpush('screenshot_queue', screenshot_task)
-            print(f"Pushed to screenshot_queue: {screenshot_task}")
+            self.redis_client.rpush(screenshot_task_queue, screenshot_task)
+            print(f"Pushed to {screenshot_task_queue}: {screenshot_task}")
+    
+            crawl_queue_index = self.select_queue_index(url)
+            crawl_task_queue = f'crawl_queue_{crawl_queue_index}'
+            crawl_task = json.dumps({'url': url, 'root_domain': root_domain, 'user_id': user_id})
+            self.redis_client.rpush(crawl_task_queue, crawl_task)
+            print(f"Pushed to {crawl_task_queue}: {crawl_task}")
 
         except Exception as e:
             print(f"Error processing HTTP for {subdomain}: {e}")
 
+    def select_queue_index(self, identifier):
+        # Simple hash-based mechanism to select a queue index
+        hash_value = int(hashlib.md5(identifier.encode()).hexdigest(), 16)
+        num_queues = 4  # Adjust this based on the total number of screenshot_queues you have
+        return hash_value % num_queues
+    
     def run(self):
         try:
             while True:
@@ -62,9 +77,8 @@ if __name__ == "__main__":
     ray.init()
 
     num_workers = 4
-    http_workers = [HTTPWorker.remote(queue_names=['http_queue']) for _ in range(num_workers)]
-    
-    for worker in http_workers:
+    for i in range(num_workers):
+        worker = HTTPWorker.remote(queue_names=[f'http_queue_{i}'])
         worker.run.remote()
 
     try:

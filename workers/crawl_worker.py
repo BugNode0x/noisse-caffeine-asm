@@ -50,7 +50,7 @@ class JavaScriptGatheringWorker(BaseWorker):
     def process_url(self, subdomain_id, url):
         katana_path = os.path.expanduser('~/go/bin/katana')
         # Updated Katana command with '-u' flag
-        katana_cmd = [katana_path, '-u', url, '-silent', '-d', '2', '-hl', '-jc', '-c', '50', '-p', '50', '-scp', '/snap/bin/chromium', '--no-sandbox']
+        katana_cmd = [katana_path, '-u', url, '-silent', '-d', '2', '-hl', '-jc', '-c', '50', '-p', '50', '-scp', '/snap/bin/chromium', '--no-sandbox', '-ef', 'ttf,woff,svg,png,gif,jpg,css,jpeg,ico,woff2,eot']
 
         print(f"Executing Katana command: {' '.join(katana_cmd)}")
         process = subprocess.Popen(katana_cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
@@ -71,42 +71,47 @@ class JavaScriptGatheringWorker(BaseWorker):
         
 
     def process_task(self, task):
-        root_domain = task.get('root_domain')
+        url = task.get('url')
         user_id = task.get('user_id')
 
+        # Check if URL is valid and not None
+        if not url:
+            print(f"Invalid or None URL received in task: {task}")
+            return
 
-        if root_domain:
-            urls = self.fetch_eligible_urls(root_domain)
-            if urls:  # Check if urls is not None
-                for subdomain_id, url in urls:
-                    start_message = f"[Crawl]Starting crawling for url: {url}"
-                    admin_start_message = f"{start_message} - User ID: {user_id}"
-                    self.send_slack_notification(user_id, start_message)
-                    self.send_admin_slack_notification(admin_start_message)
-                    self.process_url(subdomain_id, url)
-            else:
-                print(f"No eligible URLs found for root domain: {root_domain}")
-        
+        start_message = f"[Crawl] Starting crawling for URL: {url}"
+        admin_start_message = f"{start_message} - User ID: {user_id}"
+        self.send_slack_notification(user_id, start_message)
+        self.send_admin_slack_notification(admin_start_message)
+
+        # Get subdomain_id from the database
+        parsed_url = urlparse(url)
+        subdomain_id_query = "SELECT subdomain_id FROM subdomains WHERE subdomain = %s"
+        subdomain_id = execute_db_query(subdomain_id_query, (parsed_url.netloc,), fetch_one=True)
+        if not subdomain_id:
+            print(f"Subdomain ID not found for URL: {url}")
+            return
+
+        self.process_url(subdomain_id, url)  # Calling process_url method with subdomain_id and URL
 
     def run(self):
         try:
             while True:
-                task_data_str = self.redis_client.blpop('crawl_queue', timeout=5)  # Timeout to cycle through queues
-                if task_data_str:
-                    _, task_json_str = task_data_str
-                    task = json.loads(task_json_str)
-                    self.process_task(task)
-                    
+                for queue_name in self.queue_names:
+                    task_data_str = self.redis_client.blpop(queue_name, timeout=5)
+                    if task_data_str:
+                        _, task_json_str = task_data_str
+                        task = json.loads(task_json_str)
+                        self.process_task(task)
         except KeyboardInterrupt:
             print("Shutting down CrawlWorker gracefully...")
 
 if __name__ == "__main__":
     ray.init()
 
-    num_workers = 4
-    crawl_workers = [JavaScriptGatheringWorker.remote(queue_names=['crawl_queue']) for _ in range(num_workers)]
-    
-    for worker in crawl_workers:
+    num_workers = 4    
+    for i in range(num_workers):
+        worker = JavaScriptGatheringWorker.remote(queue_names=[f'crawl_queue_{i}'])
         worker.run.remote()
 
     try:

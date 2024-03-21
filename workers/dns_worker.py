@@ -3,6 +3,7 @@ import json
 import ray
 import os
 import time
+import hashlib
 from brain.db_processor import get_user_id_from_hunter_id, insert_dns_data_remote, execute_db_query 
 from brain.base_worker import BaseWorker
 
@@ -24,7 +25,6 @@ class DNSWorker(BaseWorker):
         admin_message = f"{user_message} - User ID: {user_id}"
         self.send_slack_notification(user_id, user_message)
         self.send_admin_slack_notification(admin_message)
-
 
         dnsx_path = os.path.expanduser('~/go/bin/dnsx')
         dnsx_cmd = [dnsx_path, '-silent', '-t', '200', '-json', '-asn', '-wd', root_domain,
@@ -59,11 +59,22 @@ class DNSWorker(BaseWorker):
 
             resolved_subdomain = dns_data['host']
             http_task = json.dumps({'subdomain': resolved_subdomain, 'root_domain': root_domain, 'user_id': user_id})
-            self.redis_client.rpush('http_queue', http_task)
-            print(f"Pushed to http_queue: {http_task}")
+            queue_index = self.select_queue_index(user_id, subdomain)
+            http_task_queue = f"http_queue_{queue_index}"
+
+            # Push to the selected http_queue
+            self.redis_client.rpush(http_task_queue, http_task)
+            print(f"Pushed to {http_task_queue}: {http_task}")
 
         except Exception as e:
             print(f"Error processing DNS for {subdomain}: {e}")
+    
+    def select_queue_index(self, user_id, subdomain):
+        # Simple hash-based mechanism to select a queue index
+        combined_key = f"{user_id}_{subdomain}"
+        hash_value = int(hashlib.md5(combined_key.encode()).hexdigest(), 16)
+        num_queues = 4  # Total number of http_queues you have
+        return hash_value % num_queues
 
     def run(self):
         try:
