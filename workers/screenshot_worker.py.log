@@ -16,3 +16,24 @@ Screenshot Workers have been started. Main script will now wait indefinitely.
 [36m(insert_screenshot_data pid=1540735)[0m Inserted new screenshot data for subdomain ID 12370 and URL http://rest.vulnweb.com.
 Shutting down Screenshot Workers gracefully...
 2024-03-21 18:24:33,894	INFO worker.py:1715 -- Started a local Ray instance. View the dashboard at [1m[32mhttp://127.0.0.1:8273 [39m[22m
+Screenshot Workers have been started. Main script will now wait indefinitely.
+[36m(ScreenshotWorker pid=1582360)[0m Fetched task from screenshot_queue_3: {"url": "https://app.noisse.io", "root_domain": "noisse.io", "user_id": 41}
+[36m(ScreenshotWorker pid=1582243)[0m Fetched task from screenshot_queue_1: {"url": "https://api.noisse.io", "root_domain": "noisse.io", "user_id": 41}
+[36m(insert_screenshot_data pid=1580775)[0m Database query error: no results to fetch
+[36m(insert_screenshot_data pid=1580775)[0m Inserted new screenshot data for subdomain ID 12373 and URL https://app.noisse.io.
+[36m(insert_screenshot_data pid=1580773)[0m Inserted new screenshot data for subdomain ID 12372 and URL https://api.noisse.io.
+[36m(ScreenshotWorker pid=1582348)[0m Fetched task from screenshot_queue_2: {"url": "https://www.noisse.io", "root_domain": "noisse.io", "user_id": 41}
+[36m(ScreenshotWorker pid=1582348)[0m Screenshot file not found for URL: https://www.noisse.io
+[36m(insert_screenshot_data pid=1580773)[0m Database query error: no results to fetch
+Shutting down Screenshot Workers gracefully...
+2024-03-21 18:33:15,688	INFO worker.py:1715 -- Started a local Ray instance. View the dashboard at [1m[32mhttp://127.0.0.1:8274 [39m[22m
+Screenshot Workers have been started. Main script will now wait indefinitely.
+[36m(ScreenshotWorker pid=1591526)[0m Fetched task from screenshot_queue_3: {"url": "https://app.noisse.io", "root_domain": "noisse.io", "user_id": 41}
+[36m(ScreenshotWorker pid=1591239)[0m Fetched task from screenshot_queue_1: {"url": "https://api.noisse.io", "root_domain": "noisse.io", "user_id": 41}
+[36m(insert_screenshot_data pid=1589644)[0m Duplicate screenshot data for subdomain ID 12372 and URL https://api.noisse.io not inserted.
+[36m(insert_screenshot_data pid=1589666)[0m Duplicate screenshot data for subdomain ID 12373 and URL https://app.noisse.io not inserted.
+[36m(ScreenshotWorker pid=1591295)[0m Fetched task from screenshot_queue_2: {"url": "https://www.noisse.io", "root_domain": "noisse.io", "user_id": 41}
+[36m(insert_screenshot_data pid=1589666)[0m Database query error: no results to fetch
+[36m(insert_screenshot_data pid=1589666)[0m Inserted new screenshot data for subdomain ID 12371 and URL https://www.noisse.io.
+Shutting down Screenshot Workers gracefully...
+2024-03-22 15:40:49,609	INFO worker.py:1715 -- Started a local Ray instance. View the dashboard at [1m[32mhttp://127.0.0.1:8272 [39m[22m

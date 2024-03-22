@@ -160,3 +160,81 @@ DNS Workers have been started. Main script will now wait indefinitely.
 [36m(DNSWorker pid=1541033)[0m Pushed to http_queue_3: {"subdomain": "rest.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
 Shutting down DNS Workers gracefully...
 2024-03-21 18:24:34,714	INFO worker.py:1715 -- Started a local Ray instance. View the dashboard at [1m[32mhttp://127.0.0.1:8274 [39m[22m
+DNS Workers have been started. Main script will now wait indefinitely.
+[36m(DNSWorker pid=1581921)[0m Fetched task from dns_queue: {"subdomain": "app.noisse.io", "root_domain": "noisse.io", "user_id": 41}
+[36m(DNSWorker pid=1581907)[0m Fetched task from dns_queue: {"subdomain": "api.noisse.io", "root_domain": "noisse.io", "user_id": 41}
+[36m(DNSWorker pid=1581926)[0m Fetched task from dns_queue: {"subdomain": "www.noisse.io", "root_domain": "noisse.io", "user_id": 41}
+[36m(DNSWorker pid=1581906)[0m Fetched task from dns_queue: {"subdomain": "prototype-apidev.noisse.io", "root_domain": "noisse.io", "user_id": 41}
+[36m(DNSWorker pid=1581921)[0m Waiting for subdomain ID for app.noisse.io to be available...
+[36m(DNSWorker pid=1581906)[0m Waiting for subdomain ID for prototype-apidev.noisse.io to be available...
+[36m(DNSWorker pid=1581926)[0m Waiting for subdomain ID for www.noisse.io to be available...
+[36m(DNSWorker pid=1581907)[0m Waiting for subdomain ID for api.noisse.io to be available...
+[36m(DNSWorker pid=1581921)[0m Waiting for subdomain ID for app.noisse.io to be available...
+[36m(DNSWorker pid=1581906)[0m Waiting for subdomain ID for prototype-apidev.noisse.io to be available...
+[36m(DNSWorker pid=1581926)[0m Waiting for subdomain ID for www.noisse.io to be available...
+[36m(DNSWorker pid=1581907)[0m Waiting for subdomain ID for api.noisse.io to be available...
+[36m(DNSWorker pid=1581921)[0m Waiting for subdomain ID for app.noisse.io to be available...
+[36m(DNSWorker pid=1581906)[0m Waiting for subdomain ID for prototype-apidev.noisse.io to be available...
+[36m(DNSWorker pid=1581926)[0m Waiting for subdomain ID for www.noisse.io to be available...
+[36m(DNSWorker pid=1581907)[0m Waiting for subdomain ID for api.noisse.io to be available...
+[36m(DNSWorker pid=1581921)[0m {'host': 'app.noisse.io', 'ttl': 3600, 'resolver': ['8.8.4.4:53'], 'a': ['76.76.21.22', '76.76.21.123'], 'cname': ['cname.vercel-dns.com'], 'all': ['app.noisse.io.\t3600\tIN\tCNAME\tcname.vercel-dns.com.', 'cname.vercel-dns.com.\t600\tIN\tA\t76.76.21.22', 'cname.vercel-dns.com.\t600\tIN\tA\t76.76.21.123', '\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 512'], 'status_code': 'NOERROR', 'timestamp': '2024-03-21T18:26:25.287791586Z'}
+[36m(DNSWorker pid=1581906)[0m Error processing DNS for prototype-apidev.noisse.io: Expecting value: line 1 column 1 (char 0)
+[36m(DNSWorker pid=1581906)[0m Fetched task from dns_queue: {"subdomain": "prototype-appdev.noisse.io", "root_domain": "noisse.io", "user_id": 41}
+[36m(DNSWorker pid=1581906)[0m 
+[36m(DNSWorker pid=1581907)[0m {'host': 'api.noisse.io', 'ttl': 3600, 'resolver': ['8.8.4.4:53'], 'a': ['34.86.119.124'], 'cname': ['f3ah8ldi.up.railway.app', 'global-edge.gcp.production.rlwy.net'], 'all': ['api.noisse.io.\t3600\tIN\tCNAME\tf3ah8ldi.up.railway.app.', 'f3ah8ldi.up.railway.app.\t60\tIN\tCNAME\tglobal-edge.gcp.production.rlwy.net.', 'global-edge.gcp.production.rlwy.net.\t60\tIN\tA\t34.86.119.124', '\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 512'], 'status_code': 'NOERROR', 'timestamp': '2024-03-21T18:26:26.076800516Z'}
+[36m(DNSWorker pid=1581926)[0m {'host': 'www.noisse.io', 'ttl': 3600, 'resolver': ['8.8.4.4:53'], 'a': ['52.223.52.2', '35.71.142.77'], 'cname': ['sites.framer.app'], 'all': ['www.noisse.io.\t3600\tIN\tCNAME\tsites.framer.app.', 'sites.framer.app.\t300\tIN\tA\t52.223.52.2', 'sites.framer.app.\t300\tIN\tA\t35.71.142.77', '\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 512'], 'status_code': 'NOERROR', 'timestamp': '2024-03-21T18:26:26.007288212Z'}
+[36m(insert_dns_data_remote pid=1580804)[0m Starting insert_dns_data_remote function.
+[36m(insert_dns_data_remote pid=1580804)[0m Processing DNS data for subdomain: app.noisse.io, IP: 76.76.21.22
+[36m(insert_dns_data_remote pid=1580805)[0m Processing DNS data for subdomain: api.noisse.io, IP: 34.86.119.124
+[36m(insert_dns_data_remote pid=1580806)[0m Processing DNS data for subdomain: www.noisse.io, IP: 52.223.52.2
+[36m(insert_dns_data_remote pid=1580804)[0m Count of existing DNS records for app.noisse.io with IP 76.76.21.22: 0
+[36m(insert_dns_data_remote pid=1580805)[0m Count of existing DNS records for api.noisse.io with IP 34.86.119.124: 0
+[36m(DNSWorker pid=1581906)[0m Error processing DNS for prototype-appdev.noisse.io: Expecting value: line 1 column 1 (char 0)
+[36m(insert_dns_data_remote pid=1580804)[0m Database query error: no results to fetch
+[36m(insert_dns_data_remote pid=1580804)[0m New DNS data inserted for app.noisse.io.
+[36m(insert_dns_data_remote pid=1580804)[0m Completed insert_dns_data_remote function.
+[36m(DNSWorker pid=1581921)[0m Pushed to http_queue_0: {"subdomain": "app.noisse.io", "root_domain": "noisse.io", "user_id": 41}
+[36m(insert_dns_data_remote pid=1580806)[0m Count of existing DNS records for www.noisse.io with IP 52.223.52.2: 0
+[36m(insert_dns_data_remote pid=1580805)[0m New DNS data inserted for api.noisse.io.
+[36m(DNSWorker pid=1581907)[0m Pushed to http_queue_3: {"subdomain": "api.noisse.io", "root_domain": "noisse.io", "user_id": 41}
+[36m(insert_dns_data_remote pid=1580806)[0m New DNS data inserted for www.noisse.io.
+[36m(DNSWorker pid=1581926)[0m Pushed to http_queue_0: {"subdomain": "www.noisse.io", "root_domain": "noisse.io", "user_id": 41}
+Shutting down DNS Workers gracefully...
+2024-03-21 18:33:03,413	INFO worker.py:1715 -- Started a local Ray instance. View the dashboard at [1m[32mhttp://127.0.0.1:8270 [39m[22m
+DNS Workers have been started. Main script will now wait indefinitely.
+[36m(DNSWorker pid=1590272)[0m Fetched task from dns_queue: {"subdomain": "api.noisse.io", "root_domain": "noisse.io", "user_id": 41}
+[36m(DNSWorker pid=1590255)[0m Fetched task from dns_queue: {"subdomain": "app.noisse.io", "root_domain": "noisse.io", "user_id": 41}
+[36m(DNSWorker pid=1590271)[0m Fetched task from dns_queue: {"subdomain": "www.noisse.io", "root_domain": "noisse.io", "user_id": 41}
+[36m(DNSWorker pid=1590256)[0m Fetched task from dns_queue: {"subdomain": "prototype-apidev.noisse.io", "root_domain": "noisse.io", "user_id": 41}
+[36m(DNSWorker pid=1590255)[0m {'host': 'app.noisse.io', 'ttl': 3600, 'resolver': ['8.8.4.4:53'], 'a': ['76.76.21.22', '76.76.21.164'], 'cname': ['cname.vercel-dns.com'], 'all': ['app.noisse.io.\t3600\tIN\tCNAME\tcname.vercel-dns.com.', 'cname.vercel-dns.com.\t600\tIN\tA\t76.76.21.22', 'cname.vercel-dns.com.\t600\tIN\tA\t76.76.21.164', '\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 512'], 'status_code': 'NOERROR', 'timestamp': '2024-03-21T18:34:57.317376491Z'}
+[36m(DNSWorker pid=1590272)[0m {'host': 'api.noisse.io', 'ttl': 3600, 'resolver': ['8.8.4.4:53'], 'a': ['34.86.119.124'], 'cname': ['f3ah8ldi.up.railway.app', 'global-edge.gcp.production.rlwy.net'], 'all': ['api.noisse.io.\t3600\tIN\tCNAME\tf3ah8ldi.up.railway.app.', 'f3ah8ldi.up.railway.app.\t60\tIN\tCNAME\tglobal-edge.gcp.production.rlwy.net.', 'global-edge.gcp.production.rlwy.net.\t60\tIN\tA\t34.86.119.124', '\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 512'], 'status_code': 'NOERROR', 'timestamp': '2024-03-21T18:34:56.787394991Z'}
+[36m(DNSWorker pid=1590271)[0m {'host': 'www.noisse.io', 'ttl': 3086, 'resolver': ['8.8.4.4:53'], 'a': ['52.223.52.2', '35.71.142.77'], 'cname': ['sites.framer.app'], 'all': ['www.noisse.io.\t3086\tIN\tCNAME\tsites.framer.app.', 'sites.framer.app.\t300\tIN\tA\t52.223.52.2', 'sites.framer.app.\t300\tIN\tA\t35.71.142.77', '\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 512'], 'status_code': 'NOERROR', 'timestamp': '2024-03-21T18:34:59.869261749Z'}
+[36m(DNSWorker pid=1590256)[0m Error processing DNS for prototype-apidev.noisse.io: Expecting value: line 1 column 1 (char 0)
+[36m(DNSWorker pid=1590256)[0m Fetched task from dns_queue: {"subdomain": "prototype-appdev.noisse.io", "root_domain": "noisse.io", "user_id": 41}
+[36m(insert_dns_data_remote pid=1589362)[0m Starting insert_dns_data_remote function.
+[36m(insert_dns_data_remote pid=1589362)[0m Processing DNS data for subdomain: api.noisse.io, IP: 34.86.119.124
+[36m(insert_dns_data_remote pid=1589363)[0m Processing DNS data for subdomain: app.noisse.io, IP: 76.76.21.22
+[36m(insert_dns_data_remote pid=1589360)[0m Processing DNS data for subdomain: www.noisse.io, IP: 52.223.52.2
+[36m(DNSWorker pid=1590272)[0m Pushed to http_queue_3: {"subdomain": "api.noisse.io", "root_domain": "noisse.io", "user_id": 41}
+[36m(insert_dns_data_remote pid=1589363)[0m Count of existing DNS records for app.noisse.io with IP 76.76.21.22: 1
+[36m(insert_dns_data_remote pid=1589363)[0m Duplicate DNS data for app.noisse.io with IP 76.76.21.22 not inserted.
+[36m(insert_dns_data_remote pid=1589363)[0m Completed insert_dns_data_remote function.
+[36m(insert_dns_data_remote pid=1589362)[0m Count of existing DNS records for api.noisse.io with IP 34.86.119.124: 1
+[36m(insert_dns_data_remote pid=1589362)[0m Duplicate DNS data for api.noisse.io with IP 34.86.119.124 not inserted.
+[36m(DNSWorker pid=1590255)[0m Pushed to http_queue_0: {"subdomain": "app.noisse.io", "root_domain": "noisse.io", "user_id": 41}
+[36m(DNSWorker pid=1590271)[0m Pushed to http_queue_0: {"subdomain": "www.noisse.io", "root_domain": "noisse.io", "user_id": 41}
+[36m(insert_dns_data_remote pid=1589360)[0m Count of existing DNS records for www.noisse.io with IP 52.223.52.2: 1
+[36m(insert_dns_data_remote pid=1589360)[0m Duplicate DNS data for www.noisse.io with IP 52.223.52.2 not inserted.
+[36m(DNSWorker pid=1590256)[0m Error processing DNS for prototype-appdev.noisse.io: Expecting value: line 1 column 1 (char 0)
+Shutting down DNS Workers gracefully...
+2024-03-22 15:40:49,975	INFO worker.py:1715 -- Started a local Ray instance. View the dashboard at [1m[32mhttp://127.0.0.1:8273 [39m[22m
+2024-03-22 15:42:31,681	ERROR worker.py:405 -- Unhandled error (suppress with 'RAY_IGNORE_UNHANDLED_ERRORS=1'): [36mray::DNSWorker.run()[39m (pid=1639665, ip=45.55.200.170, actor_id=b69dc07be02804408a602b9901000000, repr=<dns_worker.DNSWorker object at 0x73aee4409b10>)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/noisse/noisse-caffeine-asm/workers/dns_worker.py", line 110, in run
+    self.process_task(task_data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/noisse/noisse-caffeine-asm/workers/dns_worker.py", line 80, in process_task
+    self.push_notification_to_queue(user_id, completion_message)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'DNSWorker' object has no attribute 'push_notification_to_queue'

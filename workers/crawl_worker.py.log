@@ -160,3 +160,72 @@ Crawl Workers have been started. Main script will now wait indefinitely.
 [36m(insert_js_result pid=1540576)[0m Inserted new JS data for subdomain ID 12370 and URL http://vulnweb.com/.
 Shutting down Crawl Workers gracefully...
 2024-03-21 18:24:34,505	INFO worker.py:1715 -- Started a local Ray instance. View the dashboard at [1m[32mhttp://127.0.0.1:8272 [39m[22m
+Crawl Workers have been started. Main script will now wait indefinitely.
+[36m(JavaScriptGatheringWorker pid=1581928)[0m Executing Katana command: /root/go/bin/katana -u https://app.noisse.io -silent -d 2 -hl -jc -c 50 -p 50 -scp /snap/bin/chromium --no-sandbox -ef ttf,woff,svg,png,gif,jpg,css,jpeg,ico,woff2,eot
+[36m(JavaScriptGatheringWorker pid=1581924)[0m Executing Katana command: /root/go/bin/katana -u https://api.noisse.io -silent -d 2 -hl -jc -c 50 -p 50 -scp /snap/bin/chromium --no-sandbox -ef ttf,woff,svg,png,gif,jpg,css,jpeg,ico,woff2,eot
+[36m(JavaScriptGatheringWorker pid=1581924)[0m Katana command executed successfully for URL: https://api.noisse.io
+[36m(JavaScriptGatheringWorker pid=1581924)[0m Cleaned URLs for https://api.noisse.io: {'https://api.noisse.io'}
+[36m(JavaScriptGatheringWorker pid=1581924)[0m Inserting JS URL into DB: https://api.noisse.io
+[36m(JavaScriptGatheringWorker pid=1581928)[0m Katana command executed successfully for URL: https://app.noisse.io
+[36m(JavaScriptGatheringWorker pid=1581928)[0m Cleaned URLs for https://app.noisse.io: {'https://app.noisse.io/site.webmanifest', 'https://app.noisse.io', 'https://app.noisse.io/static/js/main.db1fa3f6.js'}
+[36m(JavaScriptGatheringWorker pid=1581928)[0m Inserting JS URL into DB: https://app.noisse.io/site.webmanifest
+[36m(JavaScriptGatheringWorker pid=1581924)[0m Inserted JS URL into DB: https://api.noisse.io
+[36m(insert_js_result pid=1580820)[0m Database query error: no results to fetch
+[36m(insert_js_result pid=1580820)[0m Inserted new JS data for subdomain ID 12372 and URL https://api.noisse.io.
+[36m(JavaScriptGatheringWorker pid=1581928)[0m Inserted JS URL into DB: https://app.noisse.io/site.webmanifest
+[36m(JavaScriptGatheringWorker pid=1581928)[0m Inserting JS URL into DB: https://app.noisse.io
+[36m(insert_js_result pid=1580816)[0m Inserted new JS data for subdomain ID 12373 and URL https://app.noisse.io/site.webmanifest.
+[36m(JavaScriptGatheringWorker pid=1581928)[0m Inserted JS URL into DB: https://app.noisse.io
+[36m(JavaScriptGatheringWorker pid=1581928)[0m Inserting JS URL into DB: https://app.noisse.io/static/js/main.db1fa3f6.js
+[36m(insert_js_result pid=1580816)[0m Inserted new JS data for subdomain ID 12373 and URL https://app.noisse.io.
+[36m(JavaScriptGatheringWorker pid=1581928)[0m Inserted JS URL into DB: https://app.noisse.io/static/js/main.db1fa3f6.js
+[36m(insert_js_result pid=1580816)[0m Inserted new JS data for subdomain ID 12373 and URL https://app.noisse.io/static/js/main.db1fa3f6.js.
+[36m(JavaScriptGatheringWorker pid=1581927)[0m Executing Katana command: /root/go/bin/katana -u https://www.noisse.io -silent -d 2 -hl -jc -c 50 -p 50 -scp /snap/bin/chromium --no-sandbox -ef ttf,woff,svg,png,gif,jpg,css,jpeg,ico,woff2,eot
+[36m(JavaScriptGatheringWorker pid=1581927)[0m Katana command executed successfully for URL: https://www.noisse.io
+[36m(JavaScriptGatheringWorker pid=1581927)[0m Cleaned URLs for https://www.noisse.io: {'https://www.noisse.io/contact', 'https://app.noisse.io', 'https://www.noisse.io/about', 'https://api.noisse.io/portal/auth', 'https://www.noisse.io'}
+[36m(JavaScriptGatheringWorker pid=1581927)[0m Inserting JS URL into DB: https://www.noisse.io/contact
+[36m(insert_js_result pid=1580816)[0m Database query error: no results to fetch[32m [repeated 3x across cluster] (Ray deduplicates logs by default. Set RAY_DEDUP_LOGS=0 to disable log deduplication, or see https://docs.ray.io/en/master/ray-observability/ray-logging.html#log-deduplication for more options.)[0m
+[36m(JavaScriptGatheringWorker pid=1581927)[0m Inserted JS URL into DB: https://www.noisse.io/contact
+[36m(JavaScriptGatheringWorker pid=1581927)[0m Inserting JS URL into DB: https://app.noisse.io
+[36m(insert_js_result pid=1580816)[0m Inserted new JS data for subdomain ID 12371 and URL https://www.noisse.io/contact.
+[36m(JavaScriptGatheringWorker pid=1581927)[0m Inserted JS URL into DB: https://app.noisse.io
+[36m(JavaScriptGatheringWorker pid=1581927)[0m Inserting JS URL into DB: https://www.noisse.io/about
+[36m(insert_js_result pid=1580816)[0m Inserted new JS data for subdomain ID 12371 and URL https://app.noisse.io.
+[36m(JavaScriptGatheringWorker pid=1581927)[0m Inserted JS URL into DB: https://www.noisse.io/about
+[36m(JavaScriptGatheringWorker pid=1581927)[0m Inserting JS URL into DB: https://api.noisse.io/portal/auth
+[36m(insert_js_result pid=1580816)[0m Inserted new JS data for subdomain ID 12371 and URL https://www.noisse.io/about.
+[36m(JavaScriptGatheringWorker pid=1581927)[0m Inserted JS URL into DB: https://api.noisse.io/portal/auth
+[36m(JavaScriptGatheringWorker pid=1581927)[0m Inserting JS URL into DB: https://www.noisse.io
+[36m(insert_js_result pid=1580816)[0m Database query error: no results to fetch[32m [repeated 3x across cluster][0m
+[36m(insert_js_result pid=1580816)[0m Inserted new JS data for subdomain ID 12371 and URL https://api.noisse.io/portal/auth.
+[36m(JavaScriptGatheringWorker pid=1581927)[0m Inserted JS URL into DB: https://www.noisse.io
+[36m(insert_js_result pid=1580816)[0m Inserted new JS data for subdomain ID 12371 and URL https://www.noisse.io.
+Shutting down Crawl Workers gracefully...
+2024-03-21 18:33:04,276	INFO worker.py:1715 -- Started a local Ray instance. View the dashboard at [1m[32mhttp://127.0.0.1:8271 [39m[22m
+Crawl Workers have been started. Main script will now wait indefinitely.
+[36m(JavaScriptGatheringWorker pid=1590441)[0m Executing Katana command: /root/go/bin/katana -u https://api.noisse.io -silent -d 2 -hl -jc -c 50 -p 50 -scp /snap/bin/chromium --no-sandbox -ef ttf,woff,svg,png,gif,jpg,css,jpeg,ico,woff2,eot
+[36m(JavaScriptGatheringWorker pid=1590449)[0m Executing Katana command: /root/go/bin/katana -u https://app.noisse.io -silent -d 2 -hl -jc -c 50 -p 50 -scp /snap/bin/chromium --no-sandbox -ef ttf,woff,svg,png,gif,jpg,css,jpeg,ico,woff2,eot
+[36m(JavaScriptGatheringWorker pid=1590449)[0m Katana command executed successfully for URL: https://app.noisse.io
+[36m(JavaScriptGatheringWorker pid=1590449)[0m Cleaned URLs for https://app.noisse.io: {'https://app.noisse.io/site.webmanifest', 'https://app.noisse.io/static/js/main.db1fa3f6.js', 'https://app.noisse.io'}
+[36m(JavaScriptGatheringWorker pid=1590449)[0m Inserting JS URL into DB: https://app.noisse.io/site.webmanifest
+[36m(JavaScriptGatheringWorker pid=1590441)[0m Katana command executed successfully for URL: https://api.noisse.io
+[36m(JavaScriptGatheringWorker pid=1590441)[0m Cleaned URLs for https://api.noisse.io: {'https://api.noisse.io'}
+[36m(JavaScriptGatheringWorker pid=1590441)[0m Inserting JS URL into DB: https://api.noisse.io
+[36m(JavaScriptGatheringWorker pid=1590449)[0m Inserted JS URL into DB: https://app.noisse.io/site.webmanifest
+[36m(JavaScriptGatheringWorker pid=1590449)[0m Inserting JS URL into DB: https://app.noisse.io/static/js/main.db1fa3f6.js
+[36m(insert_js_result pid=1589395)[0m Duplicate JS data for subdomain ID 12373 and URL https://app.noisse.io/site.webmanifest not inserted.
+[36m(JavaScriptGatheringWorker pid=1590441)[0m Inserted JS URL into DB: https://api.noisse.io
+[36m(insert_js_result pid=1589411)[0m Duplicate JS data for subdomain ID 12372 and URL https://api.noisse.io not inserted.
+[36m(JavaScriptGatheringWorker pid=1590449)[0m Inserted JS URL into DB: https://app.noisse.io/static/js/main.db1fa3f6.js
+[36m(JavaScriptGatheringWorker pid=1590449)[0m Inserting JS URL into DB: https://app.noisse.io
+[36m(insert_js_result pid=1589395)[0m Duplicate JS data for subdomain ID 12373 and URL https://app.noisse.io/static/js/main.db1fa3f6.js not inserted.
+[36m(JavaScriptGatheringWorker pid=1590449)[0m Inserted JS URL into DB: https://app.noisse.io
+[36m(insert_js_result pid=1589395)[0m Duplicate JS data for subdomain ID 12373 and URL https://app.noisse.io not inserted.
+[36m(JavaScriptGatheringWorker pid=1590448)[0m Executing Katana command: /root/go/bin/katana -u https://www.noisse.io -silent -d 2 -hl -jc -c 50 -p 50 -scp /snap/bin/chromium --no-sandbox -ef ttf,woff,svg,png,gif,jpg,css,jpeg,ico,woff2,eot
+[36m(JavaScriptGatheringWorker pid=1590448)[0m Katana command executed successfully for URL: https://www.noisse.io
+[36m(JavaScriptGatheringWorker pid=1590448)[0m Cleaned URLs for https://www.noisse.io: {'https://www.noisse.io'}
+[36m(JavaScriptGatheringWorker pid=1590448)[0m Inserting JS URL into DB: https://www.noisse.io
+[36m(JavaScriptGatheringWorker pid=1590448)[0m Inserted JS URL into DB: https://www.noisse.io
+[36m(insert_js_result pid=1589395)[0m Duplicate JS data for subdomain ID 12371 and URL https://www.noisse.io not inserted.
+Shutting down Crawl Workers gracefully...
+2024-03-22 15:40:48,575	INFO worker.py:1715 -- Started a local Ray instance. View the dashboard at [1m[32mhttp://127.0.0.1:8271 [39m[22m

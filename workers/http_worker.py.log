@@ -54,3 +54,42 @@ HTTP Workers have been started. Main script will now wait indefinitely.
 [36m(insert_http_data pid=1540463)[0m New HTTP data inserted for http://rest.vulnweb.com.
 Shutting down HTTP Workers gracefully...
 2024-03-21 18:24:31,803	INFO worker.py:1715 -- Started a local Ray instance. View the dashboard at [1m[32mhttp://127.0.0.1:8270 [39m[22m
+HTTP Workers have been started. Main script will now wait indefinitely.
+[36m(HTTPWorker pid=1581694)[0m Fetched task from http_queue_0: {"subdomain": "app.noisse.io", "root_domain": "noisse.io", "user_id": 41}
+[36m(HTTPWorker pid=1581707)[0m Fetched task from http_queue_3: {"subdomain": "api.noisse.io", "root_domain": "noisse.io", "user_id": 41}
+[36m(HTTPWorker pid=1581694)[0m {'timestamp': '2024-03-21T18:26:44.336955722Z', 'port': '443', 'url': 'https://app.noisse.io', 'input': 'app.noisse.io', 'title': 'Noisse', 'scheme': 'https', 'webserver': 'Vercel', 'content_type': 'text/html', 'method': 'GET', 'host': '76.76.21.123', 'path': '/', 'time': '100.515199ms', 'a': ['76.76.21.123', '76.76.21.164'], 'cname': ['cname.vercel-dns.com'], 'tech': ['HSTS', 'Vercel'], 'words': 85, 'lines': 1, 'status_code': 200, 'content_length': 2210, 'failed': False, 'knowledgebase': {'PageType': 'other', 'pHash': 0}}
+[36m(HTTPWorker pid=1581694)[0m Pushed to screenshot_queue_3: {"url": "https://app.noisse.io", "root_domain": "noisse.io", "user_id": 41}
+[36m(HTTPWorker pid=1581694)[0m Pushed to crawl_queue_3: {"url": "https://app.noisse.io", "root_domain": "noisse.io", "user_id": 41}
+[36m(HTTPWorker pid=1581694)[0m Fetched task from http_queue_0: {"subdomain": "www.noisse.io", "root_domain": "noisse.io", "user_id": 41}
+[36m(HTTPWorker pid=1581707)[0m {'timestamp': '2024-03-21T18:26:44.679952067Z', 'cdn_name': 'google', 'port': '443', 'url': 'https://api.noisse.io', 'input': 'api.noisse.io', 'title': 'Error', 'scheme': 'https', 'webserver': 'railway', 'content_type': 'text/html', 'method': 'GET', 'host': '34.86.119.124', 'path': '/', 'time': '549.860536ms', 'a': ['34.86.119.124'], 'cname': ['f3ah8ldi.up.railway.app', 'global-edge.gcp.production.rlwy.net'], 'tech': ['Express', 'Node.js'], 'words': 6, 'lines': 11, 'status_code': 404, 'content_length': 139, 'failed': False, 'cdn': True, 'knowledgebase': {'PageType': 'error', 'pHash': 0}}
+[36m(HTTPWorker pid=1581707)[0m Pushed to screenshot_queue_1: {"url": "https://api.noisse.io", "root_domain": "noisse.io", "user_id": 41}
+[36m(HTTPWorker pid=1581707)[0m Pushed to crawl_queue_1: {"url": "https://api.noisse.io", "root_domain": "noisse.io", "user_id": 41}
+[36m(insert_http_data pid=1580606)[0m Database query error: no results to fetch
+[36m(insert_http_data pid=1580606)[0m New HTTP data inserted for https://app.noisse.io.
+[36m(insert_http_data pid=1580607)[0m New HTTP data inserted for https://api.noisse.io.
+[36m(HTTPWorker pid=1581694)[0m {'timestamp': '2024-03-21T18:27:17.098268125Z', 'port': '443', 'url': 'https://www.noisse.io', 'input': 'www.noisse.io', 'title': 'Noisse - Web Recon', 'scheme': 'https', 'webserver': 'Caddy/0a07437', 'content_type': 'text/html', 'method': 'GET', 'host': '35.71.142.77', 'path': '/', 'time': '379.704295ms', 'a': ['35.71.142.77', '52.223.52.2'], 'cname': ['sites.framer.app'], 'tech': ['HSTS', 'HTTP/3'], 'words': 8725, 'lines': 69, 'status_code': 200, 'content_length': 301330, 'failed': False, 'knowledgebase': {'PageType': 'nonerror', 'pHash': 0}}
+[36m(HTTPWorker pid=1581694)[0m Pushed to screenshot_queue_2: {"url": "https://www.noisse.io", "root_domain": "noisse.io", "user_id": 41}
+[36m(insert_http_data pid=1580607)[0m Database query error: no results to fetch
+[36m(HTTPWorker pid=1581694)[0m Pushed to crawl_queue_2: {"url": "https://www.noisse.io", "root_domain": "noisse.io", "user_id": 41}
+[36m(insert_http_data pid=1580607)[0m Database query error: no results to fetch
+[36m(insert_http_data pid=1580607)[0m New HTTP data inserted for https://www.noisse.io.
+Shutting down HTTP Workers gracefully...
+2024-03-21 18:33:05,591	INFO worker.py:1715 -- Started a local Ray instance. View the dashboard at [1m[32mhttp://127.0.0.1:8272 [39m[22m
+HTTP Workers have been started. Main script will now wait indefinitely.
+[36m(HTTPWorker pid=1590749)[0m Fetched task from http_queue_0: {"subdomain": "app.noisse.io", "root_domain": "noisse.io", "user_id": 41}
+[36m(HTTPWorker pid=1590757)[0m Fetched task from http_queue_3: {"subdomain": "api.noisse.io", "root_domain": "noisse.io", "user_id": 41}
+[36m(HTTPWorker pid=1590749)[0m {'timestamp': '2024-03-21T18:35:13.712243587Z', 'port': '443', 'url': 'https://app.noisse.io', 'input': 'app.noisse.io', 'title': 'Noisse', 'scheme': 'https', 'webserver': 'Vercel', 'content_type': 'text/html', 'method': 'GET', 'host': '76.76.21.123', 'path': '/', 'time': '304.43313ms', 'a': ['76.76.21.123', '76.76.21.9'], 'cname': ['cname.vercel-dns.com'], 'tech': ['HSTS', 'Vercel'], 'words': 85, 'lines': 1, 'status_code': 200, 'content_length': 2210, 'failed': False, 'knowledgebase': {'PageType': 'other', 'pHash': 0}}
+[36m(HTTPWorker pid=1590749)[0m Pushed to screenshot_queue_3: {"url": "https://app.noisse.io", "root_domain": "noisse.io", "user_id": 41}
+[36m(HTTPWorker pid=1590749)[0m Pushed to crawl_queue_3: {"url": "https://app.noisse.io", "root_domain": "noisse.io", "user_id": 41}
+[36m(HTTPWorker pid=1590749)[0m Fetched task from http_queue_0: {"subdomain": "www.noisse.io", "root_domain": "noisse.io", "user_id": 41}
+[36m(HTTPWorker pid=1590757)[0m {'timestamp': '2024-03-21T18:35:16.608751068Z', 'cdn_name': 'google', 'port': '443', 'url': 'https://api.noisse.io', 'input': 'api.noisse.io', 'title': 'Error', 'scheme': 'https', 'webserver': 'railway', 'content_type': 'text/html', 'method': 'GET', 'host': '34.86.119.124', 'path': '/', 'time': '967.294892ms', 'a': ['34.86.119.124'], 'cname': ['f3ah8ldi.up.railway.app', 'global-edge.gcp.production.rlwy.net'], 'tech': ['Express', 'Node.js'], 'words': 6, 'lines': 11, 'status_code': 404, 'content_length': 139, 'failed': False, 'cdn': True, 'knowledgebase': {'PageType': 'error', 'pHash': 0}}
+[36m(HTTPWorker pid=1590757)[0m Pushed to screenshot_queue_1: {"url": "https://api.noisse.io", "root_domain": "noisse.io", "user_id": 41}
+[36m(HTTPWorker pid=1590757)[0m Pushed to crawl_queue_1: {"url": "https://api.noisse.io", "root_domain": "noisse.io", "user_id": 41}
+[36m(insert_http_data pid=1589439)[0m Duplicate HTTP data for https://app.noisse.io not inserted.
+[36m(insert_http_data pid=1589440)[0m Duplicate HTTP data for https://api.noisse.io not inserted.
+[36m(HTTPWorker pid=1590749)[0m {'timestamp': '2024-03-21T18:35:51.993008714Z', 'port': '443', 'url': 'https://www.noisse.io', 'input': 'www.noisse.io', 'title': 'Noisse - Web Recon', 'scheme': 'https', 'webserver': 'Caddy/0a07437', 'content_type': 'text/html', 'method': 'GET', 'host': '35.71.142.77', 'path': '/', 'time': '1.180475618s', 'a': ['35.71.142.77', '52.223.52.2'], 'cname': ['sites.framer.app'], 'tech': ['HSTS', 'HTTP/3'], 'words': 8725, 'lines': 69, 'status_code': 200, 'content_length': 301330, 'failed': False, 'knowledgebase': {'PageType': 'nonerror', 'pHash': 0}}
+[36m(HTTPWorker pid=1590749)[0m Pushed to screenshot_queue_2: {"url": "https://www.noisse.io", "root_domain": "noisse.io", "user_id": 41}
+[36m(HTTPWorker pid=1590749)[0m Pushed to crawl_queue_2: {"url": "https://www.noisse.io", "root_domain": "noisse.io", "user_id": 41}
+[36m(insert_http_data pid=1589440)[0m Duplicate HTTP data for https://www.noisse.io not inserted.
+Shutting down HTTP Workers gracefully...
+2024-03-22 15:40:47,279	INFO worker.py:1715 -- Started a local Ray instance. View the dashboard at [1m[32mhttp://127.0.0.1:8270 [39m[22m

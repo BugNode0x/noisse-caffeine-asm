@@ -9,6 +9,7 @@ from brain.base_worker import BaseWorker
 
 @ray.remote
 class DNSWorker(BaseWorker):
+
     def check_subdomain_id_exists(self, subdomain):
         query = "SELECT subdomain_id FROM subdomains WHERE subdomain = %s"
         subdomain_id = execute_db_query(query, (subdomain,), fetch_one=True)
@@ -20,6 +21,8 @@ class DNSWorker(BaseWorker):
         subdomain = task['subdomain']
         root_domain = task['root_domain']
         user_id = task['user_id']
+
+        self.increment_task_count(root_domain, user_id)
 
         user_message = f"[DNS] Processing DNS for resolution for: {subdomain}"
         admin_message = f"{user_message} - User ID: {user_id}"
@@ -39,14 +42,15 @@ class DNSWorker(BaseWorker):
 
         if retry_count == max_retries:
             print(f"Subdomain ID for {subdomain} not found after retries, skipping DNS processing.")
-            return             
-
+            return    
+        
         try:
             process = subprocess.Popen(dnsx_cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, stdin=subprocess.PIPE)
             stdout, _ = process.communicate(input=subdomain.encode())
 
             if process.returncode != 0:
                 raise Exception(f"dnsx failed with exit code {process.returncode}")
+
 
             dns_data = json.loads(stdout.decode())
             print(dns_data)
@@ -68,7 +72,27 @@ class DNSWorker(BaseWorker):
 
         except Exception as e:
             print(f"Error processing DNS for {subdomain}: {e}")
-    
+
+        finally:
+            # Decrement task count and check if it's time to send the completion message
+            if self.decrement_task_count(root_domain, user_id):
+                completion_message = f"DNS enumeration completed for {root_domain}"
+                self.push_notification_to_queue(user_id, completion_message)
+
+    def increment_task_count(self, root_domain, user_id):
+        # Use Redis to increment the task count for the given root_domain and user_id
+        redis_key = f"dns_task_count:{root_domain}:{user_id}"
+        self.redis_client.incr(redis_key)
+        # Optional: Set a reasonable expiry time for the key
+        self.redis_client.expire(redis_key, 4000)  # 4000 seconds expiry time
+
+    def decrement_task_count(self, root_domain, user_id):
+        # Use Redis to decrement the task count and check if it reaches zero
+        redis_key = f"dns_task_count:{root_domain}:{user_id}"
+        remaining_tasks = self.redis_client.decr(redis_key)
+        return remaining_tasks <= 0  # Returns True if all tasks are processed
+
+
     def select_queue_index(self, user_id, subdomain):
         # Simple hash-based mechanism to select a queue index
         combined_key = f"{user_id}_{subdomain}"
