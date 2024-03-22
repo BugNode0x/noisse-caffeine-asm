@@ -71,28 +71,48 @@ class JavaScriptGatheringWorker(BaseWorker):
         
 
     def process_task(self, task):
+        # Extract information from the task
         url = task.get('url')
         user_id = task.get('user_id')
+        root_domain = task.get('root_domain')
+        
+        self.increment_task_count(root_domain, user_id)
 
-        # Check if URL is valid and not None
-        if not url:
-            print(f"Invalid or None URL received in task: {task}")
+        # Validate the task data
+        if not url or not user_id or not root_domain:
+            print(f"Invalid task received: {task}")
             return
 
+        # Notify the start of the task
         start_message = f"[Crawl] Starting crawling for URL: {url}"
         admin_start_message = f"{start_message} - User ID: {user_id}"
         self.send_slack_notification(user_id, start_message)
-        self.send_admin_slack_notification(admin_start_message)
+        self.send_admin_slack_notification(admin_message)
 
-        # Get subdomain_id from the database
-        parsed_url = urlparse(url)
-        subdomain_id_query = "SELECT subdomain_id FROM subdomains WHERE subdomain = %s"
-        subdomain_id = execute_db_query(subdomain_id_query, (parsed_url.netloc,), fetch_one=True)
-        if not subdomain_id:
-            print(f"Subdomain ID not found for URL: {url}")
-            return
+        # Increment the task count for this domain and user
+        self.increment_task_count(root_domain, user_id)
 
-        self.process_url(subdomain_id, url)  # Calling process_url method with subdomain_id and URL
+        try:
+            # Fetch the subdomain ID from the database
+            parsed_url = urlparse(url)
+            subdomain_id_query = "SELECT subdomain_id FROM subdomains WHERE subdomain = %s"
+            subdomain_id = execute_db_query(subdomain_id_query, (parsed_url.netloc,), fetch_one=True)
+            if not subdomain_id:
+                print(f"Subdomain ID not found for URL: {url}")
+                return
+
+            # Process the URL using the existing logic
+            self.process_url(subdomain_id, url)
+
+        except Exception as e:
+            print(f"Error processing URL {url}: {e}")
+
+        finally:
+            # Decrement the task count and send completion notification if applicable
+            if self.decrement_task_count(root_domain, user_id):
+                completion_message = f"Crawl task completed for {root_domain}"
+                self.push_notification_to_queue(user_id, completion_message)
+
 
     def run(self):
         try:

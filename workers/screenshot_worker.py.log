@@ -37,3 +37,37 @@ Screenshot Workers have been started. Main script will now wait indefinitely.
 [36m(insert_screenshot_data pid=1589666)[0m Inserted new screenshot data for subdomain ID 12371 and URL https://www.noisse.io.
 Shutting down Screenshot Workers gracefully...
 2024-03-22 15:40:49,609	INFO worker.py:1715 -- Started a local Ray instance. View the dashboard at [1m[32mhttp://127.0.0.1:8272 [39m[22m
+Screenshot Workers have been started. Main script will now wait indefinitely.
+[36m(ScreenshotWorker pid=1640375)[0m Fetched task from screenshot_queue_1: {"url": "https://api.noisse.io", "root_domain": "noisse.io", "user_id": 41}
+[36m(ScreenshotWorker pid=1640380)[0m Fetched task from screenshot_queue_2: {"url": "https://www.noisse.io", "root_domain": "noisse.io", "user_id": 41}
+[36m(insert_screenshot_data pid=1638557)[0m Duplicate screenshot data for subdomain ID 12372 and URL https://api.noisse.io not inserted.
+[36m(ScreenshotWorker pid=1640423)[0m Fetched task from screenshot_queue_3: {"url": "https://app.noisse.io", "root_domain": "noisse.io", "user_id": 41}
+[36m(ScreenshotWorker pid=1640380)[0m Screenshot file not found for URL: https://www.noisse.io
+[36m(insert_screenshot_data pid=1638557)[0m Duplicate screenshot data for subdomain ID 12373 and URL https://app.noisse.io not inserted.
+Shutting down Screenshot Workers gracefully...
+2024-03-22 15:54:36,509	INFO worker.py:1715 -- Started a local Ray instance. View the dashboard at [1m[32mhttp://127.0.0.1:8273 [39m[22m
+Screenshot Workers have been started. Main script will now wait indefinitely.
+[36m(ScreenshotWorker pid=1650327)[0m Fetched task from screenshot_queue_1: {"url": "https://api.noisse.io", "root_domain": "noisse.io", "user_id": 41}
+[36m(ScreenshotWorker pid=1650463)[0m Fetched task from screenshot_queue_2: {"url": "https://www.noisse.io", "root_domain": "noisse.io", "user_id": 41}
+[36m(insert_screenshot_data pid=1648746)[0m Duplicate screenshot data for subdomain ID 12372 and URL https://api.noisse.io not inserted.
+[36m(ScreenshotWorker pid=1650564)[0m Fetched task from screenshot_queue_3: {"url": "https://app.noisse.io", "root_domain": "noisse.io", "user_id": 41}
+[36m(insert_screenshot_data pid=1648746)[0m Duplicate screenshot data for subdomain ID 12371 and URL https://www.noisse.io not inserted.
+[36m(insert_screenshot_data pid=1648746)[0m Duplicate screenshot data for subdomain ID 12373 and URL https://app.noisse.io not inserted.
+Shutting down Screenshot Workers gracefully...
+Exception ignored in atexit callback: <function shutdown at 0x7575ed720a40>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/dist-packages/ray/_private/client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/ray/_private/worker.py", line 1801, in shutdown
+    global_worker.core_worker.shutdown_driver()
+KeyboardInterrupt: 
+2024-03-22 16:34:08,381	INFO worker.py:1715 -- Started a local Ray instance. View the dashboard at [1m[32mhttp://127.0.0.1:8274 [39m[22m
+Screenshot Workers have been started. Main script will now wait indefinitely.
+[36m(ScreenshotWorker pid=1672290)[0m Fetched task from screenshot_queue_3: {"url": "https://app.noisse.io", "root_domain": "noisse.io", "user_id": 41}
+[36m(ScreenshotWorker pid=1672171)[0m Fetched task from screenshot_queue_1: {"url": "https://api.noisse.io", "root_domain": "noisse.io", "user_id": 41}
+[36m(insert_screenshot_data pid=1670524)[0m Duplicate screenshot data for subdomain ID 12373 and URL https://app.noisse.io not inserted.
+[36m(insert_screenshot_data pid=1670528)[0m Duplicate screenshot data for subdomain ID 12372 and URL https://api.noisse.io not inserted.
+[36m(ScreenshotWorker pid=1672185)[0m Fetched task from screenshot_queue_2: {"url": "https://www.noisse.io", "root_domain": "noisse.io", "user_id": 41}
+[36m(insert_screenshot_data pid=1670528)[0m Duplicate screenshot data for subdomain ID 12371 and URL https://www.noisse.io not inserted.
+Shutting down Screenshot Workers gracefully...

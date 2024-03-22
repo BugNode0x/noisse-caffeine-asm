@@ -229,3 +229,97 @@ Crawl Workers have been started. Main script will now wait indefinitely.
 [36m(insert_js_result pid=1589395)[0m Duplicate JS data for subdomain ID 12371 and URL https://www.noisse.io not inserted.
 Shutting down Crawl Workers gracefully...
 2024-03-22 15:40:48,575	INFO worker.py:1715 -- Started a local Ray instance. View the dashboard at [1m[32mhttp://127.0.0.1:8271 [39m[22m
+Crawl Workers have been started. Main script will now wait indefinitely.
+[36m(JavaScriptGatheringWorker pid=1639658)[0m Executing Katana command: /root/go/bin/katana -u https://api.noisse.io -silent -d 2 -hl -jc -c 50 -p 50 -scp /snap/bin/chromium --no-sandbox -ef ttf,woff,svg,png,gif,jpg,css,jpeg,ico,woff2,eot
+[36m(JavaScriptGatheringWorker pid=1639659)[0m Executing Katana command: /root/go/bin/katana -u https://www.noisse.io -silent -d 2 -hl -jc -c 50 -p 50 -scp /snap/bin/chromium --no-sandbox -ef ttf,woff,svg,png,gif,jpg,css,jpeg,ico,woff2,eot
+[36m(JavaScriptGatheringWorker pid=1639658)[0m Katana command executed successfully for URL: https://api.noisse.io
+[36m(JavaScriptGatheringWorker pid=1639658)[0m Cleaned URLs for https://api.noisse.io: {'https://api.noisse.io'}
+[36m(JavaScriptGatheringWorker pid=1639658)[0m Inserting JS URL into DB: https://api.noisse.io
+[36m(JavaScriptGatheringWorker pid=1639659)[0m Katana command executed successfully for URL: https://www.noisse.io
+[36m(JavaScriptGatheringWorker pid=1639659)[0m Cleaned URLs for https://www.noisse.io: {'https://www.noisse.io'}
+[36m(JavaScriptGatheringWorker pid=1639659)[0m Inserting JS URL into DB: https://www.noisse.io
+[36m(JavaScriptGatheringWorker pid=1639661)[0m Executing Katana command: /root/go/bin/katana -u https://app.noisse.io -silent -d 2 -hl -jc -c 50 -p 50 -scp /snap/bin/chromium --no-sandbox -ef ttf,woff,svg,png,gif,jpg,css,jpeg,ico,woff2,eot
+[36m(JavaScriptGatheringWorker pid=1639658)[0m Inserted JS URL into DB: https://api.noisse.io
+[36m(insert_js_result pid=1638491)[0m Duplicate JS data for subdomain ID 12372 and URL https://api.noisse.io not inserted.
+[36m(JavaScriptGatheringWorker pid=1639659)[0m Inserted JS URL into DB: https://www.noisse.io
+[36m(insert_js_result pid=1638493)[0m Duplicate JS data for subdomain ID 12371 and URL https://www.noisse.io not inserted.
+[36m(JavaScriptGatheringWorker pid=1639661)[0m Katana command executed successfully for URL: https://app.noisse.io
+[36m(JavaScriptGatheringWorker pid=1639661)[0m Cleaned URLs for https://app.noisse.io: {'https://app.noisse.io', 'https://app.noisse.io/static/js/main.db1fa3f6.js', 'https://app.noisse.io/site.webmanifest'}
+[36m(JavaScriptGatheringWorker pid=1639661)[0m Inserting JS URL into DB: https://app.noisse.io
+[36m(JavaScriptGatheringWorker pid=1639661)[0m Inserted JS URL into DB: https://app.noisse.io
+[36m(JavaScriptGatheringWorker pid=1639661)[0m Inserting JS URL into DB: https://app.noisse.io/static/js/main.db1fa3f6.js
+[36m(insert_js_result pid=1638493)[0m Duplicate JS data for subdomain ID 12373 and URL https://app.noisse.io not inserted.
+[36m(JavaScriptGatheringWorker pid=1639661)[0m Inserted JS URL into DB: https://app.noisse.io/static/js/main.db1fa3f6.js
+[36m(JavaScriptGatheringWorker pid=1639661)[0m Inserting JS URL into DB: https://app.noisse.io/site.webmanifest
+[36m(insert_js_result pid=1638493)[0m Duplicate JS data for subdomain ID 12373 and URL https://app.noisse.io/static/js/main.db1fa3f6.js not inserted.
+[36m(JavaScriptGatheringWorker pid=1639661)[0m Inserted JS URL into DB: https://app.noisse.io/site.webmanifest
+[36m(insert_js_result pid=1638493)[0m Duplicate JS data for subdomain ID 12373 and URL https://app.noisse.io/site.webmanifest not inserted.
+Shutting down Crawl Workers gracefully...
+2024-03-22 15:54:36,476	INFO worker.py:1715 -- Started a local Ray instance. View the dashboard at [1m[32mhttp://127.0.0.1:8274 [39m[22m
+Crawl Workers have been started. Main script will now wait indefinitely.
+[36m(JavaScriptGatheringWorker pid=1649777)[0m Executing Katana command: /root/go/bin/katana -u https://api.noisse.io -silent -d 2 -hl -jc -c 50 -p 50 -scp /snap/bin/chromium --no-sandbox -ef ttf,woff,svg,png,gif,jpg,css,jpeg,ico,woff2,eot
+[36m(JavaScriptGatheringWorker pid=1649796)[0m Executing Katana command: /root/go/bin/katana -u https://www.noisse.io -silent -d 2 -hl -jc -c 50 -p 50 -scp /snap/bin/chromium --no-sandbox -ef ttf,woff,svg,png,gif,jpg,css,jpeg,ico,woff2,eot
+[36m(JavaScriptGatheringWorker pid=1649777)[0m Katana command executed successfully for URL: https://api.noisse.io
+[36m(JavaScriptGatheringWorker pid=1649777)[0m Cleaned URLs for https://api.noisse.io: {'https://api.noisse.io'}
+[36m(JavaScriptGatheringWorker pid=1649777)[0m Inserting JS URL into DB: https://api.noisse.io
+[36m(JavaScriptGatheringWorker pid=1649777)[0m Inserted JS URL into DB: https://api.noisse.io
+[36m(insert_js_result pid=1648733)[0m Duplicate JS data for subdomain ID 12372 and URL https://api.noisse.io not inserted.
+[36m(JavaScriptGatheringWorker pid=1649796)[0m Katana command executed successfully for URL: https://www.noisse.io
+[36m(JavaScriptGatheringWorker pid=1649796)[0m Cleaned URLs for https://www.noisse.io: {'https://www.noisse.io'}
+[36m(JavaScriptGatheringWorker pid=1649796)[0m Inserting JS URL into DB: https://www.noisse.io
+[36m(JavaScriptGatheringWorker pid=1649797)[0m Executing Katana command: /root/go/bin/katana -u https://app.noisse.io -silent -d 2 -hl -jc -c 50 -p 50 -scp /snap/bin/chromium --no-sandbox -ef ttf,woff,svg,png,gif,jpg,css,jpeg,ico,woff2,eot
+[36m(JavaScriptGatheringWorker pid=1649796)[0m Inserted JS URL into DB: https://www.noisse.io
+[36m(insert_js_result pid=1648733)[0m Duplicate JS data for subdomain ID 12371 and URL https://www.noisse.io not inserted.
+[36m(JavaScriptGatheringWorker pid=1649797)[0m Katana command executed successfully for URL: https://app.noisse.io
+[36m(JavaScriptGatheringWorker pid=1649797)[0m Cleaned URLs for https://app.noisse.io: {'https://app.noisse.io/static/js/main.db1fa3f6.js', 'https://app.noisse.io/site.webmanifest', 'https://app.noisse.io'}
+[36m(JavaScriptGatheringWorker pid=1649797)[0m Inserting JS URL into DB: https://app.noisse.io/static/js/main.db1fa3f6.js
+[36m(JavaScriptGatheringWorker pid=1649797)[0m Inserted JS URL into DB: https://app.noisse.io/static/js/main.db1fa3f6.js
+[36m(JavaScriptGatheringWorker pid=1649797)[0m Inserting JS URL into DB: https://app.noisse.io/site.webmanifest
+[36m(insert_js_result pid=1648733)[0m Duplicate JS data for subdomain ID 12373 and URL https://app.noisse.io/static/js/main.db1fa3f6.js not inserted.
+[36m(insert_js_result pid=1648733)[0m Duplicate JS data for subdomain ID 12373 and URL https://app.noisse.io/site.webmanifest not inserted.
+[36m(JavaScriptGatheringWorker pid=1649797)[0m Inserted JS URL into DB: https://app.noisse.io/site.webmanifest
+[36m(JavaScriptGatheringWorker pid=1649797)[0m Inserting JS URL into DB: https://app.noisse.io
+[36m(insert_js_result pid=1648733)[0m Duplicate JS data for subdomain ID 12373 and URL https://app.noisse.io not inserted.
+[36m(JavaScriptGatheringWorker pid=1649797)[0m Inserted JS URL into DB: https://app.noisse.io
+Shutting down Crawl Workers gracefully...
+Exception ignored in atexit callback: <function shutdown at 0x72b40f144b80>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/dist-packages/ray/_private/client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/ray/_private/worker.py", line 1801, in shutdown
+    global_worker.core_worker.shutdown_driver()
+KeyboardInterrupt: 
+2024-03-22 16:33:59,212	INFO worker.py:1715 -- Started a local Ray instance. View the dashboard at [1m[32mhttp://127.0.0.1:8271 [39m[22m
+2024-03-22 16:35:57,983	ERROR worker.py:405 -- Unhandled error (suppress with 'RAY_IGNORE_UNHANDLED_ERRORS=1'): [36mray::JavaScriptGatheringWorker.run()[39m (pid=1671311, ip=45.55.200.170, actor_id=bafa1d7e226144635940491201000000, repr=<crawl_worker.JavaScriptGatheringWorker object at 0x768ec4312bd0>)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/noisse/noisse-caffeine-asm/workers/crawl_worker.py", line 125, in run
+    self.process_task(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/noisse/noisse-caffeine-asm/workers/crawl_worker.py", line 90, in process_task
+    self.send_admin_slack_notification(admin_message)
+                                       ^^^^^^^^^^^^^
+NameError: name 'admin_message' is not defined
+2024-03-22 16:36:00,487	ERROR worker.py:405 -- Unhandled error (suppress with 'RAY_IGNORE_UNHANDLED_ERRORS=1'): [36mray::JavaScriptGatheringWorker.run()[39m (pid=1671309, ip=45.55.200.170, actor_id=9482b6b116639539830df70401000000, repr=<crawl_worker.JavaScriptGatheringWorker object at 0x7b8fb03dab10>)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/noisse/noisse-caffeine-asm/workers/crawl_worker.py", line 125, in run
+    self.process_task(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/noisse/noisse-caffeine-asm/workers/crawl_worker.py", line 90, in process_task
+    self.send_admin_slack_notification(admin_message)
+                                       ^^^^^^^^^^^^^
+NameError: name 'admin_message' is not defined
+2024-03-22 16:36:22,617	ERROR worker.py:405 -- Unhandled error (suppress with 'RAY_IGNORE_UNHANDLED_ERRORS=1'): [36mray::JavaScriptGatheringWorker.run()[39m (pid=1671310, ip=45.55.200.170, actor_id=81d4343ec7fb1d29933504af01000000, repr=<crawl_worker.JavaScriptGatheringWorker object at 0x7018e643edd0>)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/noisse/noisse-caffeine-asm/workers/crawl_worker.py", line 125, in run
+    self.process_task(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/noisse/noisse-caffeine-asm/workers/crawl_worker.py", line 90, in process_task
+    self.send_admin_slack_notification(admin_message)
+                                       ^^^^^^^^^^^^^
+NameError: name 'admin_message' is not defined
+Crawl Workers have been started. Main script will now wait indefinitely.
+Shutting down Crawl Workers gracefully...

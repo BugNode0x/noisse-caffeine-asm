@@ -91,7 +91,10 @@ class DNSWorker(BaseWorker):
         redis_key = f"dns_task_count:{root_domain}:{user_id}"
         remaining_tasks = self.redis_client.decr(redis_key)
         return remaining_tasks <= 0  # Returns True if all tasks are processed
-
+    
+    def push_notification_to_queue(self, user_id, message):
+        notification_task = json.dumps({'user_id': user_id, 'message': message})
+        self.redis_client.rpush('notification_queue', notification_task)
 
     def select_queue_index(self, user_id, subdomain):
         # Simple hash-based mechanism to select a queue index

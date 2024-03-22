@@ -62,3 +62,86 @@ PC: @     0x702f3fb1b2cf  (unknown)  __write
 [2024-03-22 15:40:18,281 E 1588585 1588585] logging.cc:361: PC: @     0x702f3fb1b2cf  (unknown)  __write
 [2024-03-22 15:40:18,281 E 1588585 1588585] logging.cc:361:     @     0x702f3fa42990  (unknown)  (unknown)
 2024-03-22 15:40:50,101	INFO worker.py:1715 -- Started a local Ray instance. View the dashboard at [1m[32mhttp://127.0.0.1:8274 [39m[22m
+Subdomain Workers have been started. Main script will now wait indefinitely.
+[36m(SubdomainEnumerationWorker pid=1639650)[0m Fetched task from api_queue: {"domain": "noisse.io", "user_id": "user_01HMTAXPTE8XSQKD8XZ9M66CQM"}
+[36m(SubdomainEnumerationWorker pid=1639650)[0m Received domain: noisse.io, Hunter ID: user_01HMTAXPTE8XSQKD8XZ9M66CQM
+[36m(SubdomainEnumerationWorker pid=1639650)[0m Calling ensure_domain_exists with domain: noisse.io, Hunter ID: user_01HMTAXPTE8XSQKD8XZ9M66CQM
+[36m(SubdomainEnumerationWorker pid=1639650)[0m Processing domain: noisse.io with ID: 193
+[36m(SubdomainEnumerationWorker pid=1639650)[0m Running subfinder
+[36m(process_and_insert_subdomain pid=1638605)[0m Database query error: no results to fetch
+[36m(SubdomainEnumerationWorker pid=1639650)[0m Database query error: no results to fetch[32m [repeated 5x across cluster] (Ray deduplicates logs by default. Set RAY_DEDUP_LOGS=0 to disable log deduplication, or see https://docs.ray.io/en/master/ray-observability/ray-logging.html#log-deduplication for more options.)[0m
+[36m(SubdomainEnumerationWorker pid=1639650)[0m Database query error: no results to fetch[32m [repeated 3x across cluster][0m
+Shutting down Subdomain Workers gracefully...
+*** SIGTERM received at time=1711122846 on cpu 2 ***
+PC: @     0x7957b4ce5771  (unknown)  clock_nanosleep
+    @     0x7957b4c42990  (unknown)  (unknown)
+    @         0x2d5f0a59  (unknown)  (unknown)
+[2024-03-22 15:54:06,278 E 1637728 1637728] logging.cc:361: *** SIGTERM received at time=1711122846 on cpu 2 ***
+[2024-03-22 15:54:06,278 E 1637728 1637728] logging.cc:361: PC: @     0x7957b4ce5771  (unknown)  clock_nanosleep
+[2024-03-22 15:54:06,281 E 1637728 1637728] logging.cc:361:     @     0x7957b4c42990  (unknown)  (unknown)
+[2024-03-22 15:54:06,284 E 1637728 1637728] logging.cc:361:     @         0x2d5f0a59  (unknown)  (unknown)
+Exception ignored in atexit callback: <function shutdown at 0x7957b13514e0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/dist-packages/ray/_private/client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/ray/_private/worker.py", line 1788, in shutdown
+    time.sleep(0.5)
+  File "/usr/local/lib/python3.11/dist-packages/ray/_private/worker.py", line 1390, in sigterm_handler
+    sys.exit(signum)
+SystemExit: 15
+2024-03-22 15:54:37,176	INFO worker.py:1715 -- Started a local Ray instance. View the dashboard at [1m[32mhttp://127.0.0.1:8272 [39m[22m
+*** SIGTERM received at time=1711125209 on cpu 2 ***
+PC: @           0x63c610  (unknown)  (unknown)
+    @     0x7e95c7c42990       2992  (unknown)
+    @     0x7e95c6cedb13         48  AbslInternalPerThreadSemWait_lts_20230125
+    @     0x7e95c61583c7        144  absl::lts_20230125::CondVar::WaitCommon()
+    @     0x7e95c6bbe07e         80  gpr_cv_wait
+    @     0x7e95c6b9f786        176  grpc_core::Executor::ThreadMain()
+    @     0x7e95c6bbc886        112  grpc_core::(anonymous namespace)::ThreadInternalsPosix::ThreadInternalsPosix()::{lambda()#1}::_FUN()
+    @     0x7e95c7c97b5a  (unknown)  (unknown)
+[2024-03-22 16:33:29,216 E 1647996 1648084] logging.cc:361: *** SIGTERM received at time=1711125209 on cpu 2 ***
+[2024-03-22 16:33:29,217 E 1647996 1648084] logging.cc:361: PC: @           0x63c610  (unknown)  (unknown)
+[2024-03-22 16:33:29,217 E 1647996 1648084] logging.cc:361:     @     0x7e95c7c42990       2992  (unknown)
+[2024-03-22 16:33:29,217 E 1647996 1648084] logging.cc:361:     @     0x7e95c6cedb13         48  AbslInternalPerThreadSemWait_lts_20230125
+[2024-03-22 16:33:29,217 E 1647996 1648084] logging.cc:361:     @     0x7e95c61583c7        144  absl::lts_20230125::CondVar::WaitCommon()
+[2024-03-22 16:33:29,217 E 1647996 1648084] logging.cc:361:     @     0x7e95c6bbe07e         80  gpr_cv_wait
+[2024-03-22 16:33:29,217 E 1647996 1648084] logging.cc:361:     @     0x7e95c6b9f786        176  grpc_core::Executor::ThreadMain()
+[2024-03-22 16:33:29,217 E 1647996 1648084] logging.cc:361:     @     0x7e95c6bbc886        112  grpc_core::(anonymous namespace)::ThreadInternalsPosix::ThreadInternalsPosix()::{lambda()#1}::_FUN()
+[2024-03-22 16:33:29,217 E 1647996 1648084] logging.cc:361:     @     0x7e95c7c97b5a  (unknown)  (unknown)
+Subdomain Workers have been started. Main script will now wait indefinitely.
+[36m(SubdomainEnumerationWorker pid=1649783)[0m Fetched task from api_queue: {"domain": "noisse.io", "user_id": "user_01HMTAXPTE8XSQKD8XZ9M66CQM"}
+[36m(SubdomainEnumerationWorker pid=1649783)[0m Received domain: noisse.io, Hunter ID: user_01HMTAXPTE8XSQKD8XZ9M66CQM
+[36m(SubdomainEnumerationWorker pid=1649783)[0m Calling ensure_domain_exists with domain: noisse.io, Hunter ID: user_01HMTAXPTE8XSQKD8XZ9M66CQM
+[36m(SubdomainEnumerationWorker pid=1649783)[0m Processing domain: noisse.io with ID: 193
+[36m(SubdomainEnumerationWorker pid=1649783)[0m Running subfinder
+[36m(process_and_insert_subdomain pid=1648763)[0m Database query error: no results to fetch
+[36m(SubdomainEnumerationWorker pid=1649783)[0m Database query error: no results to fetch[32m [repeated 5x across cluster] (Ray deduplicates logs by default. Set RAY_DEDUP_LOGS=0 to disable log deduplication, or see https://docs.ray.io/en/master/ray-observability/ray-logging.html#log-deduplication for more options.)[0m
+[36m(SubdomainEnumerationWorker pid=1649783)[0m Database query error: no results to fetch[32m [repeated 3x across cluster][0m
+Exception ignored in atexit callback: <function shutdown at 0x7e95c42554e0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/dist-packages/ray/_private/client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/ray/_private/worker.py", line 1788, in shutdown
+    time.sleep(0.5)
+  File "/usr/local/lib/python3.11/dist-packages/ray/_private/worker.py", line 1390, in sigterm_handler
+    sys.exit(signum)
+SystemExit: 15
+2024-03-22 16:33:58,077	INFO worker.py:1715 -- Started a local Ray instance. View the dashboard at [1m[32mhttp://127.0.0.1:8270 [39m[22m
+Subdomain Workers have been started. Main script will now wait indefinitely.
+[36m(SubdomainEnumerationWorker pid=1671195)[0m Fetched task from api_queue: {"domain": "noisse.io", "user_id": "user_01HMTAXPTE8XSQKD8XZ9M66CQM"}
+[36m(SubdomainEnumerationWorker pid=1671195)[0m Received domain: noisse.io, Hunter ID: user_01HMTAXPTE8XSQKD8XZ9M66CQM
+[36m(SubdomainEnumerationWorker pid=1671195)[0m Calling ensure_domain_exists with domain: noisse.io, Hunter ID: user_01HMTAXPTE8XSQKD8XZ9M66CQM
+[36m(SubdomainEnumerationWorker pid=1671195)[0m Processing domain: noisse.io with ID: 193
+[36m(SubdomainEnumerationWorker pid=1671195)[0m Running subfinder
+[36m(process_and_insert_subdomain pid=1670203)[0m Database query error: no results to fetch
+[36m(SubdomainEnumerationWorker pid=1671195)[0m Database query error: no results to fetch[32m [repeated 5x across cluster] (Ray deduplicates logs by default. Set RAY_DEDUP_LOGS=0 to disable log deduplication, or see https://docs.ray.io/en/master/ray-observability/ray-logging.html#log-deduplication for more options.)[0m
+[36m(SubdomainEnumerationWorker pid=1671195)[0m Database query error: no results to fetch[32m [repeated 4x across cluster][0m
+Shutting down Subdomain Workers gracefully...
+*** SIGTERM received at time=1711125545 on cpu 3 ***
+PC: @     0x7e467051b2cf  (unknown)  __write
+    @     0x7e4670442990  (unknown)  (unknown)
+[2024-03-22 16:39:05,107 E 1669593 1669593] logging.cc:361: *** SIGTERM received at time=1711125545 on cpu 3 ***
+[2024-03-22 16:39:05,108 E 1669593 1669593] logging.cc:361: PC: @     0x7e467051b2cf  (unknown)  __write
+[2024-03-22 16:39:05,109 E 1669593 1669593] logging.cc:361:     @     0x7e4670442990  (unknown)  (unknown)

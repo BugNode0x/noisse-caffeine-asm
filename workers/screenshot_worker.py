@@ -4,6 +4,7 @@ import os
 import ray
 import boto3
 import time
+import hashlib
 from datetime import datetime
 from urllib.parse import urlparse
 from brain.base_worker import BaseWorker
@@ -34,6 +35,8 @@ class ScreenshotWorker(BaseWorker):
         url = task['url']
         root_domain = task['root_domain']
         user_id = task['user_id']
+
+        self.increment_task_count(root_domain, user_id)
 
         user_message = f"[Screenshot] Starting screenshot processing for URL: {url}"
         admin_message = f"{user_message} - User ID: {user_id}"
@@ -79,14 +82,53 @@ class ScreenshotWorker(BaseWorker):
             curl_process = subprocess.Popen(curl_cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
             dom_data_bytes, _ = curl_process.communicate()
             dom_data = dom_data_bytes.decode('utf-8') if curl_process.returncode == 0 else ''
+
+            if upload_success:
+                s3_url = f"{s3_https_base_url}{object_name}"
+                subdomain = urlparse(url).netloc
+                insert_screenshot_data.remote(subdomain, url, s3_url, dom_data)
+
         except Exception as e:
-            print(f"Error fetching DOM for {url}: {e}")
-            dom_data = ''
+            print(f"Error processing screenshot for {url}: {e}")
 
-        subdomain = urlparse(url).netloc
+        finally:
+            if self.decrement_task_count(root_domain, user_id):
+                completion_message = f"Screenshot processing completed for {root_domain}"
+                self.push_notification_to_queue(user_id, completion_message)
+    
+    def increment_task_count(self, root_domain, user_id):
+        # Use Redis to increment the task count for the given root_domain and user_id
+        redis_key = f"crawl_task_count:{root_domain}:{user_id}"
+        self.redis_client.incr(redis_key)
+        # Optional: Set a reasonable expiry time for the key
+        self.redis_client.expire(redis_key, 4000)  # 4000 seconds expiry time
 
-        # Insert into the database
-        insert_screenshot_data.remote(subdomain, url, s3_url, dom_data)
+    def decrement_task_count(self, root_domain, user_id):
+        # Use Redis to decrement the task count and check if it reaches zero
+        redis_key = f"crawl_task_count:{root_domain}:{user_id}"
+        remaining_tasks = self.redis_client.decr(redis_key)
+        return remaining_tasks <= 0  # Returns True if all tasks are processed
+    
+    def push_notification_to_queue(self, user_id, message):
+        notification_task = json.dumps({'user_id': user_id, 'message': message})
+        self.redis_client.rpush('notification_queue', notification_task)
+
+    def increment_task_count(self, root_domain, user_id):
+        # Use Redis to increment the task count for the given root_domain and user_id
+        redis_key = f"screenshot_task_count:{root_domain}:{user_id}"
+        self.redis_client.incr(redis_key)
+        # Optional: Set a reasonable expiry time for the key
+        self.redis_client.expire(redis_key, 4000)  # 4000 seconds expiry time
+
+    def decrement_task_count(self, root_domain, user_id):
+        # Use Redis to decrement the task count and check if it reaches zero
+        redis_key = f"screenshot_task_count:{root_domain}:{user_id}"
+        remaining_tasks = self.redis_client.decr(redis_key)
+        return remaining_tasks <= 0  # Returns True if all tasks are processed
+    
+    def push_notification_to_queue(self, user_id, message):
+        notification_task = json.dumps({'user_id': user_id, 'message': message})
+        self.redis_client.rpush('notification_queue', notification_task)
 
     def run(self):
         try:

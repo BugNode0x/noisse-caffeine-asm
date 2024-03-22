@@ -14,6 +14,8 @@ class HTTPWorker(BaseWorker):
         root_domain = task['root_domain']
         user_id = task['user_id']
 
+        self.increment_task_count(root_domain, user_id)
+
         user_message = f"[HTTP] Starting HTTP probing for subdomain: {subdomain}"
         admin_message = f"{user_message} - User ID: {user_id}"
         self.send_slack_notification(user_id, user_message)
@@ -55,6 +57,29 @@ class HTTPWorker(BaseWorker):
 
         except Exception as e:
             print(f"Error processing HTTP for {subdomain}: {e}")
+
+        finally:
+            # Decrement task count and check if it's time to send the completion message
+            if self.decrement_task_count(root_domain, user_id):
+                completion_message = f"HTTP probing completed for {root_domain}"
+                self.push_notification_to_queue(user_id, completion_message)
+
+    def increment_task_count(self, root_domain, user_id):
+        # Use Redis to increment the task count for the given root_domain and user_id
+        redis_key = f"http_task_count:{root_domain}:{user_id}"
+        self.redis_client.incr(redis_key)
+        # Optional: Set a reasonable expiry time for the key
+        self.redis_client.expire(redis_key, 4000)  # 4000 seconds expiry time
+
+    def decrement_task_count(self, root_domain, user_id):
+        # Use Redis to decrement the task count and check if it reaches zero
+        redis_key = f"http_task_count:{root_domain}:{user_id}"
+        remaining_tasks = self.redis_client.decr(redis_key)
+        return remaining_tasks <= 0  # Returns True if all tasks are processed
+    
+    def push_notification_to_queue(self, user_id, message):
+        notification_task = json.dumps({'user_id': user_id, 'message': message})
+        self.redis_client.rpush('notification_queue', notification_task)
 
     def select_queue_index(self, identifier):
         # Simple hash-based mechanism to select a queue index
