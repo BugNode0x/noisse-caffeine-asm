@@ -46,10 +46,8 @@ class JavaScriptGatheringWorker(BaseWorker):
         print(execute_db_query(query, (like_pattern,)))
         return execute_db_query(query, (like_pattern,))
 
-
     def process_url(self, subdomain_id, url):
         katana_path = os.path.expanduser('~/go/bin/katana')
-        # Updated Katana command with '-u' flag
         katana_cmd = [katana_path, '-u', url, '-silent', '-d', '2', '-hl', '-jc', '-c', '50', '-p', '50', '-scp', '/snap/bin/chromium', '--no-sandbox', '-ef', 'ttf,woff,svg,png,gif,jpg,css,jpeg,ico,woff2,eot']
 
         print(f"Executing Katana command: {' '.join(katana_cmd)}")
@@ -68,32 +66,24 @@ class JavaScriptGatheringWorker(BaseWorker):
                 print(f"Inserted JS URL into DB: {js_url}")
         else:
             print(f"Error executing Katana command for URL: {url}")
-        
 
     def process_task(self, task):
-        # Extract information from the task
         url = task.get('url')
         user_id = task.get('user_id')
         root_domain = task.get('root_domain')
         
         self.increment_task_count(root_domain, user_id)
 
-        # Validate the task data
         if not url or not user_id or not root_domain:
             print(f"Invalid task received: {task}")
             return
 
-        # Notify the start of the task
         start_message = f"[Crawl] Starting crawling for URL: {url}"
         admin_start_message = f"{start_message} - User ID: {user_id}"
         self.send_slack_notification(user_id, start_message)
-        self.send_admin_slack_notification(admin_message)
-
-        # Increment the task count for this domain and user
-        self.increment_task_count(root_domain, user_id)
+        self.send_admin_slack_notification(admin_start_message)
 
         try:
-            # Fetch the subdomain ID from the database
             parsed_url = urlparse(url)
             subdomain_id_query = "SELECT subdomain_id FROM subdomains WHERE subdomain = %s"
             subdomain_id = execute_db_query(subdomain_id_query, (parsed_url.netloc,), fetch_one=True)
@@ -101,37 +91,34 @@ class JavaScriptGatheringWorker(BaseWorker):
                 print(f"Subdomain ID not found for URL: {url}")
                 return
 
-            # Process the URL using the existing logic
             self.process_url(subdomain_id, url)
 
         except Exception as e:
             print(f"Error processing URL {url}: {e}")
 
         finally:
-            # Decrement the task count and send completion notification if applicable
             if self.decrement_task_count(root_domain, user_id):
                 completion_message = f"Crawl task completed for {root_domain}"
                 self.push_notification_to_queue(user_id, completion_message)
 
-
     def run(self):
         try:
             while True:
-                for queue_name in self.queue_names:
-                    task_data_str = self.redis_client.blpop(queue_name, timeout=5)
-                    if task_data_str:
-                        _, task_json_str = task_data_str
-                        task = json.loads(task_json_str)
+                task_data = self.fetch_task()
+                if task_data:
+                    queue_name, task = task_data
+                    if task:
                         self.process_task(task)
         except KeyboardInterrupt:
-            print("Shutting down CrawlWorker gracefully...")
+            print("Shutting down JavaScriptGatheringWorker gracefully...")
 
 if __name__ == "__main__":
     ray.init()
 
-    num_workers = 4    
-    for i in range(num_workers):
-        worker = JavaScriptGatheringWorker.remote(queue_names=[f'crawl_queue_{i}'])
+    num_workers = 10
+    crawl_workers = [JavaScriptGatheringWorker.remote(queue_names=[f'crawl_queue_{i}']) for i in range(num_workers)]
+
+    for worker in crawl_workers:
         worker.run.remote()
 
     try:

@@ -71,3 +71,28 @@ Screenshot Workers have been started. Main script will now wait indefinitely.
 [36m(ScreenshotWorker pid=1672185)[0m Fetched task from screenshot_queue_2: {"url": "https://www.noisse.io", "root_domain": "noisse.io", "user_id": 41}
 [36m(insert_screenshot_data pid=1670528)[0m Duplicate screenshot data for subdomain ID 12371 and URL https://www.noisse.io not inserted.
 Shutting down Screenshot Workers gracefully...
+2024-03-22 19:30:44,674	INFO worker.py:1715 -- Started a local Ray instance. View the dashboard at [1m[32mhttp://127.0.0.1:8274 [39m[22m
+Screenshot Workers have been started. Main script will now wait indefinitely.
+[36m(ScreenshotWorker pid=1708020)[0m Fetched task from screenshot_queue_1: {"url": "https://api.noisse.io", "root_domain": "Noisse.io", "user_id": 41}
+[36m(ScreenshotWorker pid=1708277)[0m Fetched task from screenshot_queue_3: {"url": "https://app.noisse.io", "root_domain": "Noisse.io", "user_id": 41}
+[36m(insert_screenshot_data pid=1706556)[0m Duplicate screenshot data for subdomain ID 12372 and URL https://api.noisse.io not inserted.
+[36m(insert_screenshot_data pid=1706555)[0m Duplicate screenshot data for subdomain ID 12373 and URL https://app.noisse.io not inserted.
+[36m(ScreenshotWorker pid=1708066)[0m Fetched task from screenshot_queue_2: {"url": "https://www.noisse.io", "root_domain": "Noisse.io", "user_id": 41}
+[36m(insert_screenshot_data pid=1706555)[0m Duplicate screenshot data for subdomain ID 12371 and URL https://www.noisse.io not inserted.
+Shutting down Screenshot Workers gracefully...
+2024-03-26 19:14:30,087	INFO worker.py:1715 -- Started a local Ray instance. View the dashboard at [1m[32mhttp://127.0.0.1:8274 [39m[22m
+Screenshot Workers have been started. Main script will now wait indefinitely.
+[36m(ScreenshotWorker pid=2073523)[0m Fetched task from screenshot_queue_6: {"url": "http://testasp.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(ScreenshotWorker pid=2074231)[0m Fetched task from screenshot_queue_8: {"url": "http://www.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(ScreenshotWorker pid=2073523)[0m Screenshot file not found for URL: http://testasp.vulnweb.com
+[36m(ScreenshotWorker pid=2074256)[0m Fetched task from screenshot_queue_9: {"url": "http://testaspnet.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(ScreenshotWorker pid=2072765)[0m Fetched task from screenshot_queue_2: {"url": "http://testphp.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(ScreenshotWorker pid=2074256)[0m Screenshot file not found for URL: http://testaspnet.vulnweb.com
+[36m(insert_screenshot_data pid=2071705)[0m Database query error: no results to fetch
+[36m(insert_screenshot_data pid=2071705)[0m Inserted new screenshot data for subdomain ID 12433 and URL http://www.vulnweb.com.
+[36m(insert_screenshot_data pid=2071705)[0m Database query error: no results to fetch
+[36m(insert_screenshot_data pid=2071705)[0m Inserted new screenshot data for subdomain ID 12428 and URL http://testphp.vulnweb.com.
+[36m(ScreenshotWorker pid=2073532)[0m Fetched task from screenshot_queue_7: {"url": "http://testhtml5.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(insert_screenshot_data pid=2071705)[0m Database query error: no results to fetch
+[36m(insert_screenshot_data pid=2071705)[0m Inserted new screenshot data for subdomain ID 12441 and URL http://testhtml5.vulnweb.com.
+Shutting down Screenshot Workers gracefully...

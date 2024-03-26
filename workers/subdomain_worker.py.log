@@ -145,3 +145,48 @@ PC: @     0x7e467051b2cf  (unknown)  __write
 [2024-03-22 16:39:05,107 E 1669593 1669593] logging.cc:361: *** SIGTERM received at time=1711125545 on cpu 3 ***
 [2024-03-22 16:39:05,108 E 1669593 1669593] logging.cc:361: PC: @     0x7e467051b2cf  (unknown)  __write
 [2024-03-22 16:39:05,109 E 1669593 1669593] logging.cc:361:     @     0x7e4670442990  (unknown)  (unknown)
+2024-03-22 19:30:38,698	INFO worker.py:1715 -- Started a local Ray instance. View the dashboard at [1m[32mhttp://127.0.0.1:8270 [39m[22m
+Subdomain Workers have been started. Main script will now wait indefinitely.
+[36m(SubdomainEnumerationWorker pid=1707232)[0m Fetched task from api_queue: {"domain": "Noisse.io", "user_id": "user_01HMTAXPTE8XSQKD8XZ9M66CQM"}
+[36m(SubdomainEnumerationWorker pid=1707232)[0m Received domain: Noisse.io, Hunter ID: user_01HMTAXPTE8XSQKD8XZ9M66CQM
+[36m(SubdomainEnumerationWorker pid=1707232)[0m Calling ensure_domain_exists with domain: Noisse.io, Hunter ID: user_01HMTAXPTE8XSQKD8XZ9M66CQM
+[36m(SubdomainEnumerationWorker pid=1707232)[0m Database query error: no results to fetch
+[36m(SubdomainEnumerationWorker pid=1707232)[0m Processing domain: Noisse.io with ID: 194
+[36m(SubdomainEnumerationWorker pid=1707232)[0m Running subfinder
+[36m(SubdomainEnumerationWorker pid=1707232)[0m Database query error: no results to fetch
+[36m(process_and_insert_subdomain pid=1706275)[0m Database query error: no results to fetch
+[36m(SubdomainEnumerationWorker pid=1707232)[0m Database query error: no results to fetch[32m [repeated 5x across cluster] (Ray deduplicates logs by default. Set RAY_DEDUP_LOGS=0 to disable log deduplication, or see https://docs.ray.io/en/master/ray-observability/ray-logging.html#log-deduplication for more options.)[0m
+[36m(SubdomainEnumerationWorker pid=1707232)[0m Database query error: no results to fetch[32m [repeated 3x across cluster][0m
+Shutting down Subdomain Workers gracefully...
+*** SIGTERM received at time=1711312829 on cpu 3 ***
+PC: @     0x74535e91b2cf  (unknown)  __write
+    @     0x74535e842990  (unknown)  (unknown)
+[2024-03-24 20:40:29,205 E 1705293 1705293] logging.cc:361: *** SIGTERM received at time=1711312829 on cpu 3 ***
+[2024-03-24 20:40:29,205 E 1705293 1705293] logging.cc:361: PC: @     0x74535e91b2cf  (unknown)  __write
+[2024-03-24 20:40:29,206 E 1705293 1705293] logging.cc:361:     @     0x74535e842990  (unknown)  (unknown)
+2024-03-26 19:14:28,492	INFO worker.py:1715 -- Started a local Ray instance. View the dashboard at [1m[32mhttp://127.0.0.1:8272 [39m[22m
+*** SIGTERM received at time=1711480983 on cpu 3 ***
+PC: @           0x45a4fc  (unknown)  (unknown)
+    @     0x74cff2c42990  (unknown)  (unknown)
+    @ ... and at least 3 more frames
+[2024-03-26 19:23:04,001 E 2070939 2070939] logging.cc:361: *** SIGTERM received at time=1711480983 on cpu 3 ***
+[2024-03-26 19:23:04,001 E 2070939 2070939] logging.cc:361: PC: @           0x45a4fc  (unknown)  (unknown)
+[2024-03-26 19:23:04,001 E 2070939 2070939] logging.cc:361:     @     0x74cff2c42990  (unknown)  (unknown)
+[2024-03-26 19:23:04,001 E 2070939 2070939] logging.cc:361:     @ ... and at least 3 more frames
+Subdomain Workers have been started. Main script will now wait indefinitely.
+[36m(SubdomainEnumerationWorker pid=2073237)[0m Fetched task from api_queue: {"domain": "vulnweb.com", "user_id": "user_01HMTAXPTE8XSQKD8XZ9M66CQM"}
+[36m(SubdomainEnumerationWorker pid=2073237)[0m Received domain: vulnweb.com, Hunter ID: user_01HMTAXPTE8XSQKD8XZ9M66CQM
+[36m(SubdomainEnumerationWorker pid=2073237)[0m Calling ensure_domain_exists with domain: vulnweb.com, Hunter ID: user_01HMTAXPTE8XSQKD8XZ9M66CQM
+[36m(SubdomainEnumerationWorker pid=2073237)[0m Database query error: no results to fetch
+[36m(SubdomainEnumerationWorker pid=2073237)[0m Processing domain: vulnweb.com with ID: 200
+[36m(SubdomainEnumerationWorker pid=2073237)[0m Running subfinder
+[36m(SubdomainEnumerationWorker pid=2073237)[0m Database query error: no results to fetch
+[36m(process_and_insert_subdomain pid=2071627)[0m Database query error: no results to fetch
+[36m(process_and_insert_subdomain pid=2071625)[0m Database query error: no results to fetch[32m [repeated 11x across cluster] (Ray deduplicates logs by default. Set RAY_DEDUP_LOGS=0 to disable log deduplication, or see https://docs.ray.io/en/master/ray-observability/ray-logging.html#log-deduplication for more options.)[0m
+[36m(process_and_insert_subdomain pid=2071615)[0m Database query error: no results to fetch[32m [repeated 5x across cluster][0m
+[36m(SubdomainEnumerationWorker pid=2073237)[0m Database query error: no results to fetch[32m [repeated 5x across cluster][0m
+[36m(SubdomainEnumerationWorker pid=2073237)[0m Database query error: no results to fetch[32m [repeated 4x across cluster][0m
+[36m(SubdomainEnumerationWorker pid=2073237)[0m Database query error: no results to fetch[32m [repeated 4x across cluster][0m
+[36m(SubdomainEnumerationWorker pid=2073237)[0m Database query error: no results to fetch[32m [repeated 3x across cluster][0m
+[36m(SubdomainEnumerationWorker pid=2073237)[0m Database query error: no results to fetch[32m [repeated 3x across cluster][0m
+[36m(SubdomainEnumerationWorker pid=2073237)[0m Database query error: no results to fetch[32m [repeated 4x across cluster][0m

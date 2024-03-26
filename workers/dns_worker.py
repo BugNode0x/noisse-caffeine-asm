@@ -3,21 +3,17 @@ import json
 import ray
 import os
 import time
-import hashlib
-from brain.db_processor import get_user_id_from_hunter_id, insert_dns_data_remote, execute_db_query 
+from brain.db_processor import insert_dns_data_remote, execute_db_query 
 from brain.base_worker import BaseWorker
 
 @ray.remote
 class DNSWorker(BaseWorker):
-
     def check_subdomain_id_exists(self, subdomain):
         query = "SELECT subdomain_id FROM subdomains WHERE subdomain = %s"
         subdomain_id = execute_db_query(query, (subdomain,), fetch_one=True)
         return subdomain_id is not None
 
-
-    def process_task(self, task_data):
-        _, task = task_data
+    def process_task(self, task):
         subdomain = task['subdomain']
         root_domain = task['root_domain']
         user_id = task['user_id']
@@ -51,7 +47,6 @@ class DNSWorker(BaseWorker):
             if process.returncode != 0:
                 raise Exception(f"dnsx failed with exit code {process.returncode}")
 
-
             dns_data = json.loads(stdout.decode())
             print(dns_data)
 
@@ -59,11 +54,11 @@ class DNSWorker(BaseWorker):
             insert_future = insert_dns_data_remote.remote(dns_data)
 
             # Optional: wait for the operation to complete
-            result = ray.get(insert_future)
+            ray.get(insert_future)
 
             resolved_subdomain = dns_data['host']
             http_task = json.dumps({'subdomain': resolved_subdomain, 'root_domain': root_domain, 'user_id': user_id})
-            queue_index = self.select_queue_index(user_id, subdomain)
+            queue_index = self.select_queue_index(f"{user_id}_{subdomain}")  # Use a unique identifier
             http_task_queue = f"http_queue_{queue_index}"
 
             # Push to the selected http_queue
@@ -79,45 +74,21 @@ class DNSWorker(BaseWorker):
                 completion_message = f"DNS enumeration completed for {root_domain}"
                 self.push_notification_to_queue(user_id, completion_message)
 
-    def increment_task_count(self, root_domain, user_id):
-        # Use Redis to increment the task count for the given root_domain and user_id
-        redis_key = f"dns_task_count:{root_domain}:{user_id}"
-        self.redis_client.incr(redis_key)
-        # Optional: Set a reasonable expiry time for the key
-        self.redis_client.expire(redis_key, 4000)  # 4000 seconds expiry time
-
-    def decrement_task_count(self, root_domain, user_id):
-        # Use Redis to decrement the task count and check if it reaches zero
-        redis_key = f"dns_task_count:{root_domain}:{user_id}"
-        remaining_tasks = self.redis_client.decr(redis_key)
-        return remaining_tasks <= 0  # Returns True if all tasks are processed
-    
-    def push_notification_to_queue(self, user_id, message):
-        notification_task = json.dumps({'user_id': user_id, 'message': message})
-        self.redis_client.rpush('notification_queue', notification_task)
-
-    def select_queue_index(self, user_id, subdomain):
-        # Simple hash-based mechanism to select a queue index
-        combined_key = f"{user_id}_{subdomain}"
-        hash_value = int(hashlib.md5(combined_key.encode()).hexdigest(), 16)
-        num_queues = 4  # Total number of http_queues you have
-        return hash_value % num_queues
-
     def run(self):
         try:
             while True:
                 task_data = self.fetch_task()
                 if task_data:
-                    _, task_json = task_data
-                    if task_json:
-                        self.process_task(task_data)
+                    _, task = task_data
+                    if task:
+                        self.process_task(task)
         except KeyboardInterrupt:
             print("Shutting down DNSWorker gracefully...")
 
 if __name__ == "__main__":
     ray.init()
 
-    num_workers = 4
+    num_workers = 10
     dns_workers = [DNSWorker.remote(queue_names=['dns_queue']) for _ in range(num_workers)]
     
     for worker in dns_workers:

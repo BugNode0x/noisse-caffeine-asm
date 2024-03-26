@@ -4,8 +4,6 @@ import os
 import ray
 import boto3
 import time
-import hashlib
-from datetime import datetime
 from urllib.parse import urlparse
 from brain.base_worker import BaseWorker
 from brain.db_processor import insert_screenshot_data
@@ -24,12 +22,6 @@ class ScreenshotWorker(BaseWorker):
         else:
             os.remove(filepath)  # Remove file only after successful upload
             return True
-
-
-    def generate_timestamped_filename(self, url):
-        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        return url.replace("://", "_") + f"_{timestamp}.png"
-
 
     def process_task(self, task):
         url = task['url']
@@ -84,7 +76,6 @@ class ScreenshotWorker(BaseWorker):
             dom_data = dom_data_bytes.decode('utf-8') if curl_process.returncode == 0 else ''
 
             if upload_success:
-                s3_url = f"{s3_https_base_url}{object_name}"
                 subdomain = urlparse(url).netloc
                 insert_screenshot_data.remote(subdomain, url, s3_url, dom_data)
 
@@ -95,60 +86,25 @@ class ScreenshotWorker(BaseWorker):
             if self.decrement_task_count(root_domain, user_id):
                 completion_message = f"Screenshot processing completed for {root_domain}"
                 self.push_notification_to_queue(user_id, completion_message)
-    
-    def increment_task_count(self, root_domain, user_id):
-        # Use Redis to increment the task count for the given root_domain and user_id
-        redis_key = f"crawl_task_count:{root_domain}:{user_id}"
-        self.redis_client.incr(redis_key)
-        # Optional: Set a reasonable expiry time for the key
-        self.redis_client.expire(redis_key, 4000)  # 4000 seconds expiry time
-
-    def decrement_task_count(self, root_domain, user_id):
-        # Use Redis to decrement the task count and check if it reaches zero
-        redis_key = f"crawl_task_count:{root_domain}:{user_id}"
-        remaining_tasks = self.redis_client.decr(redis_key)
-        return remaining_tasks <= 0  # Returns True if all tasks are processed
-    
-    def push_notification_to_queue(self, user_id, message):
-        notification_task = json.dumps({'user_id': user_id, 'message': message})
-        self.redis_client.rpush('notification_queue', notification_task)
-
-    def increment_task_count(self, root_domain, user_id):
-        # Use Redis to increment the task count for the given root_domain and user_id
-        redis_key = f"screenshot_task_count:{root_domain}:{user_id}"
-        self.redis_client.incr(redis_key)
-        # Optional: Set a reasonable expiry time for the key
-        self.redis_client.expire(redis_key, 4000)  # 4000 seconds expiry time
-
-    def decrement_task_count(self, root_domain, user_id):
-        # Use Redis to decrement the task count and check if it reaches zero
-        redis_key = f"screenshot_task_count:{root_domain}:{user_id}"
-        remaining_tasks = self.redis_client.decr(redis_key)
-        return remaining_tasks <= 0  # Returns True if all tasks are processed
-    
-    def push_notification_to_queue(self, user_id, message):
-        notification_task = json.dumps({'user_id': user_id, 'message': message})
-        self.redis_client.rpush('notification_queue', notification_task)
 
     def run(self):
         try:
             while True:
                 task_data = self.fetch_task()
                 if task_data:
-                    _, task_json = task_data
-                    if task_json:
-                        self.process_task(task_json)
+                    _, task = task_data
+                    if task:
+                        self.process_task(task)
         except KeyboardInterrupt:
-            print("Shutting down ShotWorker gracefully...")
+            print("Shutting down ScreenshotWorker gracefully...")
 
 if __name__ == "__main__":
     ray.init()
 
-    num_workers = 4
-    screenshot_workers = [ScreenshotWorker.remote(queue_names=['screenshot_queue']) for _ in range(num_workers)]
+    num_workers = 10
+    screenshot_workers = [ScreenshotWorker.remote(queue_names=[f'screenshot_queue_{i}']) for i in range(num_workers)]
     
-    for i in range(num_workers):
-        worker = ScreenshotWorker.remote(queue_names=[f'screenshot_queue_{i}'])
+    for worker in screenshot_workers:
         worker.run.remote()
 
     try:

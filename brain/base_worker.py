@@ -2,6 +2,7 @@ import redis
 import json
 import requests
 import time
+import hashlib
 from config import REDIS_HOST, REDIS_PORT, REDIS_PWD, ADMIN_WEBHOOK
 from .db_processor import get_user_webhook
 
@@ -13,27 +14,19 @@ class BaseWorker:
     def send_slack_notification(self, user_id, message):
         webhook_url = get_user_webhook(user_id)
         if not webhook_url:
-            print("No webhook URL configured for this user.")
+            print(f"No webhook URL configured for user ID: {user_id}")
             return
         
         slack_data = {'text': message}
-
-        response = requests.post(
-            webhook_url, json=slack_data,
-            headers={'Content-Type': 'application/json'}
-        )
+        response = requests.post(webhook_url, json=slack_data, headers={'Content-Type': 'application/json'})
 
         if response.status_code != 200:
-            print(f"Slack notification failed: {response.status_code} - {response.text}")
+            print(f"Slack notification failed for user ID {user_id}: {response.status_code} - {response.text}")
 
     def send_admin_slack_notification(self, message):
-        admin_webhook_url = ADMIN_WEBHOOK  # Use the admin webhook URL from the config
+        admin_webhook_url = ADMIN_WEBHOOK
         slack_data = {'text': message}
-
-        response = requests.post(
-            admin_webhook_url, json=slack_data,
-            headers={'Content-Type': 'application/json'}
-        )
+        response = requests.post(admin_webhook_url, json=slack_data, headers={'Content-Type': 'application/json'})
 
         if response.status_code != 200:
             print(f"Admin Slack notification failed: {response.status_code} - {response.text}")
@@ -45,7 +38,7 @@ class BaseWorker:
 
     def fetch_task(self):
         for queue_name in self.queue_names:
-            task_data = self.redis_client.blpop(queue_name, timeout=1)  # Set a timeout to cycle through queues
+            task_data = self.redis_client.blpop(queue_name, timeout=1)
             if task_data:
                 _, task_data_str = task_data
                 print(f"Fetched task from {queue_name}: {task_data_str}")
@@ -59,6 +52,25 @@ class BaseWorker:
         # This method should be overridden by subclasses
         raise NotImplementedError("This method should be overridden by subclasses")
 
+    def increment_task_count(self, root_domain, user_id):
+        redis_key = f"task_count:{root_domain}:{user_id}"
+        self.redis_client.incr(redis_key)
+        self.redis_client.expire(redis_key, 4000)
+
+    def decrement_task_count(self, root_domain, user_id):
+        redis_key = f"task_count:{root_domain}:{user_id}"
+        remaining_tasks = self.redis_client.decr(redis_key)
+        return remaining_tasks <= 0
+
+    def select_queue_index(self, identifier):
+        hash_value = int(hashlib.md5(identifier.encode()).hexdigest(), 16)
+        num_queues = 10
+        return hash_value % num_queues
+
+    def push_notification_to_queue(self, user_id, message):
+        notification_task = json.dumps({'user_id': user_id, 'message': message})
+        self.redis_client.rpush('notification_queue', notification_task)
+
     def run(self):
         last_health_check_time = time.time()
         health_check_interval = 60  # seconds
@@ -70,12 +82,13 @@ class BaseWorker:
                     self.send_admin_slack_notification(f"Health check failed for {type(self).__name__}")
                 last_health_check_time = current_time
 
-            task = self.fetch_task()
-            if task:
-                try:
-                    self.process_task(task)  # Call process_task with the whole task dictionary
-                except Exception as e:
-                    crash_message = f"Worker {type(self).__name__} crashed with error: {e}"
-                    self.send_admin_slack_notification(crash_message)
-                    raise  
-
+            task_data = self.fetch_task()
+            if task_data:
+                queue_name, task = task_data
+                if task:
+                    try:
+                        self.process_task(task)
+                    except Exception as e:
+                        crash_message = f"Worker {type(self).__name__} crashed with error: {str(e)}"
+                        self.send_admin_slack_notification(crash_message)
+                        raise
