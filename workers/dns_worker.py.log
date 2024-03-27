@@ -496,3 +496,148 @@ DNS Workers have been started. Main script will now wait indefinitely.
 [36m(insert_dns_data_remote pid=2071597)[0m New DNS data inserted for httptestaspnet.vulnweb.com.
 [36m(DNSWorker pid=2073521)[0m Pushed to http_queue_7: {"subdomain": "httptestaspnet.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
 Shutting down DNS Workers gracefully...
+2024-03-27 17:53:32,196	INFO worker.py:1715 -- Started a local Ray instance. View the dashboard at [1m[32mhttp://127.0.0.1:8265 [39m[22m
+DNS Workers have been started. Main script will now wait indefinitely.
+[36m(DNSWorker pid=2181519)[0m Fetched task from dns_queue: {"subdomain": "antivirus1.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(DNSWorker pid=2181854)[0m Fetched task from dns_queue: {"subdomain": "tetphp.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(DNSWorker pid=2181523)[0m Fetched task from dns_queue: {"subdomain": "odincovo.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(DNSWorker pid=2181514)[0m Fetched task from dns_queue: {"subdomain": "testasp.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(DNSWorker pid=2181854)[0m {'host': 'tetphp.vulnweb.com', 'ttl': 3600, 'resolver': ['8.8.4.4:53'], 'a': ['44.228.249.3'], 'all': ['tetphp.vulnweb.com.\t3600\tIN\tA\t44.228.249.3', '\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 512'], 'status_code': 'NOERROR', 'timestamp': '2024-03-27T17:54:45.945826185Z'}
+[36m(DNSWorker pid=2181519)[0m {'host': 'antivirus1.vulnweb.com', 'ttl': 3600, 'resolver': ['8.8.4.4:53'], 'a': ['44.228.249.3'], 'all': ['antivirus1.vulnweb.com.\t3600\tIN\tA\t44.228.249.3', '\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 512'], 'status_code': 'NOERROR', 'timestamp': '2024-03-27T17:54:46.206238525Z'}
+[36m(DNSWorker pid=2181523)[0m {'host': 'odincovo.vulnweb.com', 'ttl': 3600, 'resolver': ['8.8.4.4:53'], 'a': ['44.228.249.3'], 'all': ['odincovo.vulnweb.com.\t3600\tIN\tA\t44.228.249.3', '\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 512'], 'status_code': 'NOERROR', 'timestamp': '2024-03-27T17:54:46.369890688Z'}
+[36m(DNSWorker pid=2181514)[0m {'host': 'testasp.vulnweb.com', 'ttl': 3600, 'resolver': ['8.8.4.4:53'], 'a': ['44.238.29.244'], 'all': ['testasp.vulnweb.com.\t3600\tIN\tA\t44.238.29.244', '\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 512'], 'status_code': 'NOERROR', 'timestamp': '2024-03-27T17:54:46.485618551Z'}
+[36m(insert_dns_data_remote pid=2180524)[0m Starting insert_dns_data_remote function.
+[36m(insert_dns_data_remote pid=2180524)[0m Processing DNS data for subdomain: tetphp.vulnweb.com, IP: 44.228.249.3
+[36m(insert_dns_data_remote pid=2180525)[0m Processing DNS data for subdomain: antivirus1.vulnweb.com, IP: 44.228.249.3
+Shutting down DNS Workers gracefully...
+[36m(insert_dns_data_remote pid=2180536)[0m Processing DNS data for subdomain: odincovo.vulnweb.com, IP: 44.228.249.3
+[36m(DNSWorker pid=2181517)[0m Fetched task from dns_queue: {"subdomain": "testhtml5.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(DNSWorker pid=2181517)[0m {'host': 'testhtml5.vulnweb.com', 'ttl': 3600, 'resolver': ['8.8.4.4:53'], 'a': ['44.228.249.3'], 'all': ['testhtml5.vulnweb.com.\t3600\tIN\tA\t44.228.249.3', '\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 512'], 'status_code': 'NOERROR', 'timestamp': '2024-03-27T17:54:46.408171087Z'}
+[36m(insert_dns_data_remote pid=2180536)[0m Starting insert_dns_data_remote function.[32m [repeated 3x across cluster] (Ray deduplicates logs by default. Set RAY_DEDUP_LOGS=0 to disable log deduplication, or see https://docs.ray.io/en/master/ray-observability/ray-logging.html#log-deduplication for more options.)[0m
+[36m(insert_dns_data_remote pid=2180526)[0m Processing DNS data for subdomain: testhtml5.vulnweb.com, IP: 44.228.249.3
+2024-03-27 17:55:06,869	INFO worker.py:1715 -- Started a local Ray instance. View the dashboard at [1m[32mhttp://127.0.0.1:8268 [39m[22m
+DNS Workers have been started. Main script will now wait indefinitely.
+[36m(DNSWorker pid=2184929)[0m Fetched task from dns_queue: {"subdomain": "testphp.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(DNSWorker pid=2184926)[0m Fetched task from dns_queue: {"subdomain": "test.php.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(DNSWorker pid=2185372)[0m Fetched task from dns_queue: {"subdomain": "rest.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(DNSWorker pid=2184925)[0m Fetched task from dns_queue: {"subdomain": "testaspnet.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(DNSWorker pid=2184930)[0m Fetched task from dns_queue: {"subdomain": "www.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(DNSWorker pid=2184929)[0m Waiting for subdomain ID for testphp.vulnweb.com to be available...
+[36m(DNSWorker pid=2185372)[0m Waiting for subdomain ID for rest.vulnweb.com to be available...
+[36m(DNSWorker pid=2184926)[0m Waiting for subdomain ID for test.php.vulnweb.com to be available...
+[36m(DNSWorker pid=2184925)[0m Waiting for subdomain ID for testaspnet.vulnweb.com to be available...
+[36m(DNSWorker pid=2184930)[0m Waiting for subdomain ID for www.vulnweb.com to be available...
+[36m(DNSWorker pid=2184929)[0m Waiting for subdomain ID for testphp.vulnweb.com to be available...
+[36m(DNSWorker pid=2184926)[0m Waiting for subdomain ID for test.php.vulnweb.com to be available...
+[36m(DNSWorker pid=2185372)[0m Waiting for subdomain ID for rest.vulnweb.com to be available...
+[36m(DNSWorker pid=2184930)[0m Waiting for subdomain ID for www.vulnweb.com to be available...
+[36m(DNSWorker pid=2184925)[0m Waiting for subdomain ID for testaspnet.vulnweb.com to be available...
+[36m(DNSWorker pid=2184929)[0m Waiting for subdomain ID for testphp.vulnweb.com to be available...
+[36m(DNSWorker pid=2185372)[0m Waiting for subdomain ID for rest.vulnweb.com to be available...
+[36m(DNSWorker pid=2184926)[0m Waiting for subdomain ID for test.php.vulnweb.com to be available...
+[36m(DNSWorker pid=2184925)[0m Waiting for subdomain ID for testaspnet.vulnweb.com to be available...
+[36m(DNSWorker pid=2184930)[0m Waiting for subdomain ID for www.vulnweb.com to be available...
+[36m(DNSWorker pid=2184929)[0m Waiting for subdomain ID for testphp.vulnweb.com to be available...
+[36m(DNSWorker pid=2184926)[0m Waiting for subdomain ID for test.php.vulnweb.com to be available...
+[36m(DNSWorker pid=2185372)[0m Waiting for subdomain ID for rest.vulnweb.com to be available...
+[36m(DNSWorker pid=2184925)[0m Waiting for subdomain ID for testaspnet.vulnweb.com to be available...
+[36m(DNSWorker pid=2184930)[0m Waiting for subdomain ID for www.vulnweb.com to be available...
+[36m(DNSWorker pid=2184929)[0m Waiting for subdomain ID for testphp.vulnweb.com to be available...
+[36m(DNSWorker pid=2185372)[0m Waiting for subdomain ID for rest.vulnweb.com to be available...
+[36m(DNSWorker pid=2184926)[0m Waiting for subdomain ID for test.php.vulnweb.com to be available...
+[36m(DNSWorker pid=2184925)[0m Waiting for subdomain ID for testaspnet.vulnweb.com to be available...
+[36m(DNSWorker pid=2184930)[0m Waiting for subdomain ID for www.vulnweb.com to be available...
+[36m(DNSWorker pid=2184929)[0m Subdomain ID for testphp.vulnweb.com not found after retries, skipping DNS processing.
+[36m(DNSWorker pid=2185372)[0m Subdomain ID for rest.vulnweb.com not found after retries, skipping DNS processing.
+[36m(DNSWorker pid=2184926)[0m Subdomain ID for test.php.vulnweb.com not found after retries, skipping DNS processing.
+[36m(DNSWorker pid=2184930)[0m Subdomain ID for www.vulnweb.com not found after retries, skipping DNS processing.
+[36m(DNSWorker pid=2184925)[0m Subdomain ID for testaspnet.vulnweb.com not found after retries, skipping DNS processing.
+[36m(DNSWorker pid=2184930)[0m Fetched task from dns_queue: {"subdomain": "antivirus1.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(DNSWorker pid=2184929)[0m Fetched task from dns_queue: {"subdomain": "odincovo.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(DNSWorker pid=2184925)[0m Fetched task from dns_queue: {"subdomain": "test.php.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(DNSWorker pid=2184926)[0m Fetched task from dns_queue: {"subdomain": "rest.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(DNSWorker pid=2185372)[0m Fetched task from dns_queue: {"subdomain": "tetphp.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(DNSWorker pid=2184930)[0m {'host': 'antivirus1.vulnweb.com', 'ttl': 3600, 'resolver': ['8.8.4.4:53'], 'a': ['44.228.249.3'], 'all': ['antivirus1.vulnweb.com.\t3600\tIN\tA\t44.228.249.3', '\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 512'], 'status_code': 'NOERROR', 'timestamp': '2024-03-27T17:56:21.187288229Z'}
+[36m(DNSWorker pid=2184929)[0m {'host': 'odincovo.vulnweb.com', 'ttl': 3600, 'resolver': ['8.8.4.4:53'], 'a': ['44.228.249.3'], 'all': ['odincovo.vulnweb.com.\t3600\tIN\tA\t44.228.249.3', '\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 512'], 'status_code': 'NOERROR', 'timestamp': '2024-03-27T17:56:21.21233526Z'}
+[36m(DNSWorker pid=2184925)[0m {'host': 'test.php.vulnweb.com', 'ttl': 3600, 'resolver': ['8.8.4.4:53'], 'a': ['44.228.249.3'], 'all': ['test.php.vulnweb.com.\t3600\tIN\tA\t44.228.249.3', '\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 512'], 'status_code': 'NOERROR', 'timestamp': '2024-03-27T17:56:21.508909288Z'}
+[36m(DNSWorker pid=2185372)[0m {'host': 'tetphp.vulnweb.com', 'ttl': 3600, 'resolver': ['8.8.4.4:53'], 'a': ['44.228.249.3'], 'all': ['tetphp.vulnweb.com.\t3600\tIN\tA\t44.228.249.3', '\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 512'], 'status_code': 'NOERROR', 'timestamp': '2024-03-27T17:56:21.729359956Z'}
+[36m(insert_dns_data_remote pid=2183832)[0m Starting insert_dns_data_remote function.
+[36m(insert_dns_data_remote pid=2183832)[0m Processing DNS data for subdomain: odincovo.vulnweb.com, IP: 44.228.249.3
+[36m(DNSWorker pid=2184926)[0m {'host': 'rest.vulnweb.com', 'ttl': 3600, 'resolver': ['8.8.4.4:53'], 'a': ['35.81.188.86'], 'all': ['rest.vulnweb.com.\t3600\tIN\tA\t35.81.188.86', '\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 512'], 'status_code': 'NOERROR', 'timestamp': '2024-03-27T17:56:21.802412586Z'}
+[36m(insert_dns_data_remote pid=2183830)[0m Processing DNS data for subdomain: antivirus1.vulnweb.com, IP: 44.228.249.3
+[36m(insert_dns_data_remote pid=2183829)[0m Processing DNS data for subdomain: test.php.vulnweb.com, IP: 44.228.249.3
+[36m(insert_dns_data_remote pid=2183831)[0m Processing DNS data for subdomain: tetphp.vulnweb.com, IP: 44.228.249.3
+[36m(insert_dns_data_remote pid=2183832)[0m Count of existing DNS records for odincovo.vulnweb.com with IP 44.228.249.3: 0
+[36m(insert_dns_data_remote pid=2183830)[0m Count of existing DNS records for antivirus1.vulnweb.com with IP 44.228.249.3: 0
+[36m(insert_dns_data_remote pid=2183829)[0m Count of existing DNS records for test.php.vulnweb.com with IP 44.228.249.3: 0
+[36m(insert_dns_data_remote pid=2183831)[0m Count of existing DNS records for tetphp.vulnweb.com with IP 44.228.249.3: 0
+[36m(DNSWorker pid=2184929)[0m Pushed to http_queue_2: {"subdomain": "odincovo.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(insert_dns_data_remote pid=2183832)[0m Database query error: no results to fetch
+[36m(insert_dns_data_remote pid=2183832)[0m New DNS data inserted for odincovo.vulnweb.com.
+[36m(insert_dns_data_remote pid=2183832)[0m Completed insert_dns_data_remote function.
+[36m(insert_dns_data_remote pid=2183832)[0m Processing DNS data for subdomain: rest.vulnweb.com, IP: 35.81.188.86
+[36m(DNSWorker pid=2184930)[0m Pushed to http_queue_0: {"subdomain": "antivirus1.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(insert_dns_data_remote pid=2183830)[0m New DNS data inserted for antivirus1.vulnweb.com.
+[36m(DNSWorker pid=2184930)[0m Fetched task from dns_queue: {"subdomain": "testasp.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(DNSWorker pid=2184929)[0m Fetched task from dns_queue: {"subdomain": "www.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(insert_dns_data_remote pid=2183829)[0m New DNS data inserted for test.php.vulnweb.com.
+[36m(DNSWorker pid=2184925)[0m Pushed to http_queue_2: {"subdomain": "test.php.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(insert_dns_data_remote pid=2183831)[0m New DNS data inserted for tetphp.vulnweb.com.
+[36m(DNSWorker pid=2184925)[0m Fetched task from dns_queue: {"subdomain": "testaspnet.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(DNSWorker pid=2185372)[0m Pushed to http_queue_8: {"subdomain": "tetphp.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(DNSWorker pid=2185372)[0m Fetched task from dns_queue: {"subdomain": "testhtml5.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(insert_dns_data_remote pid=2183832)[0m Count of existing DNS records for rest.vulnweb.com with IP 35.81.188.86: 0
+[36m(insert_dns_data_remote pid=2183832)[0m New DNS data inserted for rest.vulnweb.com.
+[36m(DNSWorker pid=2184926)[0m Pushed to http_queue_1: {"subdomain": "rest.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(DNSWorker pid=2184926)[0m Fetched task from dns_queue: {"subdomain": "testphp.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(DNSWorker pid=2184929)[0m {'host': 'www.vulnweb.com', 'ttl': 2512, 'resolver': ['8.8.4.4:53'], 'a': ['44.228.249.3'], 'all': ['www.vulnweb.com.\t2512\tIN\tA\t44.228.249.3', '\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 512'], 'status_code': 'NOERROR', 'timestamp': '2024-03-27T17:56:26.477365502Z'}
+[36m(insert_dns_data_remote pid=2183832)[0m Processing DNS data for subdomain: www.vulnweb.com, IP: 44.228.249.3
+[36m(DNSWorker pid=2184925)[0m {'host': 'testaspnet.vulnweb.com', 'ttl': 3600, 'resolver': ['8.8.4.4:53'], 'a': ['44.238.29.244'], 'all': ['testaspnet.vulnweb.com.\t3600\tIN\tA\t44.238.29.244', '\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 512'], 'status_code': 'NOERROR', 'timestamp': '2024-03-27T17:56:26.704374592Z'}
+[36m(insert_dns_data_remote pid=2183832)[0m Starting insert_dns_data_remote function.[32m [repeated 5x across cluster] (Ray deduplicates logs by default. Set RAY_DEDUP_LOGS=0 to disable log deduplication, or see https://docs.ray.io/en/master/ray-observability/ray-logging.html#log-deduplication for more options.)[0m
+[36m(insert_dns_data_remote pid=2183831)[0m Processing DNS data for subdomain: testaspnet.vulnweb.com, IP: 44.238.29.244
+[36m(DNSWorker pid=2184930)[0m {'host': 'testasp.vulnweb.com', 'ttl': 2475, 'resolver': ['8.8.4.4:53'], 'a': ['44.238.29.244'], 'all': ['testasp.vulnweb.com.\t2475\tIN\tA\t44.238.29.244', '\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 512'], 'status_code': 'NOERROR', 'timestamp': '2024-03-27T17:56:26.885275052Z'}
+[36m(insert_dns_data_remote pid=2183829)[0m Processing DNS data for subdomain: testasp.vulnweb.com, IP: 44.238.29.244
+[36m(DNSWorker pid=2185372)[0m {'host': 'testhtml5.vulnweb.com', 'ttl': 3600, 'resolver': ['8.8.4.4:53'], 'a': ['44.228.249.3'], 'all': ['testhtml5.vulnweb.com.\t3600\tIN\tA\t44.228.249.3', '\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 512'], 'status_code': 'NOERROR', 'timestamp': '2024-03-27T17:56:26.989471694Z'}
+[36m(insert_dns_data_remote pid=2183830)[0m Processing DNS data for subdomain: testhtml5.vulnweb.com, IP: 44.228.249.3
+[36m(insert_dns_data_remote pid=2183832)[0m Count of existing DNS records for www.vulnweb.com with IP 44.228.249.3: 0
+[36m(insert_dns_data_remote pid=2183829)[0m Count of existing DNS records for testasp.vulnweb.com with IP 44.238.29.244: 0
+[36m(insert_dns_data_remote pid=2183832)[0m Database query error: no results to fetch[32m [repeated 4x across cluster][0m
+[36m(insert_dns_data_remote pid=2183832)[0m Completed insert_dns_data_remote function.[32m [repeated 4x across cluster][0m
+[36m(insert_dns_data_remote pid=2183831)[0m Count of existing DNS records for testaspnet.vulnweb.com with IP 44.238.29.244: 0
+[36m(insert_dns_data_remote pid=2183830)[0m Count of existing DNS records for testhtml5.vulnweb.com with IP 44.228.249.3: 0
+[36m(insert_dns_data_remote pid=2183832)[0m New DNS data inserted for www.vulnweb.com.
+[36m(DNSWorker pid=2184929)[0m Pushed to http_queue_8: {"subdomain": "www.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(insert_dns_data_remote pid=2183829)[0m New DNS data inserted for testasp.vulnweb.com.
+[36m(DNSWorker pid=2184930)[0m Pushed to http_queue_7: {"subdomain": "testasp.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(DNSWorker pid=2184926)[0m {'host': 'testphp.vulnweb.com', 'ttl': 1485, 'resolver': ['8.8.4.4:53'], 'a': ['44.228.249.3'], 'all': ['testphp.vulnweb.com.\t1485\tIN\tA\t44.228.249.3', '\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 512'], 'status_code': 'NOERROR', 'timestamp': '2024-03-27T17:56:30.09355397Z'}
+[36m(insert_dns_data_remote pid=2183830)[0m New DNS data inserted for testhtml5.vulnweb.com.
+[36m(insert_dns_data_remote pid=2183830)[0m Processing DNS data for subdomain: testphp.vulnweb.com, IP: 44.228.249.3
+[36m(DNSWorker pid=2185372)[0m Pushed to http_queue_0: {"subdomain": "testhtml5.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(DNSWorker pid=2184925)[0m Pushed to http_queue_9: {"subdomain": "testaspnet.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(insert_dns_data_remote pid=2183831)[0m New DNS data inserted for testaspnet.vulnweb.com.
+[36m(insert_dns_data_remote pid=2183830)[0m Count of existing DNS records for testphp.vulnweb.com with IP 44.228.249.3: 0
+[36m(DNSWorker pid=2184926)[0m Pushed to http_queue_0: {"subdomain": "testphp.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(insert_dns_data_remote pid=2183830)[0m Starting insert_dns_data_remote function.[32m [repeated 4x across cluster][0m
+[36m(insert_dns_data_remote pid=2183830)[0m New DNS data inserted for testphp.vulnweb.com.
+Shutting down DNS Workers gracefully...
+Exception ignored in atexit callback: <function shutdown at 0x71a274b00a40>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/dist-packages/ray/_private/client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/ray/_private/worker.py", line 1813, in shutdown
+    _global_node.kill_all_processes(check_alive=False, allow_graceful=True)
+  File "/usr/local/lib/python3.11/dist-packages/ray/_private/node.py", line 1584, in kill_all_processes
+    self._kill_process_type(
+  File "/usr/local/lib/python3.11/dist-packages/ray/_private/node.py", line 1405, in _kill_process_type
+    self._kill_process_impl(
+  File "/usr/local/lib/python3.11/dist-packages/ray/_private/node.py", line 1461, in _kill_process_impl
+    process.wait(timeout_seconds)
+  File "/usr/lib/python3.11/subprocess.py", line 1264, in wait
+    return self._wait(timeout=timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/subprocess.py", line 2040, in _wait
+    time.sleep(delay)
+KeyboardInterrupt: 
+[36m(insert_dns_data_remote pid=2183830)[0m Database query error: no results to fetch[32m [repeated 5x across cluster][0m
+[36m(insert_dns_data_remote pid=2183830)[0m Completed insert_dns_data_remote function.[32m [repeated 5x across cluster][0m

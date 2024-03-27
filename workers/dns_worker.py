@@ -88,7 +88,7 @@ class DNSWorker(BaseWorker):
 if __name__ == "__main__":
     ray.init()
 
-    num_workers = 10
+    num_workers = 5
     dns_workers = [DNSWorker.remote(queue_names=['dns_queue']) for _ in range(num_workers)]
     
     for worker in dns_workers:

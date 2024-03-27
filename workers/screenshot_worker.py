@@ -101,7 +101,7 @@ class ScreenshotWorker(BaseWorker):
 if __name__ == "__main__":
     ray.init()
 
-    num_workers = 10
+    num_workers = 5
     screenshot_workers = [ScreenshotWorker.remote(queue_names=[f'screenshot_queue_{i}']) for i in range(num_workers)]
     
     for worker in screenshot_workers:

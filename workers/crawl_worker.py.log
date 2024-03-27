@@ -524,3 +524,92 @@ Crawl Workers have been started. Main script will now wait indefinitely.
 [36m(JavaScriptGatheringWorker pid=2073415)[0m Inserted JS URL into DB: http://testhtml5.vulnweb.com/static/app/app.js
 [36m(insert_js_result pid=2071721)[0m Inserted new JS data for subdomain ID 12441 and URL http://testhtml5.vulnweb.com/static/app/app.js.
 Shutting down Crawl Workers gracefully...
+2024-03-27 17:53:33,591	INFO worker.py:1715 -- Started a local Ray instance. View the dashboard at [1m[32mhttp://127.0.0.1:8268 [39m[22m
+Crawl Workers have been started. Main script will now wait indefinitely.
+Shutting down Crawl Workers gracefully...
+2024-03-27 17:55:06,171	INFO worker.py:1715 -- Started a local Ray instance. View the dashboard at [1m[32mhttp://127.0.0.1:8267 [39m[22m
+Crawl Workers have been started. Main script will now wait indefinitely.
+[36m(JavaScriptGatheringWorker pid=2184877)[0m Fetched task from crawl_queue_2: {"url": "http://testphp.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(JavaScriptGatheringWorker pid=2184877)[0m Executing Katana command: /root/go/bin/katana -u http://testphp.vulnweb.com -silent -d 2 -hl -jc -c 50 -p 50 -scp /snap/bin/chromium --no-sandbox -ef ttf,woff,svg,png,gif,jpg,css,jpeg,ico,woff2,eot
+[36m(JavaScriptGatheringWorker pid=2184877)[0m Katana command executed successfully for URL: http://testphp.vulnweb.com
+[36m(JavaScriptGatheringWorker pid=2184877)[0m Cleaned URLs for http://testphp.vulnweb.com: {'http://testphp.vulnweb.com/disclaimer.php', 'http://testphp.vulnweb.com/privacy.php', 'http://testphp.vulnweb.com/index.php', 'http://testphp.vulnweb.com', 'http://testphp.vulnweb.com/Templates/main_dynamic_template.dwt.php', 'http://testphp.vulnweb.com/categories.php', 'http://testphp.vulnweb.com/AJAX/index.php', 'http://testphp.vulnweb.com/login.php', 'http://testphp.vulnweb.com/artists.php', 'http://testphp.vulnweb.com/cart.php', 'http://testphp.vulnweb.com/userinfo.php', 'http://testphp.vulnweb.com/Mod_Rewrite_Shop/', 'http://testphp.vulnweb.com/guestbook.php', 'http://testphp.vulnweb.com/high', 'http://testphp.vulnweb.com/hpp/'}
+[36m(JavaScriptGatheringWorker pid=2184877)[0m Inserting JS URL into DB: http://testphp.vulnweb.com/disclaimer.php
+[36m(JavaScriptGatheringWorker pid=2184877)[0m Inserted JS URL into DB: http://testphp.vulnweb.com/disclaimer.php
+[36m(JavaScriptGatheringWorker pid=2184877)[0m Inserting JS URL into DB: http://testphp.vulnweb.com/privacy.php
+[36m(insert_js_result pid=2183793)[0m Database query error: no results to fetch
+[36m(insert_js_result pid=2183793)[0m Inserted new JS data for subdomain ID 12515 and URL http://testphp.vulnweb.com/disclaimer.php.
+[36m(JavaScriptGatheringWorker pid=2184877)[0m Inserted JS URL into DB: http://testphp.vulnweb.com/privacy.php
+[36m(JavaScriptGatheringWorker pid=2184877)[0m Inserting JS URL into DB: http://testphp.vulnweb.com/index.php
+[36m(insert_js_result pid=2183793)[0m Database query error: no results to fetch
+[36m(insert_js_result pid=2183793)[0m Inserted new JS data for subdomain ID 12515 and URL http://testphp.vulnweb.com/privacy.php.
+[36m(JavaScriptGatheringWorker pid=2184877)[0m Inserted JS URL into DB: http://testphp.vulnweb.com/index.php
+[36m(JavaScriptGatheringWorker pid=2184877)[0m Inserting JS URL into DB: http://testphp.vulnweb.com
+[36m(insert_js_result pid=2183793)[0m Database query error: no results to fetch
+[36m(insert_js_result pid=2183793)[0m Inserted new JS data for subdomain ID 12515 and URL http://testphp.vulnweb.com/index.php.
+[36m(JavaScriptGatheringWorker pid=2184877)[0m Inserted JS URL into DB: http://testphp.vulnweb.com
+[36m(JavaScriptGatheringWorker pid=2184877)[0m Inserting JS URL into DB: http://testphp.vulnweb.com/Templates/main_dynamic_template.dwt.php
+[36m(insert_js_result pid=2183793)[0m Database query error: no results to fetch
+[36m(insert_js_result pid=2183793)[0m Inserted new JS data for subdomain ID 12515 and URL http://testphp.vulnweb.com.
+[36m(JavaScriptGatheringWorker pid=2184877)[0m Inserted JS URL into DB: http://testphp.vulnweb.com/Templates/main_dynamic_template.dwt.php
+[36m(JavaScriptGatheringWorker pid=2184877)[0m Inserting JS URL into DB: http://testphp.vulnweb.com/categories.php
+[36m(insert_js_result pid=2183793)[0m Database query error: no results to fetch
+[36m(insert_js_result pid=2183793)[0m Inserted new JS data for subdomain ID 12515 and URL http://testphp.vulnweb.com/Templates/main_dynamic_template.dwt.php.
+[36m(JavaScriptGatheringWorker pid=2184877)[0m Inserted JS URL into DB: http://testphp.vulnweb.com/categories.php
+[36m(JavaScriptGatheringWorker pid=2184877)[0m Inserting JS URL into DB: http://testphp.vulnweb.com/AJAX/index.php
+[36m(insert_js_result pid=2183793)[0m Database query error: no results to fetch
+[36m(insert_js_result pid=2183793)[0m Inserted new JS data for subdomain ID 12515 and URL http://testphp.vulnweb.com/categories.php.
+[36m(JavaScriptGatheringWorker pid=2184877)[0m Inserted JS URL into DB: http://testphp.vulnweb.com/AJAX/index.php
+[36m(JavaScriptGatheringWorker pid=2184877)[0m Inserting JS URL into DB: http://testphp.vulnweb.com/login.php
+[36m(insert_js_result pid=2183793)[0m Database query error: no results to fetch
+[36m(insert_js_result pid=2183793)[0m Inserted new JS data for subdomain ID 12515 and URL http://testphp.vulnweb.com/AJAX/index.php.
+[36m(JavaScriptGatheringWorker pid=2184877)[0m Inserted JS URL into DB: http://testphp.vulnweb.com/login.php
+[36m(JavaScriptGatheringWorker pid=2184877)[0m Inserting JS URL into DB: http://testphp.vulnweb.com/artists.php
+[36m(insert_js_result pid=2183793)[0m Database query error: no results to fetch
+[36m(insert_js_result pid=2183793)[0m Inserted new JS data for subdomain ID 12515 and URL http://testphp.vulnweb.com/login.php.
+[36m(JavaScriptGatheringWorker pid=2184877)[0m Inserted JS URL into DB: http://testphp.vulnweb.com/artists.php
+[36m(JavaScriptGatheringWorker pid=2184877)[0m Inserting JS URL into DB: http://testphp.vulnweb.com/cart.php
+[36m(insert_js_result pid=2183793)[0m Database query error: no results to fetch
+[36m(insert_js_result pid=2183793)[0m Inserted new JS data for subdomain ID 12515 and URL http://testphp.vulnweb.com/artists.php.
+[36m(JavaScriptGatheringWorker pid=2184877)[0m Inserted JS URL into DB: http://testphp.vulnweb.com/cart.php
+[36m(JavaScriptGatheringWorker pid=2184877)[0m Inserting JS URL into DB: http://testphp.vulnweb.com/userinfo.php
+[36m(insert_js_result pid=2183793)[0m Database query error: no results to fetch
+[36m(insert_js_result pid=2183793)[0m Inserted new JS data for subdomain ID 12515 and URL http://testphp.vulnweb.com/cart.php.
+[36m(JavaScriptGatheringWorker pid=2184877)[0m Inserted JS URL into DB: http://testphp.vulnweb.com/userinfo.php
+[36m(JavaScriptGatheringWorker pid=2184877)[0m Inserting JS URL into DB: http://testphp.vulnweb.com/Mod_Rewrite_Shop/
+[36m(insert_js_result pid=2183793)[0m Database query error: no results to fetch
+[36m(insert_js_result pid=2183793)[0m Inserted new JS data for subdomain ID 12515 and URL http://testphp.vulnweb.com/userinfo.php.
+[36m(JavaScriptGatheringWorker pid=2184877)[0m Inserted JS URL into DB: http://testphp.vulnweb.com/Mod_Rewrite_Shop/
+[36m(JavaScriptGatheringWorker pid=2184877)[0m Inserting JS URL into DB: http://testphp.vulnweb.com/guestbook.php
+[36m(insert_js_result pid=2183793)[0m Database query error: no results to fetch
+[36m(insert_js_result pid=2183793)[0m Inserted new JS data for subdomain ID 12515 and URL http://testphp.vulnweb.com/Mod_Rewrite_Shop/.
+[36m(JavaScriptGatheringWorker pid=2184877)[0m Inserted JS URL into DB: http://testphp.vulnweb.com/guestbook.php
+[36m(JavaScriptGatheringWorker pid=2184877)[0m Inserting JS URL into DB: http://testphp.vulnweb.com/high
+[36m(insert_js_result pid=2183793)[0m Database query error: no results to fetch
+[36m(insert_js_result pid=2183793)[0m Inserted new JS data for subdomain ID 12515 and URL http://testphp.vulnweb.com/guestbook.php.
+[36m(JavaScriptGatheringWorker pid=2184877)[0m Inserted JS URL into DB: http://testphp.vulnweb.com/high
+[36m(JavaScriptGatheringWorker pid=2184877)[0m Inserting JS URL into DB: http://testphp.vulnweb.com/hpp/
+[36m(insert_js_result pid=2183793)[0m Database query error: no results to fetch
+[36m(insert_js_result pid=2183793)[0m Inserted new JS data for subdomain ID 12515 and URL http://testphp.vulnweb.com/high.
+[36m(JavaScriptGatheringWorker pid=2184877)[0m Inserted JS URL into DB: http://testphp.vulnweb.com/hpp/
+[36m(insert_js_result pid=2183793)[0m Database query error: no results to fetch
+[36m(insert_js_result pid=2183793)[0m Inserted new JS data for subdomain ID 12515 and URL http://testphp.vulnweb.com/hpp/.
+Shutting down Crawl Workers gracefully...
+Exception ignored in atexit callback: <function shutdown at 0x767f7f154c20>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/dist-packages/ray/_private/client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/ray/_private/worker.py", line 1813, in shutdown
+    _global_node.kill_all_processes(check_alive=False, allow_graceful=True)
+  File "/usr/local/lib/python3.11/dist-packages/ray/_private/node.py", line 1584, in kill_all_processes
+    self._kill_process_type(
+  File "/usr/local/lib/python3.11/dist-packages/ray/_private/node.py", line 1405, in _kill_process_type
+    self._kill_process_impl(
+  File "/usr/local/lib/python3.11/dist-packages/ray/_private/node.py", line 1461, in _kill_process_impl
+    process.wait(timeout_seconds)
+  File "/usr/lib/python3.11/subprocess.py", line 1264, in wait
+    return self._wait(timeout=timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/subprocess.py", line 2040, in _wait
+    time.sleep(delay)
+KeyboardInterrupt: 

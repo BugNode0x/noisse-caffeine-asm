@@ -231,3 +231,52 @@ HTTP Workers have been started. Main script will now wait indefinitely.
 [36m(insert_http_data pid=2071547)[0m Database query error: no results to fetch
 [36m(insert_http_data pid=2071547)[0m New HTTP data inserted for http://testhtml5.vulnweb.com.
 Shutting down HTTP Workers gracefully...
+2024-03-27 17:53:33,095	INFO worker.py:1715 -- Started a local Ray instance. View the dashboard at [1m[32mhttp://127.0.0.1:8267 [39m[22m
+HTTP Workers have been started. Main script will now wait indefinitely.
+Shutting down HTTP Workers gracefully...
+2024-03-27 17:55:08,512	INFO worker.py:1715 -- Started a local Ray instance. View the dashboard at [1m[32mhttp://127.0.0.1:8269 [39m[22m
+HTTP Workers have been started. Main script will now wait indefinitely.
+[36m(HTTPWorker pid=2184917)[0m Fetched task from http_queue_2: {"subdomain": "odincovo.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(HTTPWorker pid=2184907)[0m Fetched task from http_queue_0: {"subdomain": "antivirus1.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(HTTPWorker pid=2184909)[0m Fetched task from http_queue_1: {"subdomain": "rest.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(HTTPWorker pid=2184917)[0m Error processing HTTP for odincovo.vulnweb.com: Expecting value: line 1 column 1 (char 0)
+[36m(HTTPWorker pid=2184917)[0m Fetched task from http_queue_2: {"subdomain": "test.php.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(HTTPWorker pid=2184907)[0m Error processing HTTP for antivirus1.vulnweb.com: Expecting value: line 1 column 1 (char 0)
+[36m(HTTPWorker pid=2184907)[0m Fetched task from http_queue_0: {"subdomain": "testhtml5.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(HTTPWorker pid=2184909)[0m {'timestamp': '2024-03-27T17:56:42.261355979Z', 'port': '80', 'url': 'http://rest.vulnweb.com', 'input': 'rest.vulnweb.com', 'title': 'Acunetix Vulnerable REST API', 'scheme': 'http', 'webserver': 'Apache/2.4.25 (Debian)', 'content_type': 'text/html', 'method': 'GET', 'host': '35.81.188.86', 'path': '/', 'time': '181.820056ms', 'a': ['35.81.188.86'], 'tech': ['Apache HTTP Server:2.4.25', 'Debian', 'PHP:7.1.26'], 'words': 1397, 'lines': 138, 'status_code': 200, 'content_length': 3555, 'failed': False, 'knowledgebase': {'PageType': 'nonerror', 'pHash': 0}}
+[36m(HTTPWorker pid=2184909)[0m Pushed to screenshot_queue_9: {"url": "http://rest.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(HTTPWorker pid=2184909)[0m Pushed to crawl_queue_9: {"url": "http://rest.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(insert_http_data pid=2183974)[0m Database query error: no results to fetch
+[36m(insert_http_data pid=2183974)[0m New HTTP data inserted for http://rest.vulnweb.com.
+[36m(HTTPWorker pid=2184917)[0m Error processing HTTP for test.php.vulnweb.com: Expecting value: line 1 column 1 (char 0)
+[36m(HTTPWorker pid=2184907)[0m {'timestamp': '2024-03-27T17:56:54.203716816Z', 'port': '80', 'url': 'http://testhtml5.vulnweb.com', 'input': 'testhtml5.vulnweb.com', 'title': 'SecurityTweets - HTML5 test website for Acunetix Web Vulnerability Scanner', 'scheme': 'http', 'webserver': 'nginx/1.19.0', 'content_type': 'text/html', 'method': 'GET', 'host': '44.228.249.3', 'path': '/', 'time': '155.200519ms', 'a': ['44.228.249.3'], 'tech': ['AngularJS', 'Nginx:1.19.0'], 'words': 1483, 'lines': 164, 'status_code': 200, 'content_length': 6940, 'failed': False, 'knowledgebase': {'PageType': 'nonerror', 'pHash': 0}}
+[36m(HTTPWorker pid=2184907)[0m Pushed to screenshot_queue_7: {"url": "http://testhtml5.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(HTTPWorker pid=2184907)[0m Pushed to crawl_queue_7: {"url": "http://testhtml5.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(HTTPWorker pid=2184907)[0m Fetched task from http_queue_0: {"subdomain": "testphp.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(insert_http_data pid=2183974)[0m Database query error: no results to fetch
+[36m(insert_http_data pid=2183974)[0m New HTTP data inserted for http://testhtml5.vulnweb.com.
+[36m(HTTPWorker pid=2184907)[0m {'timestamp': '2024-03-27T17:57:09.043846674Z', 'port': '80', 'url': 'http://testphp.vulnweb.com', 'input': 'testphp.vulnweb.com', 'title': 'Home of Acunetix Art', 'scheme': 'http', 'webserver': 'nginx/1.19.0', 'content_type': 'text/html', 'method': 'GET', 'host': '44.228.249.3', 'path': '/', 'time': '153.553158ms', 'a': ['44.228.249.3'], 'tech': ['DreamWeaver', 'Nginx:1.19.0', 'PHP:5.6.40', 'Ubuntu'], 'words': 514, 'lines': 110, 'status_code': 200, 'content_length': 4958, 'failed': False, 'knowledgebase': {'PageType': 'nonerror', 'pHash': 0}}
+[36m(HTTPWorker pid=2184907)[0m Pushed to screenshot_queue_2: {"url": "http://testphp.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(HTTPWorker pid=2184907)[0m Pushed to crawl_queue_2: {"url": "http://testphp.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(insert_http_data pid=2183974)[0m Database query error: no results to fetch
+[36m(insert_http_data pid=2183974)[0m New HTTP data inserted for http://testphp.vulnweb.com.
+Shutting down HTTP Workers gracefully...
+Exception ignored in atexit callback: <function shutdown at 0x7cff1fd50a40>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/dist-packages/ray/_private/client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/ray/_private/worker.py", line 1813, in shutdown
+    _global_node.kill_all_processes(check_alive=False, allow_graceful=True)
+  File "/usr/local/lib/python3.11/dist-packages/ray/_private/node.py", line 1584, in kill_all_processes
+    self._kill_process_type(
+  File "/usr/local/lib/python3.11/dist-packages/ray/_private/node.py", line 1405, in _kill_process_type
+    self._kill_process_impl(
+  File "/usr/local/lib/python3.11/dist-packages/ray/_private/node.py", line 1461, in _kill_process_impl
+    process.wait(timeout_seconds)
+  File "/usr/lib/python3.11/subprocess.py", line 1264, in wait
+    return self._wait(timeout=timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/subprocess.py", line 2040, in _wait
+    time.sleep(delay)
+KeyboardInterrupt: 

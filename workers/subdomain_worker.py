@@ -71,7 +71,7 @@ class SubdomainEnumerationWorker(BaseWorker):
 if __name__ == "__main__":
     ray.init()
 
-    num_workers = 10
+    num_workers = 5
     subdomain_workers = [SubdomainEnumerationWorker.remote(queue_names=['api_queue']) for _ in range(num_workers)]
     
     for worker in subdomain_workers:

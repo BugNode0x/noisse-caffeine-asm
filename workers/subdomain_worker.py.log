@@ -190,3 +190,54 @@ Subdomain Workers have been started. Main script will now wait indefinitely.
 [36m(SubdomainEnumerationWorker pid=2073237)[0m Database query error: no results to fetch[32m [repeated 3x across cluster][0m
 [36m(SubdomainEnumerationWorker pid=2073237)[0m Database query error: no results to fetch[32m [repeated 3x across cluster][0m
 [36m(SubdomainEnumerationWorker pid=2073237)[0m Database query error: no results to fetch[32m [repeated 4x across cluster][0m
+2024-03-27 17:53:32,285	INFO worker.py:1715 -- Started a local Ray instance. View the dashboard at [1m[32mhttp://127.0.0.1:8266 [39m[22m
+*** SIGTERM received at time=1711562086 on cpu 3 ***
+PC: @           0x63c610  (unknown)  (unknown)
+    @     0x7a374e642990       2992  (unknown)
+    @     0x7a374d6edb13         48  AbslInternalPerThreadSemWait_lts_20230125
+    @     0x7a374cb583c7        144  absl::lts_20230125::CondVar::WaitCommon()
+    @     0x7a374d5be07e         80  gpr_cv_wait
+    @     0x7a374d59f786        176  grpc_core::Executor::ThreadMain()
+    @     0x7a374d5bc886        112  grpc_core::(anonymous namespace)::ThreadInternalsPosix::ThreadInternalsPosix()::{lambda()#1}::_FUN()
+    @     0x7a374e697b5a  (unknown)  (unknown)
+[2024-03-27 17:54:47,002 E 2179902 2179956] logging.cc:361: *** SIGTERM received at time=1711562087 on cpu 3 ***
+[2024-03-27 17:54:47,002 E 2179902 2179956] logging.cc:361: PC: @           0x63c610  (unknown)  (unknown)
+[2024-03-27 17:54:47,002 E 2179902 2179956] logging.cc:361:     @     0x7a374e642990       2992  (unknown)
+[2024-03-27 17:54:47,002 E 2179902 2179956] logging.cc:361:     @     0x7a374d6edb13         48  AbslInternalPerThreadSemWait_lts_20230125
+[2024-03-27 17:54:47,002 E 2179902 2179956] logging.cc:361:     @     0x7a374cb583c7        144  absl::lts_20230125::CondVar::WaitCommon()
+[2024-03-27 17:54:47,002 E 2179902 2179956] logging.cc:361:     @     0x7a374d5be07e         80  gpr_cv_wait
+[2024-03-27 17:54:47,002 E 2179902 2179956] logging.cc:361:     @     0x7a374d59f786        176  grpc_core::Executor::ThreadMain()
+[2024-03-27 17:54:47,002 E 2179902 2179956] logging.cc:361:     @     0x7a374d5bc886        112  grpc_core::(anonymous namespace)::ThreadInternalsPosix::ThreadInternalsPosix()::{lambda()#1}::_FUN()
+[2024-03-27 17:54:47,002 E 2179902 2179956] logging.cc:361:     @     0x7a374e697b5a  (unknown)  (unknown)
+2024-03-27 17:55:04,986	INFO worker.py:1715 -- Started a local Ray instance. View the dashboard at [1m[32mhttp://127.0.0.1:8265 [39m[22m
+Subdomain Workers have been started. Main script will now wait indefinitely.
+[36m(SubdomainEnumerationWorker pid=2184696)[0m Fetched task from api_queue: {"domain": "vulnweb.com", "user_id": "user_01HMTAXPTE8XSQKD8XZ9M66CQM"}
+[36m(SubdomainEnumerationWorker pid=2184696)[0m Received domain: vulnweb.com, Hunter ID: user_01HMTAXPTE8XSQKD8XZ9M66CQM
+[36m(SubdomainEnumerationWorker pid=2184696)[0m Calling ensure_domain_exists with domain: vulnweb.com, Hunter ID: user_01HMTAXPTE8XSQKD8XZ9M66CQM
+[36m(SubdomainEnumerationWorker pid=2184696)[0m Database query error: no results to fetch
+[36m(SubdomainEnumerationWorker pid=2184696)[0m Processing domain: vulnweb.com with ID: 204
+[36m(SubdomainEnumerationWorker pid=2184696)[0m Running subfinder
+[36m(SubdomainEnumerationWorker pid=2184696)[0m Database query error: no results to fetch
+[36m(process_and_insert_subdomain pid=2183707)[0m Database query error: no results to fetch
+[36m(SubdomainEnumerationWorker pid=2184696)[0m Database query error: no results to fetch[32m [repeated 10x across cluster] (Ray deduplicates logs by default. Set RAY_DEDUP_LOGS=0 to disable log deduplication, or see https://docs.ray.io/en/master/ray-observability/ray-logging.html#log-deduplication for more options.)[0m
+[36m(SubdomainEnumerationWorker pid=2184696)[0m Database query error: no results to fetch[32m [repeated 4x across cluster][0m
+[36m(SubdomainEnumerationWorker pid=2184696)[0m Database query error: no results to fetch[32m [repeated 4x across cluster][0m
+Shutting down Subdomain Workers gracefully...
+*** SIGTERM received at time=1711562803 on cpu 1 ***
+PC: @     0x75ae8aae5771  (unknown)  clock_nanosleep
+    @     0x75ae8aa42990  (unknown)  (unknown)
+    @         0x3a4ec74e  (unknown)  (unknown)
+[2024-03-27 18:06:43,437 E 2183097 2183097] logging.cc:361: *** SIGTERM received at time=1711562803 on cpu 1 ***
+[2024-03-27 18:06:43,437 E 2183097 2183097] logging.cc:361: PC: @     0x75ae8aae5771  (unknown)  clock_nanosleep
+[2024-03-27 18:06:43,448 E 2183097 2183097] logging.cc:361:     @     0x75ae8aa42990  (unknown)  (unknown)
+[2024-03-27 18:06:43,459 E 2183097 2183097] logging.cc:361:     @         0x3a4ec74e  (unknown)  (unknown)
+Exception ignored in atexit callback: <function shutdown at 0x75ae87155440>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/dist-packages/ray/_private/client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/ray/_private/worker.py", line 1788, in shutdown
+    time.sleep(0.5)
+  File "/usr/local/lib/python3.11/dist-packages/ray/_private/worker.py", line 1390, in sigterm_handler
+    sys.exit(signum)
+SystemExit: 15

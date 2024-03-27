@@ -77,7 +77,7 @@ class HTTPWorker(BaseWorker):
 if __name__ == "__main__":
     ray.init()
 
-    num_workers = 10
+    num_workers = 5
     http_workers = [HTTPWorker.remote(queue_names=[f'http_queue_{i}']) for i in range(num_workers)]
 
     for worker in http_workers:

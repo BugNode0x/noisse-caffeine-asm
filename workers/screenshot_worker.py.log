@@ -96,3 +96,31 @@ Screenshot Workers have been started. Main script will now wait indefinitely.
 [36m(insert_screenshot_data pid=2071705)[0m Database query error: no results to fetch
 [36m(insert_screenshot_data pid=2071705)[0m Inserted new screenshot data for subdomain ID 12441 and URL http://testhtml5.vulnweb.com.
 Shutting down Screenshot Workers gracefully...
+2024-03-27 17:53:39,685	INFO worker.py:1715 -- Started a local Ray instance. View the dashboard at [1m[32mhttp://127.0.0.1:8269 [39m[22m
+Screenshot Workers have been started. Main script will now wait indefinitely.
+Shutting down Screenshot Workers gracefully...
+2024-03-27 17:55:05,312	INFO worker.py:1715 -- Started a local Ray instance. View the dashboard at [1m[32mhttp://127.0.0.1:8266 [39m[22m
+Screenshot Workers have been started. Main script will now wait indefinitely.
+[36m(ScreenshotWorker pid=2184838)[0m Fetched task from screenshot_queue_2: {"url": "http://testphp.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(insert_screenshot_data pid=2183767)[0m Database query error: no results to fetch
+[36m(insert_screenshot_data pid=2183767)[0m Inserted new screenshot data for subdomain ID 12515 and URL http://testphp.vulnweb.com.
+Shutting down Screenshot Workers gracefully...
+Exception ignored in atexit callback: <function shutdown at 0x743eb1a4cae0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/dist-packages/ray/_private/client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/ray/_private/worker.py", line 1813, in shutdown
+    _global_node.kill_all_processes(check_alive=False, allow_graceful=True)
+  File "/usr/local/lib/python3.11/dist-packages/ray/_private/node.py", line 1584, in kill_all_processes
+    self._kill_process_type(
+  File "/usr/local/lib/python3.11/dist-packages/ray/_private/node.py", line 1405, in _kill_process_type
+    self._kill_process_impl(
+  File "/usr/local/lib/python3.11/dist-packages/ray/_private/node.py", line 1461, in _kill_process_impl
+    process.wait(timeout_seconds)
+  File "/usr/lib/python3.11/subprocess.py", line 1264, in wait
+    return self._wait(timeout=timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/subprocess.py", line 2040, in _wait
+    time.sleep(delay)
+KeyboardInterrupt: 
