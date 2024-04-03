@@ -59,7 +59,9 @@ class BaseWorker:
 
     def decrement_task_count(self, root_domain, user_id, worker_type):
         redis_key = f"task_count:{root_domain}:{user_id}:{worker_type}"
-        remaining_tasks = self.redis_client.decr(redis_key)
+        with self.redis_client.pipeline() as pipe:
+            pipe.decr(redis_key)
+            remaining_tasks = pipe.execute()[0]
         return remaining_tasks <= 0
 
     def select_queue_index(self, identifier):
