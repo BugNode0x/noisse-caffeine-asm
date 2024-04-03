@@ -71,8 +71,9 @@ class JavaScriptGatheringWorker(BaseWorker):
         url = task.get('url')
         user_id = task.get('user_id')
         root_domain = task.get('root_domain')
+        worker_type = 'crawl'
         
-        self.increment_task_count(root_domain, user_id)
+        self.increment_task_count(root_domain, user_id, worker_type)
 
         if not url or not user_id or not root_domain:
             print(f"Invalid task received: {task}")
@@ -97,7 +98,8 @@ class JavaScriptGatheringWorker(BaseWorker):
             print(f"Error processing URL {url}: {e}")
 
         finally:
-            if self.decrement_task_count(root_domain, user_id):
+            # Decrement task count and check if it's time to send the completion message
+            if self.decrement_task_count(root_domain, user_id, worker_type):
                 completion_message = f"Crawl task completed for {root_domain}"
                 self.push_notification_to_queue(user_id, completion_message)
 

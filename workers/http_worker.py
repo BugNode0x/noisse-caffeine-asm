@@ -12,8 +12,9 @@ class HTTPWorker(BaseWorker):
         subdomain = task['subdomain']
         root_domain = task['root_domain']
         user_id = task['user_id']
+        worker_type = 'http'
 
-        self.increment_task_count(root_domain, user_id)
+        self.increment_task_count(root_domain, user_id, worker_type)
 
         user_message = f"[HTTP] Starting HTTP probing for subdomain: {subdomain}"
         admin_message = f"{user_message} - User ID: {user_id}"
@@ -59,10 +60,10 @@ class HTTPWorker(BaseWorker):
 
         finally:
             # Decrement task count and check if it's time to send the completion message
-            if self.decrement_task_count(root_domain, user_id):
+            if self.decrement_task_count(root_domain, user_id, worker_type):
                 completion_message = f"HTTP probing completed for {root_domain}"
                 self.push_notification_to_queue(user_id, completion_message)
-
+                
     def run(self):
         try:
             while True:
