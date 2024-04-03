@@ -8,22 +8,21 @@ from brain.base_worker import BaseWorker
 
 @ray.remote
 class DNSWorker(BaseWorker):
+
     def check_subdomain_id_exists(self, subdomain):
         query = "SELECT subdomain_id FROM subdomains WHERE subdomain = %s"
         subdomain_id = execute_db_query(query, (subdomain,), fetch_one=True)
         return subdomain_id is not None
 
+
     def process_task(self, task):
         subdomain = task['subdomain']
         root_domain = task['root_domain']
         user_id = task['user_id']
+        worker_type = 'dns'
 
-        self.increment_task_count(root_domain, user_id)
-
-        user_message = f"[DNS] Processing DNS for resolution for: {subdomain}"
-        admin_message = f"{user_message} - User ID: {user_id}"
-        self.send_slack_notification(user_id, user_message)
-        self.send_admin_slack_notification(admin_message)
+        # Increment task count for DNS worker
+        self.increment_task_count(root_domain, user_id, worker_type)
 
         dnsx_path = os.path.expanduser('~/go/bin/dnsx')
         dnsx_cmd = [dnsx_path, '-silent', '-t', '200', '-json', '-asn', '-wd', root_domain,
@@ -31,6 +30,7 @@ class DNSWorker(BaseWorker):
                     '-r', '8.8.8.8,8.8.4.4,1.1.1.1,9.9.9.9,208.67.222.222,84.200.69.80,64.6.64.6,8.26.56.26,205.171.3.65,134.195.4.2,185.222.222.8.9,76.76.19.19,37.235.1.177,77.88.8.1,94.140.14.140,38.132.106.139,74.82.42.42,76.76.2.0']
         max_retries = 5
         retry_count = 0
+
         while not self.check_subdomain_id_exists(subdomain) and retry_count < max_retries:
             print(f"Waiting for subdomain ID for {subdomain} to be available...")
             time.sleep(2)  # Wait for 2 seconds before retrying
@@ -38,8 +38,8 @@ class DNSWorker(BaseWorker):
 
         if retry_count == max_retries:
             print(f"Subdomain ID for {subdomain} not found after retries, skipping DNS processing.")
-            return    
-        
+            return
+
         try:
             process = subprocess.Popen(dnsx_cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, stdin=subprocess.PIPE)
             stdout, _ = process.communicate(input=subdomain.encode())
@@ -52,16 +52,12 @@ class DNSWorker(BaseWorker):
 
             # Insert DNS data asynchronously
             insert_future = insert_dns_data_remote.remote(dns_data)
-
-            # Optional: wait for the operation to complete
-            ray.get(insert_future)
+            ray.get(insert_future)  # Optional: wait for the operation to complete
 
             resolved_subdomain = dns_data['host']
             http_task = json.dumps({'subdomain': resolved_subdomain, 'root_domain': root_domain, 'user_id': user_id})
             queue_index = self.select_queue_index(f"{user_id}_{subdomain}")  # Use a unique identifier
             http_task_queue = f"http_queue_{queue_index}"
-
-            # Push to the selected http_queue
             self.redis_client.rpush(http_task_queue, http_task)
             print(f"Pushed to {http_task_queue}: {http_task}")
 
@@ -70,9 +66,10 @@ class DNSWorker(BaseWorker):
 
         finally:
             # Decrement task count and check if it's time to send the completion message
-            if self.decrement_task_count(root_domain, user_id):
+            if self.decrement_task_count(root_domain, user_id, worker_type):
                 completion_message = f"DNS enumeration completed for {root_domain}"
                 self.push_notification_to_queue(user_id, completion_message)
+
 
     def run(self):
         try:

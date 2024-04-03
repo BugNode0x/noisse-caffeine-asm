@@ -241,3 +241,105 @@ Traceback (most recent call last):
   File "/usr/local/lib/python3.11/dist-packages/ray/_private/worker.py", line 1390, in sigterm_handler
     sys.exit(signum)
 SystemExit: 15
+2024-04-03 19:04:49,600	INFO worker.py:1715 -- Started a local Ray instance. View the dashboard at [1m[32mhttp://127.0.0.1:8267 [39m[22m
+*** SIGTERM received at time=1712171468 on cpu 1 ***
+PC: @           0x63c610  (unknown)  (unknown)
+    @     0x75e14ae42990  812874480  (unknown)
+    @         0x12dffe26  (unknown)  (unknown)
+[2024-04-03 19:11:09,001 E 2785276 2785276] logging.cc:361: *** SIGTERM received at time=1712171468 on cpu 1 ***
+[2024-04-03 19:11:09,003 E 2785276 2785276] logging.cc:361: PC: @           0x63c610  (unknown)  (unknown)
+[2024-04-03 19:11:09,004 E 2785276 2785276] logging.cc:361:     @     0x75e14ae42990  812874480  (unknown)
+[2024-04-03 19:11:09,006 E 2785276 2785276] logging.cc:361:     @         0x12dffe26  (unknown)  (unknown)
+Subdomain Workers have been started. Main script will now wait indefinitely.
+[36m(SubdomainEnumerationWorker pid=2787308)[0m Fetched task from api_queue: {"domain": "vulnweb.com", "user_id": "user_01HMTAXPTE8XSQKD8XZ9M66CQM"}
+[36m(SubdomainEnumerationWorker pid=2787308)[0m Received domain: vulnweb.com, Hunter ID: user_01HMTAXPTE8XSQKD8XZ9M66CQM
+[36m(SubdomainEnumerationWorker pid=2787308)[0m Calling ensure_domain_exists with domain: vulnweb.com, Hunter ID: user_01HMTAXPTE8XSQKD8XZ9M66CQM
+[36m(SubdomainEnumerationWorker pid=2787308)[0m Processing domain: vulnweb.com with ID: 209
+[36m(SubdomainEnumerationWorker pid=2787308)[0m Running subfinder
+[36m(process_and_insert_subdomain pid=2785988)[0m Database query error: no results to fetch
+[36m(process_and_insert_subdomain pid=2785988)[0m Database query error: no results to fetch[32m [repeated 12x across cluster] (Ray deduplicates logs by default. Set RAY_DEDUP_LOGS=0 to disable log deduplication, or see https://docs.ray.io/en/master/ray-observability/ray-logging.html#log-deduplication for more options.)[0m
+[36m(SubdomainEnumerationWorker pid=2787308)[0m Database query error: no results to fetch[32m [repeated 8x across cluster][0m
+[36m(SubdomainEnumerationWorker pid=2787308)[0m Database query error: no results to fetch[32m [repeated 4x across cluster][0m
+[36m(SubdomainEnumerationWorker pid=2787308)[0m Database query error: no results to fetch[32m [repeated 4x across cluster][0m
+[36m(SubdomainEnumerationWorker pid=2787308)[0m Database query error: no results to fetch[32m [repeated 4x across cluster][0m
+[36m(SubdomainEnumerationWorker pid=2787308)[0m Database query error: no results to fetch[32m [repeated 4x across cluster][0m
+[36m(SubdomainEnumerationWorker pid=2787308)[0m Database query error: no results to fetch[32m [repeated 3x across cluster][0m
+2024-04-03 19:38:29,006	INFO worker.py:1715 -- Started a local Ray instance. View the dashboard at [1m[32mhttp://127.0.0.1:8267 [39m[22m
+Subdomain Workers have been started. Main script will now wait indefinitely.
+[36m(SubdomainEnumerationWorker pid=2805217)[0m Fetched task from api_queue: {"domain": "noisse.io", "user_id": "user_01HMTAXPTE8XSQKD8XZ9M66CQM"}
+[36m(SubdomainEnumerationWorker pid=2805217)[0m Received domain: noisse.io, Hunter ID: user_01HMTAXPTE8XSQKD8XZ9M66CQM
+[36m(SubdomainEnumerationWorker pid=2805217)[0m Calling ensure_domain_exists with domain: noisse.io, Hunter ID: user_01HMTAXPTE8XSQKD8XZ9M66CQM
+[36m(SubdomainEnumerationWorker pid=2805217)[0m Database query error: no results to fetch
+[36m(SubdomainEnumerationWorker pid=2805217)[0m Processing domain: noisse.io with ID: 210
+[36m(SubdomainEnumerationWorker pid=2805217)[0m Running subfinder
+[36m(SubdomainEnumerationWorker pid=2805217)[0m Database query error: no results to fetch
+[36m(process_and_insert_subdomain pid=2804304)[0m Database query error: no results to fetch
+[36m(SubdomainEnumerationWorker pid=2805217)[0m Database query error: no results to fetch[32m [repeated 5x across cluster] (Ray deduplicates logs by default. Set RAY_DEDUP_LOGS=0 to disable log deduplication, or see https://docs.ray.io/en/master/ray-observability/ray-logging.html#log-deduplication for more options.)[0m
+[36m(SubdomainEnumerationWorker pid=2805217)[0m Database query error: no results to fetch[32m [repeated 4x across cluster][0m
+Shutting down Subdomain Workers gracefully...
+*** SIGTERM received at time=1712174612 on cpu 1 ***
+PC: @     0x7650e84e5771  (unknown)  clock_nanosleep
+    @     0x7650e8442990  578080544  (unknown)
+    @         0x285ff5fc  (unknown)  (unknown)
+[2024-04-03 20:03:32,137 E 2803637 2803637] logging.cc:361: *** SIGTERM received at time=1712174612 on cpu 1 ***
+[2024-04-03 20:03:32,137 E 2803637 2803637] logging.cc:361: PC: @     0x7650e84e5771  (unknown)  clock_nanosleep
+[2024-04-03 20:03:32,140 E 2803637 2803637] logging.cc:361:     @     0x7650e8442990  578080544  (unknown)
+[2024-04-03 20:03:32,143 E 2803637 2803637] logging.cc:361:     @         0x285ff5fc  (unknown)  (unknown)
+Exception ignored in atexit callback: <function shutdown at 0x7650e4a49440>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/dist-packages/ray/_private/client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/ray/_private/worker.py", line 1788, in shutdown
+    time.sleep(0.5)
+  File "/usr/local/lib/python3.11/dist-packages/ray/_private/worker.py", line 1390, in sigterm_handler
+    sys.exit(signum)
+SystemExit: 15
+2024-04-03 20:03:51,789	INFO worker.py:1715 -- Started a local Ray instance. View the dashboard at [1m[32mhttp://127.0.0.1:8267 [39m[22m
+Subdomain Workers have been started. Main script will now wait indefinitely.
+[36m(SubdomainEnumerationWorker pid=2818100)[0m Fetched task from api_queue: {"domain": "noisse.io", "user_id": "user_01HMTAXPTE8XSQKD8XZ9M66CQM"}
+[36m(SubdomainEnumerationWorker pid=2818100)[0m Received domain: noisse.io, Hunter ID: user_01HMTAXPTE8XSQKD8XZ9M66CQM
+[36m(SubdomainEnumerationWorker pid=2818100)[0m Calling ensure_domain_exists with domain: noisse.io, Hunter ID: user_01HMTAXPTE8XSQKD8XZ9M66CQM
+[36m(SubdomainEnumerationWorker pid=2818100)[0m Processing domain: noisse.io with ID: 210
+[36m(SubdomainEnumerationWorker pid=2818100)[0m Running subfinder
+[36m(process_and_insert_subdomain pid=2817282)[0m Database query error: no results to fetch
+[36m(SubdomainEnumerationWorker pid=2818100)[0m Database query error: no results to fetch[32m [repeated 5x across cluster] (Ray deduplicates logs by default. Set RAY_DEDUP_LOGS=0 to disable log deduplication, or see https://docs.ray.io/en/master/ray-observability/ray-logging.html#log-deduplication for more options.)[0m
+[36m(SubdomainEnumerationWorker pid=2818100)[0m Database query error: no results to fetch[32m [repeated 4x across cluster][0m
+Shutting down Subdomain Workers gracefully...
+*** SIGTERM received at time=1712175383 on cpu 3 ***
+PC: @     0x78a721ce5771  (unknown)  clock_nanosleep
+    @     0x78a721c42990  483239584  (unknown)
+    @         0x39fc8ec4  (unknown)  (unknown)
+[2024-04-03 20:16:23,435 E 2816515 2816515] logging.cc:361: *** SIGTERM received at time=1712175383 on cpu 3 ***
+[2024-04-03 20:16:23,435 E 2816515 2816515] logging.cc:361: PC: @     0x78a721ce5771  (unknown)  clock_nanosleep
+[2024-04-03 20:16:23,437 E 2816515 2816515] logging.cc:361:     @     0x78a721c42990  483239584  (unknown)
+[2024-04-03 20:16:23,439 E 2816515 2816515] logging.cc:361:     @         0x39fc8ec4  (unknown)  (unknown)
+Exception ignored in atexit callback: <function shutdown at 0x78a71e331440>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/dist-packages/ray/_private/client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/ray/_private/worker.py", line 1788, in shutdown
+    time.sleep(0.5)
+  File "/usr/local/lib/python3.11/dist-packages/ray/_private/worker.py", line 1390, in sigterm_handler
+    sys.exit(signum)
+SystemExit: 15
+2024-04-03 20:16:40,577	INFO worker.py:1715 -- Started a local Ray instance. View the dashboard at [1m[32mhttp://127.0.0.1:8265 [39m[22m
+*** SIGTERM received at time=1712175693 on cpu 0 ***
+PC: @           0x63c610  (unknown)  (unknown)
+    @     0x77224ec42990       2992  (unknown)
+    @     0x77224dcedb13         48  AbslInternalPerThreadSemWait_lts_20230125
+    @     0x77224d1583c7        144  absl::lts_20230125::CondVar::WaitCommon()
+    @     0x77224dbbe07e         80  gpr_cv_wait
+    @     0x77224db9f786        176  grpc_core::Executor::ThreadMain()
+    @     0x77224dbbc886        112  grpc_core::(anonymous namespace)::ThreadInternalsPosix::ThreadInternalsPosix()::{lambda()#1}::_FUN()
+    @     0x77224ec97b5a  (unknown)  (unknown)
+[2024-04-03 20:21:33,959 E 2824596 2824635] logging.cc:361: *** SIGTERM received at time=1712175693 on cpu 0 ***
+[2024-04-03 20:21:33,959 E 2824596 2824635] logging.cc:361: PC: @           0x63c610  (unknown)  (unknown)
+[2024-04-03 20:21:33,960 E 2824596 2824635] logging.cc:361:     @     0x77224ec42990       2992  (unknown)
+[2024-04-03 20:21:33,960 E 2824596 2824635] logging.cc:361:     @     0x77224dcedb13         48  AbslInternalPerThreadSemWait_lts_20230125
+[2024-04-03 20:21:33,960 E 2824596 2824635] logging.cc:361:     @     0x77224d1583c7        144  absl::lts_20230125::CondVar::WaitCommon()
+[2024-04-03 20:21:33,960 E 2824596 2824635] logging.cc:361:     @     0x77224dbbe07e         80  gpr_cv_wait
+[2024-04-03 20:21:33,960 E 2824596 2824635] logging.cc:361:     @     0x77224db9f786        176  grpc_core::Executor::ThreadMain()
+[2024-04-03 20:21:33,960 E 2824596 2824635] logging.cc:361:     @     0x77224dbbc886        112  grpc_core::(anonymous namespace)::ThreadInternalsPosix::ThreadInternalsPosix()::{lambda()#1}::_FUN()
+[2024-04-03 20:21:33,960 E 2824596 2824635] logging.cc:361:     @     0x77224ec97b5a  (unknown)  (unknown)

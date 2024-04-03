@@ -280,3 +280,112 @@ Traceback (most recent call last):
   File "/usr/lib/python3.11/subprocess.py", line 2040, in _wait
     time.sleep(delay)
 KeyboardInterrupt: 
+2024-04-03 19:04:49,967	INFO worker.py:1715 -- Started a local Ray instance. View the dashboard at [1m[32mhttp://127.0.0.1:8269 [39m[22m
+HTTP Workers have been started. Main script will now wait indefinitely.
+[36m(HTTPWorker pid=2787036)[0m Fetched task from http_queue_2: {"subdomain": "test.php.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(HTTPWorker pid=2787039)[0m Fetched task from http_queue_3: {"subdomain": "testapsnet.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(HTTPWorker pid=2787033)[0m Fetched task from http_queue_0: {"subdomain": "antivirus1.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(HTTPWorker pid=2787446)[0m Fetched task from http_queue_4: {"subdomain": "test.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(HTTPWorker pid=2787034)[0m Fetched task from http_queue_1: {"subdomain": "rest.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(HTTPWorker pid=2787033)[0m Error processing HTTP for antivirus1.vulnweb.com: Expecting value: line 1 column 1 (char 0)
+[36m(HTTPWorker pid=2787033)[0m Fetched task from http_queue_0: {"subdomain": "blogger.com.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(HTTPWorker pid=2787036)[0m Error processing HTTP for test.php.vulnweb.com: Expecting value: line 1 column 1 (char 0)
+[36m(HTTPWorker pid=2787036)[0m Fetched task from http_queue_2: {"subdomain": "odincovo.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(HTTPWorker pid=2787039)[0m Error processing HTTP for testapsnet.vulnweb.com: Expecting value: line 1 column 1 (char 0)
+[36m(HTTPWorker pid=2787039)[0m Fetched task from http_queue_3: {"subdomain": "www.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(HTTPWorker pid=2787446)[0m Error processing HTTP for test.vulnweb.com: Expecting value: line 1 column 1 (char 0)
+[36m(HTTPWorker pid=2787446)[0m Fetched task from http_queue_4: {"subdomain": "testaspx.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(HTTPWorker pid=2787034)[0m {'timestamp': '2024-04-03T19:07:25.667735051Z', 'port': '80', 'url': 'http://rest.vulnweb.com', 'input': 'rest.vulnweb.com', 'title': 'Acunetix Vulnerable REST API', 'scheme': 'http', 'webserver': 'Apache/2.4.25 (Debian)', 'content_type': 'text/html', 'method': 'GET', 'host': '35.81.188.86', 'path': '/', 'time': '208.446526ms', 'a': ['35.81.188.86'], 'tech': ['Apache HTTP Server:2.4.25', 'Debian', 'PHP:7.1.26'], 'words': 1397, 'lines': 138, 'status_code': 200, 'content_length': 3555, 'failed': False, 'knowledgebase': {'PageType': 'nonerror', 'pHash': 0}}
+[36m(HTTPWorker pid=2787034)[0m Pushed to screenshot_queue_4: {"url": "http://rest.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(HTTPWorker pid=2787034)[0m Pushed to crawl_queue_4: {"url": "http://rest.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(HTTPWorker pid=2787034)[0m Fetched task from http_queue_1: {"subdomain": "restasp.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(HTTPWorker pid=2787033)[0m Error processing HTTP for blogger.com.vulnweb.com: Expecting value: line 1 column 1 (char 0)
+[36m(HTTPWorker pid=2787033)[0m Fetched task from http_queue_0: {"subdomain": "testaps.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(insert_http_data pid=2786039)[0m Duplicate HTTP data for http://rest.vulnweb.com not inserted.
+[36m(HTTPWorker pid=2787036)[0m Error processing HTTP for odincovo.vulnweb.com: Expecting value: line 1 column 1 (char 0)
+[36m(HTTPWorker pid=2787036)[0m Fetched task from http_queue_2: {"subdomain": "testasp.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(HTTPWorker pid=2787039)[0m {'timestamp': '2024-04-03T19:07:34.403783197Z', 'port': '80', 'url': 'http://www.vulnweb.com', 'input': 'www.vulnweb.com', 'title': 'Acunetix Web Vulnerability Scanner - Test websites', 'scheme': 'http', 'webserver': 'nginx/1.19.0', 'content_type': 'text/html', 'method': 'GET', 'host': '44.228.249.3', 'path': '/', 'time': '162.499626ms', 'a': ['44.228.249.3'], 'tech': ['Nginx:1.19.0'], 'words': 482, 'lines': 74, 'status_code': 200, 'content_length': 4018, 'failed': False, 'knowledgebase': {'PageType': 'nonerror', 'pHash': 0}}
+[36m(HTTPWorker pid=2787039)[0m Pushed to screenshot_queue_3: {"url": "http://www.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(HTTPWorker pid=2787039)[0m Pushed to crawl_queue_3: {"url": "http://www.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(HTTPWorker pid=2787039)[0m Fetched task from http_queue_3: {"subdomain": "tetphp.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(insert_http_data pid=2786039)[0m Duplicate HTTP data for http://www.vulnweb.com not inserted.
+[36m(HTTPWorker pid=2787446)[0m Error processing HTTP for testaspx.vulnweb.com: Expecting value: line 1 column 1 (char 0)
+[36m(HTTPWorker pid=2787446)[0m Fetched task from http_queue_4: {"subdomain": "testaspnet.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(HTTPWorker pid=2787034)[0m Error processing HTTP for restasp.vulnweb.com: Expecting value: line 1 column 1 (char 0)
+[36m(HTTPWorker pid=2787034)[0m Fetched task from http_queue_1: {"subdomain": "testap.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(HTTPWorker pid=2787033)[0m Error processing HTTP for testaps.vulnweb.com: Expecting value: line 1 column 1 (char 0)
+[36m(HTTPWorker pid=2787033)[0m Fetched task from http_queue_0: {"subdomain": "testphp.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(HTTPWorker pid=2787036)[0m {'timestamp': '2024-04-03T19:07:54.144122087Z', 'port': '80', 'url': 'http://testasp.vulnweb.com', 'input': 'testasp.vulnweb.com', 'title': 'acuforum forums', 'scheme': 'http', 'webserver': 'Microsoft-IIS/8.5', 'content_type': 'text/html', 'method': 'GET', 'host': '44.238.29.244', 'path': '/', 'time': '205.282779ms', 'a': ['44.238.29.244'], 'tech': ['DreamWeaver', 'IIS:8.5', 'Microsoft ASP.NET', 'Windows Server'], 'words': 328, 'lines': 46, 'status_code': 200, 'content_length': 3537, 'failed': False, 'knowledgebase': {'PageType': 'nonerror', 'pHash': 0}}
+[36m(HTTPWorker pid=2787036)[0m Pushed to screenshot_queue_1: {"url": "http://testasp.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(HTTPWorker pid=2787036)[0m Pushed to crawl_queue_1: {"url": "http://testasp.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(HTTPWorker pid=2787036)[0m Fetched task from http_queue_2: {"subdomain": "httptestaspnet.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(insert_http_data pid=2786039)[0m Duplicate HTTP data for http://testasp.vulnweb.com not inserted.
+[36m(HTTPWorker pid=2787039)[0m Error processing HTTP for tetphp.vulnweb.com: Expecting value: line 1 column 1 (char 0)
+[36m(HTTPWorker pid=2787446)[0m {'timestamp': '2024-04-03T19:08:00.088586714Z', 'port': '80', 'url': 'http://testaspnet.vulnweb.com', 'input': 'testaspnet.vulnweb.com', 'title': 'acublog news', 'scheme': 'http', 'webserver': 'Microsoft-IIS/8.5', 'content_type': 'text/html', 'method': 'GET', 'host': '44.238.29.244', 'path': '/', 'time': '288.207117ms', 'a': ['44.238.29.244'], 'tech': ['IIS:8.5', 'Microsoft ASP.NET', 'Microsoft Visual Studio', 'Windows Server'], 'words': 580, 'lines': 89, 'status_code': 200, 'content_length': 12381, 'failed': False, 'knowledgebase': {'PageType': 'nonerror', 'pHash': 0}}
+[36m(HTTPWorker pid=2787446)[0m Pushed to screenshot_queue_4: {"url": "http://testaspnet.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(HTTPWorker pid=2787446)[0m Pushed to crawl_queue_4: {"url": "http://testaspnet.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(insert_http_data pid=2786039)[0m Duplicate HTTP data for http://testaspnet.vulnweb.com not inserted.
+[36m(HTTPWorker pid=2787034)[0m Error processing HTTP for testap.vulnweb.com: Expecting value: line 1 column 1 (char 0)
+[36m(HTTPWorker pid=2787033)[0m {'timestamp': '2024-04-03T19:08:09.474855091Z', 'port': '80', 'url': 'http://testphp.vulnweb.com', 'input': 'testphp.vulnweb.com', 'title': 'Home of Acunetix Art', 'scheme': 'http', 'webserver': 'nginx/1.19.0', 'content_type': 'text/html', 'method': 'GET', 'host': '44.228.249.3', 'path': '/', 'time': '157.908041ms', 'a': ['44.228.249.3'], 'tech': ['DreamWeaver', 'Nginx:1.19.0', 'PHP:5.6.40', 'Ubuntu'], 'words': 514, 'lines': 110, 'status_code': 200, 'content_length': 4958, 'failed': False, 'knowledgebase': {'PageType': 'nonerror', 'pHash': 0}}
+[36m(HTTPWorker pid=2787033)[0m Pushed to screenshot_queue_2: {"url": "http://testphp.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(HTTPWorker pid=2787033)[0m Pushed to crawl_queue_2: {"url": "http://testphp.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(HTTPWorker pid=2787033)[0m Fetched task from http_queue_0: {"subdomain": "testhtml5.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(insert_http_data pid=2786039)[0m Duplicate HTTP data for http://testphp.vulnweb.com not inserted.
+[36m(HTTPWorker pid=2787036)[0m Error processing HTTP for httptestaspnet.vulnweb.com: Expecting value: line 1 column 1 (char 0)
+[36m(HTTPWorker pid=2787033)[0m {'timestamp': '2024-04-03T19:08:29.877404709Z', 'port': '80', 'url': 'http://testhtml5.vulnweb.com', 'input': 'testhtml5.vulnweb.com', 'title': 'SecurityTweets - HTML5 test website for Acunetix Web Vulnerability Scanner', 'scheme': 'http', 'webserver': 'nginx/1.19.0', 'content_type': 'text/html', 'method': 'GET', 'host': '44.228.249.3', 'path': '/', 'time': '178.398411ms', 'a': ['44.228.249.3'], 'tech': ['AngularJS', 'Nginx:1.19.0'], 'words': 1483, 'lines': 164, 'status_code': 200, 'content_length': 6940, 'failed': False, 'knowledgebase': {'PageType': 'nonerror', 'pHash': 0}}
+[36m(HTTPWorker pid=2787033)[0m Pushed to screenshot_queue_2: {"url": "http://testhtml5.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(HTTPWorker pid=2787033)[0m Pushed to crawl_queue_2: {"url": "http://testhtml5.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(insert_http_data pid=2786039)[0m Duplicate HTTP data for http://testhtml5.vulnweb.com not inserted.
+Shutting down HTTP Workers gracefully...
+2024-04-03 19:38:32,581	INFO worker.py:1715 -- Started a local Ray instance. View the dashboard at [1m[32mhttp://127.0.0.1:8269 [39m[22m
+HTTP Workers have been started. Main script will now wait indefinitely.
+[36m(HTTPWorker pid=2805499)[0m Fetched task from http_queue_2: {"subdomain": "www.noisse.io", "root_domain": "noisse.io", "user_id": 41}
+[36m(HTTPWorker pid=2805500)[0m Fetched task from http_queue_3: {"subdomain": "api.noisse.io", "root_domain": "noisse.io", "user_id": 41}
+[36m(HTTPWorker pid=2805999)[0m Fetched task from http_queue_4: {"subdomain": "app.noisse.io", "root_domain": "noisse.io", "user_id": 41}
+[36m(HTTPWorker pid=2805500)[0m {'timestamp': '2024-04-03T19:40:13.18041432Z', 'cdn_name': 'google', 'port': '443', 'url': 'https://api.noisse.io', 'input': 'api.noisse.io', 'title': 'Error', 'scheme': 'https', 'webserver': 'railway', 'content_type': 'text/html', 'method': 'GET', 'host': '34.86.119.124', 'path': '/', 'time': '532.647106ms', 'a': ['34.86.119.124'], 'cname': ['f3ah8ldi.up.railway.app', 'global-edge.gcp.production.rlwy.net'], 'tech': ['Express', 'Node.js'], 'words': 6, 'lines': 11, 'status_code': 404, 'content_length': 139, 'failed': False, 'cdn': True, 'knowledgebase': {'PageType': 'error', 'pHash': 0}}
+[36m(HTTPWorker pid=2805500)[0m Pushed to screenshot_queue_1: {"url": "https://api.noisse.io", "root_domain": "noisse.io", "user_id": 41}
+[36m(HTTPWorker pid=2805999)[0m {'timestamp': '2024-04-03T19:40:13.278038448Z', 'port': '443', 'url': 'https://app.noisse.io', 'input': 'app.noisse.io', 'title': 'Noisse', 'scheme': 'https', 'webserver': 'Vercel', 'content_type': 'text/html', 'method': 'GET', 'host': '76.76.21.61', 'path': '/', 'time': '140.3751ms', 'a': ['76.76.21.61', '76.76.21.142'], 'cname': ['cname.vercel-dns.com'], 'tech': ['HSTS', 'Vercel'], 'words': 85, 'lines': 1, 'status_code': 200, 'content_length': 2210, 'failed': False, 'knowledgebase': {'PageType': 'other', 'pHash': 0}}
+[36m(HTTPWorker pid=2805500)[0m Pushed to crawl_queue_1: {"url": "https://api.noisse.io", "root_domain": "noisse.io", "user_id": 41}
+[36m(HTTPWorker pid=2805999)[0m Pushed to screenshot_queue_0: {"url": "https://app.noisse.io", "root_domain": "noisse.io", "user_id": 41}
+[36m(HTTPWorker pid=2805999)[0m Pushed to crawl_queue_0: {"url": "https://app.noisse.io", "root_domain": "noisse.io", "user_id": 41}
+[36m(insert_http_data pid=2804406)[0m Database query error: no results to fetch
+[36m(insert_http_data pid=2804406)[0m New HTTP data inserted for https://app.noisse.io.
+[36m(insert_http_data pid=2804404)[0m New HTTP data inserted for https://api.noisse.io.
+[36m(HTTPWorker pid=2805499)[0m {'timestamp': '2024-04-03T19:40:19.206859358Z', 'port': '443', 'url': 'https://www.noisse.io', 'input': 'www.noisse.io', 'title': 'Noisse - Web Recon', 'scheme': 'https', 'webserver': 'Caddy/34de75f', 'content_type': 'text/html', 'method': 'GET', 'host': '52.223.52.2', 'path': '/', 'time': '260.80527ms', 'a': ['52.223.52.2', '35.71.142.77'], 'cname': ['sites.framer.app'], 'tech': ['HSTS', 'HTTP/3'], 'words': 8725, 'lines': 69, 'status_code': 200, 'content_length': 301330, 'failed': False, 'knowledgebase': {'PageType': 'nonerror', 'pHash': 0}}
+[36m(HTTPWorker pid=2805499)[0m Pushed to screenshot_queue_0: {"url": "https://www.noisse.io", "root_domain": "noisse.io", "user_id": 41}
+[36m(HTTPWorker pid=2805499)[0m Pushed to crawl_queue_0: {"url": "https://www.noisse.io", "root_domain": "noisse.io", "user_id": 41}
+[36m(insert_http_data pid=2804404)[0m New HTTP data inserted for https://www.noisse.io.
+[36m(insert_http_data pid=2804404)[0m Database query error: no results to fetch[32m [repeated 2x across cluster] (Ray deduplicates logs by default. Set RAY_DEDUP_LOGS=0 to disable log deduplication, or see https://docs.ray.io/en/master/ray-observability/ray-logging.html#log-deduplication for more options.)[0m
+Shutting down HTTP Workers gracefully...
+*** SIGTERM received at time=1712174612 on cpu 0 ***
+PC: @     0x794dfd6940f6  (unknown)  (unknown)
+    @     0x794dfd642990  (unknown)  (unknown)
+[2024-04-03 20:03:32,935 E 2803638 2803638] logging.cc:361: *** SIGTERM received at time=1712174612 on cpu 0 ***
+[2024-04-03 20:03:32,935 E 2803638 2803638] logging.cc:361: PC: @     0x794dfd6940f6  (unknown)  (unknown)
+[2024-04-03 20:03:32,936 E 2803638 2803638] logging.cc:361:     @     0x794dfd642990  (unknown)  (unknown)
+Exception ignored in sys.unraisablehook: <built-in function unraisablehook>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/dist-packages/ray/_private/worker.py", line 1390, in sigterm_handler
+    sys.exit(signum)
+SystemExit: 15
+2024-04-03 20:03:52,390	INFO worker.py:1715 -- Started a local Ray instance. View the dashboard at [1m[32mhttp://127.0.0.1:8268 [39m[22m
+HTTP Workers have been started. Main script will now wait indefinitely.
+[36m(HTTPWorker pid=2818420)[0m Fetched task from http_queue_3: {"subdomain": "api.noisse.io", "root_domain": "noisse.io", "user_id": 41}
+[36m(HTTPWorker pid=2818409)[0m Fetched task from http_queue_2: {"subdomain": "www.noisse.io", "root_domain": "noisse.io", "user_id": 41}
+[36m(HTTPWorker pid=2818922)[0m Fetched task from http_queue_4: {"subdomain": "app.noisse.io", "root_domain": "noisse.io", "user_id": 41}
+[36m(HTTPWorker pid=2818420)[0m {'timestamp': '2024-04-03T20:04:59.130023887Z', 'cdn_name': 'google', 'port': '443', 'url': 'https://api.noisse.io', 'input': 'api.noisse.io', 'title': 'Error', 'scheme': 'https', 'webserver': 'railway', 'content_type': 'text/html', 'method': 'GET', 'host': '34.86.119.124', 'path': '/', 'time': '521.271418ms', 'a': ['34.86.119.124'], 'cname': ['f3ah8ldi.up.railway.app', 'global-edge.gcp.production.rlwy.net'], 'tech': ['Express', 'Node.js'], 'words': 6, 'lines': 11, 'status_code': 404, 'content_length': 139, 'failed': False, 'cdn': True, 'knowledgebase': {'PageType': 'error', 'pHash': 0}}
+[36m(HTTPWorker pid=2818420)[0m Pushed to screenshot_queue_1: {"url": "https://api.noisse.io", "root_domain": "noisse.io", "user_id": 41}
+[36m(HTTPWorker pid=2818420)[0m Pushed to crawl_queue_1: {"url": "https://api.noisse.io", "root_domain": "noisse.io", "user_id": 41}
+[36m(HTTPWorker pid=2818922)[0m {'timestamp': '2024-04-03T20:05:01.083317592Z', 'port': '443', 'url': 'https://app.noisse.io', 'input': 'app.noisse.io', 'title': 'Noisse', 'scheme': 'https', 'webserver': 'Vercel', 'content_type': 'text/html', 'method': 'GET', 'host': '76.76.21.9', 'path': '/', 'time': '186.253311ms', 'a': ['76.76.21.9', '76.76.21.93'], 'cname': ['cname.vercel-dns.com'], 'tech': ['HSTS', 'Vercel'], 'words': 85, 'lines': 1, 'status_code': 200, 'content_length': 2210, 'failed': False, 'knowledgebase': {'PageType': 'other', 'pHash': 0}}
+[36m(HTTPWorker pid=2818922)[0m Pushed to screenshot_queue_0: {"url": "https://app.noisse.io", "root_domain": "noisse.io", "user_id": 41}
+[36m(HTTPWorker pid=2818922)[0m Pushed to crawl_queue_0: {"url": "https://app.noisse.io", "root_domain": "noisse.io", "user_id": 41}
+[36m(insert_http_data pid=2817316)[0m Duplicate HTTP data for https://api.noisse.io not inserted.
+[36m(insert_http_data pid=2817315)[0m Duplicate HTTP data for https://app.noisse.io not inserted.
+[36m(HTTPWorker pid=2818409)[0m {'timestamp': '2024-04-03T20:05:06.305754856Z', 'port': '443', 'url': 'https://www.noisse.io', 'input': 'www.noisse.io', 'title': 'Noisse - Web Recon', 'scheme': 'https', 'webserver': 'Caddy/34de75f', 'content_type': 'text/html', 'method': 'GET', 'host': '35.71.142.77', 'path': '/', 'time': '330.651327ms', 'a': ['35.71.142.77', '52.223.52.2'], 'cname': ['sites.framer.app'], 'tech': ['HSTS', 'HTTP/3'], 'words': 8725, 'lines': 69, 'status_code': 200, 'content_length': 301330, 'failed': False, 'knowledgebase': {'PageType': 'nonerror', 'pHash': 0}}
+[36m(HTTPWorker pid=2818409)[0m Pushed to screenshot_queue_0: {"url": "https://www.noisse.io", "root_domain": "noisse.io", "user_id": 41}
+[36m(HTTPWorker pid=2818409)[0m Pushed to crawl_queue_0: {"url": "https://www.noisse.io", "root_domain": "noisse.io", "user_id": 41}
+[36m(insert_http_data pid=2817315)[0m Duplicate HTTP data for https://www.noisse.io not inserted.
+Shutting down HTTP Workers gracefully...
+2024-04-03 20:16:44,213	INFO worker.py:1715 -- Started a local Ray instance. View the dashboard at [1m[32mhttp://127.0.0.1:8267 [39m[22m
+HTTP Workers have been started. Main script will now wait indefinitely.
+Shutting down HTTP Workers gracefully...

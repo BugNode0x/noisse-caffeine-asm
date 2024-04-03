@@ -52,19 +52,19 @@ class BaseWorker:
         # This method should be overridden by subclasses
         raise NotImplementedError("This method should be overridden by subclasses")
 
-    def increment_task_count(self, root_domain, user_id):
-        redis_key = f"task_count:{root_domain}:{user_id}"
+    def increment_task_count(self, root_domain, user_id, worker_type):
+        redis_key = f"task_count:{root_domain}:{user_id}:{worker_type}"
         self.redis_client.incr(redis_key)
         self.redis_client.expire(redis_key, 4000)
 
-    def decrement_task_count(self, root_domain, user_id):
-        redis_key = f"task_count:{root_domain}:{user_id}"
+    def decrement_task_count(self, root_domain, user_id, worker_type):
+        redis_key = f"task_count:{root_domain}:{user_id}:{worker_type}"
         remaining_tasks = self.redis_client.decr(redis_key)
         return remaining_tasks <= 0
 
     def select_queue_index(self, identifier):
         hash_value = int(hashlib.md5(identifier.encode()).hexdigest(), 16)
-        num_queues = 10
+        num_queues = 5
         return hash_value % num_queues
 
     def push_notification_to_queue(self, user_id, message):

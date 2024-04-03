@@ -124,3 +124,49 @@ Traceback (most recent call last):
   File "/usr/lib/python3.11/subprocess.py", line 2040, in _wait
     time.sleep(delay)
 KeyboardInterrupt: 
+2024-04-03 19:04:50,082	INFO worker.py:1715 -- Started a local Ray instance. View the dashboard at [1m[32mhttp://127.0.0.1:8268 [39m[22m
+Screenshot Workers have been started. Main script will now wait indefinitely.
+[36m(ScreenshotWorker pid=2787402)[0m Fetched task from screenshot_queue_4: {"url": "http://rest.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(ScreenshotWorker pid=2787005)[0m Fetched task from screenshot_queue_3: {"url": "http://www.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(insert_screenshot_data pid=2786051)[0m Duplicate screenshot data for subdomain ID 12603 and URL http://rest.vulnweb.com not inserted.
+[36m(ScreenshotWorker pid=2787005)[0m Screenshot file not found for URL: http://www.vulnweb.com
+[36m(ScreenshotWorker pid=2787002)[0m Fetched task from screenshot_queue_1: {"url": "http://testasp.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(ScreenshotWorker pid=2787402)[0m Fetched task from screenshot_queue_4: {"url": "http://testaspnet.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(insert_screenshot_data pid=2786051)[0m Duplicate screenshot data for subdomain ID 12609 and URL http://testasp.vulnweb.com not inserted.
+[36m(ScreenshotWorker pid=2787004)[0m Fetched task from screenshot_queue_2: {"url": "http://testphp.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(insert_screenshot_data pid=2786051)[0m Duplicate screenshot data for subdomain ID 12597 and URL http://testaspnet.vulnweb.com not inserted.
+[36m(insert_screenshot_data pid=2786051)[0m Duplicate screenshot data for subdomain ID 12592 and URL http://testphp.vulnweb.com not inserted.
+[36m(ScreenshotWorker pid=2787004)[0m Fetched task from screenshot_queue_2: {"url": "http://testhtml5.vulnweb.com", "root_domain": "vulnweb.com", "user_id": 41}
+[36m(insert_screenshot_data pid=2786051)[0m Duplicate screenshot data for subdomain ID 12595 and URL http://testhtml5.vulnweb.com not inserted.
+Shutting down Screenshot Workers gracefully...
+2024-04-03 19:38:27,368	INFO worker.py:1715 -- Started a local Ray instance. View the dashboard at [1m[32mhttp://127.0.0.1:8265 [39m[22m
+Screenshot Workers have been started. Main script will now wait indefinitely.
+[36m(ScreenshotWorker pid=2804988)[0m Fetched task from screenshot_queue_1: {"url": "https://api.noisse.io", "root_domain": "noisse.io", "user_id": 41}
+[36m(ScreenshotWorker pid=2804987)[0m Fetched task from screenshot_queue_0: {"url": "https://app.noisse.io", "root_domain": "noisse.io", "user_id": 41}
+[36m(ScreenshotWorker pid=2804987)[0m Fetched task from screenshot_queue_0: {"url": "https://www.noisse.io", "root_domain": "noisse.io", "user_id": 41}
+[36m(insert_screenshot_data pid=2804176)[0m Database query error: no results to fetch
+[36m(insert_screenshot_data pid=2804176)[0m Inserted new screenshot data for subdomain ID 12613 and URL https://api.noisse.io.
+[36m(insert_screenshot_data pid=2804175)[0m Inserted new screenshot data for subdomain ID 12615 and URL https://app.noisse.io.
+[36m(insert_screenshot_data pid=2804175)[0m Inserted new screenshot data for subdomain ID 12611 and URL https://www.noisse.io.
+[36m(insert_screenshot_data pid=2804175)[0m Database query error: no results to fetch[32m [repeated 2x across cluster] (Ray deduplicates logs by default. Set RAY_DEDUP_LOGS=0 to disable log deduplication, or see https://docs.ray.io/en/master/ray-observability/ray-logging.html#log-deduplication for more options.)[0m
+Shutting down Screenshot Workers gracefully...
+Exception ignored in atexit callback: <function shutdown at 0x745067754ae0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/dist-packages/ray/_private/client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/ray/_private/worker.py", line 1801, in shutdown
+    global_worker.core_worker.shutdown_driver()
+KeyboardInterrupt: 
+2024-04-03 20:03:59,488	INFO worker.py:1715 -- Started a local Ray instance. View the dashboard at [1m[32mhttp://127.0.0.1:8269 [39m[22m
+Screenshot Workers have been started. Main script will now wait indefinitely.
+[36m(ScreenshotWorker pid=2818730)[0m Fetched task from screenshot_queue_1: {"url": "https://api.noisse.io", "root_domain": "noisse.io", "user_id": 41}
+[36m(ScreenshotWorker pid=2818729)[0m Fetched task from screenshot_queue_0: {"url": "https://app.noisse.io", "root_domain": "noisse.io", "user_id": 41}
+[36m(ScreenshotWorker pid=2818729)[0m Fetched task from screenshot_queue_0: {"url": "https://www.noisse.io", "root_domain": "noisse.io", "user_id": 41}
+[36m(insert_screenshot_data pid=2817614)[0m Duplicate screenshot data for subdomain ID 12613 and URL https://api.noisse.io not inserted.
+[36m(insert_screenshot_data pid=2817613)[0m Duplicate screenshot data for subdomain ID 12615 and URL https://app.noisse.io not inserted.
+[36m(insert_screenshot_data pid=2817613)[0m Duplicate screenshot data for subdomain ID 12611 and URL https://www.noisse.io not inserted.
+Shutting down Screenshot Workers gracefully...
+2024-04-03 20:16:48,570	INFO worker.py:1715 -- Started a local Ray instance. View the dashboard at [1m[32mhttp://127.0.0.1:8269 [39m[22m
+Screenshot Workers have been started. Main script will now wait indefinitely.
+Shutting down Screenshot Workers gracefully...
