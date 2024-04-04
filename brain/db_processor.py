@@ -247,3 +247,22 @@ def insert_js_result(subdomain_id, js_url):
     else:
         print(f"Duplicate JS data for subdomain ID {subdomain_id} and URL {js_url} not inserted.")
 
+@ray.remote
+def insert_hurl_data(domain_name, url):
+    # Fetch the domain_id
+    domain_id_query = "SELECT domain_id FROM domains WHERE domain_name = %s"
+    domain_id = execute_db_query(domain_id_query, (domain_name,), fetch_one=True)
+
+    if domain_id is None:
+        print(f"Domain ID not found for domain name: {domain_name}")
+        return
+
+    # Insert new hurl result
+    insert_query = '''
+        INSERT INTO hurl_results (domain_id, url)
+        VALUES (%s, %s)
+    '''
+    execute_db_query(insert_query, (domain_id, url), commit=True)
+    print(f"Inserted new Hurl data for domain ID {domain_id} and URL {url}.")
+
+

@@ -5,7 +5,7 @@ import os
 import time
 import ray
 from brain.base_worker import BaseWorker
-
+from brain.db_processor import insert_hurl_data
 
 @ray.remote
 class HurlWorker(BaseWorker):
@@ -23,20 +23,27 @@ class HurlWorker(BaseWorker):
             temp_file.write(root_domain)
             input_file = temp_file.name
 
-        output_file = f"{root_domain}.txt"
-        command = f"waymore -i {input_file} -oU /root/noisse/noisse-caffeine-asm/deving/{output_file} -mode U -from 2015 -f"
+        output_directory = "/root/noisse/noisse-caffeine-asm/deving"
+        output_file = os.path.join(output_directory, f"{root_domain}.txt")
+        command = f"waymore -i {input_file} -oU {output_file} -mode U -from 2015 -f"
 
         try:
             # Execute the command
             subprocess.run(command, shell=True, check=True)
             # Process the output file here...
+
+            with open(output_file, 'r') as file:
+                urls = file.readlines()
+                for url in urls:
+                    url = url.strip()  # Remove any leading/trailing whitespace
+                    insert_hurl_data.remote(root_domain, url) 
             
         except Exception as e:
             print(f"Error in HurlWorker: {e}")
 
         finally:
             os.remove(input_file)  # Clean up the input file
-            #os.remove(output_file)  # Clean up the output file
+            os.remove(output_file)  # Clean up the output file
 
             if self.decrement_task_count(root_domain, user_id, worker_type):
                 completion_message = f"Hurl analysis completed for {root_domain}"
