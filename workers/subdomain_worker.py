@@ -52,6 +52,9 @@ class SubdomainEnumerationWorker(BaseWorker):
             insert_subdomain_results(self.hunter_id, domain, subdomains)
             end_message = f"Subdomain enumeration completed for {domain}"
             self.push_notification_to_queue(user_id, end_message)
+            hurl_task = json.dumps({'root_domain': domain, 'user_id': user_id})
+            self.redis_client.rpush('hurl_queue', hurl_task)
+            print(f"Enqueued hurl task for {domain} to hurl_queue")
 
         for subdomain in subdomains:
             task = json.dumps({'subdomain': subdomain, 'root_domain': domain, 'user_id': user_id})

@@ -10,21 +10,21 @@ from brain.base_worker import BaseWorker
 @ray.remote
 class HurlWorker(BaseWorker):
     def process_task(self, task):
-        domain = task['domain']
+        root_domain = task['root_domain']  # Adjusted to use 'root_domain'
         user_id = task['user_id']
         worker_type = 'hurl'
 
         # Notify start of process
-        self.send_slack_notification(user_id, f"[Hurl] Starting analysis for domain: {domain}")
-        self.increment_task_count(domain, user_id, worker_type)
+        self.send_slack_notification(user_id, f"[Hurl] Starting analysis for domain: {root_domain}")
+        self.increment_task_count(root_domain, user_id, worker_type)
 
         # Creating a temporary file for input domain
         with tempfile.NamedTemporaryFile(mode='w', delete=False) as temp_file:
-            temp_file.write(domain)
+            temp_file.write(root_domain)
             input_file = temp_file.name
 
-        output_file = f"{domain}.txt"
-        command = f"waymore -i {input_file} -oU {output_file} -mode U -from 2013 -f"
+        output_file = f"{root_domain}.txt"
+        command = f"waymore -i {input_file} -oU /root/noisse/noisse-caffeine-asm/deving/{output_file} -mode U -from 2015 -f"
 
         try:
             # Execute the command
@@ -36,10 +36,10 @@ class HurlWorker(BaseWorker):
 
         finally:
             os.remove(input_file)  # Clean up the input file
-            os.remove(output_file)  # Clean up the output file
+            #os.remove(output_file)  # Clean up the output file
 
-            if self.decrement_task_count(domain, user_id, worker_type):
-                completion_message = f"Hurl analysis completed for {domain}"
+            if self.decrement_task_count(root_domain, user_id, worker_type):
+                completion_message = f"Hurl analysis completed for {root_domain}"
                 self.push_notification_to_queue(user_id, completion_message)
 
     def run(self):
@@ -56,8 +56,8 @@ class HurlWorker(BaseWorker):
 if __name__ == "__main__":
     ray.init()
 
-    num_workers = 5  # Define the number of worker instances
-    hurl_workers = [HurlWorker.remote(queue_names=['api_queue']) for _ in range(num_workers)]
+    num_workers = 5
+    hurl_workers = [HurlWorker.remote(queue_names=['hurl_queue']) for _ in range(num_workers)]
 
     for worker in hurl_workers:
         worker.run.remote()
