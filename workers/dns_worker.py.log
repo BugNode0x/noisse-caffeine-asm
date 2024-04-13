@@ -1,0 +1,3 @@
+2024-04-09 01:55:42,869	INFO worker.py:1715 -- Started a local Ray instance. View the dashboard at [1m[32mhttp://127.0.0.1:8268 [39m[22m
+DNS Workers have been started. Main script will now wait indefinitely.
+Shutting down DNS Workers gracefully...

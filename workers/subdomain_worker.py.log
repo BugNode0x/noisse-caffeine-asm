@@ -1,0 +1,9 @@
+2024-04-09 01:55:41,416	INFO worker.py:1715 -- Started a local Ray instance. View the dashboard at [1m[32mhttp://127.0.0.1:8266 [39m[22m
+Subdomain Workers have been started. Main script will now wait indefinitely.
+Shutting down Subdomain Workers gracefully...
+*** SIGTERM received at time=1713042263 on cpu 1 ***
+PC: @     0x77c49f31b2cf  (unknown)  __write
+    @     0x77c49f242990  (unknown)  (unknown)
+[2024-04-13 21:04:23,948 E 308299 308299] logging.cc:361: *** SIGTERM received at time=1713042263 on cpu 1 ***
+[2024-04-13 21:04:23,948 E 308299 308299] logging.cc:361: PC: @     0x77c49f31b2cf  (unknown)  __write
+[2024-04-13 21:04:23,948 E 308299 308299] logging.cc:361:     @     0x77c49f242990  (unknown)  (unknown)
